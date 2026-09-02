@@ -475,10 +475,30 @@ export const useAppStore = create<AppState>((set, get) => ({
         localStorage.setItem('homie_cozie_backstage_module', targetMod);
         localStorage.setItem('homie_cozie_app_mode', 'backstage');
       }
-    } else if (['reservation', 'order', 'member', 'auth', 'prd-pitch'].includes(primary)) {
-      set({ appMode: primary as AppMode });
+    } else if (primary === 'reservation' || primary === 'reservasi') {
+      set({ appMode: 'reservation' });
       if (typeof window !== 'undefined') {
-        localStorage.setItem('homie_cozie_app_mode', primary);
+        localStorage.setItem('homie_cozie_app_mode', 'reservation');
+      }
+    } else if (primary === 'order' || primary === 'checkout') {
+      set({ appMode: 'order' });
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('homie_cozie_app_mode', 'order');
+      }
+    } else if (primary === 'member' || primary === 'loyalty') {
+      set({ appMode: 'member' });
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('homie_cozie_app_mode', 'member');
+      }
+    } else if (primary === 'auth' || primary === 'login') {
+      set({ appMode: 'auth' });
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('homie_cozie_app_mode', 'auth');
+      }
+    } else if (primary === 'prd-pitch') {
+      set({ appMode: 'prd-pitch' });
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('homie_cozie_app_mode', 'prd-pitch');
       }
     } else if (['menu', 'events', 'about', 'location', 'gallery', 'faq', 'hero'].includes(primary)) {
       set({ appMode: 'customer', customerTab: primary });
