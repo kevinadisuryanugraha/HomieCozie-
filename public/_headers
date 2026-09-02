@@ -1,23 +1,21 @@
 /*
-  /*
-    X-Frame-Options: SAMEORIGIN
-    X-Content-Type-Options: nosniff
-    X-XSS-Protection: 1; mode=block
-    Referrer-Policy: strict-origin-when-cross-origin
-    Permissions-Policy: camera=(), microphone=(), geolocation=(self)
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self)
 
-  /assets/*
-    Cache-Control: public, max-age=31536000, immutable
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
 
-  /*.js
-    Cache-Control: public, max-age=31536000, immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
 
-  /*.css
-    Cache-Control: public, max-age=31536000, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
 
-  /photos/*
-    Cache-Control: public, max-age=86400
+/photos/*
+  Cache-Control: public, max-age=86400
 
-  /docs/*
-    Cache-Control: public, max-age=3600
-*/
+/docs/*
+  Cache-Control: public, max-age=3600
