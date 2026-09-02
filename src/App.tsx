@@ -190,10 +190,10 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="flex-1 space-y-16 sm:space-y-24 pb-20"
+            transition={{ duration: 0.2 }}
+            className="flex-1 pb-16"
           >
-            <main className="space-y-16 sm:space-y-24">
+            <main className="flex flex-col">
               <HeroSection
                 onOpenReservation={() => navigateToMode('reservation')}
                 onOpenMenu={() => {
@@ -202,25 +202,29 @@ export default function App() {
                 }}
               />
 
+              <GoogleProofBanner
+                reviews={reviews}
+                onOpenFeedbackModal={() => setIsFeedbackModalOpen(true)}
+              />
+
               <ScrollReveal direction="up" delay={0.02}>
-                <GoogleProofBanner
-                  reviews={reviews}
-                  onOpenFeedbackModal={() => setIsFeedbackModalOpen(true)}
+                <AboutSection
+                  onOpenReservation={() => navigateToMode('reservation')}
+                  onExploreMenu={() => {
+                    const elem = document.getElementById('menu-section');
+                    if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 />
               </ScrollReveal>
 
-              <ScrollReveal direction="up" delay={0.04}>
-                <AboutSection />
-              </ScrollReveal>
-
-              <ScrollReveal direction="up" delay={0.04}>
+              <ScrollReveal direction="up" delay={0.02}>
                 <MenuExplorer
                   onAddToCart={(item, qty, options, notes) => addToCart(item, qty, options, notes)}
                   onOpenReservation={() => navigateToMode('reservation')}
                 />
               </ScrollReveal>
 
-              <ScrollReveal direction="up" delay={0.04}>
+              <ScrollReveal direction="up" delay={0.02}>
                 <CoffeeTasteQuiz
                   onAddToCart={(item) => addToCart(item, 1)}
                   onOpenMenu={() => {
@@ -230,27 +234,27 @@ export default function App() {
                 />
               </ScrollReveal>
 
-              <ScrollReveal direction="up" delay={0.04}>
+              <ScrollReveal direction="up" delay={0.02}>
                 <GallerySection />
               </ScrollReveal>
 
-              <ScrollReveal direction="up" delay={0.04}>
+              <ScrollReveal direction="up" delay={0.02}>
                 <EventCommunitySection
                   onRSVPEvent={handleRSVPEvent}
                 />
               </ScrollReveal>
 
-              <ScrollReveal direction="up" delay={0.04}>
+              <ScrollReveal direction="up" delay={0.02}>
                 <LoyaltySection
                   onOpenMenu={() => navigateToMode('member')}
                 />
               </ScrollReveal>
 
-              <ScrollReveal direction="up" delay={0.04}>
+              <ScrollReveal direction="up" delay={0.02}>
                 <FAQSection />
               </ScrollReveal>
 
-              <ScrollReveal direction="up" delay={0.04}>
+              <ScrollReveal direction="up" delay={0.02}>
                 <LocationHoursSection
                   onOpenReservation={() => navigateToMode('reservation')}
                 />
