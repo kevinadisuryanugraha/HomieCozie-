@@ -126,6 +126,7 @@ export default function App() {
 
   // Listen to browser Back/Forward/hash changes
   useEffect(() => {
+    syncFromHash(window.location.hash);
     const onHashChange = () => {
       syncFromHash(window.location.hash);
     };
@@ -582,6 +583,18 @@ export default function App() {
                     className="text-left text-[#C84B27] hover:underline font-bold cursor-pointer"
                   >
                     • Pesan QRIS
+                  </button>
+                  <button
+                    onClick={() => navigateToMode('auth')}
+                    className="text-left text-amber-700 hover:underline font-bold cursor-pointer"
+                  >
+                    • Login Staf / Backstage
+                  </button>
+                  <button
+                    onClick={() => navigateToMode('prd-pitch')}
+                    className="text-left text-[#5C5248] hover:underline font-medium cursor-pointer"
+                  >
+                    • Blueprint PRD v2.5
                   </button>
                 </div>
               </div>

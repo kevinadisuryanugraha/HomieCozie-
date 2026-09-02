@@ -7,7 +7,8 @@ import {
   Star, 
   Gift, 
   Menu, 
-  X
+  X,
+  Lock
 } from 'lucide-react';
 import { CAFE_INFO } from '../data/mockData';
 
@@ -177,6 +178,20 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </button>
 
+          {/* Staff Login / Backstage Quick Trigger */}
+          <button
+            onClick={() => onModeChange('auth')}
+            className={`flex items-center gap-1.5 p-2 sm:px-2.5 sm:py-2 rounded-xl border transition-colors shrink-0 text-xs font-semibold ${
+              currentMode === 'auth' || currentMode === 'backstage'
+                ? 'bg-amber-100 text-amber-900 border-amber-300'
+                : 'bg-white text-[#5C5248] border-[#EAE2D8] hover:bg-[#FAF7F2] hover:text-[#1F1A16]'
+            }`}
+            title="Portal Staf & Backoffice"
+          >
+            <Lock className="w-3.5 h-3.5 text-amber-700" />
+            <span className="hidden xl:inline">Staf POS</span>
+          </button>
+
           {/* Primary CTA: Reservasi Meja */}
           <button
             id="nav-reservation-btn"
@@ -243,6 +258,16 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 <Gift className="w-4 h-4 text-amber-600" />
                 <span>Portal Member VIP</span>
+              </button>
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  onModeChange('auth');
+                }}
+                className="w-full py-2.5 rounded-xl bg-stone-100 border border-[#EAE2D8] text-stone-700 text-xs font-semibold flex items-center justify-center gap-2"
+              >
+                <Lock className="w-4 h-4 text-amber-700" />
+                <span>Portal Staf & Backoffice</span>
               </button>
             </div>
           </motion.div>
