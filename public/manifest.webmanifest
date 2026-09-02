@@ -1,24 +1,48 @@
 {
   "name": "Homie Cozie Coffee & Kitchen",
-  "short_name": "Homie Cozie POS",
-  "description": "Enterprise Omnichannel POS & Customer Ordering Platform for Homie Cozie Coffee & Kitchen",
-  "start_url": "/#",
+  "short_name": "Homie Cozie",
+  "description": "Sistem Digital Terpadu Homie Cozie Coffee & Kitchen — Reservasi Meja, Pesan QRIS, Loyalitas Member VIP",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#FAF7F2",
   "theme_color": "#C84B27",
-  "orientation": "any",
+  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/photos/homie_cozie_008.jpg",
+      "src": "/logo_homie_cozie.png",
       "sizes": "192x192",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/photos/homie_cozie_008.jpg",
+      "src": "/logo_homie_cozie.png",
       "sizes": "512x512",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Reservasi Meja",
+      "short_name": "Reservasi",
+      "description": "Booking meja online",
+      "url": "/#reservasi",
+      "icons": [{ "src": "/logo_homie_cozie.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Pesan QRIS",
+      "short_name": "Pesan",
+      "description": "Self-order & payment QRIS",
+      "url": "/#order",
+      "icons": [{ "src": "/logo_homie_cozie.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Member VIP",
+      "short_name": "Member",
+      "description": "Cek poin dan voucher member",
+      "url": "/#member",
+      "icons": [{ "src": "/logo_homie_cozie.png", "sizes": "192x192" }]
     }
   ],
   "categories": ["food", "business", "productivity", "shopping"]
