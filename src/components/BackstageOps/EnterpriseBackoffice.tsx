@@ -22,25 +22,32 @@ import { BackofficeMobileDrawer } from './layout/BackofficeMobileDrawer';
 import { BackofficeMobileBottomBar } from './layout/BackofficeMobileBottomBar';
 import { BackofficeDashboardOverview } from './dashboard/BackofficeDashboardOverview';
 
-// Sub-Module Operations
-import { FloorPlanManager } from './FloorPlanManager';
-import { KitchenDisplaySystem } from './KitchenDisplaySystem';
-import { POSRegister } from './POSRegister';
-import { ReservationManagement } from './ReservationManagement';
-import { CRMDatabase } from './CRMDatabase';
-import { InventoryStock } from './InventoryStock';
-import { RecipeBOMManager } from './RecipeBOMManager';
-import { AnalyticsReports } from './AnalyticsReports';
-import { UserRBACManager } from './UserRBACManager';
-import { CMSManager } from './CMSManager';
+// Sub-Module Operations (Lazy Loaded for Modular Performance)
+const FloorPlanManager = React.lazy(() => import('./FloorPlanManager').then(m => ({ default: m.FloorPlanManager })));
+const KitchenDisplaySystem = React.lazy(() => import('./KitchenDisplaySystem').then(m => ({ default: m.KitchenDisplaySystem })));
+const POSRegister = React.lazy(() => import('./POSRegister').then(m => ({ default: m.POSRegister })));
+const ReservationManagement = React.lazy(() => import('./ReservationManagement').then(m => ({ default: m.ReservationManagement })));
+const CRMDatabase = React.lazy(() => import('./CRMDatabase').then(m => ({ default: m.CRMDatabase })));
+const InventoryStock = React.lazy(() => import('./InventoryStock').then(m => ({ default: m.InventoryStock })));
+const RecipeBOMManager = React.lazy(() => import('./RecipeBOMManager').then(m => ({ default: m.RecipeBOMManager })));
+const AnalyticsReports = React.lazy(() => import('./AnalyticsReports').then(m => ({ default: m.AnalyticsReports })));
+const UserRBACManager = React.lazy(() => import('./UserRBACManager').then(m => ({ default: m.UserRBACManager })));
+const CMSManager = React.lazy(() => import('./CMSManager').then(m => ({ default: m.CMSManager })));
 import { RBACGuard } from '../Auth/RBACGuard';
 
-// AI & Thermal Slip Modals
-import { AICopilotModal } from './ai/AICopilotModal';
-import { AIChatAgentView } from './ai/AIChatAgentView';
-import { ThermalReceiptModal } from './pos/ThermalReceiptModal';
-import { ThemeCustomizerDrawer } from './theme/ThemeCustomizerDrawer';
-import { OwnerRadarModal } from './analytics/OwnerRadarModal';
+// AI & Thermal Slip Modals (Lazy Loaded)
+const AICopilotModal = React.lazy(() => import('./ai/AICopilotModal').then(m => ({ default: m.AICopilotModal })));
+const AIChatAgentView = React.lazy(() => import('./ai/AIChatAgentView').then(m => ({ default: m.AIChatAgentView })));
+const ThermalReceiptModal = React.lazy(() => import('./pos/ThermalReceiptModal').then(m => ({ default: m.ThermalReceiptModal })));
+const ThemeCustomizerDrawer = React.lazy(() => import('./theme/ThemeCustomizerDrawer').then(m => ({ default: m.ThemeCustomizerDrawer })));
+const OwnerRadarModal = React.lazy(() => import('./analytics/OwnerRadarModal').then(m => ({ default: m.OwnerRadarModal })));
+
+const SubmoduleFallback: React.FC = () => (
+  <div className="flex-1 flex flex-col items-center justify-center p-12 text-center">
+    <div className="w-8 h-8 border-2 border-amber-600/20 border-t-[#C84B27] rounded-full animate-spin mb-3" />
+    <span className="text-[11px] font-mono font-bold text-[#8C7E72] uppercase">Memuat Modul Operasional...</span>
+  </div>
+);
 
 export type NavModuleId = BackstageNavModuleId;
 
@@ -206,127 +213,127 @@ export const EnterpriseBackoffice: React.FC<EnterpriseBackofficeProps> = ({
 
         {/* Center Main Workspace */}
         <main className="flex-1 flex flex-col min-w-0 bg-[#FAF7F2] overflow-y-auto overflow-x-hidden max-h-full">
-          
-          {/* Module 1: Dashboard Overview */}
-          {activeModule === 'dashboard' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-ANA" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <BackofficeDashboardOverview
-                tables={tables}
-                orders={orders}
-                reservations={reservations}
-                onNavigateToModule={setActiveModule}
-                onOpenPOSForTable={handleOpenPOSForTable}
-              />
-            </RBACGuard>
-          )}
+          <React.Suspense fallback={<SubmoduleFallback />}>
+            {/* Module 1: Dashboard Overview */}
+            {activeModule === 'dashboard' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-ANA" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <BackofficeDashboardOverview
+                  tables={tables}
+                  orders={orders}
+                  reservations={reservations}
+                  onNavigateToModule={setActiveModule}
+                  onOpenPOSForTable={handleOpenPOSForTable}
+                />
+              </RBACGuard>
+            )}
 
-          {/* Module 2: POS Billing Register */}
-          {activeModule === 'pos' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-POS" minRequiredLevel="E" onOpenLoginModal={onNavigateToAuthPage}>
-              <POSRegister
-                tables={tables}
-                orders={orders}
-                onSubmitOrder={onSubmitOrder}
-                onUpdateOrderStatus={onUpdateOrderStatus}
-                onUpdateTableStatus={onUpdateTableStatus}
-                initialTableNumber={posInitialTable}
-              />
-            </RBACGuard>
-          )}
+            {/* Module 2: POS Billing Register */}
+            {activeModule === 'pos' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-POS" minRequiredLevel="E" onOpenLoginModal={onNavigateToAuthPage}>
+                <POSRegister
+                  tables={tables}
+                  orders={orders}
+                  onSubmitOrder={onSubmitOrder}
+                  onUpdateOrderStatus={onUpdateOrderStatus}
+                  onUpdateTableStatus={onUpdateTableStatus}
+                  initialTableNumber={posInitialTable}
+                />
+              </RBACGuard>
+            )}
 
-          {/* Module 3: Kitchen Display System (KDS) */}
-          {activeModule === 'kds' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-POS" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <KitchenDisplaySystem
-                orders={orders}
-                onUpdateOrderStatus={onUpdateOrderStatus}
-              />
-            </RBACGuard>
-          )}
+            {/* Module 3: Kitchen Display System (KDS) */}
+            {activeModule === 'kds' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-POS" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <KitchenDisplaySystem
+                  orders={orders}
+                  onUpdateOrderStatus={onUpdateOrderStatus}
+                />
+              </RBACGuard>
+            )}
 
-          {/* Module 4: Floor Plan & Table Management */}
-          {activeModule === 'floorplan' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-POS" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <FloorPlanManager
-                tables={tables}
-                onUpdateTableStatus={onUpdateTableStatus}
-                onOpenPOSForTable={handleOpenPOSForTable}
-              />
-            </RBACGuard>
-          )}
+            {/* Module 4: Floor Plan & Table Management */}
+            {activeModule === 'floorplan' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-POS" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <FloorPlanManager
+                  tables={tables}
+                  onUpdateTableStatus={onUpdateTableStatus}
+                  onOpenPOSForTable={handleOpenPOSForTable}
+                />
+              </RBACGuard>
+            )}
 
-          {/* Module 5: Reservation & Waitlist */}
-          {activeModule === 'reservations' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-RES" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <ReservationManagement
-                reservations={reservations}
-                tables={tables}
-                onUpdateStatus={onUpdateReservationStatus}
-                onAddAuditLog={onAddAuditLog}
-              />
-            </RBACGuard>
-          )}
+            {/* Module 5: Reservation & Waitlist */}
+            {activeModule === 'reservations' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-RES" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <ReservationManagement
+                  reservations={reservations}
+                  tables={tables}
+                  onUpdateStatus={onUpdateReservationStatus}
+                  onAddAuditLog={onAddAuditLog}
+                />
+              </RBACGuard>
+            )}
 
-          {/* Module 6: Inventory Stock */}
-          {activeModule === 'inventory' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-INV" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <InventoryStock />
-            </RBACGuard>
-          )}
+            {/* Module 6: Inventory Stock */}
+            {activeModule === 'inventory' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-INV" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <InventoryStock />
+              </RBACGuard>
+            )}
 
-          {/* Module 7: Recipe & Bill of Materials (BOM) */}
-          {activeModule === 'recipe_bom' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-INV" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <RecipeBOMManager />
-            </RBACGuard>
-          )}
+            {/* Module 7: Recipe & Bill of Materials (BOM) */}
+            {activeModule === 'recipe_bom' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-INV" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <RecipeBOMManager />
+              </RBACGuard>
+            )}
 
-          {/* Module 8: CRM Database & Loyalty */}
-          {activeModule === 'crm' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-CRM" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <CRMDatabase />
-            </RBACGuard>
-          )}
+            {/* Module 8: CRM Database & Loyalty */}
+            {activeModule === 'crm' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-CRM" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <CRMDatabase />
+              </RBACGuard>
+            )}
 
-          {/* Module 9: Sales Revenue & PB1 Tax Reports */}
-          {activeModule === 'sales_revenue' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-ANA" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <AnalyticsReports
-                orders={orders}
-                reservations={reservations}
-              />
-            </RBACGuard>
-          )}
+            {/* Module 9: Sales Revenue & PB1 Tax Reports */}
+            {activeModule === 'sales_revenue' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-ANA" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <AnalyticsReports
+                  orders={orders}
+                  reservations={reservations}
+                />
+              </RBACGuard>
+            )}
 
-          {/* Module 10: User RBAC Matrix & Audit Trail */}
-          {activeModule === 'rbac_matrix' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-USR" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <UserRBACManager
-                currentUser={currentSystemUser}
-                currentSystemUser={currentSystemUser}
-                onSwitchUser={onSwitchUser}
-                auditLogs={auditLogs}
-                onAddAuditLog={onAddAuditLog}
-              />
-            </RBACGuard>
-          )}
+            {/* Module 10: User RBAC Matrix & Audit Trail */}
+            {activeModule === 'rbac_matrix' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-USR" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <UserRBACManager
+                  currentUser={currentSystemUser}
+                  currentSystemUser={currentSystemUser}
+                  onSwitchUser={onSwitchUser}
+                  auditLogs={auditLogs}
+                  onAddAuditLog={onAddAuditLog}
+                />
+              </RBACGuard>
+            )}
 
-          {/* Module 11: Professional Content Management System (CMS) */}
-          {activeModule === 'cms' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-WEB" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <CMSManager showToast={showToast} />
-            </RBACGuard>
-          )}
+            {/* Module 11: Professional Content Management System (CMS) */}
+            {activeModule === 'cms' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-WEB" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <CMSManager showToast={showToast} />
+              </RBACGuard>
+            )}
 
-          {/* Module 12: AI Cozie Assistant (Chat Agent) */}
-          {activeModule === 'ai_agent' && (
-            <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-AI-CHAT" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
-              <div className="flex-1 flex flex-col min-h-0 h-full p-0 sm:p-4 pb-16 lg:pb-0 overflow-hidden">
-                <AIChatAgentView />
-              </div>
-            </RBACGuard>
-          )}
-
+            {/* Module 12: AI Cozie Assistant (Chat Agent) */}
+            {activeModule === 'ai_agent' && (
+              <RBACGuard currentUser={currentSystemUser} moduleCode="MOD-AI-CHAT" minRequiredLevel="L" onOpenLoginModal={onNavigateToAuthPage}>
+                <div className="flex-1 flex flex-col min-h-0 h-full p-0 sm:p-4 pb-16 lg:pb-0 overflow-hidden">
+                  <AIChatAgentView />
+                </div>
+              </RBACGuard>
+            )}
+          </React.Suspense>
         </main>
 
       </div>
@@ -360,35 +367,51 @@ export const EnterpriseBackoffice: React.FC<EnterpriseBackofficeProps> = ({
       />
 
       {/* AI Executive Copilot Modal */}
-      <AICopilotModal
-        isOpen={isAICopilotOpen}
-        onClose={() => setIsAICopilotOpen(false)}
-        orders={orders}
-        inventory={inventory}
-        totalOmzet={totalOmzetToday}
-      />
+      {isAICopilotOpen && (
+        <React.Suspense fallback={null}>
+          <AICopilotModal
+            isOpen={isAICopilotOpen}
+            onClose={() => setIsAICopilotOpen(false)}
+            orders={orders}
+            inventory={inventory}
+            totalOmzet={totalOmzetToday}
+          />
+        </React.Suspense>
+      )}
 
       {/* Dual Thermal Receipt Modal */}
-      <ThermalReceiptModal
-        isOpen={isThermalModalOpen}
-        onClose={() => setIsThermalModalOpen(false)}
-        order={selectedThermalOrder}
-        cashierName={currentSystemUser.name}
-      />
+      {isThermalModalOpen && (
+        <React.Suspense fallback={null}>
+          <ThermalReceiptModal
+            isOpen={isThermalModalOpen}
+            onClose={() => setIsThermalModalOpen(false)}
+            order={selectedThermalOrder}
+            cashierName={currentSystemUser.name}
+          />
+        </React.Suspense>
+      )}
 
       {/* Theme Customizer Drawer */}
-      <ThemeCustomizerDrawer
-        isOpen={isThemeDrawerOpen}
-        onClose={() => setIsThemeDrawerOpen(false)}
-      />
+      {isThemeDrawerOpen && (
+        <React.Suspense fallback={null}>
+          <ThemeCustomizerDrawer
+            isOpen={isThemeDrawerOpen}
+            onClose={() => setIsThemeDrawerOpen(false)}
+          />
+        </React.Suspense>
+      )}
 
       {/* Live Owner Radar Modal */}
-      <OwnerRadarModal
-        isOpen={isOwnerRadarOpen}
-        onClose={() => setIsOwnerRadarOpen(false)}
-        tables={tables}
-        orders={orders}
-      />
+      {isOwnerRadarOpen && (
+        <React.Suspense fallback={null}>
+          <OwnerRadarModal
+            isOpen={isOwnerRadarOpen}
+            onClose={() => setIsOwnerRadarOpen(false)}
+            tables={tables}
+            orders={orders}
+          />
+        </React.Suspense>
+      )}
 
       {/* 4. MOBILE BOTTOM NAVIGATION BAR */}
       <BackofficeMobileBottomBar

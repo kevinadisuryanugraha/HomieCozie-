@@ -20,23 +20,31 @@ import { LocationHoursSection } from './components/CustomerPortal/LocationHoursS
 import { AboutSection } from './components/CustomerPortal/AboutSection';
 import { GallerySection } from './components/CustomerPortal/GallerySection';
 import { FAQSection } from './components/CustomerPortal/FAQSection';
-import { FeedbackReviewModal } from './components/CustomerPortal/FeedbackReviewModal';
 import { CoffeeTasteQuiz } from './components/CustomerPortal/CoffeeTasteQuiz';
 import { WaiterCallWidget } from './components/CustomerPortal/WaiterCallWidget';
-import { LiveOrderTrackerModal } from './components/CustomerPortal/LiveOrderTrackerModal';
 
-import { AuthPage } from './pages/AuthPage';
-import { ReservationPage } from './pages/ReservationPage';
-import { OrderCheckoutPage } from './pages/OrderCheckoutPage';
-import { MemberPortalPage } from './pages/MemberPortalPage';
 import { MobileBottomDock } from './components/Mobile/MobileBottomDock';
 import { PWAInstallBanner } from './components/Mobile/PWAInstallBanner';
 import { ScrollReveal } from './components/Common/ScrollReveal';
 import { BackToTopButton } from './components/Common/BackToTopButton';
-
-import { EnterpriseBackoffice } from './components/BackstageOps/EnterpriseBackoffice';
-import { PitchDeckModal } from './components/PRDPresentation/PitchDeckModal';
 import { telemetryTracker } from './services/telemetryTracker';
+
+// Lazy Loaded Pages & Heavy Backoffice Modals for Instant Public Page Loading
+const AuthPage = React.lazy(() => import('./pages/AuthPage').then(m => ({ default: m.AuthPage })));
+const ReservationPage = React.lazy(() => import('./pages/ReservationPage').then(m => ({ default: m.ReservationPage })));
+const OrderCheckoutPage = React.lazy(() => import('./pages/OrderCheckoutPage').then(m => ({ default: m.OrderCheckoutPage })));
+const MemberPortalPage = React.lazy(() => import('./pages/MemberPortalPage').then(m => ({ default: m.MemberPortalPage })));
+const EnterpriseBackoffice = React.lazy(() => import('./components/BackstageOps/EnterpriseBackoffice').then(m => ({ default: m.EnterpriseBackoffice })));
+const PitchDeckModal = React.lazy(() => import('./components/PRDPresentation/PitchDeckModal').then(m => ({ default: m.PitchDeckModal })));
+const FeedbackReviewModal = React.lazy(() => import('./components/CustomerPortal/FeedbackReviewModal').then(m => ({ default: m.FeedbackReviewModal })));
+const LiveOrderTrackerModal = React.lazy(() => import('./components/CustomerPortal/LiveOrderTrackerModal').then(m => ({ default: m.LiveOrderTrackerModal })));
+
+const RouteLoadingFallback: React.FC = () => (
+  <div className="min-h-[60vh] w-full flex flex-col items-center justify-center p-8 text-center bg-[#FAF7F2]">
+    <div className="w-10 h-10 border-3 border-amber-600/20 border-t-[#C84B27] rounded-full animate-spin mb-4" />
+    <span className="text-xs font-mono font-bold text-[#8C7E72] tracking-wider uppercase">Memuat Modul Homie Cozie...</span>
+  </div>
+);
 
 import { 
   ShoppingBag, 
@@ -260,11 +268,13 @@ export default function App() {
             transition={{ duration: 0.25 }}
             className="flex-1"
           >
-            <ReservationPage
-              tables={tables}
-              onConfirmReservation={(res) => addReservation(res)}
-              onNavigateTo={(mode) => navigateToMode(mode)}
-            />
+            <React.Suspense fallback={<RouteLoadingFallback />}>
+              <ReservationPage
+                tables={tables}
+                onConfirmReservation={(res) => addReservation(res)}
+                onNavigateTo={(mode) => navigateToMode(mode)}
+              />
+            </React.Suspense>
           </motion.div>
         )}
 
@@ -278,15 +288,17 @@ export default function App() {
             transition={{ duration: 0.25 }}
             className="flex-1"
           >
-            <OrderCheckoutPage
-              cartItems={cartItems}
-              onUpdateQuantity={updateCartQty}
-              onRemoveItem={removeCartItem}
-              onClearCart={clearCart}
-              onAddToCart={(item, qty) => addToCart(item, qty)}
-              onSubmitOrder={(ord) => addOrder(ord)}
-              onNavigateTo={(mode) => navigateToMode(mode)}
-            />
+            <React.Suspense fallback={<RouteLoadingFallback />}>
+              <OrderCheckoutPage
+                cartItems={cartItems}
+                onUpdateQuantity={updateCartQty}
+                onRemoveItem={removeCartItem}
+                onClearCart={clearCart}
+                onAddToCart={(item, qty) => addToCart(item, qty)}
+                onSubmitOrder={(ord) => addOrder(ord)}
+                onNavigateTo={(mode) => navigateToMode(mode)}
+              />
+            </React.Suspense>
           </motion.div>
         )}
 
@@ -300,11 +312,13 @@ export default function App() {
             transition={{ duration: 0.25 }}
             className="flex-1"
           >
-            <MemberPortalPage
-              currentUser={currentSystemUser}
-              onNavigateTo={(mode) => navigateToMode(mode)}
-              onShowToast={showToast}
-            />
+            <React.Suspense fallback={<RouteLoadingFallback />}>
+              <MemberPortalPage
+                currentUser={currentSystemUser}
+                onNavigateTo={(mode) => navigateToMode(mode)}
+                onShowToast={showToast}
+              />
+            </React.Suspense>
           </motion.div>
         )}
 
@@ -318,13 +332,15 @@ export default function App() {
             transition={{ duration: 0.25 }}
             className="flex-1"
           >
-            <AuthPage
-              currentUser={currentSystemUser}
-              onLoginSuccess={(usr, log, targetModule) => loginStaff(usr, log, targetModule)}
-              onNavigateTo={(mode) => navigateToMode(mode)}
-              auditLogs={auditLogs}
-              onLogout={logoutStaff}
-            />
+            <React.Suspense fallback={<RouteLoadingFallback />}>
+              <AuthPage
+                currentUser={currentSystemUser}
+                onLoginSuccess={(usr, log, targetModule) => loginStaff(usr, log, targetModule)}
+                onNavigateTo={(mode) => navigateToMode(mode)}
+                auditLogs={auditLogs}
+                onLogout={logoutStaff}
+              />
+            </React.Suspense>
           </motion.div>
         )}
 
@@ -373,24 +389,26 @@ export default function App() {
                 </div>
               </div>
             ) : (
-              <EnterpriseBackoffice
-                currentSystemUser={currentSystemUser}
-                initialModule={backstageModule}
-                onSwitchUser={(u) => setCurrentUser(u)}
-                tables={tables}
-                orders={orders}
-                reservations={reservations}
-                auditLogs={auditLogs}
-                onUpdateTableStatus={updateTableStatus}
-                onUpdateOrderStatus={updateOrderStatus}
-                onUpdateReservationStatus={updateReservationStatus}
-                onSubmitOrder={addOrder}
-                onAddAuditLog={addAuditLog}
-                onNavigateToCustomerPortal={() => navigateToMode('customer')}
-                onNavigateToAuthPage={() => navigateToMode('auth')}
-                onOpenPitchDeck={() => navigateToMode('prd-pitch')}
-                showToast={showToast}
-              />
+              <React.Suspense fallback={<RouteLoadingFallback />}>
+                <EnterpriseBackoffice
+                  currentSystemUser={currentSystemUser}
+                  initialModule={backstageModule}
+                  onSwitchUser={(u) => setCurrentUser(u)}
+                  tables={tables}
+                  orders={orders}
+                  reservations={reservations}
+                  auditLogs={auditLogs}
+                  onUpdateTableStatus={updateTableStatus}
+                  onUpdateOrderStatus={updateOrderStatus}
+                  onUpdateReservationStatus={updateReservationStatus}
+                  onSubmitOrder={addOrder}
+                  onAddAuditLog={addAuditLog}
+                  onNavigateToCustomerPortal={() => navigateToMode('customer')}
+                  onNavigateToAuthPage={() => navigateToMode('auth')}
+                  onOpenPitchDeck={() => navigateToMode('prd-pitch')}
+                  showToast={showToast}
+                />
+              </React.Suspense>
             )}
           </motion.div>
         )}
@@ -440,10 +458,12 @@ export default function App() {
                 </div>
               </div>
             ) : (
-              <PitchDeckModal
-                onSwitchToCustomerDemo={() => navigateToMode('customer')}
-                onSwitchToBackstageDemo={() => navigateToMode('backstage')}
-              />
+              <React.Suspense fallback={<RouteLoadingFallback />}>
+                <PitchDeckModal
+                  onSwitchToCustomerDemo={() => navigateToMode('customer')}
+                  onSwitchToBackstageDemo={() => navigateToMode('backstage')}
+                />
+              </React.Suspense>
             )}
           </motion.div>
         )}
@@ -696,20 +716,26 @@ export default function App() {
 
       {/* Global Live Order Tracker Modal */}
       {customerActiveOrder && (
-        <LiveOrderTrackerModal
-          isOpen={isGlobalTrackerOpen}
-          onClose={() => setIsGlobalTrackerOpen(false)}
-          order={customerActiveOrder}
-          onUpdateStatus={(ordId, status) => updateOrderStatus(ordId, status)}
-        />
+        <React.Suspense fallback={null}>
+          <LiveOrderTrackerModal
+            isOpen={isGlobalTrackerOpen}
+            onClose={() => setIsGlobalTrackerOpen(false)}
+            order={customerActiveOrder}
+            onUpdateStatus={(ordId, status) => updateOrderStatus(ordId, status)}
+          />
+        </React.Suspense>
       )}
 
       {/* Feedback Review Modal */}
-      <FeedbackReviewModal
-        isOpen={isFeedbackModalOpen}
-        onClose={() => setIsFeedbackModalOpen(false)}
-        onSubmitReview={handleSubmitReview}
-      />
+      {isFeedbackModalOpen && (
+        <React.Suspense fallback={null}>
+          <FeedbackReviewModal
+            isOpen={isFeedbackModalOpen}
+            onClose={() => setIsFeedbackModalOpen(false)}
+            onSubmitReview={handleSubmitReview}
+          />
+        </React.Suspense>
+      )}
 
       {/* Floating Back To Top Button */}
       {appMode === 'customer' && <BackToTopButton />}

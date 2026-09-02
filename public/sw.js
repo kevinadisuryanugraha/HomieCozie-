@@ -31,8 +31,17 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Do not cache API or WebSocket requests
-  if (event.request.url.includes('/api/') || event.request.url.includes(':8080') || event.request.url.includes(':8000')) {
+  // Do not cache API, WebSocket requests, or heavy documents/media
+  const url = event.request.url;
+  if (
+    url.includes('/api/') || 
+    url.includes(':8080') || 
+    url.includes(':8000') ||
+    url.endsWith('.pdf') ||
+    url.endsWith('.zip') ||
+    url.includes('PENTEST') ||
+    url.includes('PERFORMANCE')
+  ) {
     return;
   }
 
