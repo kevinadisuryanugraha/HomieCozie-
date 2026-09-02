@@ -1,0 +1,6 @@
+{
+  "name": "Homie Cozie Coffee & Kitchen - Digital Ecosystem",
+  "description": "Integrated Restaurant Management System, Online Reservation, Digital Menu & CRM for Homie Cozie Pasar Rebo (Kalisari - Cijantung)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

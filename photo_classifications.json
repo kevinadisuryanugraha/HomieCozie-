@@ -1,0 +1,1044 @@
+[
+  {
+    "filename": "homie_cozie_001.jpg",
+    "type": "main_food",
+    "name_suggestion": "Nasi Ayam Geprek with Egg",
+    "description": "A dark bowl containing rice topped with a fried egg and saucy fried chicken, placed next to a speckled enamel teapot/mug on a dark wooden table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_002.jpg",
+    "type": "main_food",
+    "name_suggestion": "Nasi Campur Bali",
+    "description": "A plate of Balinese mixed rice served on a banana leaf with shredded chicken, lawar, crispy krupuk, and fresh vegetables.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_003.jpg",
+    "type": "non_coffee_drink",
+    "name_suggestion": "Es Matcha Mint",
+    "description": "Two iced drinks on a wooden table, with a green mint matcha beverage in the foreground and a creamy white drink with dark boba in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_004.jpg",
+    "type": "main_food",
+    "name_suggestion": "Aneka menu makanan (Assorted dishes)",
+    "description": "A collage of six food items showing onion rings, fried snacks in a basket, loaded fries, a spicy red soup, a stacked grilled sandwich, and loaded nachos.",
+    "has_people": true,
+    "confidence": "medium"
+  },
+  {
+    "filename": "homie_cozie_005.jpg",
+    "type": "main_food",
+    "name_suggestion": "Mie Goreng with Lumpia and Krupuk",
+    "description": "A plate of Indonesian fried noodles with a fried spring roll, fresh lettuce, tomato, cucumber, and crackers, with a packet of seasoning on a dark wooden table.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_006.jpg",
+    "type": "live_music_stage",
+    "name_suggestion": "Live Music Performance at Homie Cozie",
+    "description": "A live band consisting of a vocalist and guitarists performing on a small grassy stage inside the cafe, with one person sitting nearby watching.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_007.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Skillet Nachos",
+    "description": "A black cast iron skillet filled with tortilla chips topped with melted cheese, jalapeños, and diced tomatoes on a wooden table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_008.jpg",
+    "type": "coffee",
+    "name_suggestion": "Es Kopi Susu Homie Cozie",
+    "description": "Two glasses of layered iced coffee with milk, bearing the Homie Cozie logo, are placed on a dark table in the cafe's indoor setting.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_009.jpg",
+    "type": "live_music_stage",
+    "name_suggestion": "Live acoustic performance at Homie Cozie",
+    "description": "Two men perform live acoustic music, one playing guitar and the other playing a cajon, in front of a large window at the cafe.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_010.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Suasana Luar Ruang Homie Cozie",
+    "description": "The outdoor seating area of Homie Cozie Coffee & Kitchen at dusk, featuring a lit storefront, a canopy tent, tall tables, and a couple sitting at a table.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_011.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Women in hijabs at Homie Cozie",
+    "description": "A collage showing two women wearing hijabs inside the coffee shop, one taking a selfie with a smartphone while the other sits at a table, and a close-up selfie of a woman in a purple hijab.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_012.png",
+    "type": "poster_menu_graphic",
+    "name_suggestion": "Menu Nasi Oseng & Nasi Goreng Kampung",
+    "description": "A promotional menu graphic from Homie Cozie Coffee & Kitchen featuring two dishes: Nasi Oseng (Cumi/Sapi/Ayam) and Nasi Goreng Kampung, complete with ingredient labels, a cup of tea, and a glass of iced tea.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_013.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Seating Area",
+    "description": "Outdoor seating area with gravel floor, tables and chairs under string lights and trees, with a few people sitting in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_014.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Indoor seating area with cappuccino table mat",
+    "description": "An indoor coffee shop seating area featuring two brown leather chairs at a wooden table, with a cappuccino-themed table mat in the foreground.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_015.jpg",
+    "type": "live_music_stage",
+    "name_suggestion": "Panggung Live Music Homie Cozie",
+    "description": "An indoor cafe scene featuring a live music stage where a musician is performing under string lights, with a large potted tree and seating arrangements around it.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_016.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Couple relaxing at Homie Cozie",
+    "description": "A young man and woman sit together on a red sofa in a cafe, with drinks and a bag on the table in front of them.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_017.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Crispy Fried Tofu Bites with Dipping Sauce",
+    "description": "A plate of fried snacks with a black dipping sauce bowl sits on a cafe table in the foreground, while people and a projection screen are visible in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_018.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Group Photo at Homie Cozie",
+    "description": "A group of nine people posing together outdoors at a cafe with trees and buildings in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_019.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Gathering at Homie Cozie",
+    "description": "A group of people, primarily women wearing hijabs, are seated and chatting around tables inside the cafe near a large window.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_020.jpg",
+    "type": "main_food",
+    "name_suggestion": "Chicken Cordon Bleu",
+    "description": "A breaded and fried chicken cordon bleu cut in half, revealing ham and melted cheese filling, served with red sauce, mashed potatoes, a side salad, and a dipping sauce on a white plate.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_021.jpg",
+    "type": "main_food",
+    "name_suggestion": "Omelet Rice",
+    "description": "A table setting featuring a dark bowl with omelet rice, an accompanying bowl of noodles, a plate of fries, and a table menu in the background of a coffee shop.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_022.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Indoor Seating Area",
+    "description": "An indoor cafe seating area featuring brown leather chairs, a black plastic stool, and a pillar decorated with posters next to large windows.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_023.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Cheesy Nachos",
+    "description": "A black bowl filled with tortilla chips topped with red salsa, melted white cheese, and a sprig of parsley, sitting on a wooden table with a person's hands visible in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_024.jpg",
+    "type": "coffee",
+    "name_suggestion": "Es Coklat Klasik",
+    "description": "A close-up shot of a hand holding a tall glass of layered iced chocolate or mocha. The drink features a dark chocolate syrup base at the bottom, topped with milk and ice, creating a marbled effect. The background shows the interior of a cafe with warm lighting and an exposed ceiling. A prominent white sign with red lettering reads 'SINI AKU BAHAGIAIN' (Here I make you happy). There is also a caption overlay in Indonesian referencing an Instagram handle (@HOMIE.CO...), suggesting it is a promotional post for a cafe.",
+    "has_people": false
+  },
+  {
+    "filename": "homie_cozie_025.png",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Tampak Depan Kafe saat Dusk",
+    "description": "The two-story exterior facade of Homie Cozie Coffee & Kitchen is shown at dusk, featuring a black sign with #SerasaRumah, a large tree, string lights, and potted plants along the sidewalk.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_026.png",
+    "type": "coffee",
+    "name_suggestion": "Kopi Hitam Homie Cozie",
+    "description": "A cup of black coffee on a green saucer with a branded tissue box and water bottle on a dark table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_027.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Suasana Outdoor Malam",
+    "description": "People gathered at outdoor tables under a string-lit wooden roof at night.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_028.jpg",
+    "type": "main_food",
+    "name_suggestion": "Mixed Snack Platter and Chicken Satay",
+    "description": "A spread of Indonesian snacks and chicken satay served with iced chocolate and orange juice on a wooden table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_029.jpg",
+    "type": "main_food",
+    "name_suggestion": "Nasi Ayam Saus",
+    "description": "A plate of rice topped with chicken in a rich sauce, served with lettuce and tomato slices, with blurred people and bowls in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_030.jpg",
+    "type": "main_food",
+    "name_suggestion": "Creamy Pasta and Fried Chicken Set",
+    "description": "A wooden cafe table featuring a plate of creamy pasta, a plate of fried chicken with rice and dipping sauce, and two iced drinks in plastic cups.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_031.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Group gathering at Homie Cozie",
+    "description": "A group of people posing together outdoors in front of a plant-covered wall with floating balloons at a coffee shop.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_032.png",
+    "type": "poster_menu_graphic",
+    "name_suggestion": "Poster Live Acoustic Edith Project",
+    "description": "A promotional poster for the 'Live Acoustic' event at Homie Cozie Coffee & Kitchen featuring two performers with a guitar.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_033.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Seating & Neon Sign",
+    "description": "The image shows the outdoor seating area of Homie Cozie Coffee & Kitchen at night, featuring a neon sign on a dark wall, a staircase, a motorcycle, and a table with chairs.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_034.jpg",
+    "type": "poster_menu_graphic",
+    "name_suggestion": "Menu Makanan Homie Cozie",
+    "description": "Sebuah halaman menu digital yang menampilkan berbagai hidangan utama seperti Tom Yam, Mie Goreng Kampung, Chicken Katsu Teriyaki, dan Mie Bangladesh.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_035.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Five friends laughing together",
+    "description": "Five men are sitting together outdoors, laughing and talking with each other in front of a background of green trees.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_036.png",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Eksterior Homie Cozie Coffee & Kitchen saat senja",
+    "description": "The exterior facade of a coffee shop at dusk, featuring a large tree, string lights, and signage for '#SerasaRumah' and 'COFFEE & KITCHEN'.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_037.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Loaded Nachos in Plastic Container",
+    "description": "A clear plastic container filled with tortilla chips topped with red sauce, melted cheese, and diced vegetables.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_038.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Interior seating area with street art mural",
+    "description": "An indoor cafe seating area with wooden furniture, a black mesh fence, colored menu boards on the wall, and a large black-and-white street art mural covering the right side.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_039.jpg",
+    "type": "main_food",
+    "name_suggestion": "Chicken Cordon Bleu",
+    "description": "A plate of fried chicken cordon bleu stuffed with ham and cheese, served with fresh vegetables and a side of dipping sauce.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_040.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Seating Area with Tents",
+    "description": "An outdoor cafe patio featuring white canopy tents, string lights, tables, chairs, and a potted tree set on gravel flooring.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_041.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Tiga sahabat",
+    "description": "Three men posing together with thumbs-up gestures in front of a green leafy wall.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_042.jpg",
+    "type": "main_food",
+    "name_suggestion": "Rice Bowl with Savory Egg Topping",
+    "description": "A gray ceramic bowl filled with white rice topped with a savory egg and meat mixture, garnished with sliced red and green chilies and scallions, with a fork and spoon resting on the rim.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_043.jpg",
+    "type": "main_food",
+    "name_suggestion": "Skillet Loaded Nachos with Iced Drinks",
+    "description": "A black cast-iron skillet filled with loaded nachos (tortilla chips, melted cheese, red salsa, and green garnish) is being held by a hand. It sits on a dark brown tray beside two plastic cups: one with a creamy, light-colored iced beverage and another with a red/orange iced drink topped with cream and a mint leaf.",
+    "has_people": false
+  },
+  {
+    "filename": "homie_cozie_044.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Seating Area",
+    "description": "An outdoor patio area of the cafe featuring white round tables, metal stools with wooden seats, and potted plants set against a blue wall and a tiled background.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_045.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Gorengan with Sambal",
+    "description": "A woven bamboo basket lined with a banana leaf holds several golden fried fritters, accompanied by a small black bowl of dipping sauce on a concrete table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_046.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor seating area",
+    "description": "An empty outdoor patio seating area featuring tall bar stools, a bench, and a potted plant on a concrete floor with white painted lines.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_047.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Suasana Interior Coffee Shop",
+    "description": "The image shows a cozy coffee shop interior with a black metal staircase, a long counter with stools, a large window with a 'BUKA' sign, and hanging plants.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_048.jpg",
+    "type": "main_food",
+    "name_suggestion": "Makan malam lengkap",
+    "description": "A table setting featuring a plate of creamy pasta, a plate of french fries, a plate of omelet with vegetables, and two iced drinks.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_049.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Pose bersama di Homie Cozie",
+    "description": "Five women wearing hijabs are sitting together on an orange sofa in the coffee shop posing for a photo.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_050.jpg",
+    "type": "main_food",
+    "name_suggestion": "Spaghetti Bolognese with Iced Coffee",
+    "description": "A plate of spaghetti with red meat sauce, garnished with parsley and an orange twist, placed on a wooden table next to a glass of iced coffee bearing the Homie Cozie logo.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_051.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Beef Nachos",
+    "description": "A black cast-iron skillet filled with tortilla chips topped with melted cheese, ground beef, diced tomatoes, green jalapeños, and a sprig of parsley on a wooden table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_052.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Ruang Tamu Indoor Homie Cozie",
+    "description": "Sebuah area interior coffee shop yang sepi dan modern dengan sofa oranye, kursi kayu, meja, tanaman hias, serta jendela besar berlapis tirai putih yang memancarkan cahaya alami.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_053.jpg",
+    "type": "main_food",
+    "name_suggestion": "Mie Rebus Pedas (Spicy Noodles)",
+    "description": "A bowl of noodles in a red spicy broth topped with beef slices, tomatoes, green vegetables, and fried shallots.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_054.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Suasana dalam ruangan kafe",
+    "description": "Interior coffee shop area featuring brown seating, a white chair, floor speakers, a mirror, and wall decorations with several customers present.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_055.jpg",
+    "type": "main_food",
+    "name_suggestion": "Chicken Steak with Fries and Salad",
+    "description": "A plate of breaded chicken steak topped with dark sauce and sesame seeds, served with french fries, a fresh salad with pink dressing, and a small bowl of red dipping sauce.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_056.jpg",
+    "type": "coffee",
+    "name_suggestion": "Ceria Wanita dengan Cangkir Kopi Hijau (Cheerful Woman with Green Coffee Cup)",
+    "description": "A smiling woman wearing a yellow patterned shirt and dark blue overalls holds a green coffee cup and saucer while sitting inside a cafe with mint-colored walls and shelves in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_057.jpg",
+    "type": "main_food",
+    "name_suggestion": "Stuffed chicken with salad and chips",
+    "description": "A plate of breaded stuffed chicken cut open, served with ruffled potato chips, a lettuce salad with pink dressing, and a red dipping sauce.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_058.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Snack Platter with Iced Coffee",
+    "description": "A wooden table displays a spread of iced coffee drinks, fried tofu and fries in black serving dishes, and a basket of fried food, along with a chili dipping sauce.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_059.jpg",
+    "type": "other",
+    "name_suggestion": "Unknown",
+    "description": "{\n  \"filename\": \"homie_cozie_059.jpg\",\n  \"type\": \"coffee\",\n  \"name_suggestion\": \"Bottled Iced Coffee and Matcha Boba\",\n  \"description\": \"A hand holds two square bottles with black caps, one filled wit",
+    "has_people": false,
+    "raw": "{\n  \"filename\": \"homie_cozie_059.jpg\",\n  \"type\": \"coffee\",\n  \"name_suggestion\": \"Bottled Iced Coffee and Matcha Boba\",\n  \"description\": \"A hand holds two square bottles with black caps, one filled with iced coffee and the other with matcha boba, both bearing the Homie Cozie Coffee & Kitchen logo, set against a"
+  },
+  {
+    "filename": "homie_cozie_060.jpg",
+    "type": "main_food",
+    "name_suggestion": "Chicken Roulade with Mashed Potatoes and Salad",
+    "description": "A plate of sliced stuffed chicken breast served over mashed potatoes, accompanied by a side salad and two portions of red dipping sauce.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_061.png",
+    "type": "poster_menu_graphic",
+    "name_suggestion": "Signatur Minuman Mangga & Stroberi",
+    "description": "A promotional menu graphic for Homie Cozie Coffee & Kitchen showcasing two signature iced drinks, Next Level Mango and Next Level Strawberry, served in mugs with fruit toppings and accompanied by fresh fruit on a marble surface.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_062.jpg",
+    "type": "coffee",
+    "name_suggestion": "Es Kopi Homie Cozie",
+    "description": "A barista wearing glasses and an apron holds a wooden tray carrying a tall glass of layered iced coffee with the Homie Cozie logo printed on it.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_063.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Seating Area",
+    "description": "A concrete table with black metal chairs placed on a gravel bed, viewed through blurry green leaves in the foreground.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_064.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Group photo at Homie Cozie",
+    "description": "Six people posing together in front of a coffee-themed wall mural depicting baristas and a chef.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_065.jpg",
+    "type": "barista_staff",
+    "name_suggestion": "Staff Melayani Pelanggan",
+    "description": "An indoor coffee shop scene showing a staff member in dark clothing interacting with a customer in a white t-shirt near a window with white curtains.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_066.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Cheesy Nachos",
+    "description": "A black bowl filled with tortilla chips topped with melted cheese, red salsa, and ground meat, with a person in a green jacket partially visible in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_067.jpg",
+    "type": "main_food",
+    "name_suggestion": "Nasi Ayam (Chicken Rice)",
+    "description": "Two plates of Indonesian chicken rice with vegetables are served on a wooden table alongside two mugs of dark coffee, set against the backdrop of a coffee shop interior with bar stools and shelves.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_068.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Suasana kafe dari balik jendela",
+    "description": "A view of the cafe's indoor seating area with wooden chairs, tables, a counter, and hanging lights, seen through a white-framed glass window.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_069.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Loaded Nachos",
+    "description": "A black bowl filled with tortilla chips topped with melted cheese, red salsa, diced tomatoes, green chilies, and onions, with a milky drink visible in the background on a wooden table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_070.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Crispy Onion Rings",
+    "description": "A black plate of golden-brown fried onion rings served with three small bowls of dipping sauces on a white tiled table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_071.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Seating Area",
+    "description": "Outdoor seating area with white chairs and a concrete table set on a gravel floor, framed by blurred foliage in the foreground.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_072.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Night Seating Area",
+    "description": "An outdoor patio at night featuring a long wooden table with black chairs, a circular string light fixture, a white canopy tent, and a person walking in the background near the building.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_073.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Karaoke keluarga di Homie Cozie",
+    "description": "A collage of three photos showing a girl singing with a microphone while a man and woman watch, a group of people posing under the homie.cozie sign, and a family sitting together on an orange couch.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_074.png",
+    "type": "poster_menu_graphic",
+    "name_suggestion": "Es Kopi HC",
+    "description": "A promotional poster graphic for Homie Cozie Coffee & Kitchen showing a bottle of iced coffee in an ice bucket, a glass of iced coffee, and coffee beans with text and branding elements.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_075.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Seating Area",
+    "description": "An outdoor cafe courtyard with gravel flooring, black metal stools, a round table, potted trees, and a white canopy beside a building with large windows.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_076.jpg",
+    "type": "main_food",
+    "name_suggestion": "Mie Kuah Pedas",
+    "description": "A grey bowl of spicy noodle soup topped with crispy shallots and green herbs, placed on a dark table in an outdoor cafe setting.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_077.jpg",
+    "type": "main_food",
+    "name_suggestion": "Spicy Noodle Bowl with Iced Green Drink",
+    "description": "A close-up shot of a meal at a cafe or restaurant. In the foreground, a grey bowl with handles contains a spicy noodle dish garnished with green onions and herbs. Beside it sits a tall glass filled with a bright green, iced beverage with a black straw. The items rest on a dark tabletop, with a blurred background showing restaurant seating.",
+    "has_people": false
+  },
+  {
+    "filename": "homie_cozie_078.jpg",
+    "type": "dessert_pastry",
+    "name_suggestion": "Pancake HBD with Ice Cream",
+    "description": "A plate of pancakes topped with two scoops of vanilla ice cream and colorful sprinkles, decorated with red syrup spelling 'HBD' and heart shapes on a white plate.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_079.png",
+    "type": "main_food",
+    "name_suggestion": "Nasi Campur / Nasi Uduk with Fried Chicken",
+    "description": "A plate of Indonesian mixed rice with white rice, red chili sambal, fried chicken pieces, and a generous portion of crispy fried shredded coconut or meat floss, served on a decorative green plate.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_080.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Group Photo at Homie Cozie",
+    "description": "A group of nine women wearing colorful hijabs are posing together happily for a photo inside a cafe.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_081.jpg",
+    "type": "coffee",
+    "name_suggestion": "Es Kopi dan Teh (Iced Coffee and Tea)",
+    "description": "A wooden tray holds a large glass of iced black coffee, a canned beverage, and two smaller glasses of amber tea on a cafe table with blurred people in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_082.jpg",
+    "type": "live_music_stage",
+    "name_suggestion": "Live Acoustic Performance",
+    "description": "Two men are performing live acoustic music, with one singing into a microphone while the other accompanies him from behind a music stand.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_083.jpg",
+    "type": "poster_menu_graphic",
+    "name_suggestion": "Ganteng Cafe",
+    "description": "Exterior view of a café featuring white-framed windows adorned with black signs containing quirky Indonesian phrases like 'GANTENG 2 SERINGAKT' and 'TITIP SALAM BUAT KAMU'. Through the glass, an interior with lights, a wall clock, and furniture is visible, while a green plant frames the bottom.",
+    "has_people": false
+  },
+  {
+    "filename": "homie_cozie_084.png",
+    "type": "poster_menu_graphic",
+    "name_suggestion": "Kopi Botolan Menu",
+    "description": "A promotional menu graphic showing various bottled coffee and drink options from Homie Cozie Coffee & Kitchen, including Kopi Susu HC, Romantic Red Velvet, Romantic Taro, and Cendolicious, with size options of 1 liter and 500 ml.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_085.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Group gathering at Homie Cozie",
+    "description": "A group of women wearing hijabs are posing and smiling together around a table with drinks and food at Homie Cozie Coffee & Kitchen.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_086.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Ruang santai indoor",
+    "description": "Indoor seating area featuring a brown sofa, a small black coffee table, a wall-mounted TV, wooden shelves, and large black speakers with green LED lights.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_087.jpg",
+    "type": "live_music_stage",
+    "name_suggestion": "Outdoor Night Ambience with Live Acoustic",
+    "description": "An outdoor semi-open night area with string lights and a guitarist performing for guests seated at various tables.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_088.jpg",
+    "type": "live_music_stage",
+    "name_suggestion": "Panggung Musik Kafe",
+    "description": "An outdoor stage area at a cafe featuring a music stand, stool, amplifier, and guitar set up in front of large glass windows.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_089.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Suasana Homie Cozie Coffee & Kitchen",
+    "description": "Interior coffee shop dengan langit-langit tinggi, jendela besar berbingkai putih, rak berisi peralatan kopi, dan beberapa pengunjung memakai hijab di latar depan.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_090.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Crispy Onion Rings",
+    "description": "A black skillet filled with crispy onion rings served over shredded lettuce with a small cup of dipping sauce on a metal table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_091.jpg",
+    "type": "main_food",
+    "name_suggestion": "Chicken Katsu with Fries and Salad",
+    "description": "A plate of breaded fried cutlet topped with dark sauce and sesame seeds, served with french fries, a side salad with pink dressing, and a cup of dipping sauce.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_092.jpg",
+    "type": "main_food",
+    "name_suggestion": "Sepiring Bakmie",
+    "description": "A close-up view of a plate of bakmie (Indonesian noodles) topped with chicken, greens, and scallions, with a hand holding a spoon eating from the plate and a small bowl of soup in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_093.jpg",
+    "type": "live_music_stage",
+    "name_suggestion": "Live Music Acoustic",
+    "description": "A man in a white shirt is sitting and performing live acoustic music by playing a guitar and singing into a microphone in front of a large window.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_094.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Teras luar dengan lampu hias / Outdoor patio with string lights",
+    "description": "A view through a glass window showing a cozy outdoor patio area with tables, chairs, string lights, gravel flooring, and a 'Homie Cozie' sign in the background.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_095.jpg",
+    "type": "main_food",
+    "name_suggestion": "Bowl of Chicken Soup",
+    "description": "A bowl of savory chicken soup topped with fried shallots and greens, served on a wooden table next to a QR code menu stand.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_096.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Gathering/Event at Homie Cozie",
+    "description": "A group of women wearing hijabs are joyfully posing and throwing white balloons in front of a green leafy wall.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_097.jpg",
+    "type": "main_food",
+    "name_suggestion": "Chicken Cordon Bleu with Mashed Potato",
+    "description": "A close-up of a cut crispy fried chicken dish filled with ham and cheese, served with mashed potatoes, red dipping sauce, and a knife resting on top.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_098.jpg",
+    "type": "non_coffee_drink",
+    "name_suggestion": "Es Matcha Latte dan Es Teh",
+    "description": "Two layered iced drinks, a green and white matcha latte and an amber iced tea, are served on coasters atop a textured glass table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_099.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Family/Friends Gathering at Cafe",
+    "description": "A group of five people posing for a photograph at a cafe table. The setting features an indoor seating area with a lush vertical garden and warm string lights hanging overhead. The group includes men and women, with two women wearing hijabs. They are sitting on stools and chairs around a white table.",
+    "has_people": true
+  },
+  {
+    "filename": "homie_cozie_100.jpg",
+    "type": "coffee",
+    "name_suggestion": "Milky Hazelnut, Irish, and Caramel Drinks",
+    "description": "Three cups of milky drinks with the Homie Cozie logo are placed in front of three Monin syrup bottles labeled Hazelnut, Irish, and Caramel.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_101.jpg",
+    "type": "main_food",
+    "name_suggestion": "Stuffed Chicken Roulade with Salad",
+    "description": "A close-up of a sliced, breaded stuffed chicken roulade served with a side salad, a small cup of dipping sauce, and creamy mashed potatoes on a white plate.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_102.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Loaded Nachos",
+    "description": "A black bowl filled with tortilla chips topped with melted cheese, minced meat, jalapeños, tomatoes, and garnished with parsley.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_103.jpg",
+    "type": "main_food",
+    "name_suggestion": "Nasi Campur with Krupuk",
+    "description": "A white plate containing rice topped with meat, cucumber, tomato, crackers, and a dark sauce, with a small bowl of sambal and a side of fries on a wooden table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_104.jpg",
+    "type": "main_food",
+    "name_suggestion": "Martabak Special",
+    "description": "A wooden bowl containing a folded yellow savory crepe topped with minced meat, served with crackers, peanuts, and a side salad on a banana leaf, with a green iced drink in the background.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_105.jpg",
+    "type": "main_food",
+    "name_suggestion": "Nasi Goreng Komplit (Complete Fried Rice)",
+    "description": "A plate of fried rice served with crackers, lettuce, tomato, cucumber, peanuts, and other savory side dishes on a wooden table with chopsticks and a napkin.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_106.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Man enjoying food with thumbs up",
+    "description": "A smiling man in a black polo shirt gives a thumbs up while holding a spoonful of food over a bowl, with a glass of iced tea, a small orange bowl, and a laptop on the wooden table in a cafe.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_107.jpg",
+    "type": "non_coffee_drink",
+    "name_suggestion": "Es Teh Buah",
+    "description": "A glass of iced fruit tea with a wooden stirrer is placed next to a basket of french fries with dipping sauces on a black table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_108.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Group gathering",
+    "description": "A large group of people posing for a group photo inside an indoor event space with tiled floors and large windows, some holding items like plates or packages.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_109.jpg",
+    "type": "main_food",
+    "name_suggestion": "Chicken Cordon Bleu with Mashed Potato",
+    "description": "A plate showing a breaded fried roll cut open with melted cheese filling, served on a bed of yellow mashed potatoes with a side of dipping sauce and creamy orange sauce.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_110.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Onion Rings",
+    "description": "A small black pan filled with crispy onion rings served on shredded lettuce with a side of creamy dipping sauce, placed on a grey table with chairs in the background.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_111.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Suasana Kumpul di Homie Cozie",
+    "description": "A group of people, mostly women wearing hijabs, are sitting and gathered around tables in a brightly lit indoor cafe with green walls, white pillars, and large windows.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_112.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Patio Seating Area",
+    "description": "A semi-outdoor patio at night featuring string lights, potted trees, and a wooden table with chairs, looking into the lit cafe interior.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_113.jpg",
+    "type": "main_food",
+    "name_suggestion": "Savory Rice Bowl with Egg and Tea",
+    "description": "A red bowl filled with white rice topped with a savory meat and vegetable mixture, garnished with green onions and a fried egg. It is served alongside a light blue mug of tea on a wooden table, with a potted plant in the background and a wrapped spoon resting on the right.",
+    "has_people": false
+  },
+  {
+    "filename": "homie_cozie_114.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Loaded Nachos",
+    "description": "Two hands are lifting tortilla chips loaded with melted cheese, diced tomatoes, and minced meat from a black plate of nachos.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_115.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor seating corner",
+    "description": "Two black metal chairs with wooden seats and a metal table on an outdoor terrace overlooking lush green trees.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_116.jpg",
+    "type": "barista_staff",
+    "name_suggestion": "Barista with Iced Coffee",
+    "description": "A barista wearing glasses and a dark blue apron holds up a glass of iced coffee with the Homie Cozie logo in front of a cafe background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_117.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Cemilan Goreng (Fried Snack Platter)",
+    "description": "A metal basket lined with newspaper-print paper contains fried cassava and potato snacks with a black bowl of red chili sauce and white mayonnaise, accompanied by two mugs of coffee.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_118.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Suasana Interior Homie Cozie",
+    "description": "Interior ruang kafe dengan bar counter, tiga kursi bar hitam, dan barista yang terlihat di balik konter.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_119.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Ruang duduk indoor dengan kursi kulit",
+    "description": "Interior coffee shop dengan kursi kulit cokelat, meja kecil, bar counter, dan hiasan dinding vintage seperti papan bertuliskan CHAMPION dan GAS.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_120.jpg",
+    "type": "snack_bites",
+    "name_suggestion": "Skillet Nachos",
+    "description": "A black skillet filled with tortilla chips topped with red sauce, white sauce, and a green garnish, resting on a perforated black metal table.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_121.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Seating Area",
+    "description": "An outdoor cafe seating area with colorful round stools, white tables, gravel ground, and plants in the background.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_122.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Selfie di depan pintu kaca",
+    "description": "Two men posing for a selfie in front of a white-framed glass window inside a cafe.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_123.jpg",
+    "type": "main_food",
+    "name_suggestion": "Fried Croquette with Fries and Chicken",
+    "description": "A plate containing yellow fries, two fried croquettes filled with melted cheese, saucy chicken pieces, and a small black cup of red dipping sauce.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_124.jpg",
+    "type": "main_food",
+    "name_suggestion": "Takeaway Rice Meal",
+    "description": "A clear plastic container filled with a takeaway rice meal, vegetables, and side dishes is placed on a dark wooden table alongside a clear plastic cup and an orange bottle.",
+    "has_people": false,
+    "confidence": "medium"
+  },
+  {
+    "filename": "homie_cozie_125.jpg",
+    "type": "ambience_outdoor",
+    "name_suggestion": "Outdoor Patio Seating Area",
+    "description": "The image shows the outdoor patio of Homie Cozie Coffee & Kitchen featuring a neon sign, a red-tiled pergola roof, and empty tables and chairs on a tiled floor.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_126.jpg",
+    "type": "main_food",
+    "name_suggestion": "Beef Rice Bowl",
+    "description": "A yellow bowl containing white rice topped with sauteed meat, red chilies, and curled green garnish.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_127.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Indoor Seating Area",
+    "description": "A view through a white-framed glass partition showing an indoor cafe seating area with a small round table, chairs, and a decorated wall with photos and plants.",
+    "has_people": false,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_128.jpg",
+    "type": "coffee",
+    "name_suggestion": "Es Kopi Homie Cozie",
+    "description": "Two glasses of iced coffee on a table, with the foreground glass displaying the Homie Cozie Coffee & Kitchen logo and a person visible in the background.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_129.jpg",
+    "type": "people_gathering",
+    "name_suggestion": "Group gathering at Homie Cozie Coffee & Kitchen",
+    "description": "A group of people, mostly women wearing hijabs, pose together for a group photo in the indoor dining area of a cafe with tables of food and drinks in front of them.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_130.jpg",
+    "type": "poster_menu_graphic",
+    "name_suggestion": "Menu Homie Cozie Coffee & Kitchen",
+    "description": "A hand holds a plastic-covered menu book at Homie Cozie Coffee & Kitchen, showing the 'Appetizers & Dessert' and beverage sections with item names and photos.",
+    "has_people": true,
+    "confidence": "high"
+  },
+  {
+    "filename": "homie_cozie_131.jpg",
+    "type": "ambience_indoor",
+    "name_suggestion": "Coffee Shop Counter and Wall Display",
+    "description": "Interior view of a coffee shop showing a white brick wall with a clock, picture frames, hanging Edison bulbs, and a counter with a menu board, bottles, and a red tray.",
+    "has_people": false,
+    "confidence": "high"
+  }
+]

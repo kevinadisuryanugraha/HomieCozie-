@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-light: #FAF7F2;
+    --bg-surface: #F5EFEB;
+    --card-light: #FFFFFF;
+    --border-subtle: #EAE2D8;
+    --border-strong: #D5C9BC;
+    --text-primary: #1F1A16;
+    --text-secondary: #5C5248;
+    --text-muted: #8C7E72;
+    
+    /* Vibrant Culinary Palette */
+    --accent-terracotta: #C84B27;
+    --accent-terracotta-hover: #B23E1C;
+    --accent-amber: #D97706;
+    --accent-sage: #15803D;
+    --accent-berry: #7E22CE;
+    --accent-teal: #0D9488;
+    --accent-crimson: #BE123C;
+    --accent-cream: #FFFDF9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow-x: hidden !important;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Baloo 2', cursive, sans-serif;
+  }
+
+  .font-hand {
+    font-family: 'Caveat', cursive;
+  }
+
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* Clean Restrained Scrollbar for Light Theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF7F2;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D5C9BC;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B8A898;
+  }
+}
+
+/* ============================================================ */
+/* UNIVERSAL SCROLLBAR HIDING UTILITIES                         */
+/* ============================================================ */
+
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar,
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* ============================================================ */
+/* LIGHT ARTISAN CARD & SURFACE UTILITIES                       */
+/* ============================================================ */
+
+.resto-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE2D8;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 8px -2px rgba(31, 26, 22, 0.05);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resto-card:hover {
+  transform: translateY(-4px);
+  border-color: #D5C9BC;
+  box-shadow: 0 12px 24px -6px rgba(31, 26, 22, 0.1);
+}
+
+.resto-surface {
+  background-color: #F5EFEB;
+  border: 1px solid #EAE2D8;
+  border-radius: 1rem;
+}
+
+/* Luxury Light VIP Member Card */
+.matte-vip-card {
+  background: linear-gradient(135deg, #241A15 0%, #15100E 100%);
+  border: 1px solid #3D322B;
+  box-shadow: 0 20px 35px -10px rgba(31, 26, 22, 0.35);
+  transition: transform 0.15s ease-out, box-shadow 0.2s ease;
+}
+
+/* Category Accent Badges */
+.badge-amber {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+
+.badge-emerald {
+  background-color: #D1FAE5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+.badge-terracotta {
+  background-color: #FFEDD5;
+  color: #9A3412;
+  border: 1px solid #FED7AA;
+}
+
+.badge-purple {
+  background-color: #F3E8FF;
+  color: #6B21A8;
+  border: 1px solid #E9D5FF;
+}
+
+.badge-teal {
+  background-color: #CCFBF1;
+  color: #115E59;
+  border: 1px solid #99F6E4;
+}

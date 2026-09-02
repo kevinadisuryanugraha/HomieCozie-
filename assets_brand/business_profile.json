@@ -1,0 +1,31 @@
+{
+  "business_name": "Homie Cozie Coffee & Kitchen",
+  "category": "Kafe / Restoran",
+  "address": "Jl. H. Hasan No.23, RT.5/RW.2, Baru, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13780",
+  "plus_code": "MRFX+QX Baru, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta",
+  "coordinates": {
+    "latitude": -6.3255424,
+    "longitude": 106.8499976
+  },
+  "phone": "0815-8640-2420",
+  "whatsapp_reservation": "https://wa.me/6287850049458",
+  "social_media": {
+    "instagram": "http://instagram.com/homie.cozie",
+    "linktree": "https://linktr.ee/homie.cozie"
+  },
+  "price_range": "Rp 25.000 – Rp 50.000 per orang",
+  "rating_summary": {
+    "stars": 4.8,
+    "reviews_count": 78
+  },
+  "google_maps_url": "https://www.google.com/maps/place/Homie+Cozie+Coffee+%26+Kitchen/@-6.3255424,106.8499976,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69ed6693ff5185:0x1c9f23e0c402a4b5!8m2!3d-6.3255424!4d106.8499976!16s%2Fg%2F11qmqz_r4b",
+  "share_url": "https://share.google/HMwWrl8zg3TZaWSuF",
+  "assets_downloaded": {
+    "total_photos": 131,
+    "photos_directory": "D:\\assets\\photos",
+    "total_photos_size_mb": 234.10,
+    "menu_file": "D:\\assets\\Menu_Homie_Cozie.pdf",
+    "logo_file": "D:\\assets\\logo_homie_cozie.png",
+    "metadata_file": "D:\\assets\\photos_metadata.json"
+  }
+}

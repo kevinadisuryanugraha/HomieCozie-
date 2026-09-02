@@ -1,0 +1,25 @@
+{
+  "name": "Homie Cozie Coffee & Kitchen",
+  "short_name": "Homie Cozie POS",
+  "description": "Enterprise Omnichannel POS & Customer Ordering Platform for Homie Cozie Coffee & Kitchen",
+  "start_url": "/#",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#C84B27",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/photos/homie_cozie_008.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/photos/homie_cozie_008.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "business", "productivity", "shopping"]
+}

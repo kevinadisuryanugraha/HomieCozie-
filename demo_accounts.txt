@@ -1,0 +1,50 @@
+================================================================================
+           DAFTAR AKUN DEMO — HOMIE COZIE COFFEE & KITCHEN
+================================================================================
+
+1. SUPER ADMIN (Direktur Teknis)
+   - Email    : director@hanscodigital.com
+   - Password : HanscoAdmin#2026
+   - 2FA OTP  : 882026
+
+2. OWNER (Pemilik Cafe)
+   - Email    : owner@homiecozie.com
+   - Password : HomieOwner#2026
+   - 2FA OTP  : 882026
+
+3. MANAGER / SUPERVISOR
+   - Email    : manager@homiecozie.com
+   - Password : ManagerCozie#2026
+   - 2FA OTP  : Tidak Perlu
+
+4. KASIR (Frontline Cashier)
+   - Email    : kasir@homiecozie.com
+   - Password : KasirHomie#2026
+   - 2FA OTP  : Tidak Perlu
+
+5. STAFF RESERVASI & FRONT
+   - Email    : reservasi@homiecozie.com
+   - Password : Reservasi#2026
+   - 2FA OTP  : Tidak Perlu
+
+6. STAFF DAPUR & BAR (Head Barista / Kitchen)
+   - Email    : dapur@homiecozie.com
+   - Password : DapurHomie#2026
+   - 2FA OTP  : Tidak Perlu
+
+7. MARKETING & SOSMED ADMIN
+   - Email    : marketing@homiecozie.com
+   - Password : Marketing#2026
+   - 2FA OTP  : Tidak Perlu
+
+--------------------------------------------------------------------------------
+MEMBER / PELANGGAN SETIA (WhatsApp OTP)
+--------------------------------------------------------------------------------
+   - Nama      : Dimas Aditya (Member Gold)
+   - No. WA    : 081298765432
+   - Kode OTP  : 772026 (atau 6-digit angka apa saja)
+   - Email     : dimas.aditya@gmail.com
+
+================================================================================
+URL Aplikasi: http://localhost:3000/
+================================================================================
