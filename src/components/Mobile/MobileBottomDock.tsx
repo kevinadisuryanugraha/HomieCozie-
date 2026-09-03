@@ -51,7 +51,7 @@ export const MobileBottomDock: React.FC<MobileBottomDockProps> = ({
                 className={`relative py-2 px-1 rounded-xl flex flex-col items-center justify-center transition-colors ${
                   isActive
                     ? 'text-white'
-                    : 'text-[#5C5248] hover:text-[#1F1A16]'
+                    : 'text-[#3D332A] hover:text-[#1F1A16]'
                 }`}
               >
                 {isActive && (
@@ -63,7 +63,7 @@ export const MobileBottomDock: React.FC<MobileBottomDockProps> = ({
                 )}
 
                 <div className="relative">
-                  <Icon className={`w-5 h-5 ${isActive ? 'text-white stroke-[2.5]' : 'text-[#5C5248]'}`} />
+                  <Icon className={`w-5 h-5 ${isActive ? 'text-white stroke-[2.5]' : 'text-[#3D332A]'}`} />
                   {item.badge !== undefined && item.badge > 0 && (
                     <span className="absolute -top-1.5 -right-2.5 bg-stone-900 text-white text-[9px] font-mono font-bold px-1.5 py-0.2 rounded-full border border-white">
                       {item.badge}
@@ -71,7 +71,7 @@ export const MobileBottomDock: React.FC<MobileBottomDockProps> = ({
                   )}
                 </div>
 
-                <span className={`text-[10px] font-semibold mt-0.5 leading-tight ${isActive ? 'text-white font-bold' : 'text-[#5C5248]'}`}>
+                <span className={`text-[10px] font-bold mt-0.5 leading-tight ${isActive ? 'text-white font-bold' : 'text-[#3D332A]'}`}>
                   {item.label}
                 </span>
               </motion.button>

@@ -68,24 +68,24 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#EAE2D8] text-[#1F1A16] transition-colors shadow-xs">
       
       {/* Top Utility Ribbon (Desktop & Tablet) */}
-      <div className="hidden sm:block bg-[#FAF7F2] text-[#5C5248] px-4 py-1.5 text-xs border-b border-[#EAE2D8]">
+      <div className="hidden sm:block bg-[#FAF7F2] text-[#3D332A] px-4 py-1.5 text-xs border-b border-[#EAE2D8]">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
           <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1.5 text-amber-700 font-semibold text-[11px]">
-              <Star className="w-3 h-3 fill-amber-500 text-amber-500" />
+            <span className="flex items-center gap-1.5 text-amber-950 font-bold text-[11px]">
+              <Star className="w-3 h-3 fill-amber-500 text-amber-600" />
               <span>{CAFE_INFO.googleRating} Rating ({CAFE_INFO.totalGoogleReviews}+ Ulasan Google)</span>
             </span>
-            <span className="text-stone-300">•</span>
-            <span className="text-[#5C5248] text-[11px]">
+            <span className="text-[#3D332A] font-bold">•</span>
+            <span className="text-[#3D332A] text-[11px] font-medium">
               Jl. H. Hasan No. 23, Pasar Rebo, Jakarta Timur
             </span>
           </div>
 
           <div className="hidden md:flex items-center gap-4 text-xs font-medium">
-            <span className="text-[#3D332A] text-[11px] font-semibold">
+            <span className="text-[#3D332A] text-[11px] font-bold">
               Buka: 10:00 – 23:00 WIB
             </span>
-            <span className="text-amber-900 font-bold text-[11px]">
+            <span className="text-amber-950 font-black text-[11px]">
               Live Music: Weekend 19:30 WIB
             </span>
           </div>
@@ -129,10 +129,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`relative px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
+                className={`relative px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
                   isActive 
                     ? 'bg-[#C84B27] text-white shadow-xs' 
-                    : 'text-[#5C5248] hover:text-[#1F1A16] hover:bg-stone-200/60'
+                    : 'text-[#3D332A] hover:text-[#1F1A16] hover:bg-stone-200/60'
                 }`}
               >
                 {link.label}
