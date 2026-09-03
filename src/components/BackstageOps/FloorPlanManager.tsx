@@ -101,7 +101,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
         <div className="bg-white p-4 rounded-2xl border border-emerald-200 shadow-xs flex items-center justify-between">
           <div>
             <span className="text-[11px] text-emerald-800 block font-medium">Meja Tersedia</span>
-            <span className="font-mono font-bold text-xl text-emerald-700">{counts.available} Meja</span>
+            <span className="font-mono font-bold text-xl text-emerald-900">{counts.available} Meja</span>
           </div>
           <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-800 font-mono font-bold">
             {counts.available}
@@ -121,7 +121,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
         <div className="bg-white p-4 rounded-2xl border border-amber-200 shadow-xs flex items-center justify-between">
           <div>
             <span className="text-[11px] text-amber-800 block font-medium">Reserved Meja</span>
-            <span className="font-mono font-bold text-xl text-amber-700">{counts.reserved} Meja</span>
+            <span className="font-mono font-bold text-xl text-amber-900">{counts.reserved} Meja</span>
           </div>
           <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-800 font-mono font-bold">
             {counts.reserved}
@@ -151,7 +151,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
           onClick={() => setIsQRModalOpen(true)}
           className="px-4 py-2 rounded-2xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 font-bold text-xs flex items-center gap-1.5 shadow-xs transition-transform active:scale-95 cursor-pointer ml-auto"
         >
-          <QrCode className="w-3.5 h-3.5 text-[#C84B27]" />
+          <QrCode className="w-3.5 h-3.5 text-[#B23812]" />
           <span>Cetak Kartu QR Meja (Table Tents)</span>
         </button>
       </div>
@@ -242,7 +242,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
                 {tbl.status === 'available' && (
                   <div className="flex items-center justify-between text-emerald-800 pt-0.5">
                     <span className="text-[11px] text-[#5C5248] font-medium">Kondisi Meja:</span>
-                    <span className="font-semibold text-[11px] text-emerald-700">Siap Digunakan</span>
+                    <span className="font-semibold text-[11px] text-emerald-900">Siap Digunakan</span>
                   </div>
                 )}
 
@@ -263,7 +263,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
                   }}
                   className="w-full py-2.5 rounded-xl bg-white hover:bg-stone-50 border border-[#EAE2D8] text-xs font-bold text-[#1F1A16] flex items-center justify-center gap-1.5 shadow-2xs transition-all active:scale-95 cursor-pointer"
                 >
-                  <Plus className="w-3.5 h-3.5 text-[#C84B27]" />
+                  <Plus className="w-3.5 h-3.5 text-[#B23812]" />
                   <span>Buka POS</span>
                 </button>
 

@@ -549,7 +549,7 @@ export default function App() {
                       navigateToMode('customer');
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
-                    className="text-left hover:text-[#C84B27] transition-colors cursor-pointer"
+                    className="text-left hover:text-[#B23812] transition-colors cursor-pointer"
                   >
                     • Beranda
                   </button>
@@ -558,7 +558,7 @@ export default function App() {
                       navigateToMode('customer');
                       document.getElementById('about-section')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="text-left hover:text-[#C84B27] transition-colors cursor-pointer"
+                    className="text-left hover:text-[#B23812] transition-colors cursor-pointer"
                   >
                     • Tentang Kami
                   </button>
@@ -567,7 +567,7 @@ export default function App() {
                       navigateToMode('customer');
                       document.getElementById('menu-section')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="text-left hover:text-[#C84B27] transition-colors cursor-pointer"
+                    className="text-left hover:text-[#B23812] transition-colors cursor-pointer"
                   >
                     • Daftar Menu
                   </button>
@@ -576,7 +576,7 @@ export default function App() {
                       navigateToMode('customer');
                       document.getElementById('gallery-section')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="text-left hover:text-[#C84B27] transition-colors cursor-pointer"
+                    className="text-left hover:text-[#B23812] transition-colors cursor-pointer"
                   >
                     • Galeri Foto
                   </button>
@@ -585,7 +585,7 @@ export default function App() {
                       navigateToMode('customer');
                       document.getElementById('events-section')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="text-left hover:text-[#C84B27] transition-colors cursor-pointer"
+                    className="text-left hover:text-[#B23812] transition-colors cursor-pointer"
                   >
                     • Event & Musik
                   </button>
@@ -594,25 +594,25 @@ export default function App() {
                       navigateToMode('customer');
                       document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="text-left hover:text-[#C84B27] transition-colors cursor-pointer"
+                    className="text-left hover:text-[#B23812] transition-colors cursor-pointer"
                   >
                     • FAQ / Bantuan
                   </button>
                   <button
                     onClick={() => navigateToMode('reservation')}
-                    className="text-left text-[#C84B27] hover:underline font-bold cursor-pointer"
+                    className="text-left text-[#B23812] hover:underline font-bold cursor-pointer"
                   >
                     • Reservasi Meja
                   </button>
                   <button
                     onClick={() => navigateToMode('order')}
-                    className="text-left text-[#C84B27] hover:underline font-bold cursor-pointer"
+                    className="text-left text-[#B23812] hover:underline font-bold cursor-pointer"
                   >
                     • Pesan QRIS
                   </button>
                   <button
                     onClick={() => navigateToMode('auth')}
-                    className="text-left text-amber-700 hover:underline font-bold cursor-pointer"
+                    className="text-left text-amber-900 hover:underline font-bold cursor-pointer"
                   >
                     • Login Staf / Backstage
                   </button>

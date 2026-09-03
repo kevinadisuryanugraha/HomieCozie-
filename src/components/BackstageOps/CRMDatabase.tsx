@@ -84,7 +84,7 @@ export const CRMDatabase: React.FC = () => {
       minWidth: '220px',
       cell: ({ row }) => (
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center font-bold text-xs uppercase shadow-2xs shrink-0">
+          <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center font-bold text-xs uppercase shadow-2xs shrink-0">
             {row.name.slice(0, 2)}
           </div>
           <div className="min-w-0">
@@ -165,7 +165,7 @@ export const CRMDatabase: React.FC = () => {
       minWidth: '130px',
       align: 'right',
       cell: ({ row }) => (
-        <span className="font-mono font-bold text-emerald-700 text-xs whitespace-nowrap">
+        <span className="font-mono font-bold text-emerald-900 text-xs whitespace-nowrap">
           {formatRupiah(row.lifetimeSpend)}
         </span>
       )
@@ -261,7 +261,7 @@ export const CRMDatabase: React.FC = () => {
       <div className="bg-white p-4 sm:p-6 rounded-3xl border border-[#EAE2D8] shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4 w-full min-w-0">
         <div className="space-y-1.5 min-w-0 w-full flex-1">
           <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-amber-800 min-w-0 w-full overflow-hidden">
-            <Sparkles className="w-4 h-4 text-[#C84B27] shrink-0" />
+            <Sparkles className="w-4 h-4 text-[#B23812] shrink-0" />
             <span className="truncate">Database Pelanggan Terpusat & Solusi Retensi (DataTable Pro)</span>
           </div>
           <h3 className="font-display font-black text-lg sm:text-xl text-[#1F1A16] leading-tight break-words">
@@ -355,7 +355,7 @@ export const CRMDatabase: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-[10px] text-[#5C5248] block">Lifetime Spend:</span>
-                  <span className="font-bold text-emerald-700">{formatRupiah(c.lifetimeSpend)}</span>
+                  <span className="font-bold text-emerald-900">{formatRupiah(c.lifetimeSpend)}</span>
                 </div>
                 <div>
                   <span className="text-[10px] text-[#5C5248] block">Kunjungan Terakhir:</span>
@@ -399,7 +399,7 @@ export const CRMDatabase: React.FC = () => {
           <div className="bg-white border border-[#EAE2D8] rounded-3xl p-6 max-w-lg w-full text-[#1F1A16] space-y-4 shadow-2xl animate-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div className="flex items-center gap-2">
-                <Send className="w-5 h-5 text-[#C84B27]" />
+                <Send className="w-5 h-5 text-[#B23812]" />
                 <h3 className="font-display font-black text-lg text-[#1F1A16]">
                   Broadcast WhatsApp Promo ({broadcastTargetUsers.length > 0 ? broadcastTargetUsers.length : customers.length} Member)
                 </h3>
@@ -454,7 +454,7 @@ export const CRMDatabase: React.FC = () => {
           <div className="bg-white border border-[#EAE2D8] rounded-3xl p-6 max-w-md w-full text-[#1F1A16] space-y-4 shadow-2xl animate-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div className="flex items-center gap-2">
-                <Gift className="w-5 h-5 text-[#C84B27]" />
+                <Gift className="w-5 h-5 text-[#B23812]" />
                 <h3 className="font-display font-black text-lg text-[#1F1A16]">
                   Atur Saldo Poin: {pointsModalUser.name}
                 </h3>

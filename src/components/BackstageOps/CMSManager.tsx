@@ -311,7 +311,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
       {/* 1. Header CMS */}
       <div className="bg-white p-4 sm:p-6 rounded-3xl border border-[#EAE2D8] shadow-xs flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 w-full min-w-0">
         <div className="flex items-start sm:items-center gap-3.5 min-w-0 flex-1">
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center shadow-xs shrink-0 mt-0.5 sm:mt-0">
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center shadow-xs shrink-0 mt-0.5 sm:mt-0">
             <Globe className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
           </div>
           <div className="min-w-0 flex-1 space-y-1">
@@ -319,7 +319,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
               <h2 className="font-display font-black text-lg sm:text-2xl text-[#1F1A16] leading-tight">
                 Content Management System (CMS)
               </h2>
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#C84B27]/10 text-[#C84B27] border border-[#C84B27]/20 shrink-0 whitespace-nowrap">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#C84B27]/10 text-[#B23812] border border-[#C84B27]/20 shrink-0 whitespace-nowrap">
                 LIVE WEB EDITOR
               </span>
             </div>
@@ -336,7 +336,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
           rel="noopener noreferrer"
           className="w-full sm:w-auto px-4 py-2.5 rounded-2xl bg-[#FAF7F2] hover:bg-stone-200 border border-[#EAE2D8] text-xs font-bold text-[#1F1A16] flex items-center justify-center gap-2 shadow-2xs transition-all active:scale-95 shrink-0 whitespace-nowrap cursor-pointer"
         >
-          <Eye className="w-4 h-4 text-[#C84B27] shrink-0" />
+          <Eye className="w-4 h-4 text-[#B23812] shrink-0" />
           <span>Lihat Website Tamu (Live Preview)</span>
         </a>
       </div>
@@ -468,7 +468,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                           {item.category}
                         </span>
                       </td>
-                      <td className="p-3.5 font-mono font-bold text-[#C84B27] whitespace-nowrap text-right">
+                      <td className="p-3.5 font-mono font-bold text-[#B23812] whitespace-nowrap text-right">
                         Rp {item.price.toLocaleString('id-ID')}
                       </td>
                       <td className="p-3.5 text-center whitespace-nowrap">
@@ -476,7 +476,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                           onClick={() => handleToggleSoldOut(item.id)}
                           className={`px-2.5 py-1 rounded-xl text-[10px] font-mono font-bold border transition-all cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap ${
                             item.available
-                              ? 'bg-emerald-50 text-emerald-700 border-emerald-300'
+                              ? 'bg-emerald-50 text-emerald-900 border-emerald-300'
                               : 'bg-rose-50 text-rose-700 border-rose-300'
                           }`}
                         >
@@ -566,7 +566,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                         showToast(`✓ Status banner '${banner.title}' diperbarui.`);
                       }}
                       className={`px-2.5 py-1 rounded-xl text-[10px] font-mono font-bold border cursor-pointer transition-all ${
-                        banner.isActive ? 'bg-emerald-50 text-emerald-700 border-emerald-300' : 'bg-stone-200 text-stone-600'
+                        banner.isActive ? 'bg-emerald-50 text-emerald-900 border-emerald-300' : 'bg-stone-200 text-stone-600'
                       }`}
                     >
                       {banner.isActive ? 'AKTIF' : 'NONAKTIF'}
@@ -637,7 +637,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                     </div>
                   </div>
                   <div className="pt-2 flex items-center justify-between border-t border-[#EAE2D8]">
-                    <span className="font-mono font-bold text-xs text-[#C84B27]">
+                    <span className="font-mono font-bold text-xs text-[#B23812]">
                       {ev.ticketPrice === 0 ? 'FREE ENTRY' : `Rp ${ev.ticketPrice.toLocaleString('id-ID')}`}
                     </span>
                     <button
@@ -673,7 +673,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
             {/* Wi-Fi SSID */}
             <div className="space-y-1">
               <label className="font-bold text-[#1F1A16] flex items-center gap-1.5">
-                <Wifi className="w-3.5 h-3.5 text-[#C84B27]" />
+                <Wifi className="w-3.5 h-3.5 text-[#B23812]" />
                 <span>Nama Wi-Fi Tamu (SSID):</span>
               </label>
               <input
@@ -687,21 +687,21 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
             {/* Wi-Fi Password */}
             <div className="space-y-1">
               <label className="font-bold text-[#1F1A16] flex items-center gap-1.5">
-                <Wifi className="w-3.5 h-3.5 text-[#C84B27]" />
+                <Wifi className="w-3.5 h-3.5 text-[#B23812]" />
                 <span>Password Wi-Fi:</span>
               </label>
               <input
                 type="text"
                 value={cafeSettings.wifiPassword}
                 onChange={(e) => setCafeSettings({ ...cafeSettings, wifiPassword: e.target.value })}
-                className="w-full p-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8] font-mono font-bold text-xs text-[#C84B27]"
+                className="w-full p-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8] font-mono font-bold text-xs text-[#B23812]"
               />
             </div>
 
             {/* Hours Weekday */}
             <div className="space-y-1">
               <label className="font-bold text-[#1F1A16] flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5 text-amber-700" />
+                <Clock className="w-3.5 h-3.5 text-amber-900" />
                 <span>Jam Buka Weekday (Senin - Jumat):</span>
               </label>
               <input
@@ -715,7 +715,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
             {/* Hours Weekend */}
             <div className="space-y-1">
               <label className="font-bold text-[#1F1A16] flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5 text-amber-700" />
+                <Clock className="w-3.5 h-3.5 text-amber-900" />
                 <span>Jam Buka Weekend (Sabtu - Minggu):</span>
               </label>
               <input
@@ -790,7 +790,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                   <div className="flex text-amber-400 text-xs mt-0.5">★★★★★</div>
                   <p className="text-xs text-[#5C5248] mt-1">"{rev.text}"</p>
                 </div>
-                <span className="px-2 py-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold font-mono">
+                <span className="px-2 py-1 rounded-lg bg-emerald-50 text-emerald-900 border border-emerald-200 text-[10px] font-bold font-mono">
                   TERPASANG DI WEB
                 </span>
               </div>
@@ -854,7 +854,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                     step={1000}
                     value={menuForm.price}
                     onChange={(e) => setMenuForm({ ...menuForm, price: Number(e.target.value) })}
-                    className="w-full p-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8] font-mono font-bold text-xs text-[#C84B27]"
+                    className="w-full p-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8] font-mono font-bold text-xs text-[#B23812]"
                   />
                 </div>
               </div>
@@ -886,7 +886,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                     type="checkbox"
                     checked={menuForm.isBestSeller}
                     onChange={(e) => setMenuForm({ ...menuForm, isBestSeller: e.target.checked })}
-                    className="w-4 h-4 text-[#C84B27] rounded"
+                    className="w-4 h-4 text-[#B23812] rounded"
                   />
                   <span className="font-bold text-xs text-[#1F1A16]">Badge Best Seller ⭐</span>
                 </label>

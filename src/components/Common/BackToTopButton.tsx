@@ -34,7 +34,7 @@ export const BackToTopButton: React.FC = () => {
           className="fixed bottom-20 md:bottom-8 right-5 z-40 w-11 h-11 rounded-2xl bg-white text-[#1F1A16] border border-[#EAE2D8] shadow-lg flex items-center justify-center cursor-pointer group transition-colors hover:border-[#C84B27]"
         >
           <div className="relative flex items-center justify-center">
-            <ArrowUp className="w-4 h-4 text-[#1F1A16] group-hover:text-[#C84B27] transition-colors" />
+            <ArrowUp className="w-4 h-4 text-[#1F1A16] group-hover:text-[#B23812] transition-colors" />
           </div>
         </motion.button>
       )}

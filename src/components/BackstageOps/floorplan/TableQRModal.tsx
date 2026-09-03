@@ -230,7 +230,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
           <div className="p-4 sm:p-5 border-b border-[#EAE2D8] flex items-center justify-between gap-3 bg-[#FAF7F2]">
             <div className="flex items-center gap-3 min-w-0 flex-1">
               <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 flex items-center justify-center shrink-0 shadow-xs">
-                <QrCode className="w-5 h-5 text-[#C84B27]" />
+                <QrCode className="w-5 h-5 text-[#B23812]" />
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
@@ -317,7 +317,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
                 {/* Table Number Badge */}
                 <div className="py-2 px-4 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] inline-block">
                   <span className="text-[10px] text-[#5C5248] block font-bold uppercase tracking-wider">NOMOR MEJA</span>
-                  <span className="font-display font-black text-2xl sm:text-3xl text-[#C84B27] leading-tight block">
+                  <span className="font-display font-black text-2xl sm:text-3xl text-[#B23812] leading-tight block">
                     #{currentTable.tableNumber}
                   </span>
                   <span className="text-[10px] text-[#5C5248] block font-medium mt-0.5">
@@ -340,7 +340,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
                 {/* 3 Step Guide */}
                 <div className="text-left bg-[#FAF7F2] p-3 rounded-2xl border border-[#EAE2D8] text-[11px] space-y-1 text-[#5C5248]">
                   <div className="flex items-center gap-1.5 font-bold text-[#1F1A16]">
-                    <Sparkles className="w-3.5 h-3.5 text-[#C84B27]" />
+                    <Sparkles className="w-3.5 h-3.5 text-[#B23812]" />
                     <span>Cara Pemesanan Mandiri:</span>
                   </div>
                   <ol className="list-decimal list-inside space-y-0.5 text-[10px] leading-relaxed pl-0.5">
@@ -367,7 +367,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
                     <div className="font-display font-black text-base text-[#1F1A16]">
                       {CAFE_INFO.name}
                     </div>
-                    <div className="font-black text-2xl text-[#C84B27]">
+                    <div className="font-black text-2xl text-[#B23812]">
                       MEJA #{t.tableNumber}
                     </div>
                     <img

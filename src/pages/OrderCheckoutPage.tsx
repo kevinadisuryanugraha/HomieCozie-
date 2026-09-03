@@ -184,7 +184,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
             onClick={() => onNavigateTo('customer')}
             className="px-4 py-2.5 rounded-xl bg-[#FAF7F2] hover:bg-stone-200 text-[#1F1A16] border border-[#EAE2D8] text-xs font-bold flex items-center gap-2 self-start sm:self-auto transition-colors shadow-xs"
           >
-            <ArrowLeft className="w-4 h-4 text-[#C84B27]" />
+            <ArrowLeft className="w-4 h-4 text-[#B23812]" />
             <span>Tambah Menu Lain</span>
           </motion.button>
         </div>
@@ -212,7 +212,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
             <div className="bg-white border border-[#EAE2D8] rounded-2xl p-6 shadow-xs space-y-5">
               <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-4">
                 <h3 className="font-display font-black text-lg text-[#1F1A16] flex items-center gap-2">
-                  <ShoppingBag className="w-5 h-5 text-[#C84B27]" />
+                  <ShoppingBag className="w-5 h-5 text-[#B23812]" />
                   <span>Item Pesanan ({cartItems.reduce((acc, it) => acc + it.quantity, 0)})</span>
                 </h3>
                 {cartItems.length > 0 && (
@@ -263,7 +263,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                           />
                           <div className="space-y-0.5">
                             <h4 className="font-display font-bold text-sm text-[#1F1A16]">{item.menuItem.name}</h4>
-                            <div className="text-[11px] font-mono text-[#C84B27] font-bold">
+                            <div className="text-[11px] font-mono text-[#B23812] font-bold">
                               {formatRupiah(item.menuItem.price)}
                             </div>
                             {item.selectedOptions && (
@@ -290,7 +290,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                             <span className="font-mono text-xs font-bold text-[#1F1A16] px-1">{item.quantity}</span>
                             <button
                               onClick={() => onUpdateQuantity(item.cartItemId, item.quantity + 1)}
-                              className="text-[#C84B27] hover:text-[#B23E1C] px-1 font-bold"
+                              className="text-[#B23812] hover:text-[#B23E1C] px-1 font-bold"
                             >
                               +
                             </button>
@@ -322,7 +322,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                     <div key={rec.id} className="bg-[#FAF7F2] p-3 rounded-xl border border-[#EAE2D8] flex items-center justify-between gap-2">
                       <div className="min-w-0">
                         <div className="font-bold text-xs text-[#1F1A16] truncate">{rec.name}</div>
-                        <div className="text-[10px] font-mono text-[#C84B27] font-bold">{formatRupiah(rec.price)}</div>
+                        <div className="text-[10px] font-mono text-[#B23812] font-bold">{formatRupiah(rec.price)}</div>
                       </div>
                       <motion.button
                         whileHover={{ scale: 1.1 }}
@@ -345,7 +345,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
             
             <form onSubmit={handleProcessOrder} className="bg-white border border-[#EAE2D8] rounded-2xl p-6 sm:p-7 shadow-xs space-y-6">
               <h3 className="font-display font-black text-lg text-[#1F1A16] border-b border-[#EAE2D8] pb-3 flex items-center gap-2">
-                <Receipt className="w-5 h-5 text-amber-700" />
+                <Receipt className="w-5 h-5 text-amber-900" />
                 <span>Rincian & Pembayaran</span>
               </h3>
 
@@ -382,7 +382,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                       placeholder="Contoh: 06"
                       value={tableNumber}
                       onChange={(e) => setTableNumber(e.target.value)}
-                      className="w-full bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl px-4 py-2.5 text-xs font-mono font-bold text-[#C84B27] focus:outline-none focus:border-[#C84B27]"
+                      className="w-full bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl px-4 py-2.5 text-xs font-mono font-bold text-[#B23812] focus:outline-none focus:border-[#C84B27]"
                     />
                   </div>
                 )}
@@ -414,7 +414,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
               {/* Member Points Toggle */}
               <div className="p-3.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8] flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Percent className="w-4 h-4 text-amber-700" />
+                  <Percent className="w-4 h-4 text-amber-900" />
                   <div>
                     <div className="text-xs font-bold text-[#1F1A16]">Gunakan Poin Member VIP</div>
                     <div className="text-[10px] text-[#5C5248]">Hemat diskon 15% (Maks Rp 15.000)</div>
@@ -464,7 +464,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                   <span className="font-mono">{formatRupiah(subtotal)}</span>
                 </div>
                 {discount > 0 && (
-                  <div className="flex justify-between text-emerald-700">
+                  <div className="flex justify-between text-emerald-900">
                     <span>Diskon Member VIP</span>
                     <span className="font-mono">- {formatRupiah(discount)}</span>
                   </div>
@@ -479,7 +479,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                 </div>
                 <div className="flex justify-between text-sm font-bold text-[#1F1A16] pt-2 border-t border-[#EAE2D8]">
                   <span>Total Pembayaran</span>
-                  <span className="font-mono text-lg text-[#C84B27]">{formatRupiah(total)}</span>
+                  <span className="font-mono text-lg text-[#B23812]">{formatRupiah(total)}</span>
                 </div>
               </div>
 
@@ -490,7 +490,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                   onClick={() => setIsSplitBillOpen(true)}
                   className="w-full py-2.5 px-4 rounded-xl bg-amber-50 hover:bg-amber-100/80 text-amber-900 border border-amber-300/80 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-2xs"
                 >
-                  <Split className="w-3.5 h-3.5 text-[#C84B27]" />
+                  <Split className="w-3.5 h-3.5 text-[#B23812]" />
                   <span>👥 Butuh Patungan? Buka Simulasi Split Bill Meja</span>
                 </button>
               )}
@@ -547,7 +547,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
               className="bg-white border border-[#EAE2D8] rounded-3xl max-w-md w-full p-6 sm:p-7 text-[#1F1A16] shadow-2xl space-y-5"
             >
               <div className="text-center space-y-2">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 border border-emerald-300 flex items-center justify-center mx-auto shadow-xs">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-900 border border-emerald-300 flex items-center justify-center mx-auto shadow-xs">
                   <Check className="w-6 h-6 stroke-[3]" />
                 </div>
                 <h3 className="font-display font-black text-xl text-[#1F1A16]">Pesanan Diterima Dapur</h3>
@@ -560,7 +560,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
               <div className="bg-[#FAF7F2] p-4 rounded-2xl border border-[#EAE2D8] space-y-2.5 text-xs">
                 <div className="flex justify-between border-b border-[#EAE2D8] pb-2">
                   <span className="text-[#5C5248]">Nomor Order:</span>
-                  <span className="font-mono font-bold text-[#C84B27]">#{completedOrder.orderNumber}</span>
+                  <span className="font-mono font-bold text-[#B23812]">#{completedOrder.orderNumber}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#5C5248]">Tipe / Meja:</span>
@@ -570,7 +570,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                   <span className="text-[#5C5248]">Atas Nama:</span>
                   <span className="font-bold text-[#1F1A16]">{completedOrder.customerName}</span>
                 </div>
-                <div className="flex justify-between border-t border-[#EAE2D8] pt-2 font-bold text-sm text-[#C84B27]">
+                <div className="flex justify-between border-t border-[#EAE2D8] pt-2 font-bold text-sm text-[#B23812]">
                   <span>Total Lunas (QRIS):</span>
                   <span className="font-mono">{formatRupiah(completedOrder.total)}</span>
                 </div>
@@ -589,7 +589,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                   onClick={() => setIsTrackerOpen(true)}
                   className="w-full py-2.5 rounded-xl bg-[#FAF7F2] hover:bg-stone-200 text-[#1F1A16] font-bold text-xs border border-[#EAE2D8] transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <Coffee className="w-4 h-4 text-amber-700" />
+                  <Coffee className="w-4 h-4 text-amber-900" />
                   <span>📱 Buka Live Order Tracker (Pantau Antrean Dapur)</span>
                 </button>
 

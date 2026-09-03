@@ -200,7 +200,7 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
             {/* Quick Tier Perks */}
             <div className="bg-white p-4 rounded-2xl border border-[#EAE2D8] space-y-3 shadow-xs">
               <h4 className="font-display font-black text-sm text-[#1F1A16] flex items-center gap-2">
-                <Award className="w-4 h-4 text-amber-700" />
+                <Award className="w-4 h-4 text-amber-900" />
                 <span>Keuntungan Gold Member Anda</span>
               </h4>
               <div className="space-y-2 text-xs text-[#5C5248]">
@@ -256,7 +256,7 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-[#5C5248]">Pilih menu atau voucher untuk ditukarkan dengan poin Anda:</span>
-                  <span className="font-mono font-bold text-[#C84B27]">{points.toLocaleString('id-ID')} Pts Tersedia</span>
+                  <span className="font-mono font-bold text-[#B23812]">{points.toLocaleString('id-ID')} Pts Tersedia</span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -276,7 +276,7 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
                           <div className="min-w-0">
                             <span className="text-[10px] font-mono font-bold text-amber-800 uppercase">{reward.category}</span>
                             <h4 className="font-bold text-xs text-[#1F1A16] line-clamp-2 leading-snug">{reward.name}</h4>
-                            <div className="font-mono font-bold text-[#C84B27] text-xs mt-1">
+                            <div className="font-mono font-bold text-[#B23812] text-xs mt-1">
                               {reward.cost.toLocaleString('id-ID')} Pts
                             </div>
                           </div>
@@ -322,7 +322,7 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
                         <div className="text-[11px] text-[#5C5248]">
                           Berlaku hingga: <span className="font-mono text-[#1F1A16]">{v.validUntil}</span>
                         </div>
-                        <div className="font-mono font-bold text-xs text-emerald-700">
+                        <div className="font-mono font-bold text-xs text-emerald-900">
                           Kode: <span className="bg-white px-2 py-0.5 rounded border border-emerald-300">{v.code}</span>
                         </div>
                       </div>
@@ -353,7 +353,7 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
                     </div>
                     <div className="text-right">
                       <div className="font-mono font-bold text-[#1F1A16]">{tx.total}</div>
-                      <div className={`font-mono font-bold text-[11px] ${tx.type === 'in' ? 'text-emerald-700' : 'text-[#C84B27]'}`}>
+                      <div className={`font-mono font-bold text-[11px] ${tx.type === 'in' ? 'text-emerald-900' : 'text-[#B23812]'}`}>
                         {tx.pointsEarned}
                       </div>
                     </div>

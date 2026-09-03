@@ -160,7 +160,7 @@ export const ShiftZReportModal: React.FC<ShiftZReportModalProps> = ({
           {/* Header */}
           <div className="p-4 sm:p-5 border-b border-[#EAE2D8] bg-[#FAF7F2] flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center shadow-xs">
+              <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center shadow-xs">
                 <Receipt className="w-5 h-5" />
               </div>
               <div>
@@ -222,11 +222,11 @@ export const ShiftZReportModal: React.FC<ShiftZReportModalProps> = ({
                   </div>
                   <div className="flex justify-between font-bold">
                     <span>Uang Fisik Aktual Dihitung:</span>
-                    <span className="font-mono text-[#C84B27]">{formatRp(closedShiftResult.actual_cash)}</span>
+                    <span className="font-mono text-[#B23812]">{formatRp(closedShiftResult.actual_cash)}</span>
                   </div>
                   <div className="pt-2 border-t border-[#EAE2D8] flex justify-between font-black text-sm">
                     <span>Selisih Kas (Discrepancy):</span>
-                    <span className={closedShiftResult.cash_difference === 0 ? 'text-emerald-700' : closedShiftResult.cash_difference > 0 ? 'text-blue-700' : 'text-rose-700'}>
+                    <span className={closedShiftResult.cash_difference === 0 ? 'text-emerald-900' : closedShiftResult.cash_difference > 0 ? 'text-blue-700' : 'text-rose-700'}>
                       {formatRp(closedShiftResult.cash_difference)} {closedShiftResult.cash_difference === 0 ? '✅ BALANCE' : closedShiftResult.cash_difference > 0 ? '🟢 OVER' : '🔴 SHORT'}
                     </span>
                   </div>
@@ -277,7 +277,7 @@ export const ShiftZReportModal: React.FC<ShiftZReportModalProps> = ({
 
                   <div className="p-3 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8]">
                     <span className="text-[10px] text-[#5C5248] font-semibold block">Total Transaksi</span>
-                    <span className="font-mono font-bold text-xs text-emerald-700">
+                    <span className="font-mono font-bold text-xs text-emerald-900">
                       {metrics?.transactions_count || 0} Struk
                     </span>
                   </div>
@@ -316,7 +316,7 @@ export const ShiftZReportModal: React.FC<ShiftZReportModalProps> = ({
                 <div className="p-4 rounded-2xl bg-amber-50/40 border border-amber-300 space-y-3">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <Coins className="w-4 h-4 text-[#C84B27]" />
+                      <Coins className="w-4 h-4 text-[#B23812]" />
                       <span className="text-xs font-bold text-[#1F1A16]">
                         Penghitungan Uang Fisik di Laci (Cash Count):
                       </span>
@@ -351,7 +351,7 @@ export const ShiftZReportModal: React.FC<ShiftZReportModalProps> = ({
                         min="0"
                         value={actualCash || ''}
                         onChange={(e) => setActualCash(parseFloat(e.target.value) || 0)}
-                        className="w-20 p-1 text-right font-mono font-bold text-xs text-[#C84B27] bg-[#FAF7F2] border border-[#EAE2D8] rounded-lg"
+                        className="w-20 p-1 text-right font-mono font-bold text-xs text-[#B23812] bg-[#FAF7F2] border border-[#EAE2D8] rounded-lg"
                       />
                     </div>
                   </div>

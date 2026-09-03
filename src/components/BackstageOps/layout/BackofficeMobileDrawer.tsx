@@ -124,10 +124,10 @@ export const BackofficeMobileDrawer: React.FC<BackofficeMobileDrawerProps> = ({
                     onClose();
                     onOpenAICopilot();
                   }}
-                  className="w-full flex items-center justify-between px-3 py-2 rounded-2xl text-xs font-bold bg-gradient-to-r from-amber-500/10 to-[#C84B27]/10 hover:from-amber-500/20 hover:to-[#C84B27]/20 text-[#C84B27] border border-[#C84B27]/30 transition-colors cursor-pointer"
+                  className="w-full flex items-center justify-between px-3 py-2 rounded-2xl text-xs font-bold bg-gradient-to-r from-amber-500/10 to-[#C84B27]/10 hover:from-amber-500/20 hover:to-[#C84B27]/20 text-[#B23812] border border-[#C84B27]/30 transition-colors cursor-pointer"
                 >
                   <div className="flex items-center gap-2.5">
-                    <Sparkles className="w-4 h-4 text-[#C84B27] animate-pulse" />
+                    <Sparkles className="w-4 h-4 text-[#B23812] animate-pulse" />
                     <span>AI Executive Copilot</span>
                   </div>
                   <span className="text-[9px] font-mono font-bold bg-[#C84B27] text-white px-1.5 py-0.5 rounded">AI</span>
@@ -143,7 +143,7 @@ export const BackofficeMobileDrawer: React.FC<BackofficeMobileDrawerProps> = ({
                   className="w-full flex items-center justify-between px-3 py-2 rounded-2xl text-xs font-bold bg-amber-50 hover:bg-amber-100 text-amber-950 border border-amber-300 transition-colors cursor-pointer"
                 >
                   <div className="flex items-center gap-2.5">
-                    <Radio className="w-4 h-4 text-[#C84B27] animate-pulse" />
+                    <Radio className="w-4 h-4 text-[#B23812] animate-pulse" />
                     <span>Owner Live Radar</span>
                   </div>
                   <span className="text-[9px] font-mono font-bold bg-amber-200 text-amber-900 px-1.5 py-0.5 rounded">LIVE</span>
@@ -159,7 +159,7 @@ export const BackofficeMobileDrawer: React.FC<BackofficeMobileDrawerProps> = ({
                   className="w-full flex items-center justify-between px-3 py-2 rounded-2xl text-xs font-bold bg-[#FAF7F2] hover:bg-stone-200 text-[#1F1A16] border border-[#EAE2D8] transition-colors cursor-pointer"
                 >
                   <div className="flex items-center gap-2.5">
-                    <Palette className="w-4 h-4 text-[#C84B27]" />
+                    <Palette className="w-4 h-4 text-[#B23812]" />
                     <span>Kustomisasi Tema & Desain</span>
                   </div>
                   <span className="text-[10px] font-mono text-[#5C5248] font-bold uppercase">Ubah</span>

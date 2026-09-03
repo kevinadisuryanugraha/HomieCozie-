@@ -129,7 +129,7 @@ export const KitchenDisplaySystem: React.FC<KitchenDisplaySystemProps> = ({
         
         {/* Left: Flame Icon + Title + Live Counter Badge */}
         <div className="flex items-center gap-3 min-w-0">
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#C84B27] shrink-0 shadow-2xs">
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#B23812] shrink-0 shadow-2xs">
             <Flame className="w-5 h-5" />
           </div>
           <div className="min-w-0 flex-1">
@@ -160,7 +160,7 @@ export const KitchenDisplaySystem: React.FC<KitchenDisplaySystemProps> = ({
             }`}
             title={isAudioMuted ? 'Aktifkan Bunyi Notifikasi Bell Dapur' : 'Mute Bunyi Notifikasi'}
           >
-            {isAudioMuted ? <VolumeX className="w-4 h-4 text-stone-400" /> : <Volume2 className="w-4 h-4 text-[#C84B27]" />}
+            {isAudioMuted ? <VolumeX className="w-4 h-4 text-stone-400" /> : <Volume2 className="w-4 h-4 text-[#B23812]" />}
             <span>{isAudioMuted ? 'Mute' : 'Audio On'}</span>
           </button>
 
@@ -305,11 +305,11 @@ export const KitchenDisplaySystem: React.FC<KitchenDisplaySystemProps> = ({
                         <div className="space-y-1 min-w-0 flex-1">
                           <div className="flex items-center justify-between gap-1.5">
                             <div className="font-bold text-[#1F1A16] truncate">
-                              <span className="text-[#C84B27] font-mono mr-1.5 font-bold">{it.quantity}x</span>
+                              <span className="text-[#B23812] font-mono mr-1.5 font-bold">{it.quantity}x</span>
                               <span>{it.menuItem.name}</span>
                             </div>
                             <span className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded-lg shrink-0 ${
-                              isBar ? 'bg-amber-500/15 text-amber-900 border border-amber-300/60' : 'bg-orange-500/15 text-[#C84B27] border border-orange-300/60'
+                              isBar ? 'bg-amber-500/15 text-amber-900 border border-amber-300/60' : 'bg-orange-500/15 text-[#B23812] border border-orange-300/60'
                             }`}>
                               {isBar ? 'Barista Bar' : 'Kitchen Dapur'}
                             </span>

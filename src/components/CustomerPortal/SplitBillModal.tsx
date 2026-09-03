@@ -205,7 +205,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-3">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center shadow-xs">
+            <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center shadow-xs">
               <Split className="w-5 h-5" />
             </div>
             <div>
@@ -213,7 +213,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
                 Split Bill / Patungan Meja #{tableNumber}
               </h3>
               <span className="text-xs text-[#5C5248] font-mono">
-                Total Tagihan: <strong className="text-[#C84B27]">{formatRupiah(total)}</strong> (Termasuk PB1 10% + Service 5%)
+                Total Tagihan: <strong className="text-[#B23812]">{formatRupiah(total)}</strong> (Termasuk PB1 10% + Service 5%)
               </span>
             </div>
           </div>
@@ -230,7 +230,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
         <div className="bg-[#FAF7F2] p-3.5 rounded-2xl border border-[#EAE2D8] space-y-1.5">
           <div className="flex items-center justify-between text-xs font-bold">
             <span className="text-[#5C5248]">Status Pelunasan Patungan Meja:</span>
-            <span className={percentCollected === 100 ? 'text-emerald-700' : 'text-[#C84B27]'}>
+            <span className={percentCollected === 100 ? 'text-emerald-900' : 'text-[#B23812]'}>
               {formatRupiah(totalCollected)} / {formatRupiah(total)} ({percentCollected}%)
             </span>
           </div>
@@ -307,7 +307,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
                       </div>
                       <div>
                         <div className="font-bold text-xs text-[#1F1A16]">Teman #{idx + 1}</div>
-                        <div className="font-display font-black text-sm text-[#C84B27]">
+                        <div className="font-display font-black text-sm text-[#B23812]">
                           {formatRupiah(equalTotalPerPerson)}
                         </div>
                       </div>
@@ -319,7 +319,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
                         className="p-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 text-[11px] font-bold flex items-center gap-1 cursor-pointer"
                         title="Tampilkan QRIS Payer"
                       >
-                        <QrCode className="w-3.5 h-3.5 text-[#C84B27]" />
+                        <QrCode className="w-3.5 h-3.5 text-[#B23812]" />
                         <span>QRIS</span>
                       </button>
 
@@ -395,7 +395,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <span className="font-display font-black text-sm text-[#C84B27]">
+                        <span className="font-display font-black text-sm text-[#B23812]">
                           {formatRupiah(pTotal)}
                         </span>
 
@@ -404,7 +404,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
                           disabled={pTotal === 0}
                           className="p-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 text-[11px] font-bold flex items-center gap-1 cursor-pointer disabled:opacity-40"
                         >
-                          <QrCode className="w-3.5 h-3.5 text-[#C84B27]" />
+                          <QrCode className="w-3.5 h-3.5 text-[#B23812]" />
                           <span>QRIS</span>
                         </button>
 
@@ -480,11 +480,11 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
             {isCopied ? (
               <>
                 <Check className="w-3.5 h-3.5 text-emerald-600" />
-                <span className="text-emerald-700">Rincian WhatsApp Tersalin!</span>
+                <span className="text-emerald-900">Rincian WhatsApp Tersalin!</span>
               </>
             ) : (
               <>
-                <Share2 className="w-3.5 h-3.5 text-[#C84B27]" />
+                <Share2 className="w-3.5 h-3.5 text-[#B23812]" />
                 <span>Bagikan Rincian Patungan ke WhatsApp</span>
               </>
             )}
@@ -517,7 +517,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
 
               <div className="py-2 px-4 rounded-2xl bg-amber-50 border border-amber-200">
                 <span className="text-[10px] text-amber-800 font-bold block">Nominal Patungan:</span>
-                <span className="font-display font-black text-2xl text-[#C84B27]">
+                <span className="font-display font-black text-2xl text-[#B23812]">
                   {formatRupiah(activeQRISPerson.amount)}
                 </span>
               </div>

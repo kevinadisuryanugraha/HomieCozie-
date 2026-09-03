@@ -294,7 +294,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
                   prev.map((r) => (r.id === row.id ? { ...r, status: 'completed' } : r))
                 );
               }}
-              className="p-1.5 rounded-xl bg-stone-100 hover:bg-emerald-100 text-emerald-700 border border-stone-200 cursor-pointer"
+              className="p-1.5 rounded-xl bg-stone-100 hover:bg-emerald-100 text-emerald-900 border border-stone-200 cursor-pointer"
               title="Tandai Selesai"
             >
               <CheckCircle2 className="w-3.5 h-3.5" />
@@ -355,7 +355,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
       <div className="bg-white p-4 sm:p-6 rounded-3xl border border-[#EAE2D8] shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4 w-full min-w-0">
         <div className="space-y-1.5 min-w-0 w-full flex-1">
           <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-amber-800 min-w-0 w-full overflow-hidden">
-            <Sparkles className="w-4 h-4 text-[#C84B27] shrink-0" />
+            <Sparkles className="w-4 h-4 text-[#B23812] shrink-0" />
             <span className="truncate">Manajemen Reservasi & Alokasi Meja Acara</span>
           </div>
           <h3 className="font-display font-black text-lg sm:text-xl text-[#1F1A16] leading-tight break-words">
@@ -447,7 +447,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
                     </span>
                   </div>
                   {res.tableNumber ? (
-                    <div className="flex items-center justify-between gap-2 text-emerald-700 font-bold pt-1.5 border-t border-[#EAE2D8]">
+                    <div className="flex items-center justify-between gap-2 text-emerald-900 font-bold pt-1.5 border-t border-[#EAE2D8]">
                       <span className="text-[11px] shrink-0">Alokasi Meja:</span>
                       <span className="font-mono bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-lg border border-emerald-200 whitespace-nowrap">
                         Meja #{res.tableNumber}
@@ -517,7 +517,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
           <div className="bg-white border border-[#EAE2D8] rounded-3xl p-6 max-w-md w-full text-[#1F1A16] space-y-4 shadow-2xl animate-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-[#C84B27]" />
+                <Users className="w-5 h-5 text-[#B23812]" />
                 <h3 className="font-display font-black text-lg text-[#1F1A16]">
                   Dudukkan Tamu: {activeResForSeat.customerName}
                 </h3>
@@ -576,7 +576,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
           <form onSubmit={handleCreateReservation} className="bg-white border border-[#EAE2D8] rounded-3xl p-6 max-w-lg w-full text-[#1F1A16] space-y-4 shadow-2xl animate-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div className="flex items-center gap-2">
-                <Plus className="w-5 h-5 text-[#C84B27]" />
+                <Plus className="w-5 h-5 text-[#B23812]" />
                 <h3 className="font-display font-black text-lg text-[#1F1A16]">
                   Tambah Reservasi Tamu
                 </h3>

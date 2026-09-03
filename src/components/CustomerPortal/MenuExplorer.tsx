@@ -136,7 +136,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300/80 font-bold text-xs transition-colors shadow-xs w-fit"
           >
-            <FileDown className="w-4 h-4 text-amber-700" />
+            <FileDown className="w-4 h-4 text-amber-900" />
             <span>Buka / Unduh Buku Menu Resmi (PDF)</span>
           </a>
         </div>
@@ -292,7 +292,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                         </span>
                       )}
                       {!item.isBestSeller && item.isNew && (
-                        <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold bg-amber-600 text-white shadow-xs">
+                        <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold bg-amber-900 text-white shadow-xs">
                           Baru
                         </span>
                       )}
@@ -325,7 +325,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                         </span>
                       </div>
 
-                      <h3 className="font-display font-bold text-base text-[#1F1A16] line-clamp-1 group-hover:text-[#C84B27] transition-colors">
+                      <h3 className="font-display font-bold text-base text-[#1F1A16] line-clamp-1 group-hover:text-[#B23812] transition-colors">
                         {item.name}
                       </h3>
                       <p className="text-xs text-[#5C5248] line-clamp-2 mt-1 leading-relaxed">
@@ -334,7 +334,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
 
                       {item.tasteProfile && (
                         <div className="mt-2 text-xs text-[#5C5248] font-mono">
-                          <span className="text-amber-700 font-semibold">Notes:</span> {item.tasteProfile}
+                          <span className="text-amber-900 font-semibold">Notes:</span> {item.tasteProfile}
                         </div>
                       )}
                     </div>
@@ -413,7 +413,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                     className="w-16 h-16 rounded-xl object-cover border border-[#EAE2D8] shrink-0"
                   />
                   <div className="text-xs">
-                    <div className="font-mono font-bold text-[#C84B27] text-base">{formatRupiah(customizingItem.price)}</div>
+                    <div className="font-mono font-bold text-[#B23812] text-base">{formatRupiah(customizingItem.price)}</div>
                     <p className="text-[#5C5248] text-[11px] line-clamp-2 mt-0.5">{customizingItem.description}</p>
                   </div>
                 </div>
@@ -490,14 +490,14 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                   <div className="flex items-center gap-3 bg-[#FAF7F2] px-3 py-1.5 rounded-2xl border border-[#EAE2D8]">
                     <button
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="text-[#C84B27] font-bold px-2 py-0.5 hover:bg-stone-200 rounded-lg"
+                      className="text-[#B23812] font-bold px-2 py-0.5 hover:bg-stone-200 rounded-lg"
                     >
                       -
                     </button>
                     <span className="font-mono text-sm font-bold text-[#1F1A16]">{quantity}</span>
                     <button
                       onClick={() => setQuantity(quantity + 1)}
-                      className="text-[#C84B27] font-bold px-2 py-0.5 hover:bg-stone-200 rounded-lg"
+                      className="text-[#B23812] font-bold px-2 py-0.5 hover:bg-stone-200 rounded-lg"
                     >
                       +
                     </button>
@@ -520,7 +520,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                 <div className="pt-3 border-t border-[#EAE2D8] flex items-center justify-between gap-3">
                   <div>
                     <div className="text-[10px] font-mono text-[#5C5248]">Total Harga</div>
-                    <div className="font-mono font-bold text-[#C84B27] text-lg">
+                    <div className="font-mono font-bold text-[#B23812] text-lg">
                       {formatRupiah(customizingItem.price * quantity)}
                     </div>
                   </div>

@@ -201,7 +201,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
               </div>
               <div>
                 <span className="block text-[11px] text-[#5C5248]">Biaya Booking</span>
-                <span className="text-base font-bold text-emerald-700">Gratis (Rp 0)</span>
+                <span className="text-base font-bold text-emerald-900">Gratis (Rp 0)</span>
               </div>
               <div>
                 <span className="block text-[11px] text-[#5C5248]">Live Music</span>
@@ -232,7 +232,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                   }`}
                 >
                   <div className="flex items-center gap-1.5 font-bold text-xs">
-                    {isCompleted ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" /> : <span>{s.num}.</span>}
+                    {isCompleted ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-900" /> : <span>{s.num}.</span>}
                     <span>{s.title}</span>
                   </div>
                   <span className={`text-[11px] block mt-0.5 ${isCurrent ? 'text-white/90' : 'text-[#5C5248]'}`}>
@@ -270,7 +270,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
               <form onSubmit={handleNextToStep2} className="space-y-6">
                 <div className="pb-4 border-b border-[#EAE2D8]">
                   <h2 className="text-lg font-display font-black text-[#1F1A16] flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-amber-700" />
+                    <Calendar className="w-5 h-5 text-amber-900" />
                     <span>Langkah 1: Tentukan Jadwal Kunjungan & Area</span>
                   </h2>
                   <p className="text-xs text-[#5C5248] mt-0.5">
@@ -282,7 +282,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                   {/* Date Input */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-[#1F1A16] flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-amber-700" /> Tanggal Kunjungan
+                      <Calendar className="w-3.5 h-3.5 text-amber-900" /> Tanggal Kunjungan
                     </label>
                     <input
                       type="date"
@@ -296,13 +296,13 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                   {/* Guest Count Input */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-[#1F1A16] flex items-center gap-1.5">
-                      <Users className="w-3.5 h-3.5 text-amber-700" /> Jumlah Tamu (Pax)
+                      <Users className="w-3.5 h-3.5 text-amber-900" /> Jumlah Tamu (Pax)
                     </label>
                     <div className="flex items-center gap-3 bg-[#FAF7F2] border border-[#EAE2D8] rounded-2xl px-4 py-2">
                       <button
                         type="button"
                         onClick={() => setGuestCount(Math.max(1, guestCount - 1))}
-                        className="text-[#C84B27] font-bold px-2 py-1 hover:bg-stone-200 rounded-lg"
+                        className="text-[#B23812] font-bold px-2 py-1 hover:bg-stone-200 rounded-lg"
                       >
                         -
                       </button>
@@ -310,7 +310,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                       <button
                         type="button"
                         onClick={() => setGuestCount(Math.min(30, guestCount + 1))}
-                        className="text-[#C84B27] font-bold px-2 py-1 hover:bg-stone-200 rounded-lg"
+                        className="text-[#B23812] font-bold px-2 py-1 hover:bg-stone-200 rounded-lg"
                       >
                         +
                       </button>
@@ -321,7 +321,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                 {/* Time Slots Selector */}
                 <div className="space-y-2">
                   <label className="text-xs font-semibold text-[#1F1A16] flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-amber-700" /> Jam Kedatangan (Slot Waktu)
+                    <Clock className="w-3.5 h-3.5 text-amber-900" /> Jam Kedatangan (Slot Waktu)
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5">
                     {timeSlots.map((ts) => {
@@ -350,7 +350,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                 {/* Area Preference Cards */}
                 <div className="space-y-2">
                   <label className="text-xs font-semibold text-[#1F1A16] flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-amber-700" /> Preferensi Zona Suasana
+                    <MapPin className="w-3.5 h-3.5 text-amber-900" /> Preferensi Zona Suasana
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {areaOptions.map((area) => {
@@ -435,7 +435,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                 <div className="pb-4 border-b border-[#EAE2D8] flex items-center justify-between">
                   <div>
                     <h2 className="text-lg font-display font-black text-[#1F1A16] flex items-center gap-2">
-                      <MapPin className="w-5 h-5 text-amber-700" />
+                      <MapPin className="w-5 h-5 text-amber-900" />
                       <span>Langkah 2: Pilih Meja di Area {areaPreference.toUpperCase()}</span>
                     </h2>
                     <p className="text-xs text-[#5C5248] mt-0.5">
@@ -445,7 +445,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="text-xs font-bold text-[#C84B27] hover:underline flex items-center gap-1"
+                    className="text-xs font-bold text-[#B23812] hover:underline flex items-center gap-1"
                   >
                     <ArrowLeft className="w-3.5 h-3.5" />
                     <span>Ubah Sesi</span>
@@ -481,7 +481,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                         </div>
                         <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${
                           isSelected
-                            ? 'bg-white text-[#C84B27]'
+                            ? 'bg-white text-[#B23812]'
                             : isAvailable
                             ? 'bg-emerald-100 text-emerald-800 border border-emerald-300'
                             : 'bg-stone-200 text-stone-500'
@@ -519,7 +519,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                 <div className="pb-4 border-b border-[#EAE2D8] flex items-center justify-between">
                   <div>
                     <h2 className="text-lg font-display font-black text-[#1F1A16] flex items-center gap-2">
-                      <Phone className="w-5 h-5 text-amber-700" />
+                      <Phone className="w-5 h-5 text-amber-900" />
                       <span>Langkah 3: Informasi Kontak & Catatan Khusus</span>
                     </h2>
                     <p className="text-xs text-[#5C5248] mt-0.5">
@@ -529,7 +529,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                   <button
                     type="button"
                     onClick={() => setStep(2)}
-                    className="text-xs font-bold text-[#C84B27] hover:underline flex items-center gap-1"
+                    className="text-xs font-bold text-[#B23812] hover:underline flex items-center gap-1"
                   >
                     <ArrowLeft className="w-3.5 h-3.5" />
                     <span>Ubah Meja</span>
@@ -607,7 +607,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
             {/* STEP 4: SUCCESS CONFIRMATION TICKET */}
             {step === 4 && confirmedBooking && (
               <div className="space-y-6 text-center py-2">
-                <div className="w-16 h-16 rounded-3xl bg-emerald-100 border border-emerald-300 text-emerald-700 flex items-center justify-center mx-auto shadow-xs">
+                <div className="w-16 h-16 rounded-3xl bg-emerald-100 border border-emerald-300 text-emerald-900 flex items-center justify-center mx-auto shadow-xs">
                   <Check className="w-8 h-8 stroke-[3]" />
                 </div>
 
@@ -628,7 +628,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                   <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-3">
                     <div>
                       <span className="text-[10px] font-mono text-[#5C5248]">KODE BOOKING</span>
-                      <div className="font-mono font-black text-xl text-[#C84B27]" ref={bookingCodeRef}>
+                      <div className="font-mono font-black text-xl text-[#B23812]" ref={bookingCodeRef}>
                         {confirmedBooking.bookingCode}
                       </div>
                     </div>
@@ -703,7 +703,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
             
             <div className="bg-white border border-[#EAE2D8] rounded-3xl p-6 shadow-xs space-y-4">
               <h3 className="font-display font-black text-base text-[#1F1A16] flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-amber-700" />
+                <Sparkles className="w-4 h-4 text-amber-900" />
                 <span>Ringkasan Reservasi</span>
               </h3>
 
@@ -745,7 +745,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
             {/* Live Acoustic Info Card */}
             <div className="bg-white border border-[#EAE2D8] rounded-3xl p-5 text-xs text-[#5C5248] space-y-2 shadow-xs">
               <div className="flex items-center gap-2 text-amber-800 font-bold">
-                <Music className="w-4 h-4 text-[#C84B27]" />
+                <Music className="w-4 h-4 text-[#B23812]" />
                 <span>Live Music Akhir Pekan</span>
               </div>
               <p className="text-[11px] text-[#5C5248] leading-relaxed">

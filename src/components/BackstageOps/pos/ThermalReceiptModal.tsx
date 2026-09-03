@@ -386,7 +386,7 @@ export const ThermalReceiptModal: React.FC<ThermalReceiptModalProps> = ({
               <button
                 onClick={handleSendWhatsAppReceipt}
                 disabled={isSendingWa}
-                className="flex-1 sm:flex-none px-3.5 py-2 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs flex items-center justify-center gap-1.5 border border-emerald-200 transition-colors cursor-pointer shadow-2xs disabled:opacity-50"
+                className="flex-1 sm:flex-none px-3.5 py-2 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-bold text-xs flex items-center justify-center gap-1.5 border border-emerald-200 transition-colors cursor-pointer shadow-2xs disabled:opacity-50"
               >
                 <Share2 className="w-3.5 h-3.5" />
                 <span>{waSent ? '✓ WA Terkirim' : isSendingWa ? 'Mengirim...' : 'Kirim WA'}</span>

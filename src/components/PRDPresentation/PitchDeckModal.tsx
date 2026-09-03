@@ -218,7 +218,7 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({
             <div className="bg-emerald-50/60 p-4 sm:p-5 rounded-2xl border border-emerald-200 space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs text-emerald-800 font-bold uppercase">Aset Kualitas Produk</span>
-                <span className="text-xs font-mono font-bold text-emerald-700">± 6 Tahun</span>
+                <span className="text-xs font-mono font-bold text-emerald-900">± 6 Tahun</span>
               </div>
               <div className="font-serif text-3xl font-bold text-slate-900">4.8 ★ Google</div>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -240,9 +240,9 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({
             <div className="bg-amber-50 p-4 sm:p-5 rounded-2xl border border-amber-200 space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs text-amber-800 font-bold uppercase">Diferensiasi Komunitas</span>
-                <span className="text-xs font-mono font-bold text-amber-700">Tiap Weekend</span>
+                <span className="text-xs font-mono font-bold text-amber-900">Tiap Weekend</span>
               </div>
-              <div className="font-serif text-2xl font-bold text-amber-700">Live Music & #PITSTOP</div>
+              <div className="font-serif text-2xl font-bold text-amber-900">Live Music & #PITSTOP</div>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Event rutin komunitas motor dan live music belum terhubung langsung ke corong konversi reservasi meja otomatis.
               </p>
@@ -330,27 +330,27 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({
                   <tr>
                     <td className="py-2.5 px-3 font-semibold text-slate-900">Kurangi Beban Admin Manual</td>
                     <td className="py-2.5 px-3">% reservasi lewat sistem otomatis vs chat WA</td>
-                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-700">≥60% dalam 3 bulan</td>
+                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-900">≥60% dalam 3 bulan</td>
                   </tr>
                   <tr>
                     <td className="py-2.5 px-3 font-semibold text-slate-900">Perkuat Local SEO Pasar Rebo</td>
                     <td className="py-2.5 px-3">Halaman 1 Google "cafe Kalisari" & "cafe Cijantung"</td>
-                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-700">Top 5 dalam 3–6 bulan</td>
+                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-900">Top 5 dalam 3–6 bulan</td>
                   </tr>
                   <tr>
                     <td className="py-2.5 px-3 font-semibold text-slate-900">Naikkan Repeat Visit Loyalitas</td>
                     <td className="py-2.5 px-3">% transaksi dari pelanggan terdaftar (member)</td>
-                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-700">≥25% dalam 6 bulan</td>
+                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-900">≥25% dalam 6 bulan</td>
                   </tr>
                   <tr>
                     <td className="py-2.5 px-3 font-semibold text-slate-900">Efisiensi Konfirmasi Booking</td>
                     <td className="py-2.5 px-3">Waktu rata-rata konfirmasi reservasi meja</td>
-                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-700">Hitungan Jam → Instan</td>
+                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-900">Hitungan Jam → Instan</td>
                   </tr>
                   <tr>
                     <td className="py-2.5 px-3 font-semibold text-slate-900">Keamanan & Governance RBAC</td>
                     <td className="py-2.5 px-3">Insiden akses tidak sah / kebocoran data omzet</td>
-                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-700">0 Insiden (Aman)</td>
+                    <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-900">0 Insiden (Aman)</td>
                   </tr>
                 </tbody>
               </table>
@@ -934,7 +934,7 @@ Guest  (Pengunjung Tanpa Akun — QR Order, Reservasi Meja)`}
                             <span className="text-slate-800 text-[11px]">{ep.path}</span>
                           </td>
                           <td className="py-2 px-2.5 text-slate-600 text-[11px]">{ep.description}</td>
-                          <td className="py-2 px-2.5 text-right font-mono text-[10px] font-bold text-emerald-700">
+                          <td className="py-2 px-2.5 text-right font-mono text-[10px] font-bold text-emerald-900">
                             {ep.minRoleLabel}
                           </td>
                         </tr>
@@ -1001,7 +1001,7 @@ Guest  (Pengunjung Tanpa Akun — QR Order, Reservasi Meja)`}
                   </ul>
                 </div>
 
-                <div className="pt-2 border-t border-slate-200 text-xs text-emerald-700 font-semibold">
+                <div className="pt-2 border-t border-slate-200 text-xs text-emerald-900 font-semibold">
                   🎯 <strong>Target KPI:</strong> {slide.kpi}
                 </div>
               </div>
@@ -1034,7 +1034,7 @@ Guest  (Pengunjung Tanpa Akun — QR Order, Reservasi Meja)`}
               <div className="space-y-2">
                 <span className="text-[11px] font-bold text-emerald-600 uppercase">Titik Awal Negosiasi (Fase 1)</span>
                 <h4 className="font-serif font-bold text-xl text-slate-900">Fase 1 Starter Pack</h4>
-                <div className="font-serif font-bold text-2xl text-emerald-700">Rp 1.250.000</div>
+                <div className="font-serif font-bold text-2xl text-emerald-900">Rp 1.250.000</div>
                 <p className="text-xs text-slate-500">
                   Ideal untuk langsung menyelesaikan masalah SEO Kalisari/Cijantung, reservasi otomatis, dan auth dasar.
                 </p>
@@ -1065,7 +1065,7 @@ Guest  (Pengunjung Tanpa Akun — QR Order, Reservasi Meja)`}
               <div className="space-y-2">
                 <span className="text-[11px] font-bold text-emerald-600 uppercase">Paling Direkomendasikan (Fase 1+2)</span>
                 <h4 className="font-serif font-bold text-xl text-slate-900">Growth Pro Pack</h4>
-                <div className="font-serif font-bold text-2xl text-emerald-700">Rp 2.850.000</div>
+                <div className="font-serif font-bold text-2xl text-emerald-900">Rp 2.850.000</div>
                 <p className="text-xs text-slate-500">
                   Termasuk QR Order Meja, Homie Rewards CRM, Event Calendar #PITSTOP, dan Laporan Omzet.
                 </p>
@@ -1184,15 +1184,15 @@ Guest  (Pengunjung Tanpa Akun — QR Order, Reservasi Meja)`}
             <h4 className="font-semibold text-sm text-emerald-950">3 Langkah Konkret Selanjutnya (Bagian 14):</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
               <div className="bg-white p-3.5 rounded-xl border border-emerald-200 space-y-1">
-                <span className="font-mono font-bold text-emerald-700">Langkah 1</span>
+                <span className="font-mono font-bold text-emerald-900">Langkah 1</span>
                 <p className="text-slate-700">Validasi prioritas modul langsung dengan owner saat meeting Selasa siang.</p>
               </div>
               <div className="bg-white p-3.5 rounded-xl border border-emerald-200 space-y-1">
-                <span className="font-mono font-bold text-emerald-700">Langkah 2</span>
+                <span className="font-mono font-bold text-emerald-900">Langkah 2</span>
                 <p className="text-slate-700">Kunci scope & harga Fase 1 berdasarkan budget riil (acuan: Starter Rp 1.250.000).</p>
               </div>
               <div className="bg-white p-3.5 rounded-xl border border-emerald-200 space-y-1">
-                <span className="font-mono font-bold text-emerald-700">Langkah 3</span>
+                <span className="font-mono font-bold text-emerald-900">Langkah 3</span>
                 <p className="text-slate-700">Tunjukkan demo visual web & reservasi meja (Modul A & B) secara interaktif.</p>
               </div>
             </div>

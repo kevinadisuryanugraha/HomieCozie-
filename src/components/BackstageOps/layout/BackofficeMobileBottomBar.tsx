@@ -47,12 +47,12 @@ export const BackofficeMobileBottomBar: React.FC<BackofficeMobileBottomBarProps>
               onClick={() => onSelectModule(item.id)}
               className={`relative flex flex-col items-center justify-center py-1 px-2.5 rounded-2xl transition-all cursor-pointer select-none ${
                 isActive
-                  ? 'text-[#C84B27] font-black scale-105'
+                  ? 'text-[#B23812] font-black scale-105'
                   : 'text-[#5C5248] hover:text-[#1F1A16] font-medium'
               }`}
             >
               <div className="relative">
-                <Icon className={`w-5 h-5 ${isActive ? 'text-[#C84B27]' : 'text-[#5C5248]'}`} />
+                <Icon className={`w-5 h-5 ${isActive ? 'text-[#B23812]' : 'text-[#5C5248]'}`} />
                 {item.badge !== undefined && (
                   <span className="absolute -top-1 -right-2 bg-[#C84B27] text-white text-[9px] font-mono font-black px-1.5 py-0.2 rounded-full shadow-2xs">
                     {item.badge}

@@ -199,7 +199,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
               <div className="space-y-0.5">
                 <h5 className="font-bold text-xs text-[#1F1A16] line-clamp-1">{item.name}</h5>
                 <span className="text-[10px] text-[#5C5248] font-mono block uppercase">{item.category}</span>
-                <span className="font-mono font-bold text-[#C84B27] text-xs block">
+                <span className="font-mono font-bold text-[#B23812] text-xs block">
                   {formatRupiah(item.price)}
                 </span>
               </div>
@@ -215,7 +215,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
         {/* Bill Header */}
         <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
           <div className="flex items-center gap-2">
-            <Receipt className="w-5 h-5 text-[#C84B27]" />
+            <Receipt className="w-5 h-5 text-[#B23812]" />
             <h4 className="font-display font-black text-base text-[#1F1A16]">Struk Tagihan Aktif</h4>
           </div>
           <button
@@ -248,7 +248,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
                 type="text"
                 value={tableNumber}
                 onChange={(e) => setTableNumber(e.target.value)}
-                className="w-full p-2 bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl text-xs text-[#C84B27] font-mono font-bold"
+                className="w-full p-2 bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl text-xs text-[#B23812] font-mono font-bold"
               />
             </div>
           ) : (
@@ -331,7 +331,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
             </div>
 
             {discountAmount > 0 && (
-              <div className="flex justify-between text-[#C84B27]">
+              <div className="flex justify-between text-[#B23812]">
                 <span>Diskon ({discountPercent}%):</span>
                 <span>-{formatRupiah(discountAmount)}</span>
               </div>
@@ -349,7 +349,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
 
             <div className="flex justify-between pt-2 border-t border-[#EAE2D8] font-bold text-base text-[#1F1A16]">
               <span>TOTAL TAGIHAN:</span>
-              <span className="text-[#C84B27] font-black">{formatRupiah(total)}</span>
+              <span className="text-[#B23812] font-black">{formatRupiah(total)}</span>
             </div>
 
             {/* Payment Method Selector */}

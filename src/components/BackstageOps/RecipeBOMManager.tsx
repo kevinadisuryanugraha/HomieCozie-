@@ -158,7 +158,7 @@ export const RecipeBOMManager: React.FC = () => {
           <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center sm:gap-2.5">
             <div className="px-3.5 py-2.5 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] text-left sm:text-right">
               <div className="text-[10px] font-mono text-[#5C5248] uppercase font-bold tracking-tight">Rata-rata Margin</div>
-              <div className="text-base sm:text-lg font-mono font-black text-emerald-700 leading-tight mt-0.5">{avgMargin}%</div>
+              <div className="text-base sm:text-lg font-mono font-black text-emerald-900 leading-tight mt-0.5">{avgMargin}%</div>
             </div>
             <div className="px-3.5 py-2.5 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] text-left sm:text-right">
               <div className="text-[10px] font-mono text-[#5C5248] uppercase font-bold tracking-tight">Menu Terdaftar</div>
@@ -291,7 +291,7 @@ export const RecipeBOMManager: React.FC = () => {
                         HPP: <strong className="text-[#1F1A16]">{formatRupiah(rec.totalHPP)}</strong>
                       </span>
                       <span className="text-[#5C5248]">
-                        Jual: <strong className="text-[#C84B27]">{formatRupiah(rec.salePrice)}</strong>
+                        Jual: <strong className="text-[#B23812]">{formatRupiah(rec.salePrice)}</strong>
                       </span>
                     </div>
                   </div>
@@ -324,7 +324,7 @@ export const RecipeBOMManager: React.FC = () => {
                     onClick={handleOpenEdit}
                     className="px-3.5 py-2 rounded-xl bg-[#FAF7F2] hover:bg-stone-200 border border-[#EAE2D8] text-xs font-bold text-[#1F1A16] flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
                   >
-                    <Edit3 className="w-3.5 h-3.5 text-[#C84B27]" />
+                    <Edit3 className="w-3.5 h-3.5 text-[#B23812]" />
                     <span>Ubah Komposisi</span>
                   </button>
 
@@ -346,11 +346,11 @@ export const RecipeBOMManager: React.FC = () => {
                 </div>
                 <div className="p-3.5 rounded-2xl bg-amber-50/50 border border-amber-200 space-y-1">
                   <div className="text-[10px] font-mono text-amber-900 uppercase font-bold">Total HPP / Bahan</div>
-                  <div className="text-base font-mono font-bold text-[#C84B27]">{formatRupiah(selectedRecipe.totalHPP)}</div>
+                  <div className="text-base font-mono font-bold text-[#B23812]">{formatRupiah(selectedRecipe.totalHPP)}</div>
                 </div>
                 <div className="p-3.5 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-1">
                   <div className="text-[10px] font-mono text-emerald-800 uppercase font-bold">Laba Kotor / Porsi</div>
-                  <div className="text-base font-mono font-bold text-emerald-700">
+                  <div className="text-base font-mono font-bold text-emerald-900">
                     {formatRupiah(selectedRecipe.salePrice - selectedRecipe.totalHPP)} ({selectedRecipe.grossMarginPct}%)
                   </div>
                 </div>
@@ -360,7 +360,7 @@ export const RecipeBOMManager: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <h4 className="font-display font-black text-sm text-[#1F1A16] flex items-center gap-2">
-                    <Layers className="w-4 h-4 text-amber-700" />
+                    <Layers className="w-4 h-4 text-amber-900" />
                     <span>Rincian Komposisi Bahan Baku (BOM)</span>
                   </h4>
                   <span className="text-[11px] font-mono text-[#5C5248] font-bold">
@@ -401,7 +401,7 @@ export const RecipeBOMManager: React.FC = () => {
                         <td colSpan={3} className="p-3 text-right uppercase text-[#5C5248]">
                           Total Food & Beverage Cost (HPP):
                         </td>
-                        <td className="p-3 text-right text-[#C84B27]">
+                        <td className="p-3 text-right text-[#B23812]">
                           {formatRupiah(selectedRecipe.totalHPP)}
                         </td>
                       </tr>
@@ -414,7 +414,7 @@ export const RecipeBOMManager: React.FC = () => {
               {selectedRecipe.preparationNotes && (
                 <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 space-y-1.5">
                   <div className="text-[10px] font-mono font-bold text-amber-900 uppercase flex items-center gap-1.5">
-                    <Info className="w-3.5 h-3.5 text-amber-700" />
+                    <Info className="w-3.5 h-3.5 text-amber-900" />
                     <span>Standar Racikan Barista & Dapur:</span>
                   </div>
                   <p className="text-xs text-[#5C5248] leading-relaxed">
@@ -434,7 +434,7 @@ export const RecipeBOMManager: React.FC = () => {
         <div className="bg-white p-4 sm:p-6 rounded-3xl border border-[#EAE2D8] shadow-xs space-y-6 w-full min-w-0">
           <div className="border-b border-[#EAE2D8] pb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <div className="flex items-start sm:items-center gap-3 min-w-0 flex-1">
-              <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
+              <div className="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
                 <Sliders className="w-5 h-5" />
               </div>
               <div className="min-w-0 flex-1 space-y-0.5">
@@ -560,14 +560,14 @@ export const RecipeBOMManager: React.FC = () => {
                       <td className="p-3 text-right font-mono text-[#5C5248]">
                         {formatRupiah(rec.totalHPP)}
                       </td>
-                      <td className="p-3 text-right font-mono font-bold text-[#C84B27]">
+                      <td className="p-3 text-right font-mono font-bold text-[#B23812]">
                         {formatRupiah(simulatedHPP)}
                       </td>
                       <td className="p-3 text-center font-mono">
                         {rec.grossMarginPct}%
                       </td>
                       <td className="p-3 text-center font-mono font-bold">
-                        <span className={newMargin < 65 ? 'text-rose-600' : 'text-emerald-700'}>
+                        <span className={newMargin < 65 ? 'text-rose-600' : 'text-emerald-900'}>
                           {newMargin}%
                         </span>
                         {deltaMargin !== 0 && (
@@ -582,7 +582,7 @@ export const RecipeBOMManager: React.FC = () => {
                             Naikkan Harga Jual
                           </span>
                         ) : (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-900 border border-emerald-200">
                             Aman & Optimal
                           </span>
                         )}
@@ -600,7 +600,7 @@ export const RecipeBOMManager: React.FC = () => {
       {activeTab === 'deductions' && (
         <div className="bg-white p-4 sm:p-6 rounded-3xl border border-[#EAE2D8] shadow-xs space-y-4 w-full min-w-0">
           <div className="border-b border-[#EAE2D8] pb-4 flex items-start sm:items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
+            <div className="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
               <History className="w-5 h-5" />
             </div>
             <div className="min-w-0 flex-1 space-y-0.5">
@@ -767,7 +767,7 @@ export const RecipeBOMManager: React.FC = () => {
                   onClick={handleAddIngredientRow}
                   className="px-3.5 py-2 rounded-xl bg-[#FAF7F2] hover:bg-stone-200 text-xs font-bold text-[#1F1A16] border border-[#EAE2D8] flex items-center gap-1.5 cursor-pointer"
                 >
-                  <Plus className="w-3.5 h-3.5 text-[#C84B27]" />
+                  <Plus className="w-3.5 h-3.5 text-[#B23812]" />
                   <span>+ Tambah Baris Bahan</span>
                 </button>
 

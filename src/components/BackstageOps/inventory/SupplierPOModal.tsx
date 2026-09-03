@@ -187,7 +187,7 @@ export const SupplierPOModal: React.FC<SupplierPOModalProps> = ({
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-[#1F1A16]">Item Bahan Baku yang Dipesan:</span>
                 <span className="text-[11px] text-[#5C5248] font-mono font-bold">
-                  Estimasi Total: <strong className="text-[#C84B27]">{formatRp(totalEstimatedCost)}</strong>
+                  Estimasi Total: <strong className="text-[#B23812]">{formatRp(totalEstimatedCost)}</strong>
                 </span>
               </div>
 
@@ -214,7 +214,7 @@ export const SupplierPOModal: React.FC<SupplierPOModalProps> = ({
                         className="w-16 p-1.5 text-center font-mono font-bold bg-white border border-[#EAE2D8] rounded-xl"
                       />
                       <span className="font-mono text-[11px] text-[#5C5248] w-8">{it.unit}</span>
-                      <span className="font-mono font-bold text-[#C84B27] w-24 text-right">
+                      <span className="font-mono font-bold text-[#B23812] w-24 text-right">
                         {formatRp(it.quantity * it.unit_price)}
                       </span>
                       <button
@@ -238,7 +238,7 @@ export const SupplierPOModal: React.FC<SupplierPOModalProps> = ({
                     onClick={handleCopyText}
                     className="flex items-center gap-1 text-[11px] text-emerald-800 hover:underline cursor-pointer"
                   >
-                    {isCopied ? <Check className="w-3 h-3 text-emerald-700" /> : <Copy className="w-3 h-3 text-emerald-700" />}
+                    {isCopied ? <Check className="w-3 h-3 text-emerald-900" /> : <Copy className="w-3 h-3 text-emerald-900" />}
                     <span>{isCopied ? 'Tersalin' : 'Salin Teks'}</span>
                   </button>
                 </div>

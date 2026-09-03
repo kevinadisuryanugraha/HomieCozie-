@@ -326,7 +326,7 @@ export const AIChatAgentView: React.FC = () => {
       }
       if (part.startsWith('`') && part.endsWith('`') && part.length >= 2) {
         return (
-          <code key={idx} className="px-1.5 py-0.5 rounded bg-amber-500/10 border border-amber-300/40 font-mono text-[11px] text-[#C84B27] font-semibold">
+          <code key={idx} className="px-1.5 py-0.5 rounded bg-amber-500/10 border border-amber-300/40 font-mono text-[11px] text-[#B23812] font-semibold">
             {part.slice(1, -1)}
           </code>
         );
@@ -447,7 +447,7 @@ export const AIChatAgentView: React.FC = () => {
         if (trimmed.startsWith('#### ')) {
           elements.push(
             <div key={`h4-${i}`} className="mt-3 mb-1.5">
-              <h5 className="font-display font-bold text-xs sm:text-sm text-[#C84B27] flex items-center gap-1.5">
+              <h5 className="font-display font-bold text-xs sm:text-sm text-[#B23812] flex items-center gap-1.5">
                 {formatInlineText(trimmed.replace('#### ', ''))}
               </h5>
             </div>
@@ -500,7 +500,7 @@ export const AIChatAgentView: React.FC = () => {
             <div key={`numlist-${i}`} className="space-y-2 my-2.5">
               {numItems.map((item, lIdx) => (
                 <div key={lIdx} className="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-2xl bg-white/90 border border-[#EAE2D8] shadow-2xs hover:border-amber-400/60 transition-colors">
-                  <span className="w-5 h-5 rounded-lg bg-amber-100 text-[#C84B27] font-mono font-black text-[11px] flex items-center justify-center shrink-0 mt-0.5 border border-amber-300/60">
+                  <span className="w-5 h-5 rounded-lg bg-amber-100 text-[#B23812] font-mono font-black text-[11px] flex items-center justify-center shrink-0 mt-0.5 border border-amber-300/60">
                     {item.num}
                   </span>
                   <div className="flex-1 text-xs sm:text-sm leading-relaxed text-[#1F1A16]">
@@ -586,7 +586,7 @@ export const AIChatAgentView: React.FC = () => {
                 <h3 className="font-display font-black text-xs sm:text-sm text-[#1F1A16] leading-tight">
                   AI Cozie Agent
                 </h3>
-                <span className="text-[9px] sm:text-[10px] font-mono text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded font-bold border border-emerald-200">
+                <span className="text-[9px] sm:text-[10px] font-mono text-emerald-900 bg-emerald-50 px-1.5 py-0.2 rounded font-bold border border-emerald-200">
                   v2.5 Intelligence
                 </span>
               </div>
@@ -671,7 +671,7 @@ export const AIChatAgentView: React.FC = () => {
                     <div className="flex items-start justify-between gap-1.5">
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-1.5">
-                          <MessageSquare className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-[#C84B27]' : 'text-stone-400'}`} />
+                          <MessageSquare className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-[#B23812]' : 'text-stone-400'}`} />
                           <h4 className="text-xs font-bold truncate leading-tight">
                             {s.title}
                           </h4>
@@ -718,7 +718,7 @@ export const AIChatAgentView: React.FC = () => {
               <Settings className="w-3.5 h-3.5 text-stone-600" />
               <span>Pengaturan API</span>
             </span>
-            <span className="text-[9px] font-mono text-amber-700 font-bold bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">
+            <span className="text-[9px] font-mono text-amber-900 font-bold bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">
               Config
             </span>
           </button>
@@ -741,7 +741,7 @@ export const AIChatAgentView: React.FC = () => {
               className="p-1.5 sm:p-2 rounded-xl bg-white border border-[#EAE2D8] text-stone-700 hover:bg-stone-100 lg:hidden cursor-pointer shrink-0 shadow-2xs"
               title="Lihat Riwayat Percakapan"
             >
-              <MessageSquare className="w-4 h-4 text-[#C84B27]" />
+              <MessageSquare className="w-4 h-4 text-[#B23812]" />
             </button>
 
             <div className="min-w-0 flex-1">
@@ -763,7 +763,7 @@ export const AIChatAgentView: React.FC = () => {
                 onClick={() => setIsModelDropdownOpen(!isModelDropdownOpen)}
                 className="px-2 sm:px-3 py-1.5 rounded-xl bg-white hover:bg-stone-50 border border-[#EAE2D8] text-xs font-bold text-[#1F1A16] flex items-center gap-1 sm:gap-1.5 shadow-2xs cursor-pointer"
               >
-                <Sparkles className="w-3.5 h-3.5 text-[#C84B27] shrink-0" />
+                <Sparkles className="w-3.5 h-3.5 text-[#B23812] shrink-0" />
                 <span className="truncate max-w-[70px] sm:max-w-none">{activeModel.name.split(' ')[0]}</span>
                 <ChevronDown className="w-3 h-3 text-stone-400 shrink-0" />
               </button>
@@ -843,7 +843,7 @@ export const AIChatAgentView: React.FC = () => {
           {/* Welcome Screen / Empty State */}
           {(!activeSession || activeSession.messages.length === 0) && (
             <div className="max-w-2xl mx-auto py-8 space-y-6 text-center">
-              <div className="w-16 h-16 rounded-3xl bg-amber-50 border-2 border-amber-200 text-[#C84B27] flex items-center justify-center mx-auto shadow-md">
+              <div className="w-16 h-16 rounded-3xl bg-amber-50 border-2 border-amber-200 text-[#B23812] flex items-center justify-center mx-auto shadow-md">
                 <Sparkles className="w-8 h-8" />
               </div>
               <div className="space-y-1">
@@ -867,7 +867,7 @@ export const AIChatAgentView: React.FC = () => {
                       <div className="p-1.5 rounded-xl bg-stone-100 group-hover:bg-[#C84B27] group-hover:text-white transition-colors">
                         <card.icon className="w-4 h-4" />
                       </div>
-                      <h4 className="font-bold text-xs sm:text-sm text-[#1F1A16] group-hover:text-[#C84B27] transition-colors">
+                      <h4 className="font-bold text-xs sm:text-sm text-[#1F1A16] group-hover:text-[#B23812] transition-colors">
                         {card.title}
                       </h4>
                     </div>
@@ -1105,7 +1105,7 @@ export const AIChatAgentView: React.FC = () => {
                 
                 {/* Notice Card */}
                 <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 text-xs flex items-start gap-2.5">
-                  <Sparkles className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                  <Sparkles className="w-4 h-4 text-amber-900 shrink-0 mt-0.5" />
                   <div className="space-y-0.5">
                     <span className="font-bold block">Smart Fallback Simulation Aktif</span>
                     <p className="text-[#5C5248] leading-relaxed">
@@ -1192,7 +1192,7 @@ export const AIChatAgentView: React.FC = () => {
                   <div className="space-y-1.5">
                     <div className="flex justify-between text-xs font-bold">
                       <span>Kreativitas (Temperature):</span>
-                      <span className="font-mono text-[#C84B27]">{configs[activeConfigTab]?.temperature}</span>
+                      <span className="font-mono text-[#B23812]">{configs[activeConfigTab]?.temperature}</span>
                     </div>
                     <input
                       type="range"
@@ -1218,7 +1218,7 @@ export const AIChatAgentView: React.FC = () => {
                   <div className="space-y-1.5">
                     <div className="flex justify-between text-xs font-bold">
                       <span>Maksimal Token Output:</span>
-                      <span className="font-mono text-[#C84B27]">{configs[activeConfigTab]?.maxOutputTokens}</span>
+                      <span className="font-mono text-[#B23812]">{configs[activeConfigTab]?.maxOutputTokens}</span>
                     </div>
                     <input
                       type="range"

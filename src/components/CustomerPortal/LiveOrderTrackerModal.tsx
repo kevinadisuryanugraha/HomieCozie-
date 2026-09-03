@@ -58,7 +58,7 @@ const STEPS = [
     title: 'Selesai Disajikan',
     subtitle: 'Selamat menikmati sajian hangat di Homie Cozie!',
     icon: Sparkles,
-    color: 'text-[#C84B27]',
+    color: 'text-[#B23812]',
     bg: 'bg-orange-50 border-orange-200'
   }
 ];
@@ -153,7 +153,7 @@ export const LiveOrderTrackerModal: React.FC<LiveOrderTrackerModalProps> = ({
         {/* Header Bar */}
         <div className="flex items-center justify-between pb-4 border-b border-[#EAE2D8]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-[#C84B27] flex items-center justify-center font-bold">
+            <div className="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-[#B23812] flex items-center justify-center font-bold">
               <Coffee className="w-5 h-5" />
             </div>
             <div>
@@ -161,7 +161,7 @@ export const LiveOrderTrackerModal: React.FC<LiveOrderTrackerModalProps> = ({
                 <h3 className="font-display font-black text-lg text-[#1F1A16]">
                   Live Order Tracker
                 </h3>
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-900 border border-emerald-200">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   Live Sync
                 </span>
@@ -234,7 +234,7 @@ export const LiveOrderTrackerModal: React.FC<LiveOrderTrackerModalProps> = ({
                 {/* Step Content */}
                 <div className="space-y-0.5 flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2">
-                    <h4 className={`font-display font-bold text-sm ${isCurrent ? 'text-[#C84B27]' : isCompleted ? 'text-emerald-900' : 'text-stone-700'}`}>
+                    <h4 className={`font-display font-bold text-sm ${isCurrent ? 'text-[#B23812]' : isCompleted ? 'text-emerald-900' : 'text-stone-700'}`}>
                       {step.title}
                     </h4>
                     {isCurrent && (
@@ -256,7 +256,7 @@ export const LiveOrderTrackerModal: React.FC<LiveOrderTrackerModalProps> = ({
         <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] space-y-2.5 text-xs">
           <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-2 font-bold text-stone-800">
             <span>Rincian Menu ({order.items.reduce((acc, it) => acc + it.quantity, 0)} Item)</span>
-            <span className="font-mono text-[#C84B27]">{formatRupiah(order.total)} (Lunas)</span>
+            <span className="font-mono text-[#B23812]">{formatRupiah(order.total)} (Lunas)</span>
           </div>
           <div className="space-y-1.5 max-h-36 overflow-y-auto pr-1">
             {order.items.map((it, idx) => (
@@ -273,7 +273,7 @@ export const LiveOrderTrackerModal: React.FC<LiveOrderTrackerModalProps> = ({
         {/* Demo Advance Status Simulator Bar */}
         <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2 text-amber-900 font-bold">
-            <RefreshCw className="w-4 h-4 text-[#C84B27] shrink-0" />
+            <RefreshCw className="w-4 h-4 text-[#B23812] shrink-0" />
             <span className="text-[11px]">Uji Coba Alur Dapur:</span>
           </div>
           <button

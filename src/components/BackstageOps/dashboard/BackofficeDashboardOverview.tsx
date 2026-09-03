@@ -84,7 +84,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
               Operasional Backoffice
             </span>
             <span className="text-[11px] text-[#5C5248] font-mono font-medium flex items-center gap-1.5">
-              <CalendarDays className="w-3.5 h-3.5 text-amber-700 inline shrink-0" />
+              <CalendarDays className="w-3.5 h-3.5 text-amber-900 inline shrink-0" />
               <span>{new Date().toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</span>
             </span>
           </div>
@@ -109,7 +109,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
             onClick={() => onNavigateToModule('kds')}
             className="px-4.5 py-2.5 sm:py-3 rounded-2xl bg-[#FAF7F2] hover:bg-stone-200 border border-[#EAE2D8] text-[#1F1A16] font-bold text-xs flex items-center justify-center gap-2 shadow-2xs transition-all active:scale-95 cursor-pointer shrink-0"
           >
-            <UtensilsCrossed className="w-4 h-4 text-amber-700 shrink-0" />
+            <UtensilsCrossed className="w-4 h-4 text-amber-900 shrink-0" />
             <span>Layar KDS</span>
             <span className="px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-900 border border-amber-300 font-mono text-[10px] font-black">
               {activeOrders.length}
@@ -136,7 +136,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
             <div className="text-xl sm:text-2xl font-mono font-black text-[#1F1A16]">
               {formatRupiah(totalRevenueToday)}
             </div>
-            <div className="flex items-center gap-1.5 text-[11px] text-emerald-700 font-bold mt-1">
+            <div className="flex items-center gap-1.5 text-[11px] text-emerald-900 font-bold mt-1">
               <ArrowUpRight className="w-3.5 h-3.5" />
               <span>+18.4% vs kemarin</span>
             </div>
@@ -180,7 +180,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
             <div className="text-xl sm:text-2xl font-mono font-black text-[#1F1A16]">
               {activeOrders.length} <span className="text-xs text-[#5C5248] font-normal">Tiket Aktif</span>
             </div>
-            <div className="flex items-center gap-1.5 text-[11px] text-amber-700 font-medium mt-1">
+            <div className="flex items-center gap-1.5 text-[11px] text-amber-900 font-medium mt-1">
               <Clock className="w-3.5 h-3.5" />
               <span>Rata-rata sajian: 8-12 menit</span>
             </div>
@@ -300,7 +300,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
                   <span className="text-xs font-bold text-[#1F1A16] truncate max-w-[160px]">
                     {idx + 1}. {item.name}
                   </span>
-                  <span className="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
+                  <span className="text-[10px] font-mono font-bold text-emerald-900 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
                     {item.trend}
                   </span>
                 </div>
@@ -322,14 +322,14 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
         <div className="bg-white p-5 sm:p-6 rounded-3xl border border-[#EAE2D8] shadow-xs space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
             <div className="flex items-center gap-2">
-              <Package className="w-5 h-5 text-amber-700" />
+              <Package className="w-5 h-5 text-amber-900" />
               <h3 className="font-display font-black text-base text-[#1F1A16]">
                 Peringatan Stok & Bahan Dapur
               </h3>
             </div>
             <button
               onClick={() => onNavigateToModule('inventory')}
-              className="text-xs font-bold text-[#C84B27] hover:underline flex items-center gap-1 cursor-pointer"
+              className="text-xs font-bold text-[#B23812] hover:underline flex items-center gap-1 cursor-pointer"
             >
               <span>Semua Stok</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -359,14 +359,14 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
         <div className="bg-white p-5 sm:p-6 rounded-3xl border border-[#EAE2D8] shadow-xs space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
             <div className="flex items-center gap-2">
-              <Store className="w-5 h-5 text-emerald-700" />
+              <Store className="w-5 h-5 text-emerald-900" />
               <h3 className="font-display font-black text-base text-[#1F1A16]">
                 Status Meja Cepat
               </h3>
             </div>
             <button
               onClick={() => onNavigateToModule('floorplan')}
-              className="text-xs font-bold text-[#C84B27] hover:underline flex items-center gap-1 cursor-pointer"
+              className="text-xs font-bold text-[#B23812] hover:underline flex items-center gap-1 cursor-pointer"
             >
               <span>Denah Penuh</span>
               <ChevronRight className="w-3.5 h-3.5" />

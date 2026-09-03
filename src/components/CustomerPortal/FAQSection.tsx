@@ -42,7 +42,7 @@ export const FAQSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 text-amber-900 text-xs font-bold font-mono tracking-wider uppercase border border-amber-200">
-            <HelpCircle className="w-3.5 h-3.5 text-amber-700" />
+            <HelpCircle className="w-3.5 h-3.5 text-amber-900" />
             <span>Pusat Bantuan & Tanya Jawab</span>
           </div>
 
@@ -69,7 +69,7 @@ export const FAQSection: React.FC = () => {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#C84B27] hover:underline"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#B23812] hover:underline"
               >
                 Reset
               </button>
@@ -149,7 +149,7 @@ export const FAQSection: React.FC = () => {
             })
           ) : (
             <div className="bg-white p-8 rounded-2xl border border-dashed border-stone-300 text-center space-y-2">
-              <HelpCircle className="w-8 h-8 text-[#C84B27] mx-auto opacity-50" />
+              <HelpCircle className="w-8 h-8 text-[#B23812] mx-auto opacity-50" />
               <div className="font-bold text-sm text-[#1F1A16]">Pertanyaan tidak ditemukan</div>
               <p className="text-xs text-[#5C5248]">
                 Silakan coba kata kunci lain atau hubungi admin WhatsApp kami secara langsung.
@@ -161,7 +161,7 @@ export const FAQSection: React.FC = () => {
         {/* Bottom Direct WA Help Banner */}
         <div className="mt-12 p-6 rounded-2xl bg-white border border-[#EAE2D8] text-[#1F1A16] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-xs">
           <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-center justify-center shrink-0">
               <MessageCircle className="w-6 h-6" />
             </div>
             <div>

@@ -427,7 +427,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
           onClick={() => onNavigateTo('customer')}
           className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] border border-[#EAE2D8] text-xs font-semibold transition-all shadow-xs group"
         >
-          <ArrowLeft className="w-3.5 h-3.5 text-[#C84B27] group-hover:-translate-x-0.5 transition-transform" />
+          <ArrowLeft className="w-3.5 h-3.5 text-[#B23812] group-hover:-translate-x-0.5 transition-transform" />
           <span>Website Publik</span>
         </button>
 
@@ -436,7 +436,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
       {/* Authenticating Loading Overlay */}
       {isAuthenticating && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex flex-col items-center justify-center p-6 space-y-3">
-          <div className="w-12 h-12 rounded-2xl bg-white border-2 border-[#C84B27] flex items-center justify-center text-[#C84B27] shadow-2xl">
+          <div className="w-12 h-12 rounded-2xl bg-white border-2 border-[#C84B27] flex items-center justify-center text-[#B23812] shadow-2xl">
             <Lock className="w-6 h-6 animate-pulse" />
           </div>
           <div className="text-center space-y-1">
@@ -474,19 +474,19 @@ export const AuthPage: React.FC<AuthPageProps> = ({
               {/* Feature List */}
               <div className="grid grid-cols-2 lg:grid-cols-1 gap-2 pt-1 text-xs">
                 <div className="flex items-center gap-2 text-[#5C5248]">
-                  <div className="w-5 h-5 rounded-lg bg-white border border-[#EAE2D8] text-amber-700 flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 rounded-lg bg-white border border-[#EAE2D8] text-amber-900 flex items-center justify-center shrink-0">
                     <ShoppingBag className="w-3 h-3" />
                   </div>
                   <span className="truncate">POS & Billing Kasir</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#5C5248]">
-                  <div className="w-5 h-5 rounded-lg bg-white border border-[#EAE2D8] text-emerald-700 flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 rounded-lg bg-white border border-[#EAE2D8] text-emerald-900 flex items-center justify-center shrink-0">
                     <Coffee className="w-3 h-3" />
                   </div>
                   <span className="truncate">Kitchen & Bar KDS</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#5C5248]">
-                  <div className="w-5 h-5 rounded-lg bg-white border border-[#EAE2D8] text-[#C84B27] flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 rounded-lg bg-white border border-[#EAE2D8] text-[#B23812] flex items-center justify-center shrink-0">
                     <CalendarDays className="w-3 h-3" />
                   </div>
                   <span className="truncate">Denah & Reservasi Meja</span>
@@ -633,7 +633,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
 
                   {rateLimitCountdown > 0 && (
                     <div className="p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-xs flex items-center gap-2 font-mono font-bold">
-                      <Clock className="w-4 h-4 text-amber-700 animate-spin" />
+                      <Clock className="w-4 h-4 text-amber-900 animate-spin" />
                       <span>Rate Limiter: Tunggu {rateLimitCountdown}s.</span>
                     </div>
                   )}
@@ -695,7 +695,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                     <form onSubmit={handleVerify2FA} className="space-y-3.5">
                       <div className="p-3 rounded-xl bg-amber-50 border border-amber-300 text-xs text-[#1F1A16] space-y-1">
                         <div className="font-bold text-amber-900 flex items-center gap-1.5">
-                          <Fingerprint className="w-4 h-4 text-amber-700" />
+                          <Fingerprint className="w-4 h-4 text-amber-900" />
                           <span>Verifikasi 2FA ({pendingUser?.roleLabel})</span>
                         </div>
                         <p className="text-[11px] text-[#5C5248]">
@@ -714,7 +714,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                           value={twoFactorCode}
                           onChange={(e) => setTwoFactorCode(e.target.value)}
                           placeholder="882026"
-                          className="w-full text-center tracking-widest text-lg font-mono font-black py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl text-[#C84B27] focus:outline-hidden"
+                          className="w-full text-center tracking-widest text-lg font-mono font-black py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl text-[#B23812] focus:outline-hidden"
                         />
                       </div>
 
@@ -779,7 +779,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                   ) : (
                     <form onSubmit={handleVerifyMemberOTP} className="space-y-3.5">
                       <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8] text-xs text-[#1F1A16]">
-                        <span className="font-bold text-emerald-700">OTP Terkirim ke: {waPhone}</span>
+                        <span className="font-bold text-emerald-900">OTP Terkirim ke: {waPhone}</span>
                         <p className="text-[11px] text-[#5C5248] mt-0.5">
                           Gunakan kode master demo: <strong className="text-amber-800 font-mono">772026</strong>.
                         </p>
@@ -804,7 +804,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                         <button
                           type="button"
                           onClick={() => setOtpStep('phone')}
-                          className="text-[#C84B27] hover:underline font-semibold"
+                          className="text-[#B23812] hover:underline font-semibold"
                         >
                           Ganti Nomor
                         </button>
@@ -830,7 +830,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs pb-2 border-b border-[#EAE2D8]">
                     <span className="font-bold text-[#1F1A16] flex items-center gap-1.5">
-                      <Shield className="w-3.5 h-3.5 text-amber-700" />
+                      <Shield className="w-3.5 h-3.5 text-amber-900" />
                       <span>Riwayat Log Autentikasi</span>
                     </span>
                     <span className="text-[10px] font-mono text-[#5C5248]">{auditLogs.length} Entri</span>

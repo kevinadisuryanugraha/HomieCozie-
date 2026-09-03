@@ -133,7 +133,7 @@ export const BackofficeHeader: React.FC<BackofficeHeaderProps> = ({
             className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-950 text-xs font-bold shadow-2xs transition-all cursor-pointer shrink-0 active:scale-95"
             title="Buka Radar Pantauan Eksekutif Owner (Live Reverb)"
           >
-            <Radio className="w-3.5 h-3.5 text-[#C84B27] animate-pulse" />
+            <Radio className="w-3.5 h-3.5 text-[#B23812] animate-pulse" />
             <span className="hidden xl:inline">Owner Radar</span>
           </button>
         )}
@@ -145,7 +145,7 @@ export const BackofficeHeader: React.FC<BackofficeHeaderProps> = ({
             className="hidden sm:flex w-8.5 h-8.5 rounded-xl bg-[#FAF7F2] hover:bg-stone-200 border border-[#EAE2D8] text-[#5C5248] hover:text-[#1F1A16] items-center justify-center transition-all cursor-pointer shadow-2xs active:scale-95 shrink-0"
             title="Kustomisasi Tema, Warna & Font Backstage"
           >
-            <Palette className="w-4 h-4 text-[#C84B27]" />
+            <Palette className="w-4 h-4 text-[#B23812]" />
           </button>
         )}
 
@@ -153,7 +153,7 @@ export const BackofficeHeader: React.FC<BackofficeHeaderProps> = ({
         <button
           onClick={onRefresh}
           className={`w-8.5 h-8.5 hidden sm:flex items-center justify-center rounded-xl bg-white hover:bg-stone-50 text-[#5C5248] hover:text-[#1F1A16] border border-[#EAE2D8] transition-all cursor-pointer shadow-2xs shrink-0 ${
-            isRefreshing ? 'animate-spin text-[#C84B27]' : ''
+            isRefreshing ? 'animate-spin text-[#B23812]' : ''
           }`}
           title="Segarkan data operasional secara live"
         >
@@ -167,7 +167,7 @@ export const BackofficeHeader: React.FC<BackofficeHeaderProps> = ({
           aria-label="Notifikasi antrean dapur & pesanan"
           title="Notifikasi antrean dapur & pesanan"
         >
-          <Bell className="w-4 h-4 text-amber-700" />
+          <Bell className="w-4 h-4 text-amber-900" />
           {activeOrdersCount > 0 && (
             <span className="absolute -top-1 -right-1 min-w-4 h-4 px-1 rounded-full bg-[#C84B27] text-white text-[9px] font-mono font-bold flex items-center justify-center shadow-xs">
               {activeOrdersCount}
@@ -181,7 +181,7 @@ export const BackofficeHeader: React.FC<BackofficeHeaderProps> = ({
           className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] text-xs font-bold border border-[#EAE2D8] transition-colors cursor-pointer shadow-2xs shrink-0"
           title="Buka Halaman Publik Pelanggan"
         >
-          <ExternalLink className="w-3.5 h-3.5 text-amber-700" />
+          <ExternalLink className="w-3.5 h-3.5 text-amber-900" />
           <span>Portal Tamu</span>
         </button>
 

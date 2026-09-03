@@ -119,7 +119,7 @@ export const GallerySection: React.FC = () => {
                 {/* Caption Content */}
                 <div className="p-5 space-y-1.5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-display font-bold text-base sm:text-lg text-[#1F1A16] group-hover:text-[#C84B27] transition-colors leading-snug">
+                    <h3 className="font-display font-bold text-base sm:text-lg text-[#1F1A16] group-hover:text-[#B23812] transition-colors leading-snug">
                       {item.title}
                     </h3>
                     <p className="text-xs text-[#5C5248] mt-1 leading-relaxed">
@@ -135,7 +135,7 @@ export const GallerySection: React.FC = () => {
         {/* Bottom Callout banner */}
         <div className="mt-12 bg-white p-6 rounded-2xl border border-[#EAE2D8] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-xs">
           <div className="flex items-center gap-3.5">
-            <div className="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center shrink-0">
+            <div className="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 flex items-center justify-center shrink-0">
               <Camera className="w-5 h-5" />
             </div>
             <div>

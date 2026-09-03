@@ -76,7 +76,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
               <div className="space-y-2">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-xl bg-amber-50 text-[#C84B27] flex items-center justify-center shrink-0 border border-amber-200">
+                    <div className="w-8 h-8 rounded-xl bg-amber-50 text-[#B23812] flex items-center justify-center shrink-0 border border-amber-200">
                       <MapPin className="w-4 h-4" />
                     </div>
                     <h3 className="font-display font-bold text-base text-[#1F1A16]">
@@ -91,8 +91,8 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                   >
                     {copiedAddress ? (
                       <>
-                        <Check className="w-3.5 h-3.5 text-emerald-700" />
-                        <span className="text-[11px] text-emerald-700 font-bold">Tersalin</span>
+                        <Check className="w-3.5 h-3.5 text-emerald-900" />
+                        <span className="text-[11px] text-emerald-900 font-bold">Tersalin</span>
                       </>
                     ) : (
                       <>
@@ -112,7 +112,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
               <div className="p-4 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] space-y-2.5">
                 <div className="flex items-center justify-between text-xs">
                   <span className="flex items-center gap-1.5 text-[#1F1A16] font-bold">
-                    <Clock className="w-4 h-4 text-amber-700" />
+                    <Clock className="w-4 h-4 text-amber-900" />
                     <span>Jam Operasional</span>
                   </span>
                   <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold">
@@ -160,19 +160,19 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
             {/* Parking & Facilities Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-[#5C5248]">
               <div className="bg-white p-3 rounded-2xl border border-[#EAE2D8] flex items-center gap-2 shadow-xs">
-                <Car className="w-4 h-4 text-emerald-700 shrink-0" />
+                <Car className="w-4 h-4 text-emerald-900 shrink-0" />
                 <span className="font-medium text-xs">Parkir Mobil</span>
               </div>
               <div className="bg-white p-3 rounded-2xl border border-[#EAE2D8] flex items-center gap-2 shadow-xs">
-                <Bike className="w-4 h-4 text-emerald-700 shrink-0" />
+                <Bike className="w-4 h-4 text-emerald-900 shrink-0" />
                 <span className="font-medium text-xs">Parkir Motor</span>
               </div>
               <div className="bg-white p-3 rounded-2xl border border-[#EAE2D8] flex items-center gap-2 shadow-xs">
-                <Wifi className="w-4 h-4 text-emerald-700 shrink-0" />
+                <Wifi className="w-4 h-4 text-emerald-900 shrink-0" />
                 <span className="font-medium text-xs">Wi-Fi 100M</span>
               </div>
               <div className="bg-white p-3 rounded-2xl border border-[#EAE2D8] flex items-center gap-2 shadow-xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-900 shrink-0" />
                 <span className="font-medium text-xs">AC & Musholla</span>
               </div>
             </div>
@@ -287,7 +287,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                 <div className="p-6 h-full flex flex-col justify-between overflow-y-auto space-y-4">
                   <div className="space-y-1">
                     <h3 className="font-display font-bold text-sm text-[#1F1A16] flex items-center gap-1.5">
-                      <Compass className="w-4 h-4 text-[#C84B27]" />
+                      <Compass className="w-4 h-4 text-[#B23812]" />
                       <span>Rute & Akses Menuju Homie Cozie</span>
                     </h3>
                     <p className="text-xs text-[#5C5248]">
@@ -300,7 +300,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                       <div key={idx} className="bg-white p-3 rounded-xl border border-[#EAE2D8] space-y-1 shadow-xs">
                         <div className="flex items-center justify-between text-xs">
                           <span className="font-bold text-[#1F1A16]">{lm.label}</span>
-                          <span className="font-mono text-emerald-700 font-bold text-[11px]">{lm.time}</span>
+                          <span className="font-mono text-emerald-900 font-bold text-[11px]">{lm.time}</span>
                         </div>
                         <p className="text-[11px] text-[#5C5248] leading-relaxed">
                           {lm.desc}
@@ -310,7 +310,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                   </div>
 
                   <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-amber-700 shrink-0" />
+                    <Sparkles className="w-4 h-4 text-amber-900 shrink-0" />
                     <span>Patokan: Dekat persimpangan Kalisari Baru, bangunan estetik warna bata hangat.</span>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                 <div className="p-6 h-full flex flex-col justify-between overflow-y-auto space-y-4">
                   <div className="space-y-1">
                     <h3 className="font-display font-bold text-sm text-[#1F1A16] flex items-center gap-1.5">
-                      <Car className="w-4 h-4 text-[#C84B27]" />
+                      <Car className="w-4 h-4 text-[#B23812]" />
                       <span>Fasilitas Parkir & Drop-Off</span>
                     </h3>
                     <p className="text-xs text-[#5C5248]">
@@ -332,7 +332,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="bg-white p-4 rounded-xl border border-[#EAE2D8] space-y-1.5 shadow-xs">
                       <div className="flex items-center gap-2 font-bold text-xs text-[#1F1A16]">
-                        <Bike className="w-4 h-4 text-emerald-700" />
+                        <Bike className="w-4 h-4 text-emerald-900" />
                         <span>Kapasitas Motor</span>
                       </div>
                       <div className="text-base font-display font-black text-[#1F1A16]">
@@ -345,7 +345,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
 
                     <div className="bg-white p-4 rounded-xl border border-[#EAE2D8] space-y-1.5 shadow-xs">
                       <div className="flex items-center gap-2 font-bold text-xs text-[#1F1A16]">
-                        <Car className="w-4 h-4 text-emerald-700" />
+                        <Car className="w-4 h-4 text-emerald-900" />
                         <span>Kapasitas Mobil</span>
                       </div>
                       <div className="text-base font-display font-black text-[#1F1A16]">
@@ -358,7 +358,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                   </div>
 
                   <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs text-emerald-900 flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-900 shrink-0" />
                     <span>Free Parkir & Bebas Pungutan Liar untuk semua pengunjung cafe.</span>
                   </div>
                 </div>
@@ -375,7 +375,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                   rel="noreferrer"
                   className="flex items-center gap-1.5 text-[#5C5248] font-semibold hover:text-[#1F1A16] transition-colors"
                 >
-                  <Instagram className="w-4 h-4 text-amber-700" />
+                  <Instagram className="w-4 h-4 text-amber-900" />
                   <span>{CAFE_INFO.instagram}</span>
                 </a>
 
@@ -383,7 +383,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                   href={`https://wa.me/${CAFE_INFO.whatsapp.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-1.5 text-[#5C5248] font-semibold hover:text-emerald-700 transition-colors"
+                  className="flex items-center gap-1.5 text-[#5C5248] font-semibold hover:text-emerald-900 transition-colors"
                 >
                   <Phone className="w-4 h-4 text-emerald-600" />
                   <span>{CAFE_INFO.whatsapp}</span>

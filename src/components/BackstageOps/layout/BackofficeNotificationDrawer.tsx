@@ -91,7 +91,7 @@ export const BackofficeNotificationDrawer: React.FC<BackofficeNotificationDrawer
                       className="p-3.5 rounded-2xl bg-[#FAF7F2] hover:bg-amber-50/60 border border-[#EAE2D8] hover:border-amber-300 transition-all cursor-pointer space-y-2"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono font-bold text-[#C84B27]">
+                        <span className="text-xs font-mono font-bold text-[#B23812]">
                           #{ord.orderNumber}
                         </span>
                         <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200">

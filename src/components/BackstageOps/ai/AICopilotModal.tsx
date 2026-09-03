@@ -104,7 +104,7 @@ export const AICopilotModal: React.FC<AICopilotModalProps> = ({
                     AI Executive Copilot
                   </h3>
                   <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-100 text-amber-950 border border-amber-300 inline-flex items-center gap-1.5 whitespace-nowrap shrink-0 shadow-2xs">
-                    <Bot className="w-3 h-3 text-[#C84B27]" />
+                    <Bot className="w-3 h-3 text-[#B23812]" />
                     <span>Gemini 2.5 Intelligence</span>
                   </span>
                 </div>
@@ -167,7 +167,7 @@ export const AICopilotModal: React.FC<AICopilotModalProps> = ({
               className="ml-auto p-2 rounded-xl bg-white hover:bg-stone-100 text-[#5C5248] border border-[#EAE2D8] transition-colors cursor-pointer shrink-0 shadow-2xs"
               title="Generate Ulang Analisis"
             >
-              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin text-[#C84B27]' : ''}`} />
+              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin text-[#B23812]' : ''}`} />
             </button>
           </div>
 
@@ -176,7 +176,7 @@ export const AICopilotModal: React.FC<AICopilotModalProps> = ({
             {loading ? (
               <div className="py-16 text-center space-y-3">
                 <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-800 flex items-center justify-center mx-auto animate-bounce border border-amber-200">
-                  <Sparkles className="w-6 h-6 text-[#C84B27]" />
+                  <Sparkles className="w-6 h-6 text-[#B23812]" />
                 </div>
                 <div className="text-sm font-bold text-[#1F1A16]">AI sedang menganalisis data kafe...</div>
                 <p className="text-xs text-[#5C5248]">Memproses tren penjualan, burn rate bahan, dan parameter pelanggan.</p>

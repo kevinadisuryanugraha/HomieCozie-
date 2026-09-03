@@ -149,7 +149,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
           {/* Header */}
           <div className="bg-[#FAF7F2] p-4 sm:p-5 border-b border-[#EAE2D8] flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-white border border-[#EAE2D8] flex items-center justify-center text-[#C84B27] shadow-2xs font-bold text-xs">
+              <div className="w-8 h-8 rounded-xl bg-white border border-[#EAE2D8] flex items-center justify-center text-[#B23812] shadow-2xs font-bold text-xs">
                 QRIS
               </div>
               <div>
@@ -234,7 +234,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                 <div className="bg-[#FAF7F2] p-4 rounded-2xl border border-[#EAE2D8] flex items-center justify-between">
                   <div>
                     <span className="text-[11px] text-[#5C5248] font-semibold block">Total Tagihan Pesanan:</span>
-                    <span className="font-display font-black text-xl text-[#C84B27]">
+                    <span className="font-display font-black text-xl text-[#B23812]">
                       {formatRupiah(order.total)}
                     </span>
                   </div>
@@ -242,7 +242,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                     onClick={handleCopyAmount}
                     className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-white border border-[#EAE2D8] hover:bg-stone-50 text-xs font-bold text-[#1F1A16] shadow-2xs cursor-pointer transition-colors"
                   >
-                    {copiedAmount ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-[#C84B27]" />}
+                    {copiedAmount ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 text-[#B23812]" />}
                     <span>{copiedAmount ? 'Disalin' : 'Salin'}</span>
                   </button>
                 </div>
@@ -284,7 +284,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                 <div className="flex items-center justify-center gap-2 text-xs font-mono">
                   <Clock className="w-4 h-4 text-amber-600" />
                   <span className="text-[#5C5248]">Kedaluwarsa dalam:</span>
-                  <span className="font-bold text-[#C84B27] px-2 py-0.5 rounded-lg bg-amber-50 border border-amber-200">
+                  <span className="font-bold text-[#B23812] px-2 py-0.5 rounded-lg bg-amber-50 border border-amber-200">
                     {timeFormatted}
                   </span>
                 </div>
@@ -299,8 +299,8 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                   <div className="grid grid-cols-2 gap-2">
                     {[
                       { name: 'BCA Mobile', color: 'hover:border-blue-600 hover:text-blue-700' },
-                      { name: 'Livin Mandiri', color: 'hover:border-amber-600 hover:text-amber-700' },
-                      { name: 'GoPay / OVO', color: 'hover:border-emerald-600 hover:text-emerald-700' },
+                      { name: 'Livin Mandiri', color: 'hover:border-amber-600 hover:text-amber-900' },
+                      { name: 'GoPay / OVO', color: 'hover:border-emerald-600 hover:text-emerald-900' },
                       { name: 'ShopeePay / Dana', color: 'hover:border-rose-600 hover:text-rose-700' }
                     ].map((app) => (
                       <button
@@ -312,9 +312,9 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                         }`}
                       >
                         {paymentStatus === 'verifying' && selectedApp === app.name ? (
-                          <RefreshCw className="w-3.5 h-3.5 animate-spin text-[#C84B27]" />
+                          <RefreshCw className="w-3.5 h-3.5 animate-spin text-[#B23812]" />
                         ) : (
-                          <Smartphone className="w-3.5 h-3.5 text-[#C84B27]" />
+                          <Smartphone className="w-3.5 h-3.5 text-[#B23812]" />
                         )}
                         <span>{app.name}</span>
                       </button>

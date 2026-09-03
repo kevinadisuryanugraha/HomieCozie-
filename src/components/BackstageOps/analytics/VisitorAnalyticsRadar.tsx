@@ -174,7 +174,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
   if (isLoading && !data) {
     return (
       <div className="p-8 text-center text-xs text-[#5C5248] flex items-center justify-center gap-2">
-        <RefreshCw className="w-4 h-4 animate-spin text-[#C84B27]" />
+        <RefreshCw className="w-4 h-4 animate-spin text-[#B23812]" />
         <span>Memuat Radar Pengunjung & Customer Intelligence...</span>
       </div>
     );
@@ -188,7 +188,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
       {/* 1. Header Toolbar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-4 sm:p-5 rounded-3xl border border-[#EAE2D8] shadow-xs w-full min-w-0">
         <div className="flex items-start sm:items-center gap-3.5 min-w-0 flex-1">
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
             <Radio className="w-5 h-5 animate-pulse" />
           </div>
           <div className="min-w-0 flex-1 space-y-1">
@@ -239,7 +239,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
           <button
             onClick={fetchAnalytics}
             className={`p-2.5 rounded-xl sm:rounded-2xl bg-white hover:bg-stone-50 border border-[#EAE2D8] text-[#5C5248] hover:text-[#1F1A16] transition-all cursor-pointer shadow-2xs shrink-0 active:scale-95 ${
-              isRefreshing ? 'animate-spin text-[#C84B27]' : ''
+              isRefreshing ? 'animate-spin text-[#B23812]' : ''
             }`}
             title="Refresh radar"
           >
@@ -274,7 +274,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
         <div className="bg-white p-5 rounded-2xl border border-[#EAE2D8] shadow-xs">
           <div className="flex items-center justify-between text-[#5C5248]">
             <span className="text-xs font-mono uppercase font-bold">Total Kunjungan</span>
-            <Users className="w-4 h-4 text-[#C84B27]" />
+            <Users className="w-4 h-4 text-[#B23812]" />
           </div>
           <div className="mt-3 flex items-baseline gap-2">
             <span className="font-display font-black text-2xl sm:text-3xl text-[#1F1A16]">
@@ -291,7 +291,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
         <div className="bg-white p-5 rounded-2xl border border-[#EAE2D8] shadow-xs">
           <div className="flex items-center justify-between text-[#5C5248]">
             <span className="text-xs font-mono uppercase font-bold">Rata-Rata Dwell Time</span>
-            <Clock className="w-4 h-4 text-amber-700" />
+            <Clock className="w-4 h-4 text-amber-900" />
           </div>
           <div className="mt-3 flex items-baseline gap-2">
             <span className="font-display font-black text-2xl sm:text-3xl text-[#1F1A16]">
@@ -311,7 +311,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
             <TrendingUp className="w-4 h-4 text-emerald-600" />
           </div>
           <div className="mt-3 flex items-baseline gap-2">
-            <span className="font-display font-black text-2xl sm:text-3xl text-[#C84B27]">
+            <span className="font-display font-black text-2xl sm:text-3xl text-[#B23812]">
               {analytics.overallConversionRate}
             </span>
             <span className="text-xs text-stone-500 font-medium">Kunjungan → Order</span>
@@ -352,7 +352,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
                   <div className="flex items-center justify-between text-xs gap-2">
                     <span className="font-bold text-[#1F1A16] truncate">{step.name}</span>
                     <div className="flex items-center gap-1.5 font-mono shrink-0 whitespace-nowrap">
-                      <span className="font-bold text-[#C84B27]">{step.count} tamu</span>
+                      <span className="font-bold text-[#B23812]">{step.count} tamu</span>
                       <span className="text-[11px] text-[#5C5248]">({step.percentage}%)</span>
                     </div>
                   </div>
@@ -376,7 +376,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
           </div>
 
           <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-amber-950 flex items-start gap-3 shadow-2xs mt-2">
-            <Sparkles className="w-4 h-4 text-[#C84B27] shrink-0 mt-0.5 animate-pulse" />
+            <Sparkles className="w-4 h-4 text-[#B23812] shrink-0 mt-0.5 animate-pulse" />
             <div className="min-w-0 flex-1 space-y-0.5">
               <span className="font-bold block text-xs text-amber-900">Rekomendasi Optimasi Funnel AI:</span>
               <p className="text-[11px] text-[#5C5248] leading-relaxed">
@@ -392,7 +392,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
             <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-3.5">
               <div className="space-y-0.5">
                 <h4 className="font-display font-bold text-sm sm:text-base text-[#1F1A16] flex items-center gap-2 leading-snug">
-                  <QrCode className="w-4 h-4 text-[#C84B27]" />
+                  <QrCode className="w-4 h-4 text-[#B23812]" />
                   <span>Peta Panas Scan Meja Fisik</span>
                 </h4>
                 <p className="text-xs text-[#5C5248]">Nomor meja paling sering di-scan QR oleh tamu</p>
@@ -413,7 +413,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
                   </div>
 
                   <div className="text-right shrink-0 whitespace-nowrap pl-2">
-                    <span className="font-mono font-bold text-[#C84B27] block">{t.scanCount}x Scan</span>
+                    <span className="font-mono font-bold text-[#B23812] block">{t.scanCount}x Scan</span>
                     <span className="text-[10px] text-stone-500 font-mono block">Puncak: {t.peakHour}</span>
                   </div>
                 </div>
@@ -463,7 +463,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
             <div className="grid grid-cols-3 gap-2 text-center text-xs">
               {analytics.deviceBreakdown.map(d => (
                 <div key={d.device} className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8]">
-                  <Smartphone className="w-4 h-4 text-[#C84B27] mx-auto mb-1" />
+                  <Smartphone className="w-4 h-4 text-[#B23812] mx-auto mb-1" />
                   <span className="font-mono font-bold text-[#1F1A16] block">{d.percentage}%</span>
                   <span className="text-[10px] text-[#5C5248] leading-tight block">{d.device}</span>
                 </div>
@@ -501,8 +501,8 @@ export const VisitorAnalyticsRadar: React.FC = () => {
                   <tr key={m.menuName} className="hover:bg-stone-50/70">
                     <td className="p-3 font-bold text-[#1F1A16]">{m.menuName}</td>
                     <td className="p-3 text-center font-mono text-[#5C5248]">{m.viewsCount}x</td>
-                    <td className="p-3 text-center font-mono font-bold text-[#C84B27]">{m.orderCount}x</td>
-                    <td className="p-3 text-center font-mono font-bold text-emerald-700">{m.conversionRate}</td>
+                    <td className="p-3 text-center font-mono font-bold text-[#B23812]">{m.orderCount}x</td>
+                    <td className="p-3 text-center font-mono font-bold text-emerald-900">{m.conversionRate}</td>
                     <td className="p-3">
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-stone-100 text-[#1F1A16] border border-stone-200 block w-max">
                         {m.status}

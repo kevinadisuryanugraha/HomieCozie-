@@ -456,7 +456,7 @@ export function DataTable<T extends Record<string, any>>({
                   onClick={() => setShowImportModal(true)}
                   className="flex-1 sm:flex-none px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl bg-[#FAF7F2] hover:bg-stone-200 border border-[#EAE2D8] text-xs font-bold text-[#1F1A16] flex items-center justify-center gap-1.5 shadow-xs transition-colors cursor-pointer whitespace-nowrap"
                 >
-                  <Upload className="w-3.5 h-3.5 text-[#C84B27]" />
+                  <Upload className="w-3.5 h-3.5 text-[#B23812]" />
                   <span>Impor Data</span>
                 </button>
               )}
@@ -489,7 +489,7 @@ export function DataTable<T extends Record<string, any>>({
                             onClick={() => handleExportJSON(false)}
                             className="w-full text-left px-3 py-2 rounded-xl text-xs font-medium text-[#1F1A16] hover:bg-amber-50 hover:text-amber-900 flex items-center gap-2 cursor-pointer"
                           >
-                            <FileCode className="w-4 h-4 text-[#C84B27] shrink-0" />
+                            <FileCode className="w-4 h-4 text-[#B23812] shrink-0" />
                             <span>Ekspor ke JSON</span>
                           </button>
                           {selectedRowsList.length > 0 && (
@@ -570,7 +570,7 @@ export function DataTable<T extends Record<string, any>>({
                     setActiveFilters(reset);
                     setCurrentPage(1);
                   }}
-                  className="p-2 rounded-2xl bg-[#FAF7F2] text-[#5C5248] hover:text-[#C84B27] border border-[#EAE2D8] text-xs font-bold cursor-pointer transition-colors shadow-2xs shrink-0"
+                  className="p-2 rounded-2xl bg-[#FAF7F2] text-[#5C5248] hover:text-[#B23812] border border-[#EAE2D8] text-xs font-bold cursor-pointer transition-colors shadow-2xs shrink-0"
                   title="Reset Semua Filter"
                 >
                   <RefreshCw className="w-3.5 h-3.5" />
@@ -671,7 +671,7 @@ export function DataTable<T extends Record<string, any>>({
                             : col.align === 'center'
                             ? 'text-center'
                             : 'text-left'
-                        } ${col.sortable ? 'cursor-pointer hover:text-[#C84B27] transition-colors' : ''}`}
+                        } ${col.sortable ? 'cursor-pointer hover:text-[#B23812] transition-colors' : ''}`}
                         onClick={() => handleHeaderSort(col)}
                       >
                         <div
@@ -688,9 +688,9 @@ export function DataTable<T extends Record<string, any>>({
                             <span className="text-[#5C5248] shrink-0">
                               {isSorted ? (
                                 sortConfig?.direction === 'asc' ? (
-                                  <ChevronUp className="w-3.5 h-3.5 text-[#C84B27]" />
+                                  <ChevronUp className="w-3.5 h-3.5 text-[#B23812]" />
                                 ) : (
-                                  <ChevronDown className="w-3.5 h-3.5 text-[#C84B27]" />
+                                  <ChevronDown className="w-3.5 h-3.5 text-[#B23812]" />
                                 )
                               ) : (
                                 <ChevronsUpDown className="w-3 h-3 opacity-40 hover:opacity-100" />
@@ -881,7 +881,7 @@ export function DataTable<T extends Record<string, any>>({
           <div className="bg-white border border-[#EAE2D8] rounded-3xl p-6 max-w-xl w-full text-[#1F1A16] space-y-4 shadow-2xl animate-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div className="flex items-center gap-2">
-                <Upload className="w-5 h-5 text-[#C84B27]" />
+                <Upload className="w-5 h-5 text-[#B23812]" />
                 <h3 className="font-display font-black text-lg text-[#1F1A16]">
                   Impor Berkas Data (CSV / JSON)
                 </h3>
@@ -916,7 +916,7 @@ export function DataTable<T extends Record<string, any>>({
                   accept=".csv,.json,text/csv,application/json"
                   className="hidden"
                 />
-                <div className="w-10 h-10 rounded-2xl bg-amber-50 text-[#C84B27] border border-amber-200 flex items-center justify-center mx-auto">
+                <div className="w-10 h-10 rounded-2xl bg-amber-50 text-[#B23812] border border-amber-200 flex items-center justify-center mx-auto">
                   <Upload className="w-5 h-5" />
                 </div>
                 <div className="font-bold text-[#1F1A16]">
@@ -940,7 +940,7 @@ export function DataTable<T extends Record<string, any>>({
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-xs font-bold text-[#1F1A16]">
                     <span>Pratinjau Data ({importParsedData.length} Baris Terdeteksi):</span>
-                    <span className="text-emerald-700 font-mono text-[11px]">✓ Valid untuk Diimpor</span>
+                    <span className="text-emerald-900 font-mono text-[11px]">✓ Valid untuk Diimpor</span>
                   </div>
 
                   <div className="max-h-40 overflow-y-auto border border-[#EAE2D8] rounded-xl bg-[#FAF7F2] p-2 text-[11px] font-mono">

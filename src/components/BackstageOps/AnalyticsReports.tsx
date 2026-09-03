@@ -269,7 +269,7 @@ export const AnalyticsReports: React.FC = () => {
       minWidth: '120px',
       align: 'right',
       cell: ({ row }) => (
-        <span className="font-mono text-xs text-emerald-700 font-bold whitespace-nowrap">{formatRupiah(row.pb1Tax)}</span>
+        <span className="font-mono text-xs text-emerald-900 font-bold whitespace-nowrap">{formatRupiah(row.pb1Tax)}</span>
       )
     },
     {
@@ -360,14 +360,14 @@ export const AnalyticsReports: React.FC = () => {
         <div className="bg-white p-5 rounded-3xl border border-[#EAE2D8] shadow-xs hover:shadow-md hover:border-[#C84B27]/30 transition-all flex flex-col justify-between min-h-[145px]">
           <div className="flex items-center justify-between gap-2 pb-1">
             <div className="flex items-center gap-2.5 min-w-0">
-              <div className="w-8 h-8 rounded-xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="w-8 h-8 rounded-xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center shrink-0 shadow-2xs">
                 <DollarSign className="w-4 h-4" />
               </div>
               <span className="text-xs font-bold text-[#5C5248] whitespace-nowrap">
                 Omzet Hari Ini
               </span>
             </div>
-            <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0 whitespace-nowrap">
+            <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-900 border border-emerald-200 shrink-0 whitespace-nowrap">
               +18.4% <ArrowUpRight className="w-3 h-3" />
             </span>
           </div>
@@ -393,7 +393,7 @@ export const AnalyticsReports: React.FC = () => {
                 Tamu Berkunjung
               </span>
             </div>
-            <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0 whitespace-nowrap">
+            <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-900 border border-emerald-200 shrink-0 whitespace-nowrap">
               +24% <ArrowUpRight className="w-3 h-3" />
             </span>
           </div>
@@ -413,7 +413,7 @@ export const AnalyticsReports: React.FC = () => {
         <div className="bg-white p-5 rounded-3xl border border-[#EAE2D8] shadow-xs hover:shadow-md hover:border-amber-300 transition-all flex flex-col justify-between min-h-[145px]">
           <div className="flex items-center justify-between gap-2 pb-1">
             <div className="flex items-center gap-2.5 min-w-0">
-              <div className="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-center justify-center shrink-0 shadow-2xs">
                 <TrendingUp className="w-4 h-4" />
               </div>
               <span className="text-xs font-bold text-[#5C5248] whitespace-nowrap">
@@ -431,7 +431,7 @@ export const AnalyticsReports: React.FC = () => {
 
           <div className="flex items-center justify-between text-[11px] text-[#5C5248] pt-2 border-t border-[#EAE2D8]/60 mt-1">
             <span>HPP Terkontrol</span>
-            <span className="font-mono font-bold text-emerald-700 text-[11px]">{formatRupiah(cogsTotal)}</span>
+            <span className="font-mono font-bold text-emerald-900 text-[11px]">{formatRupiah(cogsTotal)}</span>
           </div>
         </div>
 
@@ -560,7 +560,7 @@ export const AnalyticsReports: React.FC = () => {
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div>
                 <h3 className="font-display font-black text-base text-[#1F1A16] flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-[#C84B27]" />
+                  <TrendingUp className="w-4 h-4 text-[#B23812]" />
                   <span>5 Menu Paling Laris (Top Performers)</span>
                 </h3>
                 <p className="text-xs text-[#5C5248] mt-0.5">
@@ -586,7 +586,7 @@ export const AnalyticsReports: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="font-mono font-bold text-[#C84B27] text-xs">
+                  <div className="font-mono font-bold text-[#B23812] text-xs">
                     {formatRupiah(item.revenue)}
                   </div>
                 </div>
@@ -640,7 +640,7 @@ export const AnalyticsReports: React.FC = () => {
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div>
                 <h3 className="font-display font-black text-base text-[#1F1A16] flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-amber-700" />
+                  <Clock className="w-4 h-4 text-amber-900" />
                   <span>Heatmap Beban Jam Sibuk (Rush Hours)</span>
                 </h3>
                 <p className="text-xs text-[#5C5248] mt-0.5">
@@ -662,7 +662,7 @@ export const AnalyticsReports: React.FC = () => {
                     />
                   </div>
                   <span className={`w-10 text-right font-mono font-bold text-[11px] ${
-                    hr.isPeak ? 'text-[#C84B27]' : 'text-[#5C5248]'
+                    hr.isPeak ? 'text-[#B23812]' : 'text-[#5C5248]'
                   }`}>
                     {hr.load}%
                   </span>
@@ -674,7 +674,7 @@ export const AnalyticsReports: React.FC = () => {
           {/* Tax & Financial Summary Card */}
           <div className="bg-white rounded-3xl p-4 sm:p-6 border border-[#EAE2D8] shadow-xs space-y-4 w-full min-w-0">
             <div className="flex items-center gap-2.5 pb-3.5 border-b border-[#EAE2D8]">
-              <div className="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-center justify-center shrink-0 shadow-2xs">
                 <Receipt className="w-4 h-4" />
               </div>
               <div className="min-w-0 flex-1">
@@ -699,11 +699,11 @@ export const AnalyticsReports: React.FC = () => {
               </div>
               <div className="flex items-center justify-between p-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8] gap-2">
                 <span className="text-[#5C5248] text-xs font-sans">Pajak Restoran PB1 (10%):</span>
-                <span className="font-bold text-emerald-700 whitespace-nowrap shrink-0">+{formatRupiah(pb1TaxTotal)}</span>
+                <span className="font-bold text-emerald-900 whitespace-nowrap shrink-0">+{formatRupiah(pb1TaxTotal)}</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-amber-50 to-amber-100/40 border border-amber-200/80 text-amber-950 gap-1.5 sm:gap-2">
                 <span className="font-bold text-xs font-sans leading-snug">Estimasi Laba Bersih Operasional:</span>
-                <span className="font-black text-sm sm:text-base text-[#C84B27] whitespace-nowrap shrink-0 text-right font-mono">
+                <span className="font-black text-sm sm:text-base text-[#B23812] whitespace-nowrap shrink-0 text-right font-mono">
                   {formatRupiah(grossProfit + serviceChargeTotal)}
                 </span>
               </div>
@@ -730,7 +730,7 @@ export const AnalyticsReports: React.FC = () => {
             <div className="sticky -top-6 sm:-top-10 -mx-6 sm:-mx-10 px-6 sm:px-10 py-4 bg-white/95 backdrop-blur-md z-20 flex items-center justify-between border-b border-[#EAE2D8] rounded-t-3xl shadow-xs print:hidden">
               <div className="flex items-center gap-2.5 min-w-0">
                 <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-900 border border-amber-500/20 flex items-center justify-center shrink-0">
-                  <FileText className="w-4 h-4 text-[#C84B27]" />
+                  <FileText className="w-4 h-4 text-[#B23812]" />
                 </div>
                 <div className="min-w-0">
                   <span className="font-bold text-xs sm:text-sm text-[#1F1A16] block truncate">
@@ -778,7 +778,7 @@ export const AnalyticsReports: React.FC = () => {
                       />
                     </div>
                     <div className="space-y-0.5">
-                      <div className="text-[10px] font-mono font-bold tracking-widest text-[#C84B27] uppercase">
+                      <div className="text-[10px] font-mono font-bold tracking-widest text-[#B23812] uppercase">
                         PT. HOMIE COZIE BERKAH RASA
                       </div>
                       <h1 className="text-xl sm:text-2xl font-serif font-black tracking-tight text-stone-950">
@@ -819,7 +819,7 @@ export const AnalyticsReports: React.FC = () => {
                   <span className="text-sm sm:text-base font-black text-stone-900 block mt-0.5">
                     {formatRupiah(grossSales)}
                   </span>
-                  <span className="text-[9px] text-emerald-700 font-bold block mt-0.5">94 Transaksi Sukses</span>
+                  <span className="text-[9px] text-emerald-900 font-bold block mt-0.5">94 Transaksi Sukses</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-200">
@@ -827,7 +827,7 @@ export const AnalyticsReports: React.FC = () => {
                   <span className="text-sm sm:text-base font-black text-emerald-800 block mt-0.5">
                     {formatRupiah(pb1TaxTotal)}
                   </span>
-                  <span className="text-[9px] text-emerald-700 font-bold block mt-0.5">Bapenda DKI Jaktim</span>
+                  <span className="text-[9px] text-emerald-900 font-bold block mt-0.5">Bapenda DKI Jaktim</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200">
@@ -835,12 +835,12 @@ export const AnalyticsReports: React.FC = () => {
                   <span className="text-sm sm:text-base font-black text-amber-900 block mt-0.5">
                     {formatRupiah(serviceChargeTotal)}
                   </span>
-                  <span className="text-[9px] text-amber-700 font-bold block mt-0.5">Alokasi Tim Staf Kafe</span>
+                  <span className="text-[9px] text-amber-900 font-bold block mt-0.5">Alokasi Tim Staf Kafe</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#C84B27]/10 border border-orange-200">
                   <span className="text-[10px] text-orange-950 block uppercase font-bold">Total Settled Inflow</span>
-                  <span className="text-sm sm:text-base font-black text-[#C84B27] block mt-0.5">
+                  <span className="text-sm sm:text-base font-black text-[#B23812] block mt-0.5">
                     {formatRupiah(grossSales + serviceChargeTotal + pb1TaxTotal)}
                   </span>
                   <span className="text-[9px] text-orange-950 font-bold block mt-0.5">Kliring Kas & Bank 100%</span>
@@ -908,7 +908,7 @@ export const AnalyticsReports: React.FC = () => {
                         <td className="p-3 text-stone-900">101.00</td>
                         <td className="p-3 text-stone-900">TOTAL PENERIMAAN KASIR BERSIH (NETT SETTLED INFLOW)</td>
                         <td className="p-3 text-center">-</td>
-                        <td className="p-3 text-right text-[#C84B27] text-sm">
+                        <td className="p-3 text-right text-[#B23812] text-sm">
                           {formatRupiah(grossSales + serviceChargeTotal + pb1TaxTotal)}
                         </td>
                       </tr>
@@ -986,7 +986,7 @@ export const AnalyticsReports: React.FC = () => {
                             </span>
                           </td>
                           <td className="p-2 text-right">{formatRupiah(t.subtotal)}</td>
-                          <td className="p-2 text-right text-emerald-700 font-bold">{formatRupiah(t.pb1Tax)}</td>
+                          <td className="p-2 text-right text-emerald-900 font-bold">{formatRupiah(t.pb1Tax)}</td>
                           <td className="p-2 text-right font-bold text-stone-900">{formatRupiah(t.totalAmount)}</td>
                         </tr>
                       ))}

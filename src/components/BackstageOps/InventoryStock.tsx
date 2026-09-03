@@ -110,7 +110,7 @@ export const InventoryStock: React.FC = () => {
       minWidth: '220px',
       cell: ({ row }) => (
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center font-bold text-xs shadow-2xs shrink-0">
+          <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center font-bold text-xs shadow-2xs shrink-0">
             <Coffee className="w-4 h-4" />
           </div>
           <div className="min-w-0">
@@ -163,7 +163,7 @@ export const InventoryStock: React.FC = () => {
       accessorFn: (row) => row.currentStock * row.costPerUnit,
       align: 'right',
       cell: ({ row }) => (
-        <span className="font-mono font-bold text-emerald-700 text-xs whitespace-nowrap">
+        <span className="font-mono font-bold text-emerald-900 text-xs whitespace-nowrap">
           {formatRupiah(row.currentStock * row.costPerUnit)}
         </span>
       )
@@ -309,7 +309,7 @@ export const InventoryStock: React.FC = () => {
               onClick={() => setShowScannerModal(true)}
               className="flex-1 sm:flex-none px-2.5 sm:px-3.5 py-2 rounded-xl sm:rounded-2xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold flex items-center justify-center gap-1.5 shadow-2xs transition-all cursor-pointer whitespace-nowrap active:scale-95"
             >
-              <Scan className="w-3.5 h-3.5 text-[#C84B27] shrink-0" />
+              <Scan className="w-3.5 h-3.5 text-[#B23812] shrink-0" />
               <span>Scan Barcode</span>
             </button>
 
@@ -317,7 +317,7 @@ export const InventoryStock: React.FC = () => {
               onClick={() => setShowPOModal(true)}
               className="flex-1 sm:flex-none px-2.5 sm:px-3.5 py-2 rounded-xl sm:rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold flex items-center justify-center gap-1.5 shadow-2xs transition-all cursor-pointer whitespace-nowrap active:scale-95"
             >
-              <Truck className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+              <Truck className="w-3.5 h-3.5 text-emerald-900 shrink-0" />
               <span>Buat PO (WA)</span>
             </button>
 
@@ -345,7 +345,7 @@ export const InventoryStock: React.FC = () => {
                     onChange={toggleSelect}
                     className="w-4 h-4 rounded-md accent-[#C84B27] cursor-pointer"
                   />
-                  <div className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#C84B27]">
+                  <div className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#B23812]">
                     <Coffee className="w-4 h-4" />
                   </div>
                   <div>
@@ -376,7 +376,7 @@ export const InventoryStock: React.FC = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#5C5248]">Biaya / Unit (HPP):</span>
-                  <span className="text-emerald-700 font-semibold">{formatRupiah(it.costPerUnit)}</span>
+                  <span className="text-emerald-900 font-semibold">{formatRupiah(it.costPerUnit)}</span>
                 </div>
                 <div className="flex justify-between pt-1 border-t border-[#EAE2D8]">
                   <span className="text-[#5C5248]">Vendor:</span>
@@ -405,7 +405,7 @@ export const InventoryStock: React.FC = () => {
           <div className="bg-white border border-[#EAE2D8] rounded-3xl p-6 max-w-md w-full text-[#1F1A16] space-y-4 shadow-2xl animate-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div className="flex items-center gap-2">
-                <Plus className="w-5 h-5 text-[#C84B27]" />
+                <Plus className="w-5 h-5 text-[#B23812]" />
                 <h3 className="font-display font-black text-lg text-[#1F1A16]">
                   Restock: {restockModalItem.name}
                 </h3>
@@ -443,7 +443,7 @@ export const InventoryStock: React.FC = () => {
 
               <div className="p-3 rounded-2xl bg-amber-50 border border-amber-200 text-xs flex justify-between font-mono">
                 <span className="text-[#5C5248]">Estimasi Biaya PO:</span>
-                <span className="font-bold text-[#C84B27]">{formatRupiah(restockAmount * restockModalItem.costPerUnit)}</span>
+                <span className="font-bold text-[#B23812]">{formatRupiah(restockAmount * restockModalItem.costPerUnit)}</span>
               </div>
             </div>
 
@@ -472,7 +472,7 @@ export const InventoryStock: React.FC = () => {
           <form onSubmit={handleCreateNewItem} className="bg-white border border-[#EAE2D8] rounded-3xl p-6 max-w-lg w-full text-[#1F1A16] space-y-4 shadow-2xl animate-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between pb-3 border-b border-[#EAE2D8]">
               <div className="flex items-center gap-2">
-                <Plus className="w-5 h-5 text-[#C84B27]" />
+                <Plus className="w-5 h-5 text-[#B23812]" />
                 <h3 className="font-display font-black text-lg text-[#1F1A16]">
                   Tambah Bahan Baku Baru
                 </h3>

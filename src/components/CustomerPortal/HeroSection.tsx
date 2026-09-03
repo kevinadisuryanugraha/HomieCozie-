@@ -233,7 +233,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
 
                 <div className="flex flex-col justify-center pt-2 sm:pt-0 sm:px-3">
-                  <div className="font-mono font-black text-[#C84B27] text-lg">
+                  <div className="font-mono font-black text-[#B23812] text-lg">
                     <span ref={cupsCounterRef}>50K+</span>
                   </div>
                   <div className="text-[11px] text-[#3D332A] font-semibold mt-0.5">Cangkir Kopi Disajikan</div>
@@ -275,7 +275,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                           : 'text-[#3D332A] hover:text-[#1F1A16]'
                       }`}
                     >
-                      <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#C84B27]' : 'text-[#3D332A]'}`} />
+                      <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#B23812]' : 'text-[#3D332A]'}`} />
                       <span className="text-[11px]">{scene.tabLabel}</span>
                     </button>
                   );
@@ -321,7 +321,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </span>
                   <button
                     onClick={activeSceneIndex === 0 ? onOpenEvents : activeSceneIndex === 1 || activeSceneIndex === 2 ? onExploreMenu : onOpenReservation}
-                    className="text-[#C84B27] hover:text-[#B23E1C] font-bold text-[11px] flex items-center gap-1 shrink-0 ml-2 cursor-pointer"
+                    className="text-[#B23812] hover:text-[#B23E1C] font-bold text-[11px] flex items-center gap-1 shrink-0 ml-2 cursor-pointer"
                   >
                     <span>Lihat Detail</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -356,7 +356,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <span className="text-[10px] font-semibold">Parkir Luas</span>
               </div>
               <div className="flex flex-col items-center gap-1">
-                <Wind className="w-4 h-4 text-[#C84B27]" />
+                <Wind className="w-4 h-4 text-[#B23812]" />
                 <span className="text-[10px] font-semibold">AC & Outdoor</span>
               </div>
             </div>

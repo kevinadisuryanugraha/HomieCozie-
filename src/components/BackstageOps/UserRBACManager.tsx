@@ -236,7 +236,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
             className="p-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 transition-colors cursor-pointer"
             title="Reset Password Karyawan"
           >
-            <Key className="w-3.5 h-3.5 text-[#C84B27]" />
+            <Key className="w-3.5 h-3.5 text-[#B23812]" />
           </button>
           <button
             onClick={() => handleRevokeUserToken(row)}
@@ -351,7 +351,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
       <div className="bg-white p-4 sm:p-6 rounded-3xl border border-[#EAE2D8] shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4 w-full min-w-0">
         <div className="space-y-1.5 min-w-0 w-full flex-1">
           <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-amber-800 min-w-0 w-full overflow-hidden">
-            <ShieldCheck className="w-4 h-4 text-[#C84B27] shrink-0" />
+            <ShieldCheck className="w-4 h-4 text-[#B23812] shrink-0" />
             <span className="truncate">Manajemen Autentikasi & Otorisasi RBAC Terintegrasi</span>
           </div>
           <h3 className="font-display font-black text-lg sm:text-xl text-[#1F1A16] leading-tight break-words">
@@ -493,7 +493,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                   </div>
                   <div className="flex justify-between text-[#5C5248]">
                     <span>2FA Keamanan:</span>
-                    <span className={usr.twoFactorEnabled ? 'text-emerald-700 font-semibold' : 'text-[#5C5248]'}>
+                    <span className={usr.twoFactorEnabled ? 'text-emerald-900 font-semibold' : 'text-[#5C5248]'}>
                       {usr.twoFactorEnabled ? 'Aktif (OTP)' : 'Non-Aktif'}
                     </span>
                   </div>
@@ -508,7 +508,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                     onClick={() => handleResetPassword(usr)}
                     className="flex-1 py-1.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all bg-[#FAF7F2] hover:bg-stone-200 text-[#1F1A16] border border-[#EAE2D8] shadow-xs cursor-pointer"
                   >
-                    <Key className="w-3.5 h-3.5 text-[#C84B27]" />
+                    <Key className="w-3.5 h-3.5 text-[#B23812]" />
                     <span>Reset Password</span>
                   </button>
 
@@ -533,7 +533,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
             <div>
               <h3 className="font-bold text-[#1F1A16]">Matriks Hak Akses Peran Granular (PRD Tabel 8.3)</h3>
               <p className="text-[11px] text-[#5C5248]">
-                Memetakan 9 modul utama terhadap 9 tingkatan peran. Kode hak akses: <strong className="text-emerald-700">F (Full)</strong>, <strong className="text-blue-700">E (Edit/Terbatas)</strong>, <strong className="text-amber-700">L (Lihat Saja)</strong>, dan <strong className="text-stone-400">T (Tidak Ada)</strong>.
+                Memetakan 9 modul utama terhadap 9 tingkatan peran. Kode hak akses: <strong className="text-emerald-900">F (Full)</strong>, <strong className="text-blue-700">E (Edit/Terbatas)</strong>, <strong className="text-amber-900">L (Lihat Saja)</strong>, dan <strong className="text-stone-400">T (Tidak Ada)</strong>.
               </p>
             </div>
             
@@ -568,7 +568,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                     <tr key={row.moduleCode} className="hover:bg-[#FAF7F2] transition-colors">
                       <td className="p-3.5 whitespace-nowrap">
                         <div className="font-semibold text-[#1F1A16]">{row.moduleName}</div>
-                        <div className="font-mono text-[10px] text-[#C84B27]">{row.moduleCode}</div>
+                        <div className="font-mono text-[10px] text-[#B23812]">{row.moduleCode}</div>
                       </td>
                       <td className="p-3.5 text-[#5C5248] text-[11px] whitespace-nowrap">
                         {row.category}
@@ -621,7 +621,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
         <div className="space-y-4">
           <div className="bg-white border border-[#EAE2D8] p-6 rounded-3xl space-y-4 shadow-xs">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#C84B27]">
+              <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#B23812]">
                 <Fingerprint className="w-5 h-5" />
               </div>
               <div>
@@ -648,7 +648,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                     <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-50 text-amber-800 border border-amber-200">
                       {g.gate}
                     </span>
-                    <span className="text-emerald-700 font-mono text-[10px] flex items-center gap-1 font-bold">
+                    <span className="text-emerald-900 font-mono text-[10px] flex items-center gap-1 font-bold">
                       <Check className="w-3 h-3" /> Aktif
                     </span>
                   </div>
@@ -667,7 +667,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
           <div className="bg-white border border-[#EAE2D8] rounded-3xl p-6 w-full max-w-md space-y-4 shadow-2xl text-xs">
             <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-3">
               <h3 className="font-display font-bold text-base text-[#1F1A16] flex items-center gap-2">
-                <UserPlus className="w-4 h-4 text-[#C84B27]" />
+                <UserPlus className="w-4 h-4 text-[#B23812]" />
                 <span>Tambah Akun Karyawan Baru</span>
               </h3>
               <button
@@ -725,7 +725,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                   type="checkbox"
                   checked={newUser2FA}
                   onChange={(e) => setNewUser2FA(e.target.checked)}
-                  className="rounded text-[#C84B27] focus:ring-[#C84B27]"
+                  className="rounded text-[#B23812] focus:ring-[#C84B27]"
                 />
                 <div>
                   <span className="font-semibold text-[#1F1A16] block text-xs">Wajibkan 2FA Authenticator</span>

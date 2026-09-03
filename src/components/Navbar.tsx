@@ -169,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
             title="Keranjang Pesanan"
           >
-            <ShoppingBag className="w-4 h-4 text-[#C84B27]" />
+            <ShoppingBag className="w-4 h-4 text-[#B23812]" />
             <span className="hidden md:inline text-xs font-semibold">Pesanan</span>
             {cartItemCount > 0 && (
               <span className="bg-[#C84B27] text-white text-[10px] font-mono font-bold px-1.5 py-0.2 rounded-full shadow-2xs">
@@ -188,7 +188,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
             title="Portal Staf & Backoffice"
           >
-            <Lock className="w-3.5 h-3.5 text-amber-700" />
+            <Lock className="w-3.5 h-3.5 text-amber-900" />
             <span className="hidden xl:inline">Staf POS</span>
           </button>
 
@@ -266,7 +266,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }}
                 className="w-full py-2.5 rounded-xl bg-stone-100 border border-[#EAE2D8] text-stone-700 text-xs font-semibold flex items-center justify-center gap-2"
               >
-                <Lock className="w-4 h-4 text-amber-700" />
+                <Lock className="w-4 h-4 text-amber-900" />
                 <span>Portal Staf & Backoffice</span>
               </button>
             </div>

@@ -102,7 +102,7 @@ export const EventCommunitySection: React.FC<EventCommunitySectionProps> = ({ on
                 <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
                     <div className="flex items-center justify-between text-xs text-[#5C5248] mb-1">
-                      <span className="font-mono font-semibold text-amber-700 flex items-center gap-1">
+                      <span className="font-mono font-semibold text-amber-900 flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{event.date}</span>
                       </span>
@@ -112,7 +112,7 @@ export const EventCommunitySection: React.FC<EventCommunitySectionProps> = ({ on
                       </span>
                     </div>
 
-                    <h3 className="font-display font-bold text-base text-[#1F1A16] mt-1 group-hover:text-[#C84B27] transition-colors">
+                    <h3 className="font-display font-bold text-base text-[#1F1A16] mt-1 group-hover:text-[#B23812] transition-colors">
                       {event.title}
                     </h3>
                     <p className="text-xs text-[#5C5248] line-clamp-2 mt-1 leading-relaxed">

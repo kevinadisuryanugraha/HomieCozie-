@@ -341,7 +341,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             }}
             className={`py-2.5 px-3 rounded-xl font-semibold flex items-center justify-center gap-1.5 transition-all ${
               authMode === 'staff'
-                ? 'bg-amber-600 text-white shadow-md'
+                ? 'bg-amber-900 text-white shadow-md'
                 : 'text-stone-400 hover:text-stone-200 hover:bg-white/5'
             }`}
           >
@@ -356,7 +356,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             }}
             className={`py-2.5 px-3 rounded-xl font-semibold flex items-center justify-center gap-1.5 transition-all ${
               authMode === 'member'
-                ? 'bg-amber-600 text-white shadow-md'
+                ? 'bg-amber-900 text-white shadow-md'
                 : 'text-stone-400 hover:text-stone-200 hover:bg-white/5'
             }`}
           >

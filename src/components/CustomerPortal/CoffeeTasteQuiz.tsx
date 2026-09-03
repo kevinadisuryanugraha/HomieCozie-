@@ -71,7 +71,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
       subtitle: 'Dark cocoa, tebal di lidah, ekstra boost energi',
       icon: Flame,
       iconBg: 'bg-[#C84B27]/10',
-      iconColor: 'text-[#C84B27]',
+      iconColor: 'text-[#B23812]',
       borderColor: 'border-orange-200',
       recommendedMenuId: 'm-2', // Aren Cremosa Cozie
       matchScore: 94
@@ -117,7 +117,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-900 border border-amber-500/20 text-xs font-mono font-bold mb-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#C84B27]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#B23812]" />
               <span>Interactive Taste Finder</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-display font-black text-[#1F1A16] tracking-tight">
@@ -128,7 +128,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
             </p>
           </div>
           <div className="hidden md:flex items-center gap-2 text-xs font-mono text-[#5C5248]">
-            <Sliders className="w-4 h-4 text-[#C84B27]" />
+            <Sliders className="w-4 h-4 text-[#B23812]" />
             <span>Live Barista Matcher</span>
           </div>
         </div>
@@ -170,7 +170,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                         <div className="font-bold text-xs sm:text-sm text-[#1F1A16] flex items-center justify-between gap-1.5">
                           <span className="truncate">{flavor.title}</span>
                           {isSelected && (
-                            <CheckCircle2 className="w-4 h-4 text-[#C84B27] shrink-0" />
+                            <CheckCircle2 className="w-4 h-4 text-[#B23812] shrink-0" />
                           )}
                         </div>
                         <p className="text-[11px] text-[#5C5248] leading-snug">
@@ -295,7 +295,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                     <p className="text-xs text-[#5C5248] line-clamp-2 leading-relaxed">
                       {matchedItem.description}
                     </p>
-                    <div className="font-mono font-black text-[#C84B27] text-base pt-1">
+                    <div className="font-mono font-black text-[#B23812] text-base pt-1">
                       {formatRupiah(matchedItem.price)}
                     </div>
                   </div>
@@ -311,7 +311,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                       </>
                     ) : (
                       <>
-                        <Flame className="w-3 h-3 text-[#C84B27]" />
+                        <Flame className="w-3 h-3 text-[#B23812]" />
                         <span>Hangat (Hot)</span>
                       </>
                     )}

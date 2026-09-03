@@ -101,7 +101,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
             {/* 1. Header */}
             <div className="p-5 border-b border-[#EAE2D8] bg-[#FAF7F2] flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-2xl bg-white border border-[#EAE2D8] flex items-center justify-center text-[#C84B27] shadow-2xs">
+                <div className="w-9 h-9 rounded-2xl bg-white border border-[#EAE2D8] flex items-center justify-center text-[#B23812] shadow-2xs">
                   <Palette className="w-5 h-5" />
                 </div>
                 <div>
@@ -469,7 +469,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
               <div className="p-4 rounded-2xl border border-[#EAE2D8] bg-white shadow-xs space-y-3">
                 <div className="flex items-center justify-between text-[11px] font-mono text-[#5C5248] font-bold">
                   <span className="flex items-center gap-1.5">
-                    <Eye className="w-3.5 h-3.5 text-[#C84B27]" />
+                    <Eye className="w-3.5 h-3.5 text-[#B23812]" />
                     <span>Pratinjau Elemen UI Live:</span>
                   </span>
                   <span>Aktif</span>

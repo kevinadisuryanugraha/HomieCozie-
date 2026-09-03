@@ -208,7 +208,7 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
                     <h3 className="font-display font-bold text-[#1F1A16] text-base sm:text-lg">Progress Cap Digital</h3>
                     <p className="text-[#5C5248] text-xs">Cap ke-10 otomatis dapat 1 Kopi Susu / Latte GRATIS 🎁</p>
                   </div>
-                  <span className="font-mono font-bold text-amber-700 text-lg sm:text-xl">{stamps} / 10 Cap</span>
+                  <span className="font-mono font-bold text-amber-900 text-lg sm:text-xl">{stamps} / 10 Cap</span>
                 </div>
 
                 {/* 10 Stamps Grid with Pop Animation */}
@@ -253,10 +253,10 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
                 </div>
 
                 <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8] flex items-center justify-between text-xs">
-                  <span className="text-[#5C5248]">Tinggal <strong className="text-[#C84B27]">{10 - stamps} cap lagi</strong> untuk klaim kopi gratis berikutnya!</span>
+                  <span className="text-[#5C5248]">Tinggal <strong className="text-[#B23812]">{10 - stamps} cap lagi</strong> untuk klaim kopi gratis berikutnya!</span>
                   <button 
                     onClick={onOpenMenu}
-                    className="font-bold text-[#C84B27] hover:underline"
+                    className="font-bold text-[#B23812] hover:underline"
                   >
                     Buka Menu →
                   </button>
@@ -289,7 +289,7 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
                         </div>
                         <p className="text-[11px] text-[#5C5248]">{v.desc}</p>
                         {isRedeemed && (
-                          <div className="text-[11px] font-mono font-bold text-emerald-700 pt-1">
+                          <div className="text-[11px] font-mono font-bold text-emerald-900 pt-1">
                             Kode Voucher: <span className="bg-white px-2 py-0.5 rounded border border-emerald-300">{v.code}</span>
                           </div>
                         )}

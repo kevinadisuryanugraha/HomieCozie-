@@ -105,7 +105,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
         {/* Drawer Header */}
         <div className="p-4 sm:p-5 border-b border-[#EAE2D8] flex items-center justify-between bg-[#FAF7F2] shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#C84B27] shadow-xs">
+            <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-[#B23812] shadow-xs">
               <ShoppingBag className="w-5 h-5" />
             </div>
             <div>
@@ -146,7 +146,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
               <div className="bg-white p-3.5 rounded-2xl border border-emerald-200 flex items-center justify-around text-xs shadow-xs">
                 <div>
                   <span className="text-[#5C5248] text-[10px] uppercase font-bold block">NO. ORDER</span>
-                  <span className="font-mono font-black text-[#C84B27] text-sm">{completedOrder.orderNumber}</span>
+                  <span className="font-mono font-black text-[#B23812] text-sm">{completedOrder.orderNumber}</span>
                 </div>
                 <div>
                   <span className="text-[#5C5248] text-[10px] uppercase font-bold block">PENEMPATAN</span>
@@ -156,7 +156,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                 </div>
                 <div>
                   <span className="text-[#5C5248] text-[10px] uppercase font-bold block">METODE</span>
-                  <span className="font-bold text-emerald-700 uppercase">{completedOrder.paymentMethod}</span>
+                  <span className="font-bold text-emerald-900 uppercase">{completedOrder.paymentMethod}</span>
                 </div>
               </div>
             </div>
@@ -169,7 +169,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
               {completedOrder.items.map((item, idx) => (
                 <div key={idx} className="flex justify-between items-center text-xs py-1">
                   <div className="flex items-center gap-2">
-                    <span className="font-mono font-bold text-[#C84B27]">{item.quantity}x</span>
+                    <span className="font-mono font-bold text-[#B23812]">{item.quantity}x</span>
                     <span className="text-[#1F1A16] font-medium">{item.menuItem.name}</span>
                   </div>
                   <span className="font-mono font-bold text-[#1F1A16]">
@@ -189,7 +189,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                 </div>
                 <div className="flex justify-between text-[#1F1A16] font-bold text-sm pt-2 border-t border-[#EAE2D8]">
                   <span>Total Pembayaran (Lunas):</span>
-                  <span className="font-display font-black text-[#C84B27] text-base">{formatRupiah(completedOrder.total)}</span>
+                  <span className="font-display font-black text-[#B23812] text-base">{formatRupiah(completedOrder.total)}</span>
                 </div>
               </div>
             </div>
@@ -204,7 +204,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
         ) : cartItems.length === 0 ? (
           /* EMPTY CART VIEW */
           <div className="flex-1 flex flex-col items-center justify-center p-6 text-center space-y-4">
-            <div className="w-20 h-20 rounded-3xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center shadow-inner">
+            <div className="w-20 h-20 rounded-3xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center shadow-inner">
               <ShoppingBag className="w-10 h-10 stroke-[1.5]" />
             </div>
             <div>
@@ -300,7 +300,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                       <h5 className="font-bold text-xs text-[#1F1A16] truncate">
                         {item.menuItem.name}
                       </h5>
-                      <div className="font-mono text-xs text-[#C84B27] font-bold mt-0.5">
+                      <div className="font-mono text-xs text-[#B23812] font-bold mt-0.5">
                         {formatRupiah(item.menuItem.price * item.quantity)}
                       </div>
 
@@ -312,7 +312,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                       </div>
 
                       {item.notes && (
-                        <div className="text-[10px] text-amber-700 italic mt-0.5">
+                        <div className="text-[10px] text-amber-900 italic mt-0.5">
                           "{item.notes}"
                         </div>
                       )}
@@ -322,7 +322,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                     <div className="flex items-center gap-2 bg-[#FAF7F2] px-2.5 py-1 rounded-xl border border-[#EAE2D8] shrink-0">
                       <button
                         onClick={() => onUpdateQuantity(item.cartItemId, item.quantity - 1)}
-                        className="text-[#C84B27] font-bold p-0.5 hover:scale-110 cursor-pointer"
+                        className="text-[#B23812] font-bold p-0.5 hover:scale-110 cursor-pointer"
                       >
                         <Minus className="w-3.5 h-3.5" />
                       </button>
@@ -331,7 +331,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                       </span>
                       <button
                         onClick={() => onUpdateQuantity(item.cartItemId, item.quantity + 1)}
-                        className="text-[#C84B27] font-bold p-0.5 hover:scale-110 cursor-pointer"
+                        className="text-[#B23812] font-bold p-0.5 hover:scale-110 cursor-pointer"
                       >
                         <Plus className="w-3.5 h-3.5" />
                       </button>
@@ -362,7 +362,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                         : 'bg-[#FAF7F2] border-[#EAE2D8] text-[#5C5248] hover:bg-stone-100'
                     }`}
                   >
-                    <QrCode className="w-4 h-4 text-[#C84B27]" />
+                    <QrCode className="w-4 h-4 text-[#B23812]" />
                     <span className="text-[11px]">QRIS Instant</span>
                   </button>
 
@@ -413,7 +413,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                 </div>
                 <div className="flex justify-between text-[#1F1A16] font-bold text-sm pt-2 border-t border-[#EAE2D8]">
                   <span>Total Tagihan:</span>
-                  <span className="font-display font-black text-[#C84B27] text-base">{formatRupiah(total)}</span>
+                  <span className="font-display font-black text-[#B23812] text-base">{formatRupiah(total)}</span>
                 </div>
               </div>
 

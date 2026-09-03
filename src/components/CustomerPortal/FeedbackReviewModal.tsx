@@ -66,11 +66,11 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
   const getRatingCaption = (r: number) => {
     switch (r) {
       case 5:
-        return { label: '🤩 Luar Biasa & Sangat Puas!', color: 'text-emerald-700', bg: 'bg-emerald-50 border-emerald-200' };
+        return { label: '🤩 Luar Biasa & Sangat Puas!', color: 'text-emerald-900', bg: 'bg-emerald-50 border-emerald-200' };
       case 4:
-        return { label: '😊 Puas & Menyenangkan', color: 'text-emerald-700', bg: 'bg-emerald-50 border-emerald-200' };
+        return { label: '😊 Puas & Menyenangkan', color: 'text-emerald-900', bg: 'bg-emerald-50 border-emerald-200' };
       case 3:
-        return { label: '😐 Cukup / Biasa Saja', color: 'text-amber-700', bg: 'bg-amber-50 border-amber-200' };
+        return { label: '😐 Cukup / Biasa Saja', color: 'text-amber-900', bg: 'bg-amber-50 border-amber-200' };
       case 2:
         return { label: '😕 Kurang Memuaskan', color: 'text-rose-700', bg: 'bg-rose-50 border-rose-200' };
       case 1:
@@ -148,7 +148,7 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
           {/* Header */}
           <div className="p-4 sm:p-5 border-b border-[#EAE2D8] bg-[#FAF7F2] flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center shadow-xs">
+              <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center shadow-xs">
                 <Star className="w-5 h-5 fill-[#C84B27]" />
               </div>
               <div>
@@ -194,7 +194,7 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
                     <span className="text-[10px] text-amber-800 font-bold uppercase tracking-wider block">
                       KODE VOUCHER ANDA
                     </span>
-                    <span className="font-mono font-black text-xl text-[#C84B27] tracking-widest block">
+                    <span className="font-mono font-black text-xl text-[#B23812] tracking-widest block">
                       HOMIE5STAR
                     </span>
                     <span className="text-[11px] text-[#5C5248] block">
@@ -280,12 +280,12 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
                             <button
                               type="button"
                               onClick={() => handleCopyTemplate(tpl.text, idx)}
-                              className="flex items-center gap-1 text-[11px] font-bold text-[#C84B27] hover:underline cursor-pointer"
+                              className="flex items-center gap-1 text-[11px] font-bold text-[#B23812] hover:underline cursor-pointer"
                             >
                               {copiedTemplateIdx === idx ? (
                                 <>
                                   <Check className="w-3 h-3 text-emerald-600" />
-                                  <span className="text-emerald-700">Tersalin!</span>
+                                  <span className="text-emerald-900">Tersalin!</span>
                                 </>
                               ) : (
                                 <>

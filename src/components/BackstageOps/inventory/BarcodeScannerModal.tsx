@@ -108,7 +108,7 @@ export const BarcodeScannerModal: React.FC<BarcodeScannerModalProps> = ({
           {/* Header */}
           <div className="p-4 sm:p-5 border-b border-[#EAE2D8] bg-[#FAF7F2] flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#C84B27] flex items-center justify-center shadow-xs">
+              <div className="w-9 h-9 rounded-2xl bg-amber-50 border border-amber-200 text-[#B23812] flex items-center justify-center shadow-xs">
                 <Scan className="w-5 h-5" />
               </div>
               <div>
@@ -143,7 +143,7 @@ export const BarcodeScannerModal: React.FC<BarcodeScannerModalProps> = ({
               /* Matched Item Restock Form */
               <div className="space-y-4 bg-[#FAF7F2] p-4 rounded-2xl border border-[#EAE2D8]">
                 <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-2">
-                  <span className="text-[10px] font-mono text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-mono text-emerald-900 font-bold bg-emerald-100 px-2 py-0.5 rounded-full">
                     ITEM TERDETEKSI ✅
                   </span>
                   <span className="font-mono text-xs text-[#5C5248]">{matchedItem.sku}</span>
@@ -166,7 +166,7 @@ export const BarcodeScannerModal: React.FC<BarcodeScannerModalProps> = ({
                       min="1"
                       value={restockQty}
                       onChange={(e) => setRestockQty(parseFloat(e.target.value) || 1)}
-                      className="flex-1 p-2.5 rounded-xl bg-white border border-[#EAE2D8] font-mono font-bold text-sm text-[#C84B27]"
+                      className="flex-1 p-2.5 rounded-xl bg-white border border-[#EAE2D8] font-mono font-bold text-sm text-[#B23812]"
                     />
                     <span className="font-mono font-bold text-xs text-[#5C5248] px-2">{matchedItem.unit}</span>
                   </div>

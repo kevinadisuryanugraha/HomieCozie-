@@ -120,7 +120,7 @@ export const OwnerRadarModal: React.FC<OwnerRadarModalProps> = ({
           {/* Top Live Radar Header */}
           <div className="p-4 sm:p-5 border-b border-stone-800 bg-stone-900/90 flex items-start sm:items-center justify-between gap-3 shrink-0">
             <div className="flex items-start sm:items-center gap-3 min-w-0 flex-1">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-2xl bg-[#C84B27]/20 border border-[#C84B27]/40 text-[#C84B27] shrink-0 shadow-2xs mt-0.5 sm:mt-0">
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-2xl bg-[#C84B27]/20 border border-[#C84B27]/40 text-[#B23812] shrink-0 shadow-2xs mt-0.5 sm:mt-0">
                 <Radio className="w-5 h-5 animate-pulse" />
                 <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-emerald-500/30 animate-ping" />
               </div>
@@ -209,7 +209,7 @@ export const OwnerRadarModal: React.FC<OwnerRadarModalProps> = ({
               <div className="p-4 rounded-2xl bg-stone-900 border border-stone-800 space-y-2 shadow-2xs">
                 <div className="flex items-center justify-between text-stone-400">
                   <span className="text-xs font-bold flex items-center gap-1.5 truncate">
-                    <Utensils className="w-3.5 h-3.5 text-[#C84B27] shrink-0" />
+                    <Utensils className="w-3.5 h-3.5 text-[#B23812] shrink-0" />
                     <span>Antrean KDS</span>
                   </span>
                   <span className="font-mono font-bold text-xs text-rose-400 shrink-0">
