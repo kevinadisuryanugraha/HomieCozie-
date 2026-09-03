@@ -3,12 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   Download, 
   X, 
-  Sparkles, 
-  Smartphone, 
-  Check, 
-  Share, 
-  PlusSquare,
-  ArrowRight
+  Share
 } from 'lucide-react';
 import { CAFE_INFO } from '../../data/mockData';
 
@@ -38,7 +33,6 @@ export const PWAInstallBanner: React.FC = () => {
     const isSafari = /safari/.test(userAgent) && !/chrome|crios|crmo/.test(userAgent);
     if (isIosDevice && isSafari) {
       setIsIOS(true);
-      // Show iOS helper banner after a slight delay
       const timer = setTimeout(() => setShowBanner(true), 3500);
       return () => clearTimeout(timer);
     }
@@ -95,7 +89,7 @@ export const PWAInstallBanner: React.FC = () => {
           {/* Close button */}
           <button
             onClick={handleDismiss}
-            className="absolute top-3 right-3 w-6 h-6 rounded-full bg-stone-800 text-stone-400 hover:text-white flex items-center justify-center transition-colors"
+            className="absolute top-3 right-3 w-6 h-6 rounded-full bg-stone-800 text-stone-200 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
             aria-label="Tutup Banner"
           >
             <X className="w-3 h-3" />
@@ -111,13 +105,13 @@ export const PWAInstallBanner: React.FC = () => {
             </div>
 
             <div className="space-y-0.5 min-w-0">
-              <div className="text-[10px] font-mono font-medium text-stone-400 uppercase">
+              <div className="text-[10px] font-mono font-bold text-amber-400 uppercase">
                 Aplikasi Web PWA
               </div>
-              <h4 className="font-display font-bold text-sm text-white leading-tight">
+              <div className="font-display font-bold text-sm text-white leading-tight">
                 Homie Cozie App
-              </h4>
-              <p className="text-[11px] text-stone-300 leading-snug">
+              </div>
+              <p className="text-[11px] text-stone-200 leading-snug font-medium">
                 Pasang di layar utama untuk akses cepat reservasi & pesanan.
               </p>
             </div>
@@ -126,8 +120,8 @@ export const PWAInstallBanner: React.FC = () => {
           {/* Action Area */}
           <div className="mt-3 pt-2.5 border-t border-[#2E2520] flex items-center gap-2">
             {isIOS ? (
-              <div className="text-[11px] text-stone-300 bg-stone-900 p-2 rounded-xl border border-[#2E2520] w-full flex items-center gap-2">
-                <Share className="w-4 h-4 text-amber-300 shrink-0" />
+              <div className="text-[11px] text-stone-200 bg-stone-900 p-2 rounded-xl border border-[#2E2520] w-full flex items-center gap-2">
+                <Share className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>
                   Ketuk <strong>Share</strong> lalu pilih <strong>'Tambah ke Layar Utama'</strong>.
                 </span>
@@ -136,14 +130,14 @@ export const PWAInstallBanner: React.FC = () => {
               <>
                 <button
                   onClick={handleInstallClick}
-                  className="flex-1 py-2 px-3 rounded-xl bg-[#C84B27] hover:bg-[#B23E1C] text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
+                  className="flex-1 py-2 px-3 rounded-xl bg-[#C84B27] hover:bg-[#B23E1C] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-xs"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Pasang Aplikasi</span>
                 </button>
                 <button
                   onClick={handleDismiss}
-                  className="py-2 px-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-400 text-xs"
+                  className="py-2 px-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold text-xs cursor-pointer border border-stone-700"
                 >
                   Nanti
                 </button>
