@@ -3,11 +3,19 @@
  * Network-First for HTML/Navigation, Cache-First for Hashed Assets, Offline Fallback
  */
 
-const CACHE_NAME = 'homie-cozie-cache-v2';
+const CACHE_NAME = 'homie-cozie-cache-v3';
 const STATIC_FALLBACK = [
   '/',
   '/index.html',
   '/manifest.webmanifest',
+  '/pwa-192x192.png',
+  '/pwa-512x512.png',
+  '/maskable-icon-192x192.png',
+  '/maskable-icon-512x512.png',
+  '/apple-touch-icon.png',
+  '/favicon.ico',
+  '/favicon-32x32.png',
+  '/favicon-16x16.png',
   '/logo_homie_cozie.png'
 ];
 

@@ -1,49 +1,85 @@
 {
   "name": "Homie Cozie Coffee & Kitchen",
   "short_name": "Homie Cozie",
-  "description": "Sistem Digital Terpadu Homie Cozie Coffee & Kitchen — Reservasi Meja, Pesan QRIS, Loyalitas Member VIP",
-  "start_url": "/",
+  "description": "Sistem Digital Terpadu Homie Cozie Coffee & Kitchen — Reservasi Meja, Pesan QRIS & Menu Digital, Loyalitas Member VIP Kalisari – Cijantung.",
+  "start_url": "/?source=pwa",
   "scope": "/",
+  "id": "/?source=pwa",
   "display": "standalone",
-  "background_color": "#FAF7F2",
-  "theme_color": "#C84B27",
+  "background_color": "#14100E",
+  "theme_color": "#14100E",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/logo_homie_cozie.png",
+      "src": "/pwa-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/logo_homie_cozie.png",
+      "src": "/pwa-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/maskable-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Homie Cozie Coffee & Kitchen Desktop View"
+    },
+    {
+      "src": "/screenshots/screenshot-mobile.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homie Cozie Coffee & Kitchen Mobile View"
     }
   ],
   "shortcuts": [
     {
       "name": "Reservasi Meja",
       "short_name": "Reservasi",
-      "description": "Booking meja online",
+      "description": "Booking meja online instant",
       "url": "/#reservasi",
-      "icons": [{ "src": "/logo_homie_cozie.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Pesan QRIS",
       "short_name": "Pesan",
-      "description": "Self-order & payment QRIS",
+      "description": "Self-order & payment QRIS instant",
       "url": "/#order",
-      "icons": [{ "src": "/logo_homie_cozie.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Member VIP",
       "short_name": "Member",
       "description": "Cek poin dan voucher member",
       "url": "/#member",
-      "icons": [{ "src": "/logo_homie_cozie.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Lokasi & Jam Buka",
+      "short_name": "Lokasi",
+      "description": "Petunjuk arah ke Jl. H. Hasan No. 23",
+      "url": "/#location",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
     }
   ],
-  "categories": ["food", "business", "productivity", "shopping"]
+  "categories": ["food", "business", "lifestyle", "shopping"]
 }
