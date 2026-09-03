@@ -63,10 +63,6 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
         
         {/* Section Header */}
         <div className="max-w-2xl mb-10 space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300 mb-1">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-            <span>Cozie Loyalty & Rewards</span>
-          </div>
           <h2 className="font-display font-black text-2xl sm:text-4xl text-[#1F1A16]">
             Kumpulkan Cap, Nikmati Kopi Gratis
           </h2>

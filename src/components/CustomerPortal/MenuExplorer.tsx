@@ -119,10 +119,6 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div className="max-w-2xl space-y-2">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-100 text-amber-900 border border-amber-300 mb-1">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              <span>Specialty Beans & Kitchen Recipes</span>
-            </div>
             <h2 className="font-display font-black text-3xl sm:text-4xl text-[#1F1A16]">
               Daftar Menu Homie Cozie
             </h2>

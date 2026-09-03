@@ -23,7 +23,6 @@ import { BackToTopButton } from './components/Common/BackToTopButton';
 import { telemetryTracker } from './services/telemetryTracker';
 
 // Lazy Loaded Customer Portal Sections for Blazing Fast FCP & Minimal Main Thread Work
-const BentoShowcase = React.lazy(() => import('./components/CustomerPortal/BentoShowcase').then(m => ({ default: m.BentoShowcase })));
 const MenuExplorer = React.lazy(() => import('./components/CustomerPortal/MenuExplorer').then(m => ({ default: m.MenuExplorer })));
 const CoffeeTasteQuiz = React.lazy(() => import('./components/CustomerPortal/CoffeeTasteQuiz').then(m => ({ default: m.CoffeeTasteQuiz })));
 const GallerySection = React.lazy(() => import('./components/CustomerPortal/GallerySection').then(m => ({ default: m.GallerySection })));
@@ -220,22 +219,6 @@ export default function App() {
                 reviews={reviews}
                 onOpenFeedbackModal={() => setIsFeedbackModalOpen(true)}
               />
-
-              <ScrollReveal direction="up" delay={0.02}>
-                <React.Suspense fallback={<SectionLoadingFallback />}>
-                  <BentoShowcase
-                    onExploreMenu={() => {
-                      const elem = document.getElementById('menu-section');
-                      if (elem) elem.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    onOpenReservation={() => navigateToMode('reservation')}
-                    onOpenEvents={() => {
-                      const elem = document.getElementById('events-section');
-                      if (elem) elem.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                  />
-                </React.Suspense>
-              </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.02}>
                 <AboutSection

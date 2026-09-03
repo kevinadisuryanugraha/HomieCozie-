@@ -127,39 +127,14 @@ export const PWAInstallBanner: React.FC = () => {
                 />
               </div>
 
-              <div className="space-y-0.5 min-w-0">
-                <div className="flex items-center gap-1.5 flex-wrap">
-                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-amber-500/15 border border-amber-500/30 text-[10px] font-bold text-amber-400">
-                    <Sparkles className="w-2.5 h-2.5" />
-                    PWA Instan
-                  </span>
-                  <span className="inline-flex items-center gap-1 text-[10px] font-bold text-amber-300">
-                    <Star className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
-                    4.8
-                  </span>
-                </div>
+              <div className="space-y-1 min-w-0">
                 <div className="font-display font-black text-sm text-white leading-tight">
-                  Homie Cozie App
+                  Homie Cozie Coffee & Kitchen
                 </div>
                 <p className="text-[11px] text-stone-300 leading-snug font-normal">
-                  Pasang di layar HP untuk reservasi meja cepat & loyalitas VIP.
+                  Pasang di layar utama HP untuk akses cepat menu & reservasi meja.
                 </p>
               </div>
-            </div>
-
-            {/* Feature Pills */}
-            <div className="mt-2.5 pt-2 border-t border-stone-800/80 flex items-center justify-between text-[10px] text-stone-300 px-0.5">
-              <span className="flex items-center gap-1">
-                <Zap className="w-3 h-3 text-amber-400" /> Reservasi Cepat
-              </span>
-              <span className="text-stone-600">•</span>
-              <span className="flex items-center gap-1">
-                <CheckCircle2 className="w-3 h-3 text-emerald-400" /> Tanpa Download APK
-              </span>
-              <span className="text-stone-600">•</span>
-              <span className="flex items-center gap-1">
-                <Sparkles className="w-3 h-3 text-[#E4572E]" /> Poin VIP
-              </span>
             </div>
 
             {/* Action Buttons */}

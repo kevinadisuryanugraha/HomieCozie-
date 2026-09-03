@@ -49,10 +49,6 @@ export const EventCommunitySection: React.FC<EventCommunitySectionProps> = ({ on
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="space-y-2 max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-900 border border-purple-200 mb-1">
-              <Music className="w-3.5 h-3.5 text-purple-600" />
-              <span>Weekend Live Stage & Community #PITSTOP</span>
-            </div>
             <h2 className="font-display font-black text-2xl sm:text-4xl text-[#1F1A16]">
               Jadwal Panggung & Event Akustik
             </h2>

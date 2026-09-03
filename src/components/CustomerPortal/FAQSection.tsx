@@ -41,11 +41,6 @@ export const FAQSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 text-amber-900 text-xs font-bold font-mono tracking-wider uppercase border border-amber-200">
-            <HelpCircle className="w-3.5 h-3.5 text-amber-900" />
-            <span>Pusat Bantuan & Tanya Jawab</span>
-          </div>
-
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-[#1F1A16]">
             Pertanyaan yang Sering Diajukan
           </h2>

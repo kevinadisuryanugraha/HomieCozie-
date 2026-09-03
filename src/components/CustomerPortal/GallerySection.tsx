@@ -36,11 +36,6 @@ export const GallerySection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 text-teal-800 text-xs font-bold font-mono tracking-wider uppercase border border-teal-200">
-            <Camera className="w-3.5 h-3.5 text-teal-600" />
-            <span>Suasana & Estetika 4 Zona</span>
-          </div>
-
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-[#1F1A16]">
             Galeri Suasana Homie Cozie
           </h2>

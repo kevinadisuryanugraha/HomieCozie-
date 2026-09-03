@@ -124,24 +124,15 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Section Header (bklit.com & UI/UX Pro Max) */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        {/* Section Header */}
+        <div className="mb-10">
           <div className="max-w-xl space-y-2">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-900/10 text-[#8C341A] border border-amber-900/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#C84B27]" />
-              <span>Panduan Rasa & Selera Kopi</span>
-            </div>
             <h2 className="font-display font-black text-2xl sm:text-4xl text-[#1F1A16] tracking-tight">
               Temukan Racikan Kopi Favoritmu
             </h2>
             <p className="text-[#3D332A] text-xs sm:text-sm leading-relaxed">
               Bingung memilih menu? Pilih karakter rasa yang Anda sukai, dan sistem rekomendasi barista kami akan mencocokkan seduhan terbaik untuk Anda.
             </p>
-          </div>
-
-          <div className="hidden md:flex items-center gap-2 text-xs font-mono text-[#5C5248]">
-            <Sliders className="w-4 h-4 text-[#8C341A]" />
-            <span>Interactive Barista Matcher</span>
           </div>
         </div>
 

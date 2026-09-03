@@ -1,16 +1,12 @@
 import React from 'react';
-import { motion } from 'motion/react';
 import { 
   Coffee, 
   Utensils, 
   Music, 
   Users, 
-  ArrowRight,
-  Sparkles,
-  Heart
+  ArrowRight
 } from 'lucide-react';
 import { CAFE_INFO, CAFE_STATS } from '../../data/mockData';
-import { SpotlightCard } from '../Common/SpotlightCard';
 
 interface AboutSectionProps {
   onOpenReservation: () => void;
@@ -44,18 +40,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
   return (
     <section 
       id="about-section" 
-      className="py-16 sm:py-20 bg-[#FAF7F2] text-[#1F1A16] border-b border-[#EAE2D8] relative overflow-hidden"
+      className="py-14 sm:py-18 bg-[#FAF7F2] text-[#1F1A16] border-b border-[#EAE2D8]"
       aria-label="Tentang Homie Cozie"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Title */}
-        <div className="max-w-2xl space-y-2.5 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-900/10 border border-amber-900/20 text-[#8C341A] text-xs font-mono font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-[#C84B27]" />
-            Kisah Sejak 2020 • Kalisari, Pasar Rebo
-          </div>
-
+        <div className="max-w-2xl space-y-2.5 mb-10">
           <h2 className="font-display font-black text-2xl sm:text-4xl text-[#1F1A16] tracking-tight leading-snug">
             Tempat Berkumpul yang Hangat & Tenang di Kalisari
           </h2>
@@ -65,12 +56,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
           </p>
         </div>
 
-        {/* Stats Row with Spotlight Cards (Kokonut UI / 21st.dev) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-14">
+        {/* Stats Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-12">
           {CAFE_STATS.map((stat, idx) => (
-            <SpotlightCard
+            <div
               key={idx}
-              className="p-4 sm:p-5 text-center shadow-xs hover:shadow-md transition-shadow"
+              className="bg-white p-4 sm:p-5 rounded-2xl border border-[#EAE2D8] text-center shadow-xs"
             >
               <div className="font-display font-black text-2xl sm:text-3xl text-[#8C341A] tracking-tight">
                 {stat.value}
@@ -81,7 +72,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
               <p className="text-[11px] text-[#3D332A] mt-0.5 leading-snug font-medium">
                 {stat.sub}
               </p>
-            </SpotlightCard>
+            </div>
           ))}
         </div>
 
@@ -89,38 +80,36 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Cafe Interior Photo (5 cols) */}
-          <div className="lg:col-span-5">
-            <SpotlightCard className="overflow-hidden shadow-sm">
-              <img
-                src="/photos/homie_cozie_116.webp"
-                srcSet="/photos/homie_cozie_116_mob.webp 480w, /photos/homie_cozie_116.webp 900w"
-                sizes="(max-width: 640px) 480px, 900px"
-                alt="Barista Homie Cozie menyiapkan seduhan kopi specialty"
-                width={600}
-                height={400}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-80 sm:h-96 object-cover"
-              />
-              <div className="p-4 bg-white border-t border-[#EAE2D8]">
-                <div className="text-xs font-bold text-[#1F1A16] flex items-center gap-1.5">
-                  <Coffee className="w-4 h-4 text-[#C84B27]" />
-                  <span>Barista Specialty Bar</span>
-                </div>
-                <p className="text-[11px] text-[#3D332A] mt-1 font-medium">
-                  Penyeduhan kopi presisi dengan mesin espresso modern dan racikan khas Homie Cozie.
-                </p>
+          <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-[#EAE2D8] bg-white shadow-xs">
+            <img
+              src="/photos/homie_cozie_116.webp"
+              srcSet="/photos/homie_cozie_116_mob.webp 480w, /photos/homie_cozie_116.webp 900w"
+              sizes="(max-width: 640px) 480px, 900px"
+              alt="Barista Homie Cozie menyiapkan seduhan kopi specialty"
+              width={600}
+              height={400}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-80 sm:h-96 object-cover"
+            />
+            <div className="p-4 bg-white border-t border-[#EAE2D8]">
+              <div className="text-xs font-bold text-[#1F1A16] flex items-center gap-1.5">
+                <Coffee className="w-4 h-4 text-[#C84B27]" />
+                <span>Barista Specialty Bar</span>
               </div>
-            </SpotlightCard>
+              <p className="text-[11px] text-[#3D332A] mt-1 font-medium">
+                Penyeduhan kopi presisi dengan mesin espresso modern dan racikan khas Homie Cozie.
+              </p>
+            </div>
           </div>
 
           {/* Right Column: 4 Core Pillars (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {pillars.map((pillar, idx) => (
-                <SpotlightCard 
+                <div 
                   key={idx}
-                  className="p-4 space-y-2 shadow-xs hover:shadow-md transition-shadow"
+                  className="bg-white p-4.5 rounded-2xl border border-[#EAE2D8] space-y-2 shadow-xs"
                 >
                   <div className="w-8 h-8 rounded-xl bg-amber-50 border border-amber-200 text-[#8C341A] flex items-center justify-center">
                     <pillar.icon className="w-4 h-4" />
@@ -131,30 +120,26 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
                   <p className="text-xs text-[#3D332A] leading-relaxed font-normal">
                     {pillar.description}
                   </p>
-                </SpotlightCard>
+                </div>
               ))}
             </div>
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 onClick={onOpenReservation}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#C84B27] hover:bg-[#B23E1C] text-white font-semibold text-xs sm:text-sm transition-colors shadow-xs cursor-pointer"
               >
                 <span>Reservasi Meja Online</span>
                 <ArrowRight className="w-4 h-4" />
-              </motion.button>
+              </button>
               
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 onClick={onExploreMenu}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] font-semibold text-xs sm:text-sm border border-[#EAE2D8] transition-colors shadow-xs cursor-pointer"
               >
                 <Coffee className="w-4 h-4 text-[#3D332A]" />
                 <span>Lihat Pilihan Menu</span>
-              </motion.button>
+              </button>
             </div>
           </div>
 
