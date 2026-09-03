@@ -13,14 +13,7 @@ import { useAppStore } from './store/useAppStore';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/CustomerPortal/HeroSection';
 import { GoogleProofBanner } from './components/CustomerPortal/GoogleProofBanner';
-import { MenuExplorer } from './components/CustomerPortal/MenuExplorer';
-import { EventCommunitySection } from './components/CustomerPortal/EventCommunitySection';
-import { LoyaltySection } from './components/CustomerPortal/LoyaltySection';
-import { LocationHoursSection } from './components/CustomerPortal/LocationHoursSection';
 import { AboutSection } from './components/CustomerPortal/AboutSection';
-import { GallerySection } from './components/CustomerPortal/GallerySection';
-import { FAQSection } from './components/CustomerPortal/FAQSection';
-import { CoffeeTasteQuiz } from './components/CustomerPortal/CoffeeTasteQuiz';
 import { WaiterCallWidget } from './components/CustomerPortal/WaiterCallWidget';
 
 import { MobileBottomDock } from './components/Mobile/MobileBottomDock';
@@ -28,6 +21,15 @@ import { PWAInstallBanner } from './components/Mobile/PWAInstallBanner';
 import { ScrollReveal } from './components/Common/ScrollReveal';
 import { BackToTopButton } from './components/Common/BackToTopButton';
 import { telemetryTracker } from './services/telemetryTracker';
+
+// Lazy Loaded Customer Portal Sections for Blazing Fast FCP & Minimal Main Thread Work
+const MenuExplorer = React.lazy(() => import('./components/CustomerPortal/MenuExplorer').then(m => ({ default: m.MenuExplorer })));
+const CoffeeTasteQuiz = React.lazy(() => import('./components/CustomerPortal/CoffeeTasteQuiz').then(m => ({ default: m.CoffeeTasteQuiz })));
+const GallerySection = React.lazy(() => import('./components/CustomerPortal/GallerySection').then(m => ({ default: m.GallerySection })));
+const EventCommunitySection = React.lazy(() => import('./components/CustomerPortal/EventCommunitySection').then(m => ({ default: m.EventCommunitySection })));
+const LoyaltySection = React.lazy(() => import('./components/CustomerPortal/LoyaltySection').then(m => ({ default: m.LoyaltySection })));
+const FAQSection = React.lazy(() => import('./components/CustomerPortal/FAQSection').then(m => ({ default: m.FAQSection })));
+const LocationHoursSection = React.lazy(() => import('./components/CustomerPortal/LocationHoursSection').then(m => ({ default: m.LocationHoursSection })));
 
 // Lazy Loaded Pages & Heavy Backoffice Modals for Instant Public Page Loading
 const AuthPage = React.lazy(() => import('./pages/AuthPage').then(m => ({ default: m.AuthPage })));
@@ -38,6 +40,12 @@ const EnterpriseBackoffice = React.lazy(() => import('./components/BackstageOps/
 const PitchDeckModal = React.lazy(() => import('./components/PRDPresentation/PitchDeckModal').then(m => ({ default: m.PitchDeckModal })));
 const FeedbackReviewModal = React.lazy(() => import('./components/CustomerPortal/FeedbackReviewModal').then(m => ({ default: m.FeedbackReviewModal })));
 const LiveOrderTrackerModal = React.lazy(() => import('./components/CustomerPortal/LiveOrderTrackerModal').then(m => ({ default: m.LiveOrderTrackerModal })));
+
+const SectionLoadingFallback: React.FC = () => (
+  <div className="min-h-[140px] w-full bg-[#FAF7F2] flex items-center justify-center p-6">
+    <div className="w-6 h-6 border-2 border-amber-600/20 border-t-[#C84B27] rounded-full animate-spin" />
+  </div>
+);
 
 const RouteLoadingFallback: React.FC = () => (
   <div className="min-h-[60vh] w-full flex flex-col items-center justify-center p-8 text-center bg-[#FAF7F2]">
@@ -218,46 +226,60 @@ export default function App() {
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.02}>
-                <MenuExplorer
-                  onAddToCart={(item, qty, options, notes) => addToCart(item, qty, options, notes)}
-                  onOpenReservation={() => navigateToMode('reservation')}
-                />
+                <React.Suspense fallback={<SectionLoadingFallback />}>
+                  <MenuExplorer
+                    onAddToCart={(item, qty, options, notes) => addToCart(item, qty, options, notes)}
+                    onOpenReservation={() => navigateToMode('reservation')}
+                  />
+                </React.Suspense>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.02}>
-                <CoffeeTasteQuiz
-                  onAddToCart={(item) => addToCart(item, 1)}
-                  onOpenMenu={() => {
-                    const elem = document.getElementById('menu-section');
-                    if (elem) elem.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                />
+                <React.Suspense fallback={<SectionLoadingFallback />}>
+                  <CoffeeTasteQuiz
+                    onAddToCart={(item) => addToCart(item, 1)}
+                    onOpenMenu={() => {
+                      const elem = document.getElementById('menu-section');
+                      if (elem) elem.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  />
+                </React.Suspense>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.02}>
-                <GallerySection />
+                <React.Suspense fallback={<SectionLoadingFallback />}>
+                  <GallerySection />
+                </React.Suspense>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.02}>
-                <EventCommunitySection
-                  onRSVPEvent={handleRSVPEvent}
-                />
+                <React.Suspense fallback={<SectionLoadingFallback />}>
+                  <EventCommunitySection
+                    onRSVPEvent={handleRSVPEvent}
+                  />
+                </React.Suspense>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.02}>
-                <LoyaltySection
-                  onOpenMenu={() => navigateToMode('member')}
-                />
+                <React.Suspense fallback={<SectionLoadingFallback />}>
+                  <LoyaltySection
+                    onOpenMenu={() => navigateToMode('member')}
+                  />
+                </React.Suspense>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.02}>
-                <FAQSection />
+                <React.Suspense fallback={<SectionLoadingFallback />}>
+                  <FAQSection />
+                </React.Suspense>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.02}>
-                <LocationHoursSection
-                  onOpenReservation={() => navigateToMode('reservation')}
-                />
+                <React.Suspense fallback={<SectionLoadingFallback />}>
+                  <LocationHoursSection
+                    onOpenReservation={() => navigateToMode('reservation')}
+                  />
+                </React.Suspense>
               </ScrollReveal>
             </main>
           </motion.div>

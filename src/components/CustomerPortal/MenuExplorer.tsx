@@ -168,7 +168,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700 text-xs font-bold"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#5C5248] hover:text-[#1F1A16] text-xs font-bold"
                 >
                   Clear
                 </button>

@@ -152,7 +152,7 @@ export const EventCommunitySection: React.FC<EventCommunitySectionProps> = ({ on
                         disabled={isFull}
                         className={`w-full py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors ${
                           isFull
-                            ? 'bg-stone-200 text-stone-400 cursor-not-allowed'
+                            ? 'bg-stone-200 text-stone-700 font-medium cursor-not-allowed'
                             : 'bg-[#C84B27] hover:bg-[#B23E1C] text-white shadow-xs'
                         }`}
                       >

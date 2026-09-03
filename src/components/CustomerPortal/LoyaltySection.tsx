@@ -228,7 +228,7 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
                             ? 'bg-[#C84B27] border-[#C84B27] text-white shadow-xs'
                             : isRewardSlot
                             ? 'bg-amber-50 border-dashed border-amber-400 text-amber-800'
-                            : 'bg-[#FAF7F2] border-[#EAE2D8] text-stone-400'
+                            : 'bg-[#FAF7F2] border-[#EAE2D8] text-[#5C5248]'
                         }`}
                       >
                         {isStamped ? (
@@ -243,8 +243,8 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
                           </>
                         ) : (
                           <>
-                            <Coffee className="w-4 h-4 text-stone-300" />
-                            <span className="text-[10px] font-mono mt-0.5 text-stone-400">#{index + 1}</span>
+                            <Coffee className="w-4 h-4 text-[#5C5248]" />
+                            <span className="text-[10px] font-mono mt-0.5 text-[#5C5248]">#{index + 1}</span>
                           </>
                         )}
                       </motion.div>
@@ -305,7 +305,7 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
                             ? 'bg-emerald-700 text-white cursor-default'
                             : canAfford
                             ? 'bg-[#C84B27] hover:bg-[#B23E1C] text-white'
-                            : 'bg-stone-200 text-stone-400 cursor-not-allowed border border-stone-300'
+                            : 'bg-stone-200 text-stone-700 cursor-not-allowed border border-stone-300 font-medium'
                         }`}
                       >
                         {isRedeemed ? '✓ Berhasil Ditukar' : canAfford ? 'Tukar Poin' : 'Poin Kurang'}
