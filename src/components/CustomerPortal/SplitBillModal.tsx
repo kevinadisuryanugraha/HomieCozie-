@@ -505,7 +505,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
               <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-2">
                 <div className="text-left">
                   <span className="text-[10px] font-mono text-[#5C5248]">QRIS SPLIT BILL</span>
-                  <h4 className="font-bold text-sm text-[#1F1A16]">{activeQRISPerson.name}</h4>
+                  <div className="font-bold text-sm text-[#1F1A16]">{activeQRISPerson.name}</div>
                 </div>
                 <button
                   onClick={() => setActiveQRISPerson(null)}

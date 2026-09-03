@@ -297,9 +297,9 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                     className="bg-white p-3.5 rounded-2xl border border-[#EAE2D8] shadow-xs flex items-center justify-between gap-3"
                   >
                     <div className="flex-1 min-w-0">
-                      <h5 className="font-bold text-xs text-[#1F1A16] truncate">
+                      <div className="font-bold text-xs text-[#1F1A16] truncate">
                         {item.menuItem.name}
-                      </h5>
+                      </div>
                       <div className="font-mono text-xs text-[#B23812] font-bold mt-0.5">
                         {formatRupiah(item.menuItem.price * item.quantity)}
                       </div>

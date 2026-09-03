@@ -171,7 +171,7 @@ export const AIBaristaRecommender: React.FC<AIBaristaRecommenderProps> = ({
             />
             <div className="flex-1 min-w-0">
               <span className="text-[10px] font-mono text-[#5C5248] uppercase block">Minuman Utama</span>
-              <h4 className="font-bold text-xs text-[#1F1A16] truncate">{drinkItem.name}</h4>
+              <div className="font-bold text-xs text-[#1F1A16] truncate">{drinkItem.name}</div>
               <span className="font-mono font-bold text-xs text-[#B23812]">
                 Rp{drinkItem.price.toLocaleString('id-ID')}
               </span>
@@ -187,7 +187,7 @@ export const AIBaristaRecommender: React.FC<AIBaristaRecommenderProps> = ({
             />
             <div className="flex-1 min-w-0">
               <span className="text-[10px] font-mono text-[#5C5248] uppercase block">Pairing Makanan</span>
-              <h4 className="font-bold text-xs text-[#1F1A16] truncate">{foodItem.name}</h4>
+              <div className="font-bold text-xs text-[#1F1A16] truncate">{foodItem.name}</div>
               <span className="font-mono font-bold text-xs text-[#B23812]">
                 Rp{foodItem.price.toLocaleString('id-ID')}
               </span>
@@ -199,7 +199,7 @@ export const AIBaristaRecommender: React.FC<AIBaristaRecommenderProps> = ({
         <div className="md:col-span-4 border-t md:border-t-0 md:border-l border-[#EAE2D8] pt-3 md:pt-0 md:pl-4 flex flex-col justify-between space-y-3">
           <div>
             <div className="flex items-baseline gap-2">
-              <span className="text-xs text-stone-400 line-through font-mono">
+              <span className="text-xs text-stone-600 line-through font-mono">
                 Rp{originalTotal.toLocaleString('id-ID')}
               </span>
               <span className="font-display font-black text-xl text-[#B23812]">

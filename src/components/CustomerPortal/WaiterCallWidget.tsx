@@ -137,9 +137,9 @@ export const WaiterCallWidget: React.FC<WaiterCallWidgetProps> = ({
                   className="py-8 text-center space-y-3 bg-emerald-50 rounded-2xl border border-emerald-200 p-5"
                 >
                   <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
-                  <h4 className="font-bold text-base text-emerald-900">
+                  <div className="font-bold text-base text-emerald-900">
                     Permintaan Terkirim!
-                  </h4>
+                  </div>
                   <p className="text-xs text-emerald-800">
                     Staf kafe telah menerima notifikasi untuk <strong>Meja #{tableNumber}</strong> dan segera menuju meja Anda.
                   </p>

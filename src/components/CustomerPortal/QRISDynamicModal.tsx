@@ -187,9 +187,9 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                   <span className="text-[11px] font-mono font-bold text-emerald-800 uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200">
                     Pembayaran Berhasil Terverifikasi
                   </span>
-                  <h4 className="font-display font-black text-xl text-[#1F1A16] mt-1.5">
+                  <div className="font-display font-black text-xl text-[#1F1A16] mt-1.5">
                     {formatRupiah(order.total)}
-                  </h4>
+                  </div>
                   <p className="text-xs text-[#5C5248] mt-1">
                     Dibayar via <strong>{selectedApp}</strong> • No. Pesanan #{order.orderNumber}
                   </p>
