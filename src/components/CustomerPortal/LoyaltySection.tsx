@@ -205,8 +205,8 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
               <div className="space-y-6">
                 <div className="flex items-center justify-between text-xs">
                   <div>
-                    <h4 className="font-display font-bold text-[#1F1A16] text-base sm:text-lg">Progress Cap Digital</h4>
-                    <p className="text-[#8C7E72] text-xs">Cap ke-10 otomatis dapat 1 Kopi Susu / Latte GRATIS 🎁</p>
+                    <h3 className="font-display font-bold text-[#1F1A16] text-base sm:text-lg">Progress Cap Digital</h3>
+                    <p className="text-[#5C5248] text-xs">Cap ke-10 otomatis dapat 1 Kopi Susu / Latte GRATIS 🎁</p>
                   </div>
                   <span className="font-mono font-bold text-amber-700 text-lg sm:text-xl">{stamps} / 10 Cap</span>
                 </div>

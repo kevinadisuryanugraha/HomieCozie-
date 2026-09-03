@@ -1,0 +1,49 @@
+# Homie Cozie Coffee & Kitchen — Full Digital Knowledge Base & Specifications
+
+## 1. Identitas & Profil Bisnis
+- Nama Usaha: Homie Cozie Coffee & Kitchen
+- Tagline: Tempat Nongkrong Hangat & Live Music Favorit Kalisari – Cijantung
+- Tahun Berdiri: 2020 (6 Tahun Melayani Komunitas)
+- Alamat Lengkap: Jl. H. Hasan No. 23, RT.5/RW.2, Baru, Kec. Pasar Rebo, Kota Jakarta Timur, DKI Jakarta 13780
+- Titik Koordinat: -6.3255424, 106.8499976 (Google Plus Code: MRFX+QX Baru, Kota Jakarta Timur)
+- Rating Google Maps: 4.8 / 5.0 (268+ Ulasan Terverifikasi)
+- WhatsApp Reservasi / Hotline: +62 878-5004-9458
+- Telepon Kafe: 0815-8640-2420
+- Media Sosial: Instagram @homie.cozie, Linktree linktr.ee/homie.cozie
+- Jam Operasional:
+  * Selasa – Minggu: 10:00 – 23:00 WIB
+  * Akhir Pekan (Jumat – Minggu): 09:00 – 00:00 WIB (Live Acoustic Music mulai 19:30 WIB)
+  * Hari Senin: Libur Operasional (Maintenance)
+
+## 2. Fasilitas Kafe
+- Panggung Live Music Akustik (Semi-Outdoor Stage)
+- Indoor Utama Full AC & Bebas Asap Rokok
+- Semi-Outdoor Seating Area (Smoking Friendly)
+- Mezzanine Cozy Floor (Semi-Private Lantai Atas)
+- Wi-Fi 100 Mbps Berkecepatan Tinggi (SSID: HomieCozie_Guest)
+- Colokan Listrik (Power Outlet) Tersedia di Setiap Meja
+- Area Parkir Luas untuk Motor dan Mobil
+- Musholla Bersih dan Toilet Nyaman
+- Boardgames & Permainan Kartu (Uno, Chess, Stacko)
+
+## 3. Daftar Menu & Harga Utama (100% Halal)
+- Kopi Susu Homie Signature (Rp 24.000) — Espresso blend pilihan + gula aren murni + susu segar gurih
+- Aren Cremosa Cozie (Rp 28.000) — Double espresso + salted caramel cream + torched brown sugar
+- V60 Single Origin (Rp 30.000) — Biji kopi arabika pilihan: Aceh Gayo Natural, Flores Bajawa Washed, Kerinci Honey
+- Butterscotch Sea Salt Latte (Rp 29.000) — Espresso + butterscotch sauce + sea salt foam
+- Matcha Cold Whisk Latte (Rp 27.000) — Pure Uji matcha grade ceremonial + fresh milk
+- Tropical Berry Fizz Mocktail (Rp 26.000) — Mixed berries compote + soda + mint leaves
+- Artisan Earl Grey Milk Tea (Rp 25.000) — Premium black tea with bergamot oil + steamed milk
+- Nasi Goreng Homie Spesial (Rp 35.000) — Nasi goreng resep rumahan + telur mata sapi + kerupuk + ayam suwir
+- Spaghetti Aglio Olio Smoked Beef (Rp 34.000) — Pasta al dente + olive oil + bawang putih + smoked beef + cabe kering
+- Crispy Chicken Sambal Matah Rice Bowl (Rp 32.000) — Ayam krispi gurih + sambal matah Bali segar + nasi pulen
+- Beef Quesadilla with Mozzarella (Rp 33.000) — Tortilla panggang isi daging sapi cincang bumbu rempah + lelehan keju mozarella
+- Churros con Chocolate / Dulce de Leche (Rp 23.000) — Churros renyah bertabur cinnamon sugar + cocolan cokelat premium
+- Croffle Maple Butter Glaze (Rp 25.000) — Croissant waffle renyah berlapis karamel + topping butter & maple syrup
+
+## 4. Sistem Digital & Integrasi
+- Progressive Web App (PWA) Offline-Ready dengan Service Worker
+- QR Table Ordering & Pembayaran QRIS Dinamis Bank Indonesia
+- Live Order Kitchen Display System (KDS) & Real-time POS Kasir
+- Integrasi Real-time Pusher WebSockets & Web Audio Sound Chimes
+- Manajemen Bill of Materials (BOM) & Pengurangan Stok Otomatis

@@ -53,7 +53,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
         
         {/* Section Header */}
         <div className="max-w-2xl mb-10 space-y-2">
-          <div className="text-xs font-mono font-semibold text-[#8C7E72] uppercase tracking-wider">
+          <div className="text-xs font-mono font-semibold text-[#5C5248] uppercase tracking-wider">
             Lokasi & Jam Operasional
           </div>
           <h2 className="font-display font-black text-2xl sm:text-4xl text-[#1F1A16] tracking-tight">
@@ -271,7 +271,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                     </div>
                     <div className="min-w-0">
                       <div className="font-display font-bold text-[#1F1A16] text-[11px] truncate">Homie Cozie Coffee & Kitchen</div>
-                      <div className="text-[10px] text-[#8C7E72] truncate">Jl. H. Hasan No. 23, Pasar Rebo</div>
+                      <div className="text-[10px] text-[#5C5248] truncate">Jl. H. Hasan No. 23, Pasar Rebo</div>
                     </div>
                   </div>
 
@@ -286,10 +286,10 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
               {activeMapView === 'landmarks' && (
                 <div className="p-6 h-full flex flex-col justify-between overflow-y-auto space-y-4">
                   <div className="space-y-1">
-                    <h4 className="font-display font-bold text-sm text-[#1F1A16] flex items-center gap-1.5">
+                    <h3 className="font-display font-bold text-sm text-[#1F1A16] flex items-center gap-1.5">
                       <Compass className="w-4 h-4 text-[#C84B27]" />
                       <span>Rute & Akses Menuju Homie Cozie</span>
-                    </h4>
+                    </h3>
                     <p className="text-xs text-[#5C5248]">
                       Lokasi sangat mudah ditemukan, berada di pinggir jalan utama Jl. H. Hasan Kalisari.
                     </p>
@@ -320,10 +320,10 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
               {activeMapView === 'parking' && (
                 <div className="p-6 h-full flex flex-col justify-between overflow-y-auto space-y-4">
                   <div className="space-y-1">
-                    <h4 className="font-display font-bold text-sm text-[#1F1A16] flex items-center gap-1.5">
+                    <h3 className="font-display font-bold text-sm text-[#1F1A16] flex items-center gap-1.5">
                       <Car className="w-4 h-4 text-[#C84B27]" />
                       <span>Fasilitas Parkir & Drop-Off</span>
-                    </h4>
+                    </h3>
                     <p className="text-xs text-[#5C5248]">
                       Area parkir aman didukung oleh petugas parkir dan pengawasan kamera CCTV 24 jam.
                     </p>
@@ -390,7 +390,7 @@ export const LocationHoursSection: React.FC<LocationHoursSectionProps> = ({ onOp
                 </a>
               </div>
 
-              <span className="text-[11px] font-mono text-[#8C7E72]">
+              <span className="text-[11px] font-mono text-[#5C5248]">
                 Kalisari, Pasar Rebo, Jakarta Timur
               </span>
             </div>

@@ -43,10 +43,10 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
   ]);
 
   const [rewardCatalog, setRewardCatalog] = useState([
-    { id: 'r1', name: 'Free Kopi Susu Gula Aren Asli', cost: 2500, category: 'Coffee', image: '/photos/homie_cozie_008.jpg', claimed: false },
-    { id: 'r2', name: 'Voucher Makan Senilai Rp 25.000', cost: 2000, category: 'Voucher', image: '/photos/homie_cozie_105.jpg', claimed: false },
-    { id: 'r3', name: 'Gratis Croffle & Pancake Dessert', cost: 3000, category: 'Pastry', image: '/photos/homie_cozie_078.jpg', claimed: false },
-    { id: 'r4', name: 'Kopi Botolan 1 Liter Homie Cozie', cost: 6000, category: 'Merch', image: '/photos/homie_cozie_084.png', claimed: false }
+    { id: 'r1', name: 'Free Kopi Susu Gula Aren Asli', cost: 2500, category: 'Coffee', image: '/photos/homie_cozie_008.webp', claimed: false },
+    { id: 'r2', name: 'Voucher Makan Senilai Rp 25.000', cost: 2000, category: 'Voucher', image: '/photos/homie_cozie_105.webp', claimed: false },
+    { id: 'r3', name: 'Gratis Croffle & Pancake Dessert', cost: 3000, category: 'Pastry', image: '/photos/homie_cozie_078.webp', claimed: false },
+    { id: 'r4', name: 'Kopi Botolan 1 Liter Homie Cozie', cost: 6000, category: 'Merch', image: '/photos/homie_cozie_084.webp', claimed: false }
   ]);
 
   const transactionHistory = [

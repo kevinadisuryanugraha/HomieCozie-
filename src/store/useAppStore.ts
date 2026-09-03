@@ -343,7 +343,7 @@ export const useAppStore = create<AppState>((set, get) => ({
                 categoryLabel: it.menu_item?.category?.name || 'Menu',
                 price: Number(it.unit_price),
                 description: it.menu_item?.description || '',
-                image: it.menu_item?.image || '/photos/homie_cozie_008.jpg',
+                image: it.menu_item?.image || '/photos/homie_cozie_008.webp',
                 tags: it.menu_item?.tags || [],
                 available: true,
                 preparationTimeMinutes: 5,

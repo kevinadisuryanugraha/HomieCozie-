@@ -112,10 +112,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             />
           </div>
           <div className="min-w-0">
-            <h1 className="font-display font-black text-sm sm:text-lg text-[#1F1A16] leading-none tracking-tight truncate">
+            <span className="font-display font-black text-sm sm:text-lg text-[#1F1A16] leading-none tracking-tight truncate block">
               Homie Cozie
-            </h1>
-            <p className="text-[10px] sm:text-[11px] text-[#8C7E72] font-medium mt-0.5 truncate">
+            </span>
+            <p className="text-[10px] sm:text-[11px] text-[#5C5248] font-medium mt-0.5 truncate">
               Coffee & Kitchen
             </p>
           </div>

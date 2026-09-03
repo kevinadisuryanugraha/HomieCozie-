@@ -1,0 +1,26 @@
+# Homie Cozie Coffee & Kitchen
+
+> Homie Cozie Coffee & Kitchen adalah kafe specialty coffee, kitchen comfort food berstandar chef, dan panggung live music akustik di Kalisari, Pasar Rebo, Jakarta Timur. Berdiri sejak tahun 2020 dengan rating 4.8 dari 268+ ulasan Google Maps.
+
+## Core Information
+- Name: Homie Cozie Coffee & Kitchen
+- Address: Jl. H. Hasan No. 23, RT.5/RW.2, Baru, Kec. Pasar Rebo, Kota Jakarta Timur, DKI Jakarta 13780
+- Plus Code: MRFX+QX Baru, Kota Jakarta Timur
+- Operating Hours: Selasa – Minggu 10:00 – 23:00 WIB (Akhir Pekan buka 09:00, Live Music mulai 19:30 WIB). Senin Tutup.
+- WhatsApp Reservasi / Hotline: +62 878-5004-9458
+- Price Range: Rp 25.000 – Rp 50.000 per orang (100% Halal Certified)
+- Wi-Fi: HomieCozie_Guest (100 Mbps berkecepatan tinggi)
+- Facilities: Live Music Stage, Indoor Full AC, Semi-Outdoor Smoking Area, Mezzanine Cozy Floor, Area Parkir Luas Motor & Mobil, Colokan Listrik di Setiap Meja, Musholla Bersih, Toilet Nyaman, Boardgames & Uno.
+
+## Navigasi Layanan & Fitur Utama
+- [Daftar Menu](https://homie-cozie.pages.dev/#menu): Pilihan lengkap Kopi Susu Gula Aren Homie Signature, V60 Manual Brew Aceh Gayo/Flores, Aren Cremosa Cozie, Butterscotch Sea Salt Latte, Tropical Berry Fizz, Nasi Goreng Homie Spesial, Spaghetti Aglio Olio Smoked Beef, Crispy Chicken Sambal Matah, Beef Quesadilla, Churros Dulce de Leche, dan Croffle Maple Butter.
+- [Reservasi Meja Online](https://homie-cozie.pages.dev/#reservation): Sistem pemesanan meja interaktif tanpa uang muka untuk 4 zona: Semi-Outdoor Stage (01-08), Indoor AC Utama (09-16), Mezzanine VIP Loft (17-20), dan Backyard Garden (21-24).
+- [Pesan di Meja QRIS](https://homie-cozie.pages.dev/#order): Self-ordering digital dari meja tamu dengan QRIS dinamis Bank Indonesia, dukungan split bill per orang, dan pelacakan status pesanan dapur (Live Order Tracker).
+- [Jadwal Live Music & Event](https://homie-cozie.pages.dev/#events): Agenda pertunjukan musik akustik akhir pekan (Jumat & Sabtu 19:30 WIB), workshop barista seduh manual, dan temu komunitas.
+- [Loyalitas & Member VIP](https://homie-cozie.pages.dev/#member): Program cap digital 10x gratis 1 minuman kopi, voucher diskon ulang tahun, dan penukaran poin rewards.
+- [Galeri Suasana](https://homie-cozie.pages.dev/#gallery): Foto resolusi tinggi interior kafe, suasana panggung live music, area kerja WFH, dan kreasi barista.
+- [Pertanyaan Umum (FAQ)](https://homie-cozie.pages.dev/#faq): Informasi fasilitas WFH, reservasi rombongan / arisan / ulang tahun, kebijakan smoking area, dan metode pembayaran.
+- [Lokasi & Petunjuk Arah](https://homie-cozie.pages.dev/#location): Koordinat Google Maps, patokan jalan H. Hasan Kalisari Cijantung, dan panduan parkir kendaraan.
+
+## Optional Context
+- [Dokumentasi Lengkap LLM](https://homie-cozie.pages.dev/llms-full.txt): Spesifikasi detail menu, resep, varian harga, bahan baku, dan arsitektur sistem digital Homie Cozie.

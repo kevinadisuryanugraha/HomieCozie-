@@ -157,13 +157,13 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
             
             {/* Search Box */}
             <div className="relative w-full sm:w-88">
-              <Search className="w-4 h-4 text-[#8C7E72] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-[#5C5248] absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Cari Kopi Susu, Aren Cremosa, Nasi Goreng..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl text-xs font-medium text-[#1F1A16] placeholder:text-[#8C7E72] focus:outline-none focus:border-[#C84B27] focus:ring-1 focus:ring-[#C84B27] transition-all"
+                className="w-full pl-10 pr-4 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl text-xs font-medium text-[#1F1A16] placeholder:text-[#5C5248] focus:outline-none focus:border-[#C84B27] focus:ring-1 focus:ring-[#C84B27] transition-all"
               />
               {searchQuery && (
                 <button
@@ -276,7 +276,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                         (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80';
                       }}
                       className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
-                      loading="lazy"
+                      loading="lazy" decoding="async" width={360} height={180}
                     />
 
                     {/* Floating Badges */}
@@ -302,7 +302,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                   {/* Content Details */}
                   <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
                     <div>
-                      <div className="flex items-center justify-between text-xs text-[#8C7E72] mb-1.5">
+                      <div className="flex items-center justify-between text-xs text-[#5C5248] mb-1.5">
                         <span className={`font-mono text-[10px] font-bold px-2 py-0.5 rounded-md border ${
                           item.category === 'coffee' 
                             ? 'bg-amber-50 text-amber-800 border-amber-200'
@@ -320,7 +320,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                         }`}>
                           {item.categoryLabel}
                         </span>
-                        <span className="font-mono text-[11px] text-[#8C7E72]">
+                        <span className="font-mono text-[11px] text-[#5C5248]">
                           ± {item.preparationTimeMinutes} mnt
                         </span>
                       </div>
@@ -333,7 +333,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                       </p>
 
                       {item.tasteProfile && (
-                        <div className="mt-2 text-xs text-[#8C7E72] font-mono">
+                        <div className="mt-2 text-xs text-[#5C5248] font-mono">
                           <span className="text-amber-700 font-semibold">Notes:</span> {item.tasteProfile}
                         </div>
                       )}
@@ -342,7 +342,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                     {/* Price & Action Button */}
                     <div className="pt-3 border-t border-[#EAE2D8] flex items-center justify-between">
                       <div>
-                        <div className="text-[10px] text-[#8C7E72] font-mono">Harga</div>
+                        <div className="text-[10px] text-[#5C5248] font-mono">Harga</div>
                         <div className="font-mono font-bold text-[#1F1A16] text-base">
                           {formatRupiah(item.price)}
                         </div>
@@ -512,14 +512,14 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                     placeholder="Mis. 'Kurangi minyak', 'Pisah sambal', dsb."
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl text-xs text-[#1F1A16] placeholder:text-[#8C7E72] focus:outline-none focus:border-[#C84B27]"
+                    className="w-full px-3.5 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl text-xs text-[#1F1A16] placeholder:text-[#5C5248] focus:outline-none focus:border-[#C84B27]"
                   />
                 </div>
 
                 {/* Confirm Add to Cart */}
                 <div className="pt-3 border-t border-[#EAE2D8] flex items-center justify-between gap-3">
                   <div>
-                    <div className="text-[10px] font-mono text-[#8C7E72]">Total Harga</div>
+                    <div className="text-[10px] font-mono text-[#5C5248]">Total Harga</div>
                     <div className="font-mono font-bold text-[#C84B27] text-lg">
                       {formatRupiah(customizingItem.price * quantity)}
                     </div>

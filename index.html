@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
     <title>Homie Cozie Coffee & Kitchen — Kalisari Cijantung</title>
     <meta name="description" content="Sistem Digital Terpadu Homie Cozie Coffee & Kitchen — Reservasi Meja, Pesan QRIS, Loyalitas Member VIP. Jl. H. Hasan No. 23, RT.5/RW.2, Pasar Rebo, Jakarta Timur." />
-    
+    <link rel="canonical" href="https://homie-cozie.pages.dev/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://homie-cozie.pages.dev/" />
+    <meta property="og:title" content="Homie Cozie Coffee & Kitchen — Kalisari Cijantung" />
+    <meta property="og:description" content="Tempat Nongkrong Hangat & Live Music Favorit Kalisari – Cijantung. Kopi Specialty, Comfort Food Chef, dan Panggung Akustik." />
+    <meta property="og:image" content="https://homie-cozie.pages.dev/photos/homie_cozie_006.webp" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Homie Cozie Coffee & Kitchen" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://homie-cozie.pages.dev/" />
+    <meta name="twitter:title" content="Homie Cozie Coffee & Kitchen — Kalisari Cijantung" />
+    <meta name="twitter:description" content="Tempat Nongkrong Hangat & Live Music Favorit Kalisari – Cijantung. Kopi Specialty, Comfort Food Chef, dan Panggung Akustik." />
+    <meta name="twitter:image" content="https://homie-cozie.pages.dev/photos/homie_cozie_006.webp" />
+
     <!-- PWA Primary Tags -->
     <meta name="theme-color" content="#14100E" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -21,10 +39,61 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/logo_homie_cozie.png" />
 
-    <!-- Google Fonts Optimized (Preconnect + Display Swap) -->
+    <!-- Preload Hero LCP Image for Instant Mobile Paint -->
+    <link rel="preload" as="image" href="/photos/homie_cozie_006.webp" type="image/webp" fetchpriority="high" />
+
+    <!-- Google Fonts Optimized (Preconnect + Non-blocking Async Stylesheet) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=IBM+Plex+Mono:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=IBM+Plex+Mono:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=IBM+Plex+Mono:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Caveat:wght@600;700&family=IBM+Plex+Mono:wght@400;600&family=Work+Sans:wght@400;500;600;700&display=swap" />
+    </noscript>
+
+    <!-- Structured Data Schema (JSON-LD) for LocalBusiness & Cafe -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Homie Cozie Coffee & Kitchen",
+      "image": "https://homie-cozie.pages.dev/photos/homie_cozie_006.webp",
+      "url": "https://homie-cozie.pages.dev/",
+      "telephone": "+6287850049458",
+      "priceRange": "Rp 25.000 – Rp 50.000",
+      "servesCuisine": ["Coffee", "Indonesian", "Western", "Pastry"],
+      "hasMenu": "https://homie-cozie.pages.dev/#menu",
+      "acceptsReservations": "True",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. H. Hasan No.23, RT.5/RW.2, Baru, Kec. Ps. Rebo",
+        "addressLocality": "Jakarta Timur",
+        "addressRegion": "DKI Jakarta",
+        "postalCode": "13780",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.3255424,
+        "longitude": 106.8499976
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "10:00",
+          "closes": "23:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "268",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
   </head>
   <body class="bg-[#14100E] text-stone-100 font-sans antialiased selection:bg-[#E4572E] selection:text-white overscroll-none overflow-x-hidden min-h-screen">
     <div id="root"></div>

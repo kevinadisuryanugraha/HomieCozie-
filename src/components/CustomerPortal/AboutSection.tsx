@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'motion/react';
 import { 
   Coffee, 
   Utensils, 
@@ -44,7 +43,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
         
         {/* Section Title */}
         <div className="max-w-2xl space-y-2 mb-12">
-          <div className="text-xs font-mono font-medium text-[#8C7E72]">
+          <div className="text-xs font-mono font-semibold text-[#5C5248]">
             Kisah Sejak 2020 • Kalisari, Pasar Rebo
           </div>
 
@@ -64,13 +63,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
               key={idx}
               className="bg-white p-4 sm:p-5 rounded-2xl border border-[#EAE2D8] text-center shadow-xs"
             >
-              <div className="font-display font-black text-2xl sm:text-3xl text-amber-700 tracking-tight">
+              <div className="font-display font-black text-2xl sm:text-3xl text-amber-800 tracking-tight">
                 {stat.value}
               </div>
               <div className="font-bold text-[#1F1A16] text-xs sm:text-sm mt-1">
                 {stat.label}
               </div>
-              <p className="text-[11px] text-[#8C7E72] mt-0.5 leading-snug">
+              <p className="text-[11px] text-[#5C5248] mt-0.5 leading-snug">
                 {stat.sub}
               </p>
             </div>
@@ -83,14 +82,17 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
           {/* Left Column: Cafe Interior Photo (5 cols) */}
           <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-[#EAE2D8] bg-white shadow-sm">
             <img
-              src="/photos/homie_cozie_116.jpg"
+              src="/photos/homie_cozie_116.webp"
               alt="Barista Homie Cozie menyiapkan seduhan kopi specialty"
-              className="w-full h-80 sm:h-96 object-cover"
+              width={600}
+              height={400}
               loading="lazy"
+              decoding="async"
+              className="w-full h-80 sm:h-96 object-cover"
             />
             <div className="p-4 bg-white border-t border-[#EAE2D8]">
               <div className="text-xs font-bold text-[#1F1A16]">Barista Specialty Bar</div>
-              <p className="text-[11px] text-[#8C7E72] mt-0.5">
+              <p className="text-[11px] text-[#5C5248] mt-0.5">
                 Penyeduhan kopi presisi dengan mesin espresso modern dan racikan khas Homie Cozie.
               </p>
             </div>
@@ -104,12 +106,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
                   key={idx}
                   className="bg-white p-4 rounded-2xl border border-[#EAE2D8] space-y-2 shadow-xs"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 flex items-center justify-center">
                     <pillar.icon className="w-4 h-4" />
                   </div>
-                  <h4 className="font-display font-bold text-sm text-[#1F1A16]">
+                  <h3 className="font-display font-bold text-sm text-[#1F1A16]">
                     {pillar.title}
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[#5C5248] leading-relaxed">
                     {pillar.description}
                   </p>
@@ -120,7 +122,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <button
                 onClick={onOpenReservation}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#C84B27] hover:bg-[#B23E1C] text-white font-semibold text-xs sm:text-sm transition-colors shadow-xs"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#C84B27] hover:bg-[#B23E1C] text-white font-semibold text-xs sm:text-sm transition-colors shadow-xs cursor-pointer"
               >
                 <span>Reservasi Meja Online</span>
                 <ArrowRight className="w-4 h-4" />
@@ -128,9 +130,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
               
               <button
                 onClick={onExploreMenu}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] font-semibold text-xs sm:text-sm border border-[#EAE2D8] transition-colors shadow-xs"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] font-semibold text-xs sm:text-sm border border-[#EAE2D8] transition-colors shadow-xs cursor-pointer"
               >
-                <Coffee className="w-4 h-4 text-[#8C7E72]" />
+                <Coffee className="w-4 h-4 text-[#5C5248]" />
                 <span>Lihat Pilihan Menu</span>
               </button>
             </div>

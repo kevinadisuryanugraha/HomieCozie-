@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /docs/
+Disallow: /backstage
+
+Sitemap: https://homie-cozie.pages.dev/sitemap.xml

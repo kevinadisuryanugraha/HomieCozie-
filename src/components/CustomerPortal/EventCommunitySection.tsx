@@ -88,7 +88,7 @@ export const EventCommunitySection: React.FC<EventCommunitySectionProps> = ({ on
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80';
                     }}
-                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                    loading="lazy" decoding="async" width={400} height={200} className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
                   />
 
                   <div className="absolute top-3 left-3 flex items-center gap-1.5">
@@ -101,12 +101,12 @@ export const EventCommunitySection: React.FC<EventCommunitySectionProps> = ({ on
                 {/* Content */}
                 <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <div className="flex items-center justify-between text-xs text-[#8C7E72] mb-1">
+                    <div className="flex items-center justify-between text-xs text-[#5C5248] mb-1">
                       <span className="font-mono font-semibold text-amber-700 flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{event.date}</span>
                       </span>
-                      <span className="font-mono text-[#8C7E72] flex items-center gap-1">
+                      <span className="font-mono text-[#5C5248] flex items-center gap-1">
                         <Clock className="w-3.5 h-3.5" />
                         <span>{event.time}</span>
                       </span>
@@ -123,7 +123,7 @@ export const EventCommunitySection: React.FC<EventCommunitySectionProps> = ({ on
                   {/* Seat Availability & Action */}
                   <div className="space-y-3 pt-3 border-t border-[#EAE2D8]">
                     <div className="space-y-1 text-xs">
-                      <div className="flex items-center justify-between text-[#8C7E72]">
+                      <div className="flex items-center justify-between text-[#5C5248]">
                         <span className="text-[11px]">Kapasitas Meja</span>
                         <span className="font-mono font-bold text-[#1F1A16]">
                           {isFull ? 'Penuh' : `Sisa ${seatsRemaining} Kursi`}

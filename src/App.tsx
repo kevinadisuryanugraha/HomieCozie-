@@ -42,7 +42,7 @@ const LiveOrderTrackerModal = React.lazy(() => import('./components/CustomerPort
 const RouteLoadingFallback: React.FC = () => (
   <div className="min-h-[60vh] w-full flex flex-col items-center justify-center p-8 text-center bg-[#FAF7F2]">
     <div className="w-10 h-10 border-3 border-amber-600/20 border-t-[#C84B27] rounded-full animate-spin mb-4" />
-    <span className="text-xs font-mono font-bold text-[#8C7E72] tracking-wider uppercase">Memuat Modul Homie Cozie...</span>
+    <span className="text-xs font-mono font-bold text-[#5C5248] tracking-wider uppercase">Memuat Modul Homie Cozie...</span>
   </div>
 );
 
@@ -611,11 +611,11 @@ export default function App() {
                 <div className="space-y-2 text-xs text-[#5C5248]">
                   <div>
                     <div className="font-bold text-[#1F1A16]">Selasa – Minggu:</div>
-                    <div className="text-[#8C7E72]">{CAFE_INFO.operatingHours.weekdays}</div>
+                    <div className="text-[#5C5248]">{CAFE_INFO.operatingHours.weekdays}</div>
                   </div>
                   <div>
                     <div className="font-bold text-[#1F1A16]">Akhir Pekan (Live Music):</div>
-                    <div className="text-[#8C7E72]">{CAFE_INFO.operatingHours.weekends}</div>
+                    <div className="text-[#5C5248]">{CAFE_INFO.operatingHours.weekends}</div>
                   </div>
                   <div className="pt-1">
                     <div className="font-bold text-[#1F1A16]">WhatsApp Kafe:</div>
@@ -634,7 +634,7 @@ export default function App() {
             </div>
 
             {/* Bottom Strip */}
-            <div className="pt-8 border-t border-[#EAE2D8] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-[#8C7E72] pb-16 md:pb-0">
+            <div className="pt-8 border-t border-[#EAE2D8] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-[#5C5248] pb-16 md:pb-0">
               <div>
                 © 2020 – 2026 <strong className="text-[#1F1A16]">Homie Cozie Coffee & Kitchen</strong>. All rights reserved.
               </div>
@@ -664,7 +664,7 @@ export default function App() {
                 </span>
               </div>
               <div className="space-y-0.5 pr-2">
-                <div className="text-[10px] text-[#8C7E72] font-mono leading-none">Total Pesanan</div>
+                <div className="text-[10px] text-[#5C5248] font-mono leading-none font-semibold">Total Pesanan</div>
                 <div className="font-mono font-bold text-sm text-[#1F1A16] leading-none">
                   {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(
                     cartItems.reduce((acc, it) => acc + it.menuItem.price * it.quantity, 0)

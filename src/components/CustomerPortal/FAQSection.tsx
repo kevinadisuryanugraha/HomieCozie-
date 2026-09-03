@@ -58,13 +58,13 @@ export const FAQSection: React.FC = () => {
         {/* Search Bar & Category Filters */}
         <div className="space-y-4 mb-10">
           <div className="relative">
-            <Search className="w-5 h-5 text-[#8C7E72] absolute left-4 top-1/2 -translate-y-1/2" />
+            <Search className="w-5 h-5 text-[#5C5248] absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               placeholder="Cari pertanyaan (misal: colokan, parkir, halal, live music)..."
-              className="w-full bg-white border border-[#EAE2D8] rounded-xl pl-12 pr-4 py-3 text-sm text-[#1F1A16] placeholder:text-[#8C7E72] focus:outline-none focus:border-[#C84B27] focus:ring-1 focus:ring-[#C84B27] transition-all shadow-xs"
+              className="w-full bg-white border border-[#EAE2D8] rounded-xl pl-12 pr-4 py-3 text-sm text-[#1F1A16] placeholder:text-[#5C5248] focus:outline-none focus:border-[#C84B27] focus:ring-1 focus:ring-[#C84B27] transition-all shadow-xs"
             />
             {searchQuery && (
               <button

@@ -13,7 +13,6 @@ import {
   Car,
   Wind,
   Coffee,
-  Sparkles,
   ChevronRight
 } from 'lucide-react';
 import { CAFE_INFO } from '../../data/mockData';
@@ -44,7 +43,7 @@ const SHOWCASE_SCENES: ShowcaseScene[] = [
     title: 'Weekend Acoustic Groove',
     tag: 'Live Music Weekend',
     subtitle: 'Jumat & Sabtu mulai 19:30 WIB • Semi-Outdoor Stage & Free Entry',
-    image: '/photos/homie_cozie_006.jpg',
+    image: '/photos/homie_cozie_006.webp',
     badge: 'Jumat & Sabtu 19:30'
   },
   {
@@ -54,7 +53,7 @@ const SHOWCASE_SCENES: ShowcaseScene[] = [
     title: 'Artisan Espresso & Manual Brew',
     tag: 'Signature Coffee',
     subtitle: 'Kopi Susu Gula Aren Asli & Seduhan Filter V60 Single Origin Nusantara',
-    image: '/photos/homie_cozie_008.jpg',
+    image: '/photos/homie_cozie_008.webp',
     badge: '100% Arabika & Robusta Pilihan'
   },
   {
@@ -64,7 +63,7 @@ const SHOWCASE_SCENES: ShowcaseScene[] = [
     title: 'Comfort Food & Kitchen Mains',
     tag: 'Chef Recipes',
     subtitle: 'Nasi Goreng Kampung, Pasta Aglio Olio, Rice Bowl Sambal Matah & Platters',
-    image: '/photos/homie_cozie_105.jpg',
+    image: '/photos/homie_cozie_105.webp',
     badge: 'Fresh Cooked to Order'
   },
   {
@@ -74,7 +73,7 @@ const SHOWCASE_SCENES: ShowcaseScene[] = [
     title: 'Indoor AC & Garden Backyard',
     tag: 'Ruang Nyaman',
     subtitle: 'Colokan di setiap meja, Wi-Fi 100Mbps cepat, dan area mezzanine semi-private',
-    image: '/photos/homie_cozie_025.png',
+    image: '/photos/homie_cozie_025.webp',
     badge: 'WFH & Hangout Ready'
   }
 ];
@@ -103,54 +102,64 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   }, [isAutoPlayPaused]);
 
   useEffect(() => {
-    // Number counters
-    const ratingObj = { val: 0 };
-    animate(ratingObj, {
-      val: 4.8,
-      duration: 1200,
-      ease: 'outExpo',
-      onUpdate: () => {
-        if (ratingCounterRef.current) {
-          ratingCounterRef.current.innerText = `${ratingObj.val.toFixed(1)}`;
+    // Number counters with requestIdleCallback fallback
+    const runCounters = () => {
+      const ratingObj = { val: 0 };
+      animate(ratingObj, {
+        val: 4.8,
+        duration: 1000,
+        ease: 'outExpo',
+        onUpdate: () => {
+          if (ratingCounterRef.current) {
+            ratingCounterRef.current.innerText = `${ratingObj.val.toFixed(1)}`;
+          }
         }
-      }
-    });
+      });
 
-    const reviewsObj = { val: 0 };
-    animate(reviewsObj, {
-      val: 268,
-      duration: 1400,
-      ease: 'outExpo',
-      onUpdate: () => {
-        if (reviewsCounterRef.current) {
-          reviewsCounterRef.current.innerText = `${Math.round(reviewsObj.val)}+`;
+      const reviewsObj = { val: 0 };
+      animate(reviewsObj, {
+        val: 268,
+        duration: 1100,
+        ease: 'outExpo',
+        onUpdate: () => {
+          if (reviewsCounterRef.current) {
+            reviewsCounterRef.current.innerText = `${Math.round(reviewsObj.val)}+`;
+          }
         }
-      }
-    });
+      });
 
-    const cupsObj = { val: 0 };
-    animate(cupsObj, {
-      val: 50,
-      duration: 1600,
-      ease: 'outExpo',
-      onUpdate: () => {
-        if (cupsCounterRef.current) {
-          cupsCounterRef.current.innerText = `${Math.round(cupsObj.val)}K+`;
+      const cupsObj = { val: 0 };
+      animate(cupsObj, {
+        val: 50,
+        duration: 1200,
+        ease: 'outExpo',
+        onUpdate: () => {
+          if (cupsCounterRef.current) {
+            cupsCounterRef.current.innerText = `${Math.round(cupsObj.val)}K+`;
+          }
         }
-      }
-    });
+      });
 
-    const yearsObj = { val: 0 };
-    animate(yearsObj, {
-      val: 6,
-      duration: 1000,
-      ease: 'outExpo',
-      onUpdate: () => {
-        if (yearsCounterRef.current) {
-          yearsCounterRef.current.innerText = `${Math.round(yearsObj.val)} Thn`;
+      const yearsObj = { val: 0 };
+      animate(yearsObj, {
+        val: 6,
+        duration: 900,
+        ease: 'outExpo',
+        onUpdate: () => {
+          if (yearsCounterRef.current) {
+            yearsCounterRef.current.innerText = `${Math.round(yearsObj.val)} Thn`;
+          }
         }
-      }
-    });
+      });
+    };
+
+    if ('requestIdleCallback' in window) {
+      const handle = (window as any).requestIdleCallback(runCounters);
+      return () => (window as any).cancelIdleCallback(handle);
+    } else {
+      const timer = setTimeout(runCounters, 100);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const currentScene = SHOWCASE_SCENES[activeSceneIndex];
@@ -170,10 +179,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#EAE2D8] text-[#1F1A16] font-medium shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
                 <span className="font-semibold text-emerald-800">Buka Hari Ini</span>
-                <span className="text-[#8C7E72] font-mono">10:00 – 23:00 WIB</span>
+                <span className="text-[#5C5248] font-mono">10:00 – 23:00 WIB</span>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#EAE2D8] text-[#5C5248] shadow-xs">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#EAE2D8] text-[#5C5248] shadow-xs font-medium">
                 <span>📍 Kalisari, Pasar Rebo, Jakarta Timur</span>
               </div>
             </div>
@@ -184,7 +193,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 Kopi Hangat, Santap Nikmat & Panggung Musik.
               </h1>
               
-              <p className="text-[#5C5248] text-sm sm:text-base leading-relaxed max-w-xl">
+              <p className="text-[#5C5248] text-sm sm:text-base leading-relaxed max-w-xl font-normal">
                 Tempat nongkrong favorit Kalisari – Cijantung dengan racikan kopi specialty Nusantara, hidangan dapur hangat berstandar chef, dan pertunjukan live acoustic setiap akhir pekan.
               </p>
             </div>
@@ -211,7 +220,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   onClick={onExploreMenu}
                   className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] font-semibold text-xs sm:text-sm border border-[#EAE2D8] hover:border-[#D5C9BC] transition-colors shadow-xs cursor-pointer"
                 >
-                  <Utensils className="w-4 h-4 text-amber-700" />
+                  <Utensils className="w-4 h-4 text-amber-800" />
                   <span>Daftar Menu</span>
                 </motion.button>
 
@@ -222,7 +231,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   onClick={onOpenQRScan}
                   className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] font-semibold text-xs sm:text-sm border border-[#EAE2D8] hover:border-[#D5C9BC] transition-colors shadow-xs cursor-pointer"
                 >
-                  <QrCode className="w-4 h-4 text-emerald-700" />
+                  <QrCode className="w-4 h-4 text-emerald-800" />
                   <span>Pesan di Meja</span>
                 </motion.button>
               </div>
@@ -234,32 +243,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 
                 <div className="flex flex-col justify-center px-2">
                   <div className="flex items-center gap-1 text-[#1F1A16] font-mono font-black text-lg">
-                    <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <Star className="w-4 h-4 fill-amber-400 text-amber-500" />
                     <span ref={ratingCounterRef}>4.8</span>
-                    <span className="text-xs text-[#8C7E72] font-normal">/ 5.0</span>
+                    <span className="text-xs text-[#5C5248] font-semibold">/ 5.0</span>
                   </div>
-                  <div className="text-[11px] text-[#8C7E72] mt-0.5">Rating Google (268+ Ulasan)</div>
+                  <div className="text-[11px] text-[#5C5248] font-medium mt-0.5">Rating Google (268+ Ulasan)</div>
                 </div>
 
                 <div className="flex flex-col justify-center pt-2 sm:pt-0 sm:px-3">
                   <div className="font-mono font-black text-[#1F1A16] text-lg">
                     <span ref={reviewsCounterRef}>268+</span>
                   </div>
-                  <div className="text-[11px] text-[#8C7E72] mt-0.5">Ulasan Positif Terverifikasi</div>
+                  <div className="text-[11px] text-[#5C5248] font-medium mt-0.5">Ulasan Positif Terverifikasi</div>
                 </div>
 
                 <div className="flex flex-col justify-center pt-2 sm:pt-0 sm:px-3">
                   <div className="font-mono font-black text-[#C84B27] text-lg">
                     <span ref={cupsCounterRef}>50K+</span>
                   </div>
-                  <div className="text-[11px] text-[#8C7E72] mt-0.5">Cangkir Kopi Disajikan</div>
+                  <div className="text-[11px] text-[#5C5248] font-medium mt-0.5">Cangkir Kopi Disajikan</div>
                 </div>
 
                 <div className="flex flex-col justify-center pt-2 sm:pt-0 sm:px-3">
                   <div className="font-mono font-black text-[#1F1A16] text-lg">
                     <span ref={yearsCounterRef}>6 Thn</span>
                   </div>
-                  <div className="text-[11px] text-[#8C7E72] mt-0.5">Sejak 2020 di Kalisari</div>
+                  <div className="text-[11px] text-[#5C5248] font-medium mt-0.5">Sejak 2020 di Kalisari</div>
                 </div>
 
               </div>
@@ -288,10 +297,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                         isActive
                           ? 'bg-white text-[#1F1A16] shadow-xs border border-[#EAE2D8]'
-                          : 'text-[#8C7E72] hover:text-[#1F1A16]'
+                          : 'text-[#5C5248] hover:text-[#1F1A16]'
                       }`}
                     >
-                      <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#C84B27]' : 'text-[#8C7E72]'}`} />
+                      <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#C84B27]' : 'text-[#5C5248]'}`} />
                       <span className="text-[11px]">{scene.tabLabel}</span>
                     </button>
                   );
@@ -305,10 +314,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     key={currentScene.id}
                     src={currentScene.image}
                     alt={currentScene.title}
+                    width={560}
+                    height={320}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
-                    transition={{ duration: 0.4 }}
+                    transition={{ duration: 0.3 }}
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80';
                     }}
@@ -340,9 +354,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               {/* Scene Caption Footer */}
               <div className="p-4 space-y-1 bg-white">
-                <h3 className="font-display font-bold text-base text-[#1F1A16]">
+                <h2 className="font-display font-bold text-base text-[#1F1A16]">
                   {currentScene.title}
-                </h3>
+                </h2>
                 <p className="text-xs text-[#5C5248] leading-relaxed">
                   {currentScene.subtitle}
                 </p>

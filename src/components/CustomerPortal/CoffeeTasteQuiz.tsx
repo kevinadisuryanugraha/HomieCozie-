@@ -127,7 +127,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
               Pilih profil rasa yang kamu sukai, kami akan mencarikan menu yang paling pas untuk santap di tempat atau take-away.
             </p>
           </div>
-          <div className="hidden md:flex items-center gap-2 text-xs font-mono text-[#8C7E72]">
+          <div className="hidden md:flex items-center gap-2 text-xs font-mono text-[#5C5248]">
             <Sliders className="w-4 h-4 text-[#C84B27]" />
             <span>Live Barista Matcher</span>
           </div>
@@ -286,7 +286,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                     className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border border-[#EAE2D8] shrink-0 shadow-xs"
                   />
                   <div className="space-y-1 min-w-0 flex-1">
-                    <div className="text-[11px] font-mono font-semibold text-[#8C7E72] uppercase tracking-wider">
+                    <div className="text-[11px] font-mono font-semibold text-[#5C5248] uppercase tracking-wider">
                       {matchedItem.categoryLabel || matchedItem.category}
                     </div>
                     <h3 className="font-display font-black text-base sm:text-lg text-[#1F1A16] leading-tight truncate">
