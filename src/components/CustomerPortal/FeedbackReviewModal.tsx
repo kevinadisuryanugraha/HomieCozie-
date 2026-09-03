@@ -19,7 +19,7 @@ import {
   Frown,
   Meh
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { CAFE_INFO } from '../../data/mockData';
 import { ReviewItem } from '../../types';
 import { soundService } from '../../utils/audioChime';
@@ -76,7 +76,7 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
       case 1:
         return { label: '😞 Sangat Kecewa', color: 'text-rose-700', bg: 'bg-rose-50 border-rose-200' };
       default:
-        return { label: 'Pilih Bintang Pengalaman Anda', color: 'text-[#8C7E72]', bg: 'bg-stone-50 border-stone-200' };
+        return { label: 'Pilih Bintang Pengalaman Anda', color: 'text-[#5C5248]', bg: 'bg-stone-50 border-stone-200' };
     }
   };
 
@@ -92,7 +92,7 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
   const handleOpenGoogleMaps = () => {
     soundService.playCashRegisterSound();
     try {
-      confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+      triggerConfetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
     } catch {}
 
     // Google Maps write review URL
@@ -155,7 +155,7 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
                 <h3 className="font-display font-black text-base sm:text-lg text-[#1F1A16]">
                   Bagikan Pengalaman Kunjungan Anda
                 </h3>
-                <p className="text-xs text-[#8C7E72]">
+                <p className="text-xs text-[#5C5248]">
                   Ulasan Anda membantu {CAFE_INFO.name} menjaga kualitas terbaik
                 </p>
               </div>
@@ -227,7 +227,7 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
                         onClick={() => {
                           setRating(starVal);
                           if (starVal >= 4) {
-                            try { confetti({ particleCount: 60, spread: 60 }); } catch {}
+                            try { triggerConfetti({ particleCount: 60, spread: 60 }); } catch {}
                           }
                         }}
                         onMouseEnter={() => setHoverRating(starVal)}
@@ -262,7 +262,7 @@ export const FeedbackReviewModal: React.FC<FeedbackReviewModalProps> = ({
                         <span className="text-xs font-bold text-[#1F1A16] block">
                           Bantu Kami di Google Maps & Dapatkan Diskon 15%!
                         </span>
-                        <span className="text-[11px] text-[#8C7E72]">
+                        <span className="text-[11px] text-[#5C5248]">
                           Pilih salah satu template ulasan di bawah ini untuk disalin ke Google Maps:
                         </span>
                       </div>

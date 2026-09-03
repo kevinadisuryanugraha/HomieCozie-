@@ -99,7 +99,7 @@ export const BackofficeSidebar: React.FC<BackofficeSidebarProps> = ({
           {!isSidebarCollapsed ? (
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#8C7E72]">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#5C5248]">
                 Shift Aktif • Pos 1
               </span>
             </div>
@@ -121,7 +121,7 @@ export const BackofficeSidebar: React.FC<BackofficeSidebarProps> = ({
           {BACKOFFICE_NAV_GROUPS.map((group, gIdx) => (
             <div key={gIdx} className="space-y-1">
               {!isSidebarCollapsed ? (
-                <div className="text-[10px] font-mono font-bold tracking-wider text-[#8C7E72] px-2.5 py-1 uppercase flex items-center justify-between">
+                <div className="text-[10px] font-mono font-bold tracking-wider text-[#5C5248] px-2.5 py-1 uppercase flex items-center justify-between">
                   <span>{group.title}</span>
                 </div>
               ) : (
@@ -149,7 +149,7 @@ export const BackofficeSidebar: React.FC<BackofficeSidebarProps> = ({
                       }`}
                     >
                       <Icon className={`w-4 h-4 shrink-0 transition-transform ${
-                        isActive ? 'scale-110 text-white' : 'text-[#8C7E72] group-hover:text-[#1F1A16]'
+                        isActive ? 'scale-110 text-white' : 'text-[#5C5248] group-hover:text-[#1F1A16]'
                       }`} />
 
                       {!isSidebarCollapsed && (

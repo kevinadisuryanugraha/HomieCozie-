@@ -60,7 +60,7 @@ export const BackofficeNotificationDrawer: React.FC<BackofficeNotificationDrawer
                     <h3 className="font-display font-black text-base text-[#1F1A16]">
                       Pusat Notifikasi Live
                     </h3>
-                    <p className="text-[11px] text-[#8C7E72]">
+                    <p className="text-[11px] text-[#5C5248]">
                       {activeOrders.length} antrean aktif • {occupiedTables.length} meja makan
                     </p>
                   </div>
@@ -78,7 +78,7 @@ export const BackofficeNotificationDrawer: React.FC<BackofficeNotificationDrawer
                 {activeOrders.length === 0 ? (
                   <div className="text-center py-10 space-y-2">
                     <Sparkles className="w-8 h-8 text-amber-600 mx-auto opacity-50" />
-                    <p className="text-xs text-[#8C7E72]">Tidak ada tiket pesanan tertunda.</p>
+                    <p className="text-xs text-[#5C5248]">Tidak ada tiket pesanan tertunda.</p>
                   </div>
                 ) : (
                   activeOrders.map(ord => (

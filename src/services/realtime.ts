@@ -25,6 +25,12 @@ class RealtimeService {
   public init() {
     if (typeof window === 'undefined' || this.echo) return;
 
+    // Avoid connecting to local ws://127.0.0.1 on remote production domains (e.g. pages.dev) to prevent mixed content errors
+    const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (!isLocalHost && (REVERB_HOST === '127.0.0.1' || REVERB_HOST === 'localhost')) {
+      return;
+    }
+
     try {
       Pusher.logToConsole = false;
 

@@ -18,7 +18,7 @@ import {
   Check,
   X
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { INITIAL_MENU_ITEMS, CAFE_INFO } from '../../data/mockData';
 import { ThermalReceiptModal } from './pos/ThermalReceiptModal';
 import { ShiftZReportModal } from './pos/ShiftZReportModal';
@@ -129,7 +129,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
     setDiscountPercent(0);
 
     try {
-      confetti({ particleCount: 50, spread: 60 });
+      triggerConfetti({ particleCount: 50, spread: 60 });
     } catch {}
   };
 
@@ -143,13 +143,13 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
         <div className="bg-white p-4 rounded-3xl border border-[#EAE2D8] shadow-xs space-y-3">
           <div className="flex items-center gap-2">
             <div className="relative flex-1">
-              <Search className="w-4 h-4 text-[#8C7E72] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-[#5C5248] absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Cari menu Kopi Susu, Nasi Goreng, Truffle..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-2xl text-xs text-[#1F1A16] placeholder:text-[#8C7E72] focus:outline-none focus:border-[#C84B27]"
+                className="w-full pl-10 pr-4 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-2xl text-xs text-[#1F1A16] placeholder:text-[#5C5248] focus:outline-none focus:border-[#C84B27]"
               />
             </div>
 
@@ -198,7 +198,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
               />
               <div className="space-y-0.5">
                 <h5 className="font-bold text-xs text-[#1F1A16] line-clamp-1">{item.name}</h5>
-                <span className="text-[10px] text-[#8C7E72] font-mono block uppercase">{item.category}</span>
+                <span className="text-[10px] text-[#5C5248] font-mono block uppercase">{item.category}</span>
                 <span className="font-mono font-bold text-[#C84B27] text-xs block">
                   {formatRupiah(item.price)}
                 </span>
@@ -267,7 +267,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
         {/* Items List */}
         <div className="space-y-2 max-h-60 overflow-y-auto pr-1 scrollbar-none divide-y divide-[#EAE2D8]">
           {activeItems.length === 0 ? (
-            <div className="py-8 text-center text-[#8C7E72] text-xs">
+            <div className="py-8 text-center text-[#5C5248] text-xs">
               Klik item di katalog menu untuk menambahkan ke tagihan
             </div>
           ) : (
@@ -275,7 +275,7 @@ export const POSRegister: React.FC<POSRegisterProps> = ({
               <div key={item.id} className="pt-2 first:pt-0 flex items-center justify-between text-xs">
                 <div className="space-y-0.5">
                   <div className="font-bold text-[#1F1A16]">{item.name}</div>
-                  <span className="text-[10px] font-mono text-[#8C7E72]">{formatRupiah(item.price)} / item</span>
+                  <span className="text-[10px] font-mono text-[#5C5248]">{formatRupiah(item.price)} / item</span>
                 </div>
 
                 <div className="flex items-center gap-2">

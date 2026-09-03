@@ -15,7 +15,7 @@ import {
   Send,
   HeartHandshake
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { CAFE_INFO } from '../../data/mockData';
 
 interface ReservationModalProps {
@@ -82,7 +82,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({
     setStep(3); // Success step
 
     try {
-      confetti({
+      triggerConfetti({
         particleCount: 70,
         spread: 60,
         origin: { y: 0.6 }

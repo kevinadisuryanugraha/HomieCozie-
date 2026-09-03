@@ -475,7 +475,7 @@ export function DataTable<T extends Record<string, any>>({
 
                       {showExportMenu && (
                         <div className="absolute right-0 mt-2 w-52 bg-white border border-[#EAE2D8] rounded-2xl shadow-xl z-30 p-1.5 space-y-1 animate-in zoom-in-95 duration-100">
-                          <div className="px-3 py-1.5 text-[10px] font-mono font-bold text-[#8C7E72] uppercase border-b border-[#EAE2D8]">
+                          <div className="px-3 py-1.5 text-[10px] font-mono font-bold text-[#5C5248] uppercase border-b border-[#EAE2D8]">
                             Format Ekspor Data
                           </div>
                           <button
@@ -516,7 +516,7 @@ export function DataTable<T extends Record<string, any>>({
         <div className="flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between pt-1">
           {/* Real-time Search input */}
           <div className="relative w-full lg:w-80 shrink-0">
-            <Search className="w-4 h-4 text-[#8C7E72] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#5C5248] absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder={searchPlaceholder}
@@ -525,12 +525,12 @@ export function DataTable<T extends Record<string, any>>({
                 setSearch(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full pl-10 pr-8 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-2xl text-xs text-[#1F1A16] placeholder:text-[#8C7E72] focus:outline-none focus:border-[#C84B27] shadow-2xs"
+              className="w-full pl-10 pr-8 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] rounded-2xl text-xs text-[#1F1A16] placeholder:text-[#5C5248] focus:outline-none focus:border-[#C84B27] shadow-2xs"
             />
             {search && (
               <button
                 onClick={() => setSearch('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8C7E72] hover:text-[#1F1A16] cursor-pointer"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#5C5248] hover:text-[#1F1A16] cursor-pointer"
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -570,7 +570,7 @@ export function DataTable<T extends Record<string, any>>({
                     setActiveFilters(reset);
                     setCurrentPage(1);
                   }}
-                  className="p-2 rounded-2xl bg-[#FAF7F2] text-[#8C7E72] hover:text-[#C84B27] border border-[#EAE2D8] text-xs font-bold cursor-pointer transition-colors shadow-2xs shrink-0"
+                  className="p-2 rounded-2xl bg-[#FAF7F2] text-[#5C5248] hover:text-[#C84B27] border border-[#EAE2D8] text-xs font-bold cursor-pointer transition-colors shadow-2xs shrink-0"
                   title="Reset Semua Filter"
                 >
                   <RefreshCw className="w-3.5 h-3.5" />
@@ -685,7 +685,7 @@ export function DataTable<T extends Record<string, any>>({
                         >
                           <span>{col.header}</span>
                           {col.sortable && (
-                            <span className="text-[#8C7E72] shrink-0">
+                            <span className="text-[#5C5248] shrink-0">
                               {isSorted ? (
                                 sortConfig?.direction === 'asc' ? (
                                   <ChevronUp className="w-3.5 h-3.5 text-[#C84B27]" />
@@ -709,7 +709,7 @@ export function DataTable<T extends Record<string, any>>({
                   <tr>
                     <td
                       colSpan={columns.length + (enableSelection ? 1 : 0)}
-                      className="py-14 px-4 text-center text-[#8C7E72]"
+                      className="py-14 px-4 text-center text-[#5C5248]"
                     >
                       <div className="flex flex-col items-center justify-center space-y-2">
                         <Layers className="w-8 h-8 text-stone-300" />
@@ -922,7 +922,7 @@ export function DataTable<T extends Record<string, any>>({
                 <div className="font-bold text-[#1F1A16]">
                   {importFileName ? `File Terpilih: ${importFileName}` : 'Klik untuk Pilih File CSV / JSON'}
                 </div>
-                <p className="text-[11px] text-[#8C7E72]">
+                <p className="text-[11px] text-[#5C5248]">
                   Mendukung berkas CSV dengan pemisah koma atau format array JSON standar
                 </p>
               </div>
@@ -948,7 +948,7 @@ export function DataTable<T extends Record<string, any>>({
                       {JSON.stringify(importParsedData.slice(0, 3), null, 2)}
                     </pre>
                     {importParsedData.length > 3 && (
-                      <div className="text-center text-[#8C7E72] pt-1">
+                      <div className="text-center text-[#5C5248] pt-1">
                         ... dan {importParsedData.length - 3} baris lainnya
                       </div>
                     )}

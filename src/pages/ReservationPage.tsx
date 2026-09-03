@@ -23,7 +23,7 @@ import {
   Briefcase,
   Heart
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../utils/confettiHelper";
 import { Reservation, CafeArea, TableItem } from '../types';
 import { CAFE_INFO, INITIAL_TABLES } from '../data/mockData';
 
@@ -137,7 +137,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
     setStep(4);
 
     try {
-      confetti({
+      triggerConfetti({
         particleCount: 70,
         spread: 80,
         origin: { y: 0.6 }
@@ -182,7 +182,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
         <div className="bg-white border border-[#EAE2D8] rounded-2xl p-6 sm:p-8 shadow-xs">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-1.5">
-              <div className="text-xs font-mono font-medium text-[#8C7E72]">
+              <div className="text-xs font-mono font-medium text-[#5C5248]">
                 Reservasi Meja Restoran
               </div>
               <h1 className="text-2xl sm:text-3xl font-display font-black text-[#1F1A16]">
@@ -196,15 +196,15 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
             {/* Quick Summary Strip */}
             <div className="flex items-center gap-6 text-xs text-[#5C5248] border-t md:border-t-0 md:border-l border-[#EAE2D8] pt-3 md:pt-0 md:pl-6">
               <div>
-                <span className="block text-[11px] text-[#8C7E72]">Total Meja</span>
+                <span className="block text-[11px] text-[#5C5248]">Total Meja</span>
                 <span className="text-base font-bold text-[#1F1A16] font-mono">{tables.length} Meja</span>
               </div>
               <div>
-                <span className="block text-[11px] text-[#8C7E72]">Biaya Booking</span>
+                <span className="block text-[11px] text-[#5C5248]">Biaya Booking</span>
                 <span className="text-base font-bold text-emerald-700">Gratis (Rp 0)</span>
               </div>
               <div>
-                <span className="block text-[11px] text-[#8C7E72]">Live Music</span>
+                <span className="block text-[11px] text-[#5C5248]">Live Music</span>
                 <span className="text-base font-bold text-amber-800">Weekend 19:30</span>
               </div>
             </div>
@@ -235,7 +235,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                     {isCompleted ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" /> : <span>{s.num}.</span>}
                     <span>{s.title}</span>
                   </div>
-                  <span className={`text-[11px] block mt-0.5 ${isCurrent ? 'text-white/90' : 'text-[#8C7E72]'}`}>
+                  <span className={`text-[11px] block mt-0.5 ${isCurrent ? 'text-white/90' : 'text-[#5C5248]'}`}>
                     {s.desc}
                   </span>
                 </div>
@@ -338,7 +338,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                           }`}
                         >
                           <div className="font-mono font-bold text-sm">{ts.time} WIB</div>
-                          <div className={`text-[10px] mt-0.5 ${isSelected ? 'text-white/90' : 'text-[#8C7E72]'}`}>
+                          <div className={`text-[10px] mt-0.5 ${isSelected ? 'text-white/90' : 'text-[#5C5248]'}`}>
                             {ts.label}
                           </div>
                         </button>
@@ -627,7 +627,7 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
                 <div className="bg-[#FAF7F2] border border-[#EAE2D8] rounded-3xl p-6 text-left max-w-lg mx-auto shadow-sm relative space-y-4">
                   <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-3">
                     <div>
-                      <span className="text-[10px] font-mono text-[#8C7E72]">KODE BOOKING</span>
+                      <span className="text-[10px] font-mono text-[#5C5248]">KODE BOOKING</span>
                       <div className="font-mono font-black text-xl text-[#C84B27]" ref={bookingCodeRef}>
                         {confirmedBooking.bookingCode}
                       </div>
@@ -639,26 +639,26 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
 
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div>
-                      <span className="text-[10px] text-[#8C7E72] block">TANGGAL & WAKTU</span>
+                      <span className="text-[10px] text-[#5C5248] block">TANGGAL & WAKTU</span>
                       <span className="font-bold text-[#1F1A16] font-mono">{confirmedBooking.date} @ {confirmedBooking.timeSlot} WIB</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-[#8C7E72] block">JUMLAH TAMU</span>
+                      <span className="text-[10px] text-[#5C5248] block">JUMLAH TAMU</span>
                       <span className="font-bold text-[#1F1A16]">{confirmedBooking.guestCount} Orang</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-[#8C7E72] block">AREA & MEJA</span>
+                      <span className="text-[10px] text-[#5C5248] block">AREA & MEJA</span>
                       <span className="font-bold text-amber-800 uppercase">{confirmedBooking.areaPreference} (Meja #{confirmedBooking.tableNumber})</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-[#8C7E72] block">OCCASION</span>
+                      <span className="text-[10px] text-[#5C5248] block">OCCASION</span>
                       <span className="font-bold text-[#5C5248] capitalize">{confirmedBooking.specialOccasion}</span>
                     </div>
                   </div>
 
                   {confirmedBooking.notes && (
                     <div className="pt-2 border-t border-[#EAE2D8] text-xs">
-                      <span className="text-[10px] text-[#8C7E72] block">CATATAN KHUSUS</span>
+                      <span className="text-[10px] text-[#5C5248] block">CATATAN KHUSUS</span>
                       <span className="text-[#5C5248] italic">"{confirmedBooking.notes}"</span>
                     </div>
                   )}
@@ -709,23 +709,23 @@ export const ReservationPage: React.FC<ReservationPageProps> = ({
 
               <div className="space-y-3 text-xs border-y border-[#EAE2D8] py-3">
                 <div className="flex justify-between">
-                  <span className="text-[#8C7E72]">Tanggal:</span>
+                  <span className="text-[#5C5248]">Tanggal:</span>
                   <span className="font-mono font-bold text-[#1F1A16]">{date}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#8C7E72]">Jam:</span>
+                  <span className="text-[#5C5248]">Jam:</span>
                   <span className="font-mono font-bold text-amber-800">{timeSlot} WIB</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#8C7E72]">Jumlah Tamu:</span>
+                  <span className="text-[#5C5248]">Jumlah Tamu:</span>
                   <span className="font-bold text-[#1F1A16]">{guestCount} Orang</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#8C7E72]">Area:</span>
+                  <span className="text-[#5C5248]">Area:</span>
                   <span className="font-bold text-[#1F1A16] capitalize">{areaPreference}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#8C7E72]">Nomor Meja:</span>
+                  <span className="text-[#5C5248]">Nomor Meja:</span>
                   <span className="font-mono font-bold text-amber-800">Meja #{selectedTableNumber}</span>
                 </div>
               </div>

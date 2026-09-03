@@ -24,7 +24,7 @@ import {
   Split,
   Coffee
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../utils/confettiHelper";
 import { SplitBillModal } from '../components/CustomerPortal/SplitBillModal';
 import { LiveOrderTrackerModal } from '../components/CustomerPortal/LiveOrderTrackerModal';
 import { QRISDynamicModal } from '../components/CustomerPortal/QRISDynamicModal';
@@ -150,7 +150,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
       onClearCart();
 
       try {
-        confetti({
+        triggerConfetti({
           particleCount: 90,
           spread: 70,
           origin: { y: 0.6 }
@@ -272,7 +272,7 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
                               </div>
                             )}
                             {item.notes && (
-                              <div className="text-[10px] text-[#8C7E72] italic">
+                              <div className="text-[10px] text-[#5C5248] italic">
                                 Note: {item.notes}
                               </div>
                             )}
@@ -559,15 +559,15 @@ export const OrderCheckoutPage: React.FC<OrderCheckoutPageProps> = ({
               {/* Receipt Body */}
               <div className="bg-[#FAF7F2] p-4 rounded-2xl border border-[#EAE2D8] space-y-2.5 text-xs">
                 <div className="flex justify-between border-b border-[#EAE2D8] pb-2">
-                  <span className="text-[#8C7E72]">Nomor Order:</span>
+                  <span className="text-[#5C5248]">Nomor Order:</span>
                   <span className="font-mono font-bold text-[#C84B27]">#{completedOrder.orderNumber}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#8C7E72]">Tipe / Meja:</span>
+                  <span className="text-[#5C5248]">Tipe / Meja:</span>
                   <span className="font-bold text-[#1F1A16]">{completedOrder.orderType.toUpperCase()} {completedOrder.tableNumber && `(Meja #${completedOrder.tableNumber})`}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#8C7E72]">Atas Nama:</span>
+                  <span className="text-[#5C5248]">Atas Nama:</span>
                   <span className="font-bold text-[#1F1A16]">{completedOrder.customerName}</span>
                 </div>
                 <div className="flex justify-between border-t border-[#EAE2D8] pt-2 font-bold text-sm text-[#C84B27]">

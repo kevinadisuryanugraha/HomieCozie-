@@ -90,7 +90,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div className="bg-white p-4 rounded-2xl border border-[#EAE2D8] shadow-xs flex items-center justify-between">
           <div>
-            <span className="text-[11px] text-[#8C7E72] block font-medium">Total Kapasitas</span>
+            <span className="text-[11px] text-[#5C5248] block font-medium">Total Kapasitas</span>
             <span className="font-mono font-bold text-xl text-[#1F1A16]">{counts.total} Meja</span>
           </div>
           <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-800 font-mono font-bold border border-amber-200">
@@ -183,7 +183,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
                       </span>
                     )}
                   </div>
-                  <span className="text-[11px] text-[#8C7E72] font-mono block mt-1">
+                  <span className="text-[11px] text-[#5C5248] font-mono block mt-1">
                     {tbl.areaLabel || tbl.area.toUpperCase()}
                   </span>
                 </div>
@@ -200,7 +200,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
               <div className="space-y-2 bg-white/80 backdrop-blur-2xs p-3.5 rounded-2xl border border-stone-200/60 text-xs shadow-2xs">
                 <div className="flex items-center justify-between text-[#5C5248]">
                   <span className="flex items-center gap-1.5 text-[11px] font-medium">
-                    <Users className="w-3.5 h-3.5 text-[#8C7E72]" />
+                    <Users className="w-3.5 h-3.5 text-[#5C5248]" />
                     <span>Kapasitas:</span>
                   </span>
                   <span className="font-mono font-bold text-[#1F1A16]">{tbl.capacity} Pax</span>
@@ -215,7 +215,7 @@ export const FloorPlanManager: React.FC<FloorPlanManagerProps> = ({
                       </span>
                     </div>
                     {tbl.occupiedSince && (
-                      <div className="flex items-center justify-between text-[#8C7E72] pt-0.5 border-t border-stone-200/50">
+                      <div className="flex items-center justify-between text-[#5C5248] pt-0.5 border-t border-stone-200/50">
                         <span className="text-[11px] font-medium">Ditempati Sejak:</span>
                         <span className="font-mono font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-md border border-rose-200 text-[11px]">
                           {tbl.occupiedSince}

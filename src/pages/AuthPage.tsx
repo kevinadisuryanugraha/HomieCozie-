@@ -458,7 +458,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
           <div className="lg:col-span-5 p-6 sm:p-8 bg-[#FAF7F2] border-b lg:border-b-0 lg:border-r border-[#EAE2D8] flex flex-col justify-between space-y-6">
             
             <div className="space-y-4">
-              <div className="text-xs font-mono font-medium text-[#8C7E72]">
+              <div className="text-xs font-mono font-medium text-[#5C5248]">
                 Portal Akses Karyawan & Manajemen
               </div>
 
@@ -501,9 +501,9 @@ export const AuthPage: React.FC<AuthPageProps> = ({
             </div>
 
             {/* Bottom Status Tag */}
-            <div className="pt-4 border-t border-[#EAE2D8] flex items-center justify-between text-[10px] sm:text-[11px] text-[#8C7E72]">
+            <div className="pt-4 border-t border-[#EAE2D8] flex items-center justify-between text-[10px] sm:text-[11px] text-[#5C5248]">
               <span>Status Server: Online</span>
-              <span className="font-mono text-[#8C7E72]">v2.4 Production</span>
+              <span className="font-mono text-[#5C5248]">v2.4 Production</span>
             </div>
 
           </div>
@@ -519,7 +519,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                   <h2 className="text-base sm:text-lg font-display font-black text-[#1F1A16] leading-tight">
                     Masuk ke Akun
                   </h2>
-                  <p className="text-[10px] sm:text-[11px] text-[#8C7E72]">
+                  <p className="text-[10px] sm:text-[11px] text-[#5C5248]">
                     Pilih akun demo atau masukkan email dan password.
                   </p>
                 </div>
@@ -574,7 +574,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                   <span className="text-[#5C5248] font-medium">
                     Pilih Akun Demo:
                   </span>
-                  <span className="text-[10px] font-mono text-[#8C7E72]">
+                  <span className="text-[10px] font-mono text-[#5C5248]">
                     Otomatis Terisi
                   </span>
                 </div>
@@ -604,7 +604,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                 <div className="pt-2 border-t border-[#EAE2D8] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="text-[10px] sm:text-[11px] text-[#5C5248] truncate">
                     <span className="font-bold text-[#1F1A16]">{activeDemo.role}</span>
-                    <span className="text-[#8C7E72]"> ➜ </span>
+                    <span className="text-[#5C5248]"> ➜ </span>
                     <span className="text-amber-800 font-mono font-semibold">{activeDemo.target}</span>
                   </div>
 
@@ -645,14 +645,14 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                           Email Staf
                         </label>
                         <div className="relative">
-                          <Mail className="w-4 h-4 text-[#8C7E72] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <Mail className="w-4 h-4 text-[#5C5248] absolute left-3.5 top-1/2 -translate-y-1/2" />
                           <input
                             type="email"
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="kasir@homiecozie.com"
-                            className="w-full pl-10 pr-4 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] focus:border-[#C84B27] rounded-xl text-xs font-medium text-[#1F1A16] placeholder-[#8C7E72] focus:outline-hidden transition-colors"
+                            className="w-full pl-10 pr-4 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] focus:border-[#C84B27] rounded-xl text-xs font-medium text-[#1F1A16] placeholder-[#5C5248] focus:outline-hidden transition-colors"
                           />
                         </div>
                       </div>
@@ -662,19 +662,19 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                           Password
                         </label>
                         <div className="relative">
-                          <Lock className="w-4 h-4 text-[#8C7E72] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <Lock className="w-4 h-4 text-[#5C5248] absolute left-3.5 top-1/2 -translate-y-1/2" />
                           <input
                             type={showPassword ? 'text' : 'password'}
                             required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="••••••••••••"
-                            className="w-full pl-10 pr-10 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] focus:border-[#C84B27] rounded-xl text-xs font-medium text-[#1F1A16] placeholder-[#8C7E72] focus:outline-hidden transition-colors"
+                            className="w-full pl-10 pr-10 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] focus:border-[#C84B27] rounded-xl text-xs font-medium text-[#1F1A16] placeholder-[#5C5248] focus:outline-hidden transition-colors"
                           />
                           <button
                             type="button"
                             onClick={() => setShowPassword(!showPassword)}
-                            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#8C7E72] hover:text-[#1F1A16]"
+                            className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#5C5248] hover:text-[#1F1A16]"
                           >
                             {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                           </button>
@@ -756,14 +756,14 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                           Nomor WhatsApp
                         </label>
                         <div className="relative">
-                          <Smartphone className="w-4 h-4 text-[#8C7E72] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <Smartphone className="w-4 h-4 text-[#5C5248] absolute left-3.5 top-1/2 -translate-y-1/2" />
                           <input
                             type="tel"
                             required
                             value={waPhone}
                             onChange={(e) => setWaPhone(e.target.value)}
                             placeholder="081298765432"
-                            className="w-full pl-10 pr-4 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] focus:border-[#25D366] rounded-xl text-xs font-mono font-bold text-[#1F1A16] placeholder-[#8C7E72] focus:outline-hidden transition-colors"
+                            className="w-full pl-10 pr-4 py-2.5 bg-[#FAF7F2] border border-[#EAE2D8] focus:border-[#25D366] rounded-xl text-xs font-mono font-bold text-[#1F1A16] placeholder-[#5C5248] focus:outline-hidden transition-colors"
                           />
                         </div>
                       </div>
@@ -808,7 +808,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                         >
                           Ganti Nomor
                         </button>
-                        <span className="text-[#8C7E72] font-mono text-[11px]">
+                        <span className="text-[#5C5248] font-mono text-[11px]">
                           {otpTimer > 0 ? `Kirim ulang (${otpTimer}s)` : 'Bisa kirim ulang'}
                         </span>
                       </div>
@@ -833,7 +833,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                       <Shield className="w-3.5 h-3.5 text-amber-700" />
                       <span>Riwayat Log Autentikasi</span>
                     </span>
-                    <span className="text-[10px] font-mono text-[#8C7E72]">{auditLogs.length} Entri</span>
+                    <span className="text-[10px] font-mono text-[#5C5248]">{auditLogs.length} Entri</span>
                   </div>
 
                   <div className="space-y-1.5 max-h-[220px] overflow-y-auto pr-1 text-xs">
@@ -848,7 +848,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
                           }`}>
                             {log.status}
                           </span>
-                          <span className="text-[9px] font-mono text-[#8C7E72]">{log.timestamp}</span>
+                          <span className="text-[9px] font-mono text-[#5C5248]">{log.timestamp}</span>
                         </div>
                         <div className="font-semibold text-[#1F1A16] text-[11px] truncate">{log.action}</div>
                         <div className="text-[10px] text-[#5C5248] truncate">{log.details}</div>
@@ -861,7 +861,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
             </div>
 
             {/* Footer Notice */}
-            <p className="text-[10px] text-[#8C7E72] text-center">
+            <p className="text-[10px] text-[#5C5248] text-center">
               Akses internal dilindungi firewall & audit logging aktif • Sesi kedaluwarsa 15 menit
             </p>
 
@@ -871,7 +871,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({
       </main>
 
       {/* Footer */}
-      <footer className="w-full max-w-5xl mx-auto px-4 py-4 text-center text-[11px] text-[#8C7E72] z-10">
+      <footer className="w-full max-w-5xl mx-auto px-4 py-4 text-center text-[11px] text-[#5C5248] z-10">
         © 2026 Homie Cozie Coffee & Kitchen — Kalisari, Pasar Rebo, Jakarta Timur
       </footer>
 

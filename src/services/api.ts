@@ -35,6 +35,14 @@ class ApiClient {
   }
 
   private async request<T = any>(endpoint: string, options: ApiFetchOptions = {}, requiresAuth = false): Promise<T> {
+    // If deployed on remote HTTPS domain and API_BASE_URL points to localhost, use safe local fallback
+    if (typeof window !== 'undefined') {
+      const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      if (!isLocalHost && API_BASE_URL.includes('localhost')) {
+        return { success: false, fallback: true } as unknown as T;
+      }
+    }
+
     const isProtected = requiresAuth || [
       '/orders', 
       '/inventory', 

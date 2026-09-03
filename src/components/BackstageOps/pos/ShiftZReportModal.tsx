@@ -167,7 +167,7 @@ export const ShiftZReportModal: React.FC<ShiftZReportModalProps> = ({
                 <h3 className="font-display font-black text-base sm:text-lg text-[#1F1A16]">
                   Tutup Shift Kasir (Z-Report)
                 </h3>
-                <p className="text-xs text-[#8C7E72]">
+                <p className="text-xs text-[#5C5248]">
                   Rekonsiliasi uang fisik laci kas dan pembukuan penutupan kasir
                 </p>
               </div>
@@ -255,28 +255,28 @@ export const ShiftZReportModal: React.FC<ShiftZReportModalProps> = ({
                 {/* Shift Info Header Cards */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                   <div className="p-3 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8]">
-                    <span className="text-[10px] text-[#8C7E72] font-semibold block">No. Shift Aktif</span>
+                    <span className="text-[10px] text-[#5C5248] font-semibold block">No. Shift Aktif</span>
                     <span className="font-mono font-bold text-xs text-[#1F1A16]">
                       {activeShift?.shift_number || 'SHIFT-20260902-01'}
                     </span>
                   </div>
 
                   <div className="p-3 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8]">
-                    <span className="text-[10px] text-[#8C7E72] font-semibold block">Kasir Bertugas</span>
+                    <span className="text-[10px] text-[#5C5248] font-semibold block">Kasir Bertugas</span>
                     <span className="font-bold text-xs text-[#1F1A16] truncate block">
                       {activeShift?.cashier_name || 'Kasir Utama'}
                     </span>
                   </div>
 
                   <div className="p-3 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8]">
-                    <span className="text-[10px] text-[#8C7E72] font-semibold block">Modal Awal Laci</span>
+                    <span className="text-[10px] text-[#5C5248] font-semibold block">Modal Awal Laci</span>
                     <span className="font-mono font-bold text-xs text-[#1F1A16]">
                       {formatRp(metrics?.opening_cash || 200000)}
                     </span>
                   </div>
 
                   <div className="p-3 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8]">
-                    <span className="text-[10px] text-[#8C7E72] font-semibold block">Total Transaksi</span>
+                    <span className="text-[10px] text-[#5C5248] font-semibold block">Total Transaksi</span>
                     <span className="font-mono font-bold text-xs text-emerald-700">
                       {metrics?.transactions_count || 0} Struk
                     </span>
@@ -321,7 +321,7 @@ export const ShiftZReportModal: React.FC<ShiftZReportModalProps> = ({
                         Penghitungan Uang Fisik di Laci (Cash Count):
                       </span>
                     </div>
-                    <span className="text-[11px] text-[#8C7E72] font-mono">
+                    <span className="text-[11px] text-[#5C5248] font-mono">
                       Target: <strong>{formatRp(expectedCash)}</strong>
                     </span>
                   </div>

@@ -122,7 +122,7 @@ export const AIBaristaRecommender: React.FC<AIBaristaRecommenderProps> = ({
                 PROMO BUNDLE -Rp5.000
               </span>
             </div>
-            <p className="text-xs text-[#8C7E72]">
+            <p className="text-xs text-[#5C5248]">
               Pilih suasana hati Anda, AI kami mencocokkan racikan kopi & makanan paling harmonis
             </p>
           </div>
@@ -145,7 +145,7 @@ export const AIBaristaRecommender: React.FC<AIBaristaRecommenderProps> = ({
               }`}
             >
               <div className="flex items-center justify-between">
-                <Icon className={`w-4 h-4 ${isActive ? 'text-[#C84B27]' : 'text-[#8C7E72]'}`} />
+                <Icon className={`w-4 h-4 ${isActive ? 'text-[#C84B27]' : 'text-[#5C5248]'}`} />
                 <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded ${isActive ? 'bg-amber-100 text-amber-900' : 'bg-stone-100 text-stone-600'}`}>
                   {preset.badge}
                 </span>
@@ -170,7 +170,7 @@ export const AIBaristaRecommender: React.FC<AIBaristaRecommenderProps> = ({
               className="w-14 h-14 rounded-xl object-cover border border-[#EAE2D8]"
             />
             <div className="flex-1 min-w-0">
-              <span className="text-[10px] font-mono text-[#8C7E72] uppercase block">Minuman Utama</span>
+              <span className="text-[10px] font-mono text-[#5C5248] uppercase block">Minuman Utama</span>
               <h4 className="font-bold text-xs text-[#1F1A16] truncate">{drinkItem.name}</h4>
               <span className="font-mono font-bold text-xs text-[#C84B27]">
                 Rp{drinkItem.price.toLocaleString('id-ID')}
@@ -186,7 +186,7 @@ export const AIBaristaRecommender: React.FC<AIBaristaRecommenderProps> = ({
               className="w-14 h-14 rounded-xl object-cover border border-[#EAE2D8]"
             />
             <div className="flex-1 min-w-0">
-              <span className="text-[10px] font-mono text-[#8C7E72] uppercase block">Pairing Makanan</span>
+              <span className="text-[10px] font-mono text-[#5C5248] uppercase block">Pairing Makanan</span>
               <h4 className="font-bold text-xs text-[#1F1A16] truncate">{foodItem.name}</h4>
               <span className="font-mono font-bold text-xs text-[#C84B27]">
                 Rp{foodItem.price.toLocaleString('id-ID')}
@@ -242,7 +242,7 @@ export const AIBaristaRecommender: React.FC<AIBaristaRecommenderProps> = ({
         </div>
         <div className="flex items-center gap-1">
           {activePreset.flavorTags.map((tag) => (
-            <span key={tag} className="px-2 py-0.5 rounded-md bg-white border border-[#EAE2D8] text-[9px] font-mono text-[#8C7E72]">
+            <span key={tag} className="px-2 py-0.5 rounded-md bg-white border border-[#EAE2D8] text-[9px] font-mono text-[#5C5248]">
               #{tag}
             </span>
           ))}

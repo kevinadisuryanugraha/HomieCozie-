@@ -88,7 +88,7 @@ export function applyThemeToDOM(config: BackstageThemeConfig): void {
     root.style.setProperty('--border-strong', '#D5C9BC');
     root.style.setProperty('--text-primary', '#1F1A16');
     root.style.setProperty('--text-secondary', '#5C5248');
-    root.style.setProperty('--text-muted', '#8C7E72');
+    root.style.setProperty('--text-muted', '#5C5248');
     root.classList.remove('dark-theme');
   }
 
@@ -171,7 +171,7 @@ export function applyThemeToDOM(config: BackstageThemeConfig): void {
         .backstage-container .text-\\[\\#5C5248\\] {
           color: #A1A1AA !important;
         }
-        .backstage-container .text-\\[\\#8C7E72\\] {
+        .backstage-container .text-\\[\\#5C5248\\] {
           color: #71717A !important;
         }
         .backstage-container .border-\\[\\#EAE2D8\\] {
@@ -209,7 +209,7 @@ export function applyThemeToDOM(config: BackstageThemeConfig): void {
         .backstage-container .text-\\[\\#5C5248\\] {
           color: #D8C4B6 !important;
         }
-        .backstage-container .text-\\[\\#8C7E72\\] {
+        .backstage-container .text-\\[\\#5C5248\\] {
           color: #A68D7E !important;
         }
         .backstage-container .border-\\[\\#EAE2D8\\] {
@@ -243,7 +243,7 @@ export function applyThemeToDOM(config: BackstageThemeConfig): void {
         .backstage-container .text-\\[\\#5C5248\\] {
           color: #475569 !important;
         }
-        .backstage-container .text-\\[\\#8C7E72\\] {
+        .backstage-container .text-\\[\\#5C5248\\] {
           color: #64748B !important;
         }
         .backstage-container .border-\\[\\#EAE2D8\\] {
@@ -270,7 +270,7 @@ export function applyThemeToDOM(config: BackstageThemeConfig): void {
         .backstage-container .text-\\[\\#5C5248\\] {
           color: #52525B !important;
         }
-        .backstage-container .text-\\[\\#8C7E72\\] {
+        .backstage-container .text-\\[\\#5C5248\\] {
           color: #71717A !important;
         }
         .backstage-container .border-\\[\\#EAE2D8\\] {

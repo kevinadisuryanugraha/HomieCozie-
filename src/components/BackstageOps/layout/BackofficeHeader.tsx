@@ -88,7 +88,7 @@ export const BackofficeHeader: React.FC<BackofficeHeaderProps> = ({
             </div>
             <div className="flex items-center gap-1 mt-0.5">
               <span className={`w-1.5 h-1.5 rounded-full ${isOnline ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'}`} />
-              <span className="text-[10px] font-mono text-[#8C7E72] font-semibold leading-none">
+              <span className="text-[10px] font-mono text-[#5C5248] font-semibold leading-none">
                 {isOnline ? 'Online Reverb' : 'Offline Mode'}
               </span>
             </div>
@@ -98,15 +98,15 @@ export const BackofficeHeader: React.FC<BackofficeHeaderProps> = ({
 
       {/* Center: Search Bar */}
       <div className="hidden md:flex items-center flex-1 max-w-xs lg:max-w-md xl:max-w-lg mx-2 relative">
-        <Search className="w-4 h-4 text-[#8C7E72] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+        <Search className="w-4 h-4 text-[#5C5248] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
         <input
           type="text"
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Cari pesanan #HC, meja, bahan baku, menu..."
-          className="w-full bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl pl-9 pr-10 py-1.5 text-xs text-[#1F1A16] placeholder:text-[#8C7E72] focus:outline-hidden focus:border-[#C84B27] focus:bg-white transition-all shadow-2xs"
+          className="w-full bg-[#FAF7F2] border border-[#EAE2D8] rounded-xl pl-9 pr-10 py-1.5 text-xs text-[#1F1A16] placeholder:text-[#5C5248] focus:outline-hidden focus:border-[#C84B27] focus:bg-white transition-all shadow-2xs"
         />
-        <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[9px] font-mono font-bold bg-white px-1.5 py-0.5 rounded text-[#8C7E72] border border-[#EAE2D8]">
+        <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[9px] font-mono font-bold bg-white px-1.5 py-0.5 rounded text-[#5C5248] border border-[#EAE2D8]">
           ⌘K
         </span>
       </div>

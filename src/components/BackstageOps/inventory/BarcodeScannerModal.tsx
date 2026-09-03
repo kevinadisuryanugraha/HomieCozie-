@@ -11,7 +11,7 @@ import {
   Package,
   Sparkles
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../../utils/confettiHelper";
 import { InventoryItem } from '../../../types';
 import { soundService } from '../../../utils/audioChime';
 
@@ -83,7 +83,7 @@ export const BarcodeScannerModal: React.FC<BarcodeScannerModalProps> = ({
     onRestockItem(matchedItem.id, restockQty);
     soundService.playCashRegisterSound();
     try {
-      confetti({ particleCount: 80, spread: 60, origin: { y: 0.6 } });
+      triggerConfetti({ particleCount: 80, spread: 60, origin: { y: 0.6 } });
     } catch {}
 
     setSuccessMessage(`Berhasil restock +${restockQty} ${matchedItem.unit} untuk ${matchedItem.name}!`);
@@ -115,7 +115,7 @@ export const BarcodeScannerModal: React.FC<BarcodeScannerModalProps> = ({
                 <h3 className="font-display font-black text-base text-[#1F1A16]">
                   Scanner Barcode Restock Gudang
                 </h3>
-                <p className="text-xs text-[#8C7E72]">
+                <p className="text-xs text-[#5C5248]">
                   Scan barcode kemasan atau gunakan scanner USB kasir
                 </p>
               </div>
@@ -137,7 +137,7 @@ export const BarcodeScannerModal: React.FC<BarcodeScannerModalProps> = ({
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h4 className="font-bold text-sm text-emerald-950">{successMessage}</h4>
-                <p className="text-xs text-[#8C7E72]">Siap memindai item bahan baku berikutnya...</p>
+                <p className="text-xs text-[#5C5248]">Siap memindai item bahan baku berikutnya...</p>
               </div>
             ) : matchedItem ? (
               /* Matched Item Restock Form */
@@ -146,7 +146,7 @@ export const BarcodeScannerModal: React.FC<BarcodeScannerModalProps> = ({
                   <span className="text-[10px] font-mono text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded-full">
                     ITEM TERDETEKSI ✅
                   </span>
-                  <span className="font-mono text-xs text-[#8C7E72]">{matchedItem.sku}</span>
+                  <span className="font-mono text-xs text-[#5C5248]">{matchedItem.sku}</span>
                 </div>
 
                 <div>
@@ -248,7 +248,7 @@ export const BarcodeScannerModal: React.FC<BarcodeScannerModalProps> = ({
 
                 {/* Quick Test Barcode Pills */}
                 <div className="space-y-1 pt-1">
-                  <span className="text-[10px] font-bold text-[#8C7E72] block">Simulasi Barcode Cepat:</span>
+                  <span className="text-[10px] font-bold text-[#5C5248] block">Simulasi Barcode Cepat:</span>
                   <div className="flex flex-wrap gap-1.5">
                     {inventoryItems.slice(0, 4).map((it) => (
                       <button

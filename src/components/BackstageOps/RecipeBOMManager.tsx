@@ -143,7 +143,7 @@ export const RecipeBOMManager: React.FC = () => {
             <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-50 text-amber-900 border border-amber-200 uppercase shrink-0">
               Kitchen BOM Engine
             </span>
-            <span className="text-[11px] text-[#8C7E72] font-mono shrink-0">• Bill of Materials v2.4</span>
+            <span className="text-[11px] text-[#5C5248] font-mono shrink-0">• Bill of Materials v2.4</span>
           </div>
           <h2 className="text-lg sm:text-2xl font-display font-black text-[#1F1A16] leading-tight">
             Resep Bahan Baku & Otomasi HPP
@@ -157,11 +157,11 @@ export const RecipeBOMManager: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full lg:w-auto shrink-0">
           <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center sm:gap-2.5">
             <div className="px-3.5 py-2.5 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] text-left sm:text-right">
-              <div className="text-[10px] font-mono text-[#8C7E72] uppercase font-bold tracking-tight">Rata-rata Margin</div>
+              <div className="text-[10px] font-mono text-[#5C5248] uppercase font-bold tracking-tight">Rata-rata Margin</div>
               <div className="text-base sm:text-lg font-mono font-black text-emerald-700 leading-tight mt-0.5">{avgMargin}%</div>
             </div>
             <div className="px-3.5 py-2.5 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] text-left sm:text-right">
-              <div className="text-[10px] font-mono text-[#8C7E72] uppercase font-bold tracking-tight">Menu Terdaftar</div>
+              <div className="text-[10px] font-mono text-[#5C5248] uppercase font-bold tracking-tight">Menu Terdaftar</div>
               <div className="text-base sm:text-lg font-mono font-black text-[#1F1A16] leading-tight mt-0.5">{recipes.length} Resep</div>
             </div>
           </div>
@@ -225,13 +225,13 @@ export const RecipeBOMManager: React.FC = () => {
             {/* Search & Filter */}
             <div className="space-y-2.5">
               <div className="relative">
-                <Search className="w-4 h-4 text-[#8C7E72] absolute left-3 top-1/2 -translate-y-1/2" />
+                <Search className="w-4 h-4 text-[#5C5248] absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Cari resep menu atau bahan..."
-                  className="w-full pl-9 pr-3 py-2 text-xs bg-[#FAF7F2] border border-[#EAE2D8] rounded-2xl text-[#1F1A16] placeholder:text-[#8C7E72] focus:outline-none focus:border-[#C84B27]"
+                  className="w-full pl-9 pr-3 py-2 text-xs bg-[#FAF7F2] border border-[#EAE2D8] rounded-2xl text-[#1F1A16] placeholder:text-[#5C5248] focus:outline-none focus:border-[#C84B27]"
                 />
               </div>
 
@@ -287,10 +287,10 @@ export const RecipeBOMManager: React.FC = () => {
                     </div>
 
                     <div className="flex items-center justify-between text-[11px] font-mono pt-1.5 border-t border-[#EAE2D8]/60">
-                      <span className="text-[#8C7E72]">
+                      <span className="text-[#5C5248]">
                         HPP: <strong className="text-[#1F1A16]">{formatRupiah(rec.totalHPP)}</strong>
                       </span>
-                      <span className="text-[#8C7E72]">
+                      <span className="text-[#5C5248]">
                         Jual: <strong className="text-[#C84B27]">{formatRupiah(rec.salePrice)}</strong>
                       </span>
                     </div>
@@ -312,7 +312,7 @@ export const RecipeBOMManager: React.FC = () => {
                     <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-stone-900 text-amber-300 uppercase">
                       {selectedRecipe.category}
                     </span>
-                    <span className="text-xs text-[#8C7E72] font-mono truncate">ID: #{selectedRecipe.menuItemId}</span>
+                    <span className="text-xs text-[#5C5248] font-mono truncate">ID: #{selectedRecipe.menuItemId}</span>
                   </div>
                   <h3 className="font-display font-black text-xl text-[#1F1A16] truncate">
                     {selectedRecipe.menuItemName}
@@ -341,7 +341,7 @@ export const RecipeBOMManager: React.FC = () => {
               {/* Pricing & Cost Breakdown Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] space-y-1">
-                  <div className="text-[10px] font-mono text-[#8C7E72] uppercase font-bold">Harga Jual Menu</div>
+                  <div className="text-[10px] font-mono text-[#5C5248] uppercase font-bold">Harga Jual Menu</div>
                   <div className="text-base font-mono font-bold text-[#1F1A16]">{formatRupiah(selectedRecipe.salePrice)}</div>
                 </div>
                 <div className="p-3.5 rounded-2xl bg-amber-50/50 border border-amber-200 space-y-1">
@@ -363,14 +363,14 @@ export const RecipeBOMManager: React.FC = () => {
                     <Layers className="w-4 h-4 text-amber-700" />
                     <span>Rincian Komposisi Bahan Baku (BOM)</span>
                   </h4>
-                  <span className="text-[11px] font-mono text-[#8C7E72] font-bold">
+                  <span className="text-[11px] font-mono text-[#5C5248] font-bold">
                     {selectedRecipe.ingredients.length} Bahan Baku
                   </span>
                 </div>
 
                 <div className="border border-[#EAE2D8] rounded-2xl overflow-x-auto">
                   <table className="w-full text-left text-xs min-w-[450px]">
-                    <thead className="bg-[#FAF7F2] text-[#8C7E72] font-mono text-[10px] uppercase border-b border-[#EAE2D8]">
+                    <thead className="bg-[#FAF7F2] text-[#5C5248] font-mono text-[10px] uppercase border-b border-[#EAE2D8]">
                       <tr>
                         <th className="p-3">Bahan Baku</th>
                         <th className="p-3 text-center">Kuantitas</th>
@@ -387,7 +387,7 @@ export const RecipeBOMManager: React.FC = () => {
                           <td className="p-3 text-center font-mono font-bold text-[#5C5248]">
                             {ing.quantity} {ing.unit}
                           </td>
-                          <td className="p-3 text-right font-mono text-[#8C7E72]">
+                          <td className="p-3 text-right font-mono text-[#5C5248]">
                             {formatRupiah(ing.costPerUnit)} / {ing.unit}
                           </td>
                           <td className="p-3 text-right font-mono font-bold text-[#1F1A16]">
@@ -398,7 +398,7 @@ export const RecipeBOMManager: React.FC = () => {
                     </tbody>
                     <tfoot className="bg-[#FAF7F2] font-mono font-bold text-xs border-t border-[#EAE2D8]">
                       <tr>
-                        <td colSpan={3} className="p-3 text-right uppercase text-[#8C7E72]">
+                        <td colSpan={3} className="p-3 text-right uppercase text-[#5C5248]">
                           Total Food & Beverage Cost (HPP):
                         </td>
                         <td className="p-3 text-right text-[#C84B27]">
@@ -477,7 +477,7 @@ export const RecipeBOMManager: React.FC = () => {
                 onChange={(e) => setCoffeeCostDeltaPct(Number(e.target.value))}
                 className="w-full accent-[#C84B27] cursor-pointer"
               />
-              <div className="text-[10px] text-[#8C7E72] flex justify-between font-mono">
+              <div className="text-[10px] text-[#5C5248] flex justify-between font-mono">
                 <span>-30%</span>
                 <span>Normal (0%)</span>
                 <span>+50%</span>
@@ -499,7 +499,7 @@ export const RecipeBOMManager: React.FC = () => {
                 onChange={(e) => setDairyCostDeltaPct(Number(e.target.value))}
                 className="w-full accent-[#C84B27] cursor-pointer"
               />
-              <div className="text-[10px] text-[#8C7E72] flex justify-between font-mono">
+              <div className="text-[10px] text-[#5C5248] flex justify-between font-mono">
                 <span>-30%</span>
                 <span>Normal (0%)</span>
                 <span>+50%</span>
@@ -521,7 +521,7 @@ export const RecipeBOMManager: React.FC = () => {
                 onChange={(e) => setMeatCostDeltaPct(Number(e.target.value))}
                 className="w-full accent-[#C84B27] cursor-pointer"
               />
-              <div className="text-[10px] text-[#8C7E72] flex justify-between font-mono">
+              <div className="text-[10px] text-[#5C5248] flex justify-between font-mono">
                 <span>-30%</span>
                 <span>Normal (0%)</span>
                 <span>+50%</span>
@@ -532,7 +532,7 @@ export const RecipeBOMManager: React.FC = () => {
           {/* Simulation Results Table */}
           <div className="border border-[#EAE2D8] rounded-2xl overflow-x-auto">
             <table className="w-full text-left text-xs min-w-[600px]">
-              <thead className="bg-[#FAF7F2] text-[#8C7E72] font-mono text-[10px] uppercase border-b border-[#EAE2D8]">
+              <thead className="bg-[#FAF7F2] text-[#5C5248] font-mono text-[10px] uppercase border-b border-[#EAE2D8]">
                 <tr>
                   <th className="p-3">Menu</th>
                   <th className="p-3 text-right">Harga Jual</th>
@@ -557,7 +557,7 @@ export const RecipeBOMManager: React.FC = () => {
                       <td className="p-3 text-right font-mono font-bold text-[#1F1A16]">
                         {formatRupiah(rec.salePrice)}
                       </td>
-                      <td className="p-3 text-right font-mono text-[#8C7E72]">
+                      <td className="p-3 text-right font-mono text-[#5C5248]">
                         {formatRupiah(rec.totalHPP)}
                       </td>
                       <td className="p-3 text-right font-mono font-bold text-[#C84B27]">
@@ -646,7 +646,7 @@ export const RecipeBOMManager: React.FC = () => {
                             <div className="text-[11px] font-bold text-[#1F1A16] truncate">{deduct.ingredientName}</div>
                             <div className="flex justify-between items-center text-[10px] font-mono mt-1 gap-1">
                               <span className="text-rose-600 font-bold whitespace-nowrap">-{deduct.deductAmount} {deduct.unit}</span>
-                              <span className="text-[#8C7E72] whitespace-nowrap">Sisa: {deduct.stockRemaining} {deduct.inventoryUnit}</span>
+                              <span className="text-[#5C5248] whitespace-nowrap">Sisa: {deduct.stockRemaining} {deduct.inventoryUnit}</span>
                             </div>
                           </div>
                         ))}
@@ -675,7 +675,7 @@ export const RecipeBOMManager: React.FC = () => {
                   <h3 className="font-display font-black text-lg text-[#1F1A16]">
                     Ubah Komposisi Bahan: {selectedRecipe.menuItemName}
                   </h3>
-                  <p className="text-xs text-[#8C7E72]">
+                  <p className="text-xs text-[#5C5248]">
                     Atur takaran gramasi, mililiter, dan estimasi biaya per satuan bahan.
                   </p>
                 </div>
@@ -691,7 +691,7 @@ export const RecipeBOMManager: React.FC = () => {
                 {editIngredients.map((ing, idx) => (
                   <div key={idx} className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] grid grid-cols-12 gap-2 items-center">
                     <div className="col-span-4">
-                      <label className="text-[10px] font-mono text-[#8C7E72] uppercase font-bold block mb-1">Nama Bahan</label>
+                      <label className="text-[10px] font-mono text-[#5C5248] uppercase font-bold block mb-1">Nama Bahan</label>
                       <input
                         type="text"
                         value={ing.ingredientName}
@@ -705,7 +705,7 @@ export const RecipeBOMManager: React.FC = () => {
                     </div>
 
                     <div className="col-span-2">
-                      <label className="text-[10px] font-mono text-[#8C7E72] uppercase font-bold block mb-1">Jumlah</label>
+                      <label className="text-[10px] font-mono text-[#5C5248] uppercase font-bold block mb-1">Jumlah</label>
                       <input
                         type="number"
                         value={ing.quantity}
@@ -719,7 +719,7 @@ export const RecipeBOMManager: React.FC = () => {
                     </div>
 
                     <div className="col-span-2">
-                      <label className="text-[10px] font-mono text-[#8C7E72] uppercase font-bold block mb-1">Satuan</label>
+                      <label className="text-[10px] font-mono text-[#5C5248] uppercase font-bold block mb-1">Satuan</label>
                       <select
                         value={ing.unit}
                         onChange={(e) => {
@@ -737,7 +737,7 @@ export const RecipeBOMManager: React.FC = () => {
                     </div>
 
                     <div className="col-span-3">
-                      <label className="text-[10px] font-mono text-[#8C7E72] uppercase font-bold block mb-1">Biaya / Unit (Rp)</label>
+                      <label className="text-[10px] font-mono text-[#5C5248] uppercase font-bold block mb-1">Biaya / Unit (Rp)</label>
                       <input
                         type="number"
                         value={ing.costPerUnit}

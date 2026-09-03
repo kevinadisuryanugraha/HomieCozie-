@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { animate } from 'animejs';
 import { 
   Calendar, 
   Utensils, 
@@ -15,7 +14,6 @@ import {
   Coffee,
   ChevronRight
 } from 'lucide-react';
-import { CAFE_INFO } from '../../data/mockData';
 
 interface HeroSectionProps {
   onOpenReservation: () => void;
@@ -101,65 +99,37 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     return () => clearInterval(timer);
   }, [isAutoPlayPaused]);
 
+  // Ultra-lightweight native requestAnimationFrame counter
   useEffect(() => {
-    // Number counters with requestIdleCallback fallback
-    const runCounters = () => {
-      const ratingObj = { val: 0 };
-      animate(ratingObj, {
-        val: 4.8,
-        duration: 1000,
-        ease: 'outExpo',
-        onUpdate: () => {
-          if (ratingCounterRef.current) {
-            ratingCounterRef.current.innerText = `${ratingObj.val.toFixed(1)}`;
-          }
-        }
-      });
+    let startTimestamp: number | null = null;
+    const duration = 1000;
+    let animId: number;
 
-      const reviewsObj = { val: 0 };
-      animate(reviewsObj, {
-        val: 268,
-        duration: 1100,
-        ease: 'outExpo',
-        onUpdate: () => {
-          if (reviewsCounterRef.current) {
-            reviewsCounterRef.current.innerText = `${Math.round(reviewsObj.val)}+`;
-          }
-        }
-      });
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
 
-      const cupsObj = { val: 0 };
-      animate(cupsObj, {
-        val: 50,
-        duration: 1200,
-        ease: 'outExpo',
-        onUpdate: () => {
-          if (cupsCounterRef.current) {
-            cupsCounterRef.current.innerText = `${Math.round(cupsObj.val)}K+`;
-          }
-        }
-      });
+      if (ratingCounterRef.current) {
+        ratingCounterRef.current.innerText = (ease * 4.8).toFixed(1);
+      }
+      if (reviewsCounterRef.current) {
+        reviewsCounterRef.current.innerText = `${Math.round(ease * 268)}+`;
+      }
+      if (cupsCounterRef.current) {
+        cupsCounterRef.current.innerText = `${Math.round(ease * 50)}K+`;
+      }
+      if (yearsCounterRef.current) {
+        yearsCounterRef.current.innerText = `${Math.round(ease * 6)} Thn`;
+      }
 
-      const yearsObj = { val: 0 };
-      animate(yearsObj, {
-        val: 6,
-        duration: 900,
-        ease: 'outExpo',
-        onUpdate: () => {
-          if (yearsCounterRef.current) {
-            yearsCounterRef.current.innerText = `${Math.round(yearsObj.val)} Thn`;
-          }
-        }
-      });
+      if (progress < 1) {
+        animId = requestAnimationFrame(step);
+      }
     };
 
-    if ('requestIdleCallback' in window) {
-      const handle = (window as any).requestIdleCallback(runCounters);
-      return () => (window as any).cancelIdleCallback(handle);
-    } else {
-      const timer = setTimeout(runCounters, 100);
-      return () => clearTimeout(timer);
-    }
+    animId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(animId);
   }, []);
 
   const currentScene = SHOWCASE_SCENES[activeSceneIndex];

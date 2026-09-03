@@ -124,7 +124,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
             }
             .cafe-sub {
               font-size: 8.5px;
-              color: #8C7E72;
+              color: #5C5248;
               letter-spacing: 1px;
               margin-top: 1px;
             }
@@ -138,7 +138,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
             }
             .table-label {
               font-size: 8.5px;
-              color: #8C7E72;
+              color: #5C5248;
               font-weight: 700;
             }
             .table-number {
@@ -164,7 +164,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
             .scan-hint {
               font-size: 8.5px;
               font-family: monospace;
-              color: #8C7E72;
+              color: #5C5248;
               margin-top: 3px;
               font-weight: bold;
             }
@@ -241,7 +241,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
                     Table Tent
                   </span>
                 </div>
-                <p className="text-[11px] text-[#8C7E72] truncate">
+                <p className="text-[11px] text-[#5C5248] truncate">
                   Cetak kartu akrilik meja untuk pemesanan mandiri & pembayaran QRIS
                 </p>
               </div>
@@ -309,14 +309,14 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
                   <h4 className="font-display font-black text-base sm:text-lg text-[#1F1A16] tracking-tight">
                     {CAFE_INFO.name.toUpperCase()}
                   </h4>
-                  <p className="text-[10px] text-[#8C7E72] uppercase font-mono tracking-wider">
+                  <p className="text-[10px] text-[#5C5248] uppercase font-mono tracking-wider">
                     Coffee • Kitchen • Community
                   </p>
                 </div>
 
                 {/* Table Number Badge */}
                 <div className="py-2 px-4 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] inline-block">
-                  <span className="text-[10px] text-[#8C7E72] block font-bold uppercase tracking-wider">NOMOR MEJA</span>
+                  <span className="text-[10px] text-[#5C5248] block font-bold uppercase tracking-wider">NOMOR MEJA</span>
                   <span className="font-display font-black text-2xl sm:text-3xl text-[#C84B27] leading-tight block">
                     #{currentTable.tableNumber}
                   </span>
@@ -332,7 +332,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
                     alt={`QR Code Meja ${currentTable.tableNumber}`}
                     className="w-36 h-36 sm:w-40 sm:h-40 object-contain mx-auto"
                   />
-                  <span className="text-[10px] font-mono font-bold text-[#8C7E72] block mt-1.5 uppercase tracking-wider">
+                  <span className="text-[10px] font-mono font-bold text-[#5C5248] block mt-1.5 uppercase tracking-wider">
                     SCAN UNTUK BUKA MENU
                   </span>
                 </div>
@@ -375,7 +375,7 @@ export const TableQRModal: React.FC<TableQRModalProps> = ({
                       alt={`QR Code Meja ${t.tableNumber}`}
                       className="w-28 h-28 mx-auto object-contain"
                     />
-                    <div className="text-[10px] font-mono text-[#8C7E72]">
+                    <div className="text-[10px] font-mono text-[#5C5248]">
                       {t.areaLabel || t.area.toUpperCase()} • Wi-Fi: {CAFE_INFO.wifiSsid || 'HomieCozie_Guest'}
                     </div>
                   </div>

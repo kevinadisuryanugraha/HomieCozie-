@@ -321,7 +321,7 @@ export const CRMDatabase: React.FC = () => {
                     <h4 className="font-display font-bold text-base text-[#1F1A16]">
                       {c.name}
                     </h4>
-                    <p className="text-xs text-[#8C7E72] font-mono mt-0.5">{c.phone}</p>
+                    <p className="text-xs text-[#5C5248] font-mono mt-0.5">{c.phone}</p>
                   </div>
                 </div>
 
@@ -346,26 +346,26 @@ export const CRMDatabase: React.FC = () => {
               {/* Stats Box */}
               <div className="grid grid-cols-2 gap-2 p-3 bg-[#FAF7F2] rounded-2xl border border-[#EAE2D8] text-xs font-mono">
                 <div>
-                  <span className="text-[10px] text-[#8C7E72] block">Cozie Points:</span>
+                  <span className="text-[10px] text-[#5C5248] block">Cozie Points:</span>
                   <span className="font-bold text-amber-800 text-sm">{c.coziePoints} Pts</span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-[#8C7E72] block">Kunjungan:</span>
+                  <span className="text-[10px] text-[#5C5248] block">Kunjungan:</span>
                   <span className="font-bold text-[#1F1A16] text-sm">{c.totalVisits}x Visit</span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-[#8C7E72] block">Lifetime Spend:</span>
+                  <span className="text-[10px] text-[#5C5248] block">Lifetime Spend:</span>
                   <span className="font-bold text-emerald-700">{formatRupiah(c.lifetimeSpend)}</span>
                 </div>
                 <div>
-                  <span className="text-[10px] text-[#8C7E72] block">Kunjungan Terakhir:</span>
+                  <span className="text-[10px] text-[#5C5248] block">Kunjungan Terakhir:</span>
                   <span className="font-bold text-[#5C5248]">{c.lastVisit}</span>
                 </div>
               </div>
 
               {/* Favorite Items */}
               <div className="space-y-1">
-                <span className="text-[10px] font-bold text-[#8C7E72] uppercase tracking-wider block">
+                <span className="text-[10px] font-bold text-[#5C5248] uppercase tracking-wider block">
                   Menu Favorit:
                 </span>
                 <div className="flex flex-wrap gap-1 text-[11px] text-[#5C5248]">
@@ -387,7 +387,7 @@ export const CRMDatabase: React.FC = () => {
               >
                 <Phone className="w-3 h-3" /> Chat WhatsApp
               </a>
-              <span className="text-[11px] font-mono text-[#8C7E72]">{c.stampsCount}/10 Stamps</span>
+              <span className="text-[11px] font-mono text-[#5C5248]">{c.stampsCount}/10 Stamps</span>
             </div>
           </div>
         )}

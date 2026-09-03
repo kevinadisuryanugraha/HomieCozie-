@@ -406,7 +406,7 @@ export const AIChatAgentView: React.FC = () => {
             elements.push(
               <div key={`tbl-${i}`} className="my-3.5 overflow-x-auto rounded-2xl border border-[#EAE2D8] bg-white shadow-2xs">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-[#FAF7F2] text-[#8C7E72] font-mono text-[10px] uppercase border-b border-[#EAE2D8]">
+                  <thead className="bg-[#FAF7F2] text-[#5C5248] font-mono text-[10px] uppercase border-b border-[#EAE2D8]">
                     <tr>
                       {headers.map((h, hIdx) => (
                         <th key={hIdx} className="p-2.5 sm:p-3 font-bold">{h}</th>
@@ -624,7 +624,7 @@ export const AIChatAgentView: React.FC = () => {
 
         {/* Sessions List */}
         <div className="flex-1 overflow-y-auto p-2 sm:p-2.5 space-y-1.5 scrollbar-none no-scrollbar">
-          <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#8C7E72] px-2 py-1">
+          <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#5C5248] px-2 py-1">
             Riwayat ({filteredSessions.length})
           </div>
 
@@ -748,7 +748,7 @@ export const AIChatAgentView: React.FC = () => {
               <h3 className="font-display font-black text-xs sm:text-base text-[#1F1A16] truncate max-w-[130px] sm:max-w-[220px] md:max-w-md">
                 {activeSession?.title || 'AI Cozie Assistant'}
               </h3>
-              <p className="text-[10px] text-[#8C7E72] truncate hidden sm:block">
+              <p className="text-[10px] text-[#5C5248] truncate hidden sm:block">
                 <span>Pengguna: <strong>{currentSystemUser.name}</strong></span>
               </p>
             </div>
@@ -771,7 +771,7 @@ export const AIChatAgentView: React.FC = () => {
               {/* Model Dropdown Menu */}
               {isModelDropdownOpen && (
                 <div className="absolute right-0 top-full mt-1.5 w-72 sm:w-80 bg-white rounded-2xl shadow-xl border border-[#EAE2D8] p-2 z-50 space-y-1.5 max-h-96 overflow-y-auto">
-                  <div className="text-[10px] font-mono font-bold uppercase text-[#8C7E72] px-2 py-1">
+                  <div className="text-[10px] font-mono font-bold uppercase text-[#5C5248] px-2 py-1">
                     Pilih Model Intelligence AI
                   </div>
                   {AI_MODELS_CATALOG.map((m) => (
@@ -871,7 +871,7 @@ export const AIChatAgentView: React.FC = () => {
                         {card.title}
                       </h4>
                     </div>
-                    <p className="text-[11px] text-[#8C7E72] line-clamp-2 leading-relaxed">
+                    <p className="text-[11px] text-[#5C5248] line-clamp-2 leading-relaxed">
                       {card.subtitle}
                     </p>
                   </button>
@@ -993,7 +993,7 @@ export const AIChatAgentView: React.FC = () => {
           <div className="max-w-4xl mx-auto space-y-1.5">
             
             {/* Quick Context / Model Indicator Pill */}
-            <div className="flex items-center justify-between text-[10px] text-[#8C7E72] px-1 font-mono">
+            <div className="flex items-center justify-between text-[10px] text-[#5C5248] px-1 font-mono">
               <span className="flex items-center gap-1.5 truncate">
                 <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${activeSession?.contextEnabled ? 'bg-emerald-500' : 'bg-stone-400'}`} />
                 <span className="truncate">{activeSession?.contextEnabled ? 'Live Context Injected' : 'Mode Umum'}</span>
@@ -1069,7 +1069,7 @@ export const AIChatAgentView: React.FC = () => {
                     <h3 className="font-display font-black text-base text-[#1F1A16]">
                       Konfigurasi Provider & API Keys
                     </h3>
-                    <p className="text-xs text-[#8C7E72]">
+                    <p className="text-xs text-[#5C5248]">
                       Gunakan API Key Anda sendiri atau manfaatkan Smart Simulation Mode
                     </p>
                   </div>

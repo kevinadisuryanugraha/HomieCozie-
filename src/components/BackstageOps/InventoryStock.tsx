@@ -115,7 +115,7 @@ export const InventoryStock: React.FC = () => {
           </div>
           <div className="min-w-0">
             <div className="font-bold text-sm text-[#1F1A16] truncate">{row.name}</div>
-            <span className="text-[10px] text-[#8C7E72] font-mono uppercase tracking-wider block">{row.category}</span>
+            <span className="text-[10px] text-[#5C5248] font-mono uppercase tracking-wider block">{row.category}</span>
           </div>
         </div>
       )
@@ -140,7 +140,7 @@ export const InventoryStock: React.FC = () => {
           <div className="font-bold text-sm text-[#1F1A16]">
             {row.currentStock} {row.unit}
           </div>
-          <span className="text-[10px] text-[#8C7E72] block">Min: {row.minStock} {row.unit}</span>
+          <span className="text-[10px] text-[#5C5248] block">Min: {row.minStock} {row.unit}</span>
         </div>
       )
     },
@@ -350,7 +350,7 @@ export const InventoryStock: React.FC = () => {
                   </div>
                   <div>
                     <h5 className="font-bold text-sm text-[#1F1A16] leading-snug">{it.name}</h5>
-                    <span className="text-[10px] text-[#8C7E72] font-mono uppercase">{it.category}</span>
+                    <span className="text-[10px] text-[#5C5248] font-mono uppercase">{it.category}</span>
                   </div>
                 </div>
 

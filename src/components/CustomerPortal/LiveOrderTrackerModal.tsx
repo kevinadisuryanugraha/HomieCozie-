@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { Order, OrderStatus } from '../../types';
 import { soundService } from '../../utils/audioChime';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 
 interface LiveOrderTrackerModalProps {
   isOpen: boolean;
@@ -118,7 +118,7 @@ export const LiveOrderTrackerModal: React.FC<LiveOrderTrackerModalProps> = ({
     } else if (nextStatus === 'completed') {
       soundService.playNewOrderChime();
       try {
-        confetti({
+        triggerConfetti({
           particleCount: 100,
           spread: 80,
           origin: { y: 0.6 }

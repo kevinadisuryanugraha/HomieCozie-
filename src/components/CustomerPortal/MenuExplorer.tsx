@@ -17,7 +17,7 @@ import {
   Cake,
   FileDown
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { INITIAL_MENU_ITEMS, CAFE_INFO } from '../../data/mockData';
 import { MenuItem, MenuCategory } from '../../types';
 import { AIBaristaRecommender } from './AIBaristaRecommender';
@@ -93,7 +93,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
     setAddedItemSuccess(customizingItem.id);
 
     try {
-      confetti({
+      triggerConfetti({
         particleCount: 40,
         spread: 60,
         origin: { y: 0.8 }

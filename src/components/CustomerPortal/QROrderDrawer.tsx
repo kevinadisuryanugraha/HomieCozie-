@@ -18,7 +18,7 @@ import {
   Clock,
   ExternalLink
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { CAFE_INFO } from '../../data/mockData';
 import { soundService } from '../../utils/audioChime';
 
@@ -84,7 +84,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
       onClearCart();
 
       try {
-        confetti({
+        triggerConfetti({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 }
@@ -112,7 +112,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
               <h3 className="font-display font-black text-base sm:text-lg text-[#1F1A16]">
                 {completedOrder ? 'Pesanan Terkirim ke Dapur!' : 'Keranjang Pesanan Meja'}
               </h3>
-              <p className="text-xs text-[#8C7E72]">
+              <p className="text-xs text-[#5C5248]">
                 {completedOrder ? `Order #${completedOrder.orderNumber}` : `${cartItems.length} menu dipilih`}
               </p>
             </div>
@@ -145,17 +145,17 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
               {/* Order Number Badge */}
               <div className="bg-white p-3.5 rounded-2xl border border-emerald-200 flex items-center justify-around text-xs shadow-xs">
                 <div>
-                  <span className="text-[#8C7E72] text-[10px] uppercase font-bold block">NO. ORDER</span>
+                  <span className="text-[#5C5248] text-[10px] uppercase font-bold block">NO. ORDER</span>
                   <span className="font-mono font-black text-[#C84B27] text-sm">{completedOrder.orderNumber}</span>
                 </div>
                 <div>
-                  <span className="text-[#8C7E72] text-[10px] uppercase font-bold block">PENEMPATAN</span>
+                  <span className="text-[#5C5248] text-[10px] uppercase font-bold block">PENEMPATAN</span>
                   <span className="font-bold text-[#1F1A16] uppercase">
                     {completedOrder.orderType === 'dine-in' ? `Meja #${completedOrder.tableNumber}` : 'Takeaway'}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[#8C7E72] text-[10px] uppercase font-bold block">METODE</span>
+                  <span className="text-[#5C5248] text-[10px] uppercase font-bold block">METODE</span>
                   <span className="font-bold text-emerald-700 uppercase">{completedOrder.paymentMethod}</span>
                 </div>
               </div>
@@ -211,7 +211,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
               <h4 className="font-display font-black text-lg text-[#1F1A16]">
                 Keranjang Anda Masih Kosong
               </h4>
-              <p className="text-xs text-[#8C7E72] mt-1 max-w-xs leading-relaxed">
+              <p className="text-xs text-[#5C5248] mt-1 max-w-xs leading-relaxed">
                 Pilih racikan kopi favorit, hidangan lezat, atau coba rekomendasi pairing dari AI Barista kami.
               </p>
             </div>
@@ -280,7 +280,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
 
               {/* Items List */}
               <div className="space-y-2.5">
-                <div className="flex items-center justify-between text-xs text-[#8C7E72]">
+                <div className="flex items-center justify-between text-xs text-[#5C5248]">
                   <span className="font-bold text-[#1F1A16]">Daftar Menu Dipilih ({cartItems.length}):</span>
                   <button
                     onClick={onClearCart}
@@ -305,7 +305,7 @@ export const QROrderDrawer: React.FC<QROrderDrawerProps> = ({
                       </div>
 
                       {/* Options breakdown */}
-                      <div className="text-[10px] text-[#8C7E72] flex flex-wrap gap-1 mt-1">
+                      <div className="text-[10px] text-[#5C5248] flex flex-wrap gap-1 mt-1">
                         {item.selectedOptions?.sugar && <span className="bg-stone-100 px-1.5 py-0.5 rounded font-medium">{item.selectedOptions.sugar}</span>}
                         {item.selectedOptions?.ice && <span className="bg-stone-100 px-1.5 py-0.5 rounded font-medium">{item.selectedOptions.ice}</span>}
                         {item.selectedOptions?.spiciness && <span className="bg-stone-100 px-1.5 py-0.5 rounded font-medium">{item.selectedOptions.spiciness}</span>}

@@ -189,7 +189,7 @@ export const AICopilotModal: React.FC<AICopilotModalProps> = ({
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {Object.entries(insight.metrics).map(([key, val], idx) => (
                       <div key={idx} className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] space-y-1 shadow-2xs">
-                        <div className="text-[10px] font-mono font-bold text-[#8C7E72] uppercase tracking-wider">{key}</div>
+                        <div className="text-[10px] font-mono font-bold text-[#5C5248] uppercase tracking-wider">{key}</div>
                         <div className="text-base sm:text-lg font-mono font-black text-[#1F1A16]">{val}</div>
                       </div>
                     ))}
@@ -244,7 +244,7 @@ export const AICopilotModal: React.FC<AICopilotModalProps> = ({
 
                     {/* Realistic WhatsApp Chat Balloon */}
                     <div className="p-4 sm:p-5 rounded-3xl bg-[#EFEAE2] border border-[#D9D0C5] space-y-3 shadow-xs">
-                      <div className="text-[10px] font-mono font-bold text-[#8C7E72] uppercase flex items-center justify-between">
+                      <div className="text-[10px] font-mono font-bold text-[#5C5248] uppercase flex items-center justify-between">
                         <span>Pratinjau Pesan WhatsApp</span>
                         <button
                           onClick={() => handleCopyText(insight.summary)}

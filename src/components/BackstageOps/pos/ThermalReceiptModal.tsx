@@ -139,7 +139,7 @@ export const ThermalReceiptModal: React.FC<ThermalReceiptModalProps> = ({
                 <h3 className="font-display font-black text-base text-[#1F1A16] leading-tight">
                   Dual Thermal Slip Router
                 </h3>
-                <p className="text-xs text-[#8C7E72] leading-tight truncate">
+                <p className="text-xs text-[#5C5248] leading-tight truncate">
                   Pratinjau & Cetak Struk POS 58mm / 80mm Bluetooth & USB
                 </p>
               </div>
@@ -147,7 +147,7 @@ export const ThermalReceiptModal: React.FC<ThermalReceiptModalProps> = ({
 
             <button
               onClick={onClose}
-              className="w-8 h-8 rounded-full bg-white hover:bg-stone-100 text-[#8C7E72] flex items-center justify-center border border-[#EAE2D8] transition-colors cursor-pointer shrink-0 shadow-2xs"
+              className="w-8 h-8 rounded-full bg-white hover:bg-stone-100 text-[#5C5248] flex items-center justify-center border border-[#EAE2D8] transition-colors cursor-pointer shrink-0 shadow-2xs"
             >
               <X className="w-4 h-4" />
             </button>
@@ -199,7 +199,7 @@ export const ThermalReceiptModal: React.FC<ThermalReceiptModalProps> = ({
               <button
                 onClick={() => setPaperWidth('58mm')}
                 className={`px-2.5 py-1 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer ${
-                  paperWidth === '58mm' ? 'bg-stone-900 text-white' : 'text-[#8C7E72]'
+                  paperWidth === '58mm' ? 'bg-stone-900 text-white' : 'text-[#5C5248]'
                 }`}
               >
                 58mm
@@ -207,7 +207,7 @@ export const ThermalReceiptModal: React.FC<ThermalReceiptModalProps> = ({
               <button
                 onClick={() => setPaperWidth('80mm')}
                 className={`px-2.5 py-1 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer ${
-                  paperWidth === '80mm' ? 'bg-stone-900 text-white' : 'text-[#8C7E72]'
+                  paperWidth === '80mm' ? 'bg-stone-900 text-white' : 'text-[#5C5248]'
                 }`}
               >
                 80mm

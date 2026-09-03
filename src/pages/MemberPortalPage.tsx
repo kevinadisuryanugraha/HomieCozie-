@@ -15,7 +15,7 @@ import {
   UtensilsCrossed,
   Sparkles
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../utils/confettiHelper";
 import { SystemUser } from '../types';
 import { CAFE_INFO } from '../data/mockData';
 
@@ -91,7 +91,7 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
     setVouchers(prev => [newVoucher, ...prev]);
 
     try {
-      confetti({
+      triggerConfetti({
         particleCount: 80,
         spread: 70,
         origin: { y: 0.6 }
@@ -115,7 +115,7 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
         {/* Top Header Banner */}
         <div className="bg-white border border-[#EAE2D8] rounded-2xl p-6 sm:p-8 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-1.5">
-            <div className="text-xs font-mono font-medium text-[#8C7E72]">
+            <div className="text-xs font-mono font-medium text-[#5C5248]">
               Gold Tier Member Privilege
             </div>
             <h1 className="text-2xl sm:text-3xl font-display font-black text-[#1F1A16]">
@@ -349,7 +349,7 @@ export const MemberPortalPage: React.FC<MemberPortalPageProps> = ({
                   >
                     <div className="space-y-0.5">
                       <div className="font-bold text-[#1F1A16]">{tx.items}</div>
-                      <div className="text-[11px] text-[#8C7E72] font-mono">{tx.date}</div>
+                      <div className="text-[11px] text-[#5C5248] font-mono">{tx.date}</div>
                     </div>
                     <div className="text-right">
                       <div className="font-mono font-bold text-[#1F1A16]">{tx.total}</div>

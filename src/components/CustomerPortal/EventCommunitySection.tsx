@@ -7,7 +7,7 @@ import {
   Ticket, 
   CheckCircle2
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { EVENTS_DATA } from '../../data/mockData';
 import { CommunityEvent } from '../../types';
 
@@ -31,7 +31,7 @@ export const EventCommunitySection: React.FC<EventCommunitySectionProps> = ({ on
       onRSVPEvent(event);
     }
     try {
-      confetti({ 
+      triggerConfetti({ 
         particleCount: 50, 
         spread: 65,
         origin: { y: 0.7 }

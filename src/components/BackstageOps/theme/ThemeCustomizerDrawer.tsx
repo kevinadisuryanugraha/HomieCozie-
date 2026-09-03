@@ -108,7 +108,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
                   <h3 className="font-display font-black text-base text-[#1F1A16]">
                     Kustomisasi Tema Backstage
                   </h3>
-                  <p className="text-[11px] text-[#8C7E72]">
+                  <p className="text-[11px] text-[#5C5248]">
                     Atur palet warna brand, tipografi & layout
                   </p>
                 </div>
@@ -184,7 +184,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
               {/* Tab 1: Presets */}
               {activeTab === 'presets' && (
                 <div className="space-y-3">
-                  <div className="text-xs font-bold text-[#8C7E72] uppercase tracking-wider font-mono">
+                  <div className="text-xs font-bold text-[#5C5248] uppercase tracking-wider font-mono">
                     Pilih Preset Tema Resto:
                   </div>
 
@@ -237,7 +237,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
               {/* Tab 2: Custom Colors & Hex */}
               {activeTab === 'colors' && (
                 <div className="space-y-4">
-                  <div className="text-xs font-bold text-[#8C7E72] uppercase tracking-wider font-mono">
+                  <div className="text-xs font-bold text-[#5C5248] uppercase tracking-wider font-mono">
                     Penyesuaian Palet Warna Utama:
                   </div>
 
@@ -306,7 +306,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
 
                   {/* Quick Color Chips */}
                   <div className="space-y-2 pt-2">
-                    <span className="text-[11px] font-mono text-[#8C7E72] font-bold block">Pilihan Cepat Warna Populer:</span>
+                    <span className="text-[11px] font-mono text-[#5C5248] font-bold block">Pilihan Cepat Warna Populer:</span>
                     <div className="flex flex-wrap gap-2">
                       {[
                         { name: 'Terracotta', color: '#C84B27', hover: '#B23E1C' },
@@ -334,7 +334,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
               {/* Tab 3: Typography & Fonts */}
               {activeTab === 'fonts' && (
                 <div className="space-y-3">
-                  <div className="text-xs font-bold text-[#8C7E72] uppercase tracking-wider font-mono">
+                  <div className="text-xs font-bold text-[#5C5248] uppercase tracking-wider font-mono">
                     Pilih Gaya Tipografi:
                   </div>
 
@@ -354,7 +354,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
                         >
                           <div className="flex items-center justify-between">
                             <span className="font-bold text-xs text-[#1F1A16]">{font.name}</span>
-                            <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-white border border-[#EAE2D8] text-[#8C7E72]">
+                            <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-white border border-[#EAE2D8] text-[#5C5248]">
                               {font.category}
                             </span>
                           </div>
@@ -377,7 +377,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
                 <div className="space-y-5">
                   {/* Mode Tampilan */}
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-[#8C7E72] uppercase tracking-wider font-mono block">
+                    <label className="text-xs font-bold text-[#5C5248] uppercase tracking-wider font-mono block">
                       Mode Tampilan Backstage:
                     </label>
 
@@ -402,7 +402,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
                             <m.icon className="w-4 h-4" />
                             <span className="font-bold text-xs">{m.name}</span>
                           </div>
-                          <span className={`text-[10px] block mt-1 ${backstageTheme.themeMode === m.id ? 'text-stone-300' : 'text-[#8C7E72]'}`}>
+                          <span className={`text-[10px] block mt-1 ${backstageTheme.themeMode === m.id ? 'text-stone-300' : 'text-[#5C5248]'}`}>
                             {m.desc}
                           </span>
                         </button>
@@ -412,7 +412,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
 
                   {/* Border Radius Style */}
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-[#8C7E72] uppercase tracking-wider font-mono block">
+                    <label className="text-xs font-bold text-[#5C5248] uppercase tracking-wider font-mono block">
                       Kelengkungan Sudut (Corner Radius):
                     </label>
                     <div className="grid grid-cols-3 gap-2 text-xs font-bold">
@@ -438,7 +438,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
 
                   {/* UI Density */}
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-[#8C7E72] uppercase tracking-wider font-mono block">
+                    <label className="text-xs font-bold text-[#5C5248] uppercase tracking-wider font-mono block">
                       Kepadatan Tampilan (UI Density):
                     </label>
                     <div className="grid grid-cols-3 gap-2 text-xs font-bold">
@@ -467,7 +467,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
 
               {/* Live Preview Widget */}
               <div className="p-4 rounded-2xl border border-[#EAE2D8] bg-white shadow-xs space-y-3">
-                <div className="flex items-center justify-between text-[11px] font-mono text-[#8C7E72] font-bold">
+                <div className="flex items-center justify-between text-[11px] font-mono text-[#5C5248] font-bold">
                   <span className="flex items-center gap-1.5">
                     <Eye className="w-3.5 h-3.5 text-[#C84B27]" />
                     <span>Pratinjau Elemen UI Live:</span>
@@ -486,7 +486,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
                   </div>
 
                   <div className="flex items-center justify-between text-xs">
-                    <span className="font-mono text-[#8C7E72]">Harga: Rp 24.000</span>
+                    <span className="font-mono text-[#5C5248]">Harga: Rp 24.000</span>
                     <button
                       className="px-3 py-1.5 rounded-xl text-white font-bold text-xs shadow-2xs transition-all cursor-pointer"
                       style={{ backgroundColor: backstageTheme.primaryColor }}
@@ -501,7 +501,7 @@ export const ThemeCustomizerDrawer: React.FC<ThemeCustomizerDrawerProps> = ({
 
             {/* 4. Footer */}
             <div className="p-4 border-t border-[#EAE2D8] bg-[#FAF7F2] flex items-center justify-between">
-              <span className="text-[11px] font-mono text-[#8C7E72]">
+              <span className="text-[11px] font-mono text-[#5C5248]">
                 Tersimpan otomatis di sistem
               </span>
 

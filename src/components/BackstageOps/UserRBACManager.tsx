@@ -178,7 +178,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                   </span>
                 )}
               </div>
-              <span className="text-[11px] text-[#8C7E72] font-mono block truncate">{row.email}</span>
+              <span className="text-[11px] text-[#5C5248] font-mono block truncate">{row.email}</span>
             </div>
           </div>
         );
@@ -291,7 +291,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                 {row.action}
               </span>
             </div>
-            <span className="text-[10px] text-[#8C7E72] font-mono block">Modul: [{row.targetModule}]</span>
+            <span className="text-[10px] text-[#5C5248] font-mono block">Modul: [{row.targetModule}]</span>
           </div>
         );
       }
@@ -312,7 +312,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
       cell: ({ row }) => (
         <div className="whitespace-nowrap">
           <div className="font-bold text-xs text-[#1F1A16]">{row.user}</div>
-          <span className="text-[10px] text-[#8C7E72] font-mono block">({row.role})</span>
+          <span className="text-[10px] text-[#5C5248] font-mono block">({row.role})</span>
         </div>
       )
     },
@@ -324,7 +324,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
       cell: ({ row }) => (
         <div className="font-mono text-[11px] text-[#5C5248] whitespace-nowrap">
           <div className="font-bold text-[#1F1A16]">{row.timestamp}</div>
-          <span className="text-[10px] text-[#8C7E72] block">IP: {row.ip}</span>
+          <span className="text-[10px] text-[#5C5248] block">IP: {row.ip}</span>
         </div>
       )
     }
@@ -474,7 +474,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                           </span>
                         )}
                       </div>
-                      <p className="text-[11px] text-[#8C7E72] font-mono truncate">
+                      <p className="text-[11px] text-[#5C5248] font-mono truncate">
                         {usr.email}
                       </p>
                     </div>
@@ -493,7 +493,7 @@ export const UserRBACManager: React.FC<UserRBACManagerProps> = ({
                   </div>
                   <div className="flex justify-between text-[#5C5248]">
                     <span>2FA Keamanan:</span>
-                    <span className={usr.twoFactorEnabled ? 'text-emerald-700 font-semibold' : 'text-[#8C7E72]'}>
+                    <span className={usr.twoFactorEnabled ? 'text-emerald-700 font-semibold' : 'text-[#5C5248]'}>
                       {usr.twoFactorEnabled ? 'Aktif (OTP)' : 'Non-Aktif'}
                     </span>
                   </div>

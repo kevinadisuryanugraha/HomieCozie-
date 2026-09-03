@@ -150,7 +150,7 @@ export const WaiterCallWidget: React.FC<WaiterCallWidgetProps> = ({
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-[#1F1A16] flex items-center justify-between">
                       <span>Nomor Meja Anda:</span>
-                      <span className="text-[11px] font-mono text-[#8C7E72]">(Lihat stiker nomor di atas meja)</span>
+                      <span className="text-[11px] font-mono text-[#5C5248]">(Lihat stiker nomor di atas meja)</span>
                     </label>
                     <input
                       type="text"

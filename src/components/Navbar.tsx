@@ -76,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span>{CAFE_INFO.googleRating} Rating ({CAFE_INFO.totalGoogleReviews}+ Ulasan Google)</span>
             </span>
             <span className="text-stone-300">•</span>
-            <span className="text-[#8C7E72] text-[11px]">
+            <span className="text-[#5C5248] text-[11px]">
               Jl. H. Hasan No. 23, Pasar Rebo, Jakarta Timur
             </span>
           </div>

@@ -171,7 +171,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
         <div className="min-w-0">
           <div className="font-bold text-sm text-[#1F1A16] truncate">{row.customerName}</div>
           {row.notes && (
-            <span className="text-[10px] text-[#8C7E72] italic line-clamp-1 block">"{row.notes}"</span>
+            <span className="text-[10px] text-[#5C5248] italic line-clamp-1 block">"{row.notes}"</span>
           )}
         </div>
       )
@@ -201,7 +201,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
       cell: ({ row }) => (
         <div className="font-mono text-xs text-[#1F1A16] whitespace-nowrap">
           <div className="font-bold">{row.timeSlot} WIB</div>
-          <span className="text-[10px] text-[#8C7E72] block">{formatReservationDate(row.date)}</span>
+          <span className="text-[10px] text-[#5C5248] block">{formatReservationDate(row.date)}</span>
         </div>
       )
     },
@@ -241,7 +241,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
             Meja #{row.tableNumber}
           </span>
         ) : (
-          <span className="text-[10px] text-[#8C7E72] font-mono whitespace-nowrap">Belum Di-assign</span>
+          <span className="text-[10px] text-[#5C5248] font-mono whitespace-nowrap">Belum Di-assign</span>
         )
       )
     },
@@ -454,7 +454,7 @@ export const ReservationManagement: React.FC<ReservationManagementProps> = ({
                       </span>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-between gap-2 text-[#8C7E72] pt-1.5 border-t border-[#EAE2D8]">
+                    <div className="flex items-center justify-between gap-2 text-[#5C5248] pt-1.5 border-t border-[#EAE2D8]">
                       <span className="text-[11px] shrink-0">Alokasi Meja:</span>
                       <span className="text-[10px] font-mono italic whitespace-nowrap">Belum Di-assign</span>
                     </div>

@@ -173,7 +173,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
 
   if (isLoading && !data) {
     return (
-      <div className="p-8 text-center text-xs text-[#8C7E72] flex items-center justify-center gap-2">
+      <div className="p-8 text-center text-xs text-[#5C5248] flex items-center justify-center gap-2">
         <RefreshCw className="w-4 h-4 animate-spin text-[#C84B27]" />
         <span>Memuat Radar Pengunjung & Customer Intelligence...</span>
       </div>
@@ -272,7 +272,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
 
         {/* Card 2: Total Sessions Today */}
         <div className="bg-white p-5 rounded-2xl border border-[#EAE2D8] shadow-xs">
-          <div className="flex items-center justify-between text-[#8C7E72]">
+          <div className="flex items-center justify-between text-[#5C5248]">
             <span className="text-xs font-mono uppercase font-bold">Total Kunjungan</span>
             <Users className="w-4 h-4 text-[#C84B27]" />
           </div>
@@ -289,7 +289,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
 
         {/* Card 3: Avg Dwell Time */}
         <div className="bg-white p-5 rounded-2xl border border-[#EAE2D8] shadow-xs">
-          <div className="flex items-center justify-between text-[#8C7E72]">
+          <div className="flex items-center justify-between text-[#5C5248]">
             <span className="text-xs font-mono uppercase font-bold">Rata-Rata Dwell Time</span>
             <Clock className="w-4 h-4 text-amber-700" />
           </div>
@@ -306,7 +306,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
 
         {/* Card 4: Overall Conversion Rate */}
         <div className="bg-white p-5 rounded-2xl border border-[#EAE2D8] shadow-xs">
-          <div className="flex items-center justify-between text-[#8C7E72]">
+          <div className="flex items-center justify-between text-[#5C5248]">
             <span className="text-xs font-mono uppercase font-bold">Conversion Rate (CR)</span>
             <TrendingUp className="w-4 h-4 text-emerald-600" />
           </div>
@@ -353,7 +353,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
                     <span className="font-bold text-[#1F1A16] truncate">{step.name}</span>
                     <div className="flex items-center gap-1.5 font-mono shrink-0 whitespace-nowrap">
                       <span className="font-bold text-[#C84B27]">{step.count} tamu</span>
-                      <span className="text-[11px] text-[#8C7E72]">({step.percentage}%)</span>
+                      <span className="text-[11px] text-[#5C5248]">({step.percentage}%)</span>
                     </div>
                   </div>
 
@@ -408,7 +408,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
                     </span>
                     <div className="min-w-0">
                       <span className="font-bold text-[#1F1A16] block truncate">Meja {t.tableNumber}</span>
-                      <span className="text-[10px] text-[#8C7E72] block font-mono truncate">{t.area}</span>
+                      <span className="text-[10px] text-[#5C5248] block font-mono truncate">{t.area}</span>
                     </div>
                   </div>
 
@@ -465,7 +465,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
                 <div key={d.device} className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#EAE2D8]">
                   <Smartphone className="w-4 h-4 text-[#C84B27] mx-auto mb-1" />
                   <span className="font-mono font-bold text-[#1F1A16] block">{d.percentage}%</span>
-                  <span className="text-[10px] text-[#8C7E72] leading-tight block">{d.device}</span>
+                  <span className="text-[10px] text-[#5C5248] leading-tight block">{d.device}</span>
                 </div>
               ))}
             </div>
@@ -479,7 +479,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
               <h4 className="font-bold text-sm text-[#1F1A16]">
                 ☕ Matrix Menu Dilihat vs Dipesan (Product Opportunity)
               </h4>
-              <p className="text-xs text-[#8C7E72]">
+              <p className="text-xs text-[#5C5248]">
                 Mengetahui menu yang banyak dilirik tamu vs yang menghasilkan penjualan nyata
               </p>
             </div>
@@ -487,7 +487,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
 
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#FAF7F2] border-b border-[#EAE2D8] font-mono text-[10px] text-[#8C7E72] uppercase">
+              <thead className="bg-[#FAF7F2] border-b border-[#EAE2D8] font-mono text-[10px] text-[#5C5248] uppercase">
                 <tr>
                   <th className="p-3">Nama Menu</th>
                   <th className="p-3 text-center">Dilihat</th>
@@ -507,7 +507,7 @@ export const VisitorAnalyticsRadar: React.FC = () => {
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-stone-100 text-[#1F1A16] border border-stone-200 block w-max">
                         {m.status}
                       </span>
-                      <span className="text-[10px] text-[#8C7E72] block mt-0.5 leading-snug">
+                      <span className="text-[10px] text-[#5C5248] block mt-0.5 leading-snug">
                         {m.insight}
                       </span>
                     </td>

@@ -15,7 +15,7 @@ import {
   RefreshCw,
   Wallet
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { Order } from '../../types';
 import { CAFE_INFO } from '../../data/mockData';
 import { soundService } from '../../utils/audioChime';
@@ -70,7 +70,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
         setPaymentStatus('success');
         soundService.playCashRegisterSound();
         try {
-          confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+          triggerConfetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
         } catch {}
         onPaymentSuccess({ ...order, paymentStatus: 'paid', paymentMethod: 'qris' });
       }
@@ -117,7 +117,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
       soundService.playCashRegisterSound();
 
       try {
-        confetti({
+        triggerConfetti({
           particleCount: 100,
           spread: 80,
           origin: { y: 0.6 }
@@ -156,7 +156,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                 <h3 className="font-display font-black text-sm sm:text-base text-[#1F1A16]">
                   Pembayaran QRIS Dinamis
                 </h3>
-                <p className="text-[11px] text-[#8C7E72] font-medium">
+                <p className="text-[11px] text-[#5C5248] font-medium">
                   NMID: ID1020038475892 • {CAFE_INFO.name}
                 </p>
               </div>
@@ -233,7 +233,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                 {/* Nominal Card */}
                 <div className="bg-[#FAF7F2] p-4 rounded-2xl border border-[#EAE2D8] flex items-center justify-between">
                   <div>
-                    <span className="text-[11px] text-[#8C7E72] font-semibold block">Total Tagihan Pesanan:</span>
+                    <span className="text-[11px] text-[#5C5248] font-semibold block">Total Tagihan Pesanan:</span>
                     <span className="font-display font-black text-xl text-[#C84B27]">
                       {formatRupiah(order.total)}
                     </span>
@@ -252,7 +252,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                   {/* Top QRIS Header Band */}
                   <div className="w-full flex items-center justify-between pb-1 border-b border-stone-200">
                     <span className="font-black text-[10px] tracking-wider text-rose-600">GPN</span>
-                    <span className="font-bold text-[9px] text-[#8C7E72] uppercase font-mono">QRIS Standar BI</span>
+                    <span className="font-bold text-[9px] text-[#5C5248] uppercase font-mono">QRIS Standar BI</span>
                     <span className="font-black text-[10px] text-[#1F1A16]">QRIS</span>
                   </div>
 
@@ -275,7 +275,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
                   </div>
 
                   {/* Bottom Footer Band */}
-                  <div className="w-full text-center text-[9px] font-mono text-[#8C7E72] pt-1 border-t border-stone-200 truncate">
+                  <div className="w-full text-center text-[9px] font-mono text-[#5C5248] pt-1 border-t border-stone-200 truncate">
                     NMID: ID1020038475892 • SATU QRIS SEMUA PEMBAYARAN
                   </div>
                 </div>
@@ -291,7 +291,7 @@ export const QRISDynamicModal: React.FC<QRISDynamicModalProps> = ({
 
                 {/* Interactive Payment Simulator Triggers */}
                 <div className="space-y-2 pt-2 border-t border-[#EAE2D8]">
-                  <div className="text-[11px] font-bold text-[#8C7E72] uppercase tracking-wider flex items-center justify-between">
+                  <div className="text-[11px] font-bold text-[#5C5248] uppercase tracking-wider flex items-center justify-between">
                     <span>Simulasi Scan & Bayar:</span>
                     <span className="text-[10px] text-amber-800 lowercase font-normal font-sans">klik salah satu aplikasi</span>
                   </div>

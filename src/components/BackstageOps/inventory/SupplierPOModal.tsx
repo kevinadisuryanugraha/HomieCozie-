@@ -133,7 +133,7 @@ export const SupplierPOModal: React.FC<SupplierPOModalProps> = ({
                 <h3 className="font-display font-black text-base sm:text-lg text-[#1F1A16]">
                   Purchase Order (PO) Bahan Baku Supplier
                 </h3>
-                <p className="text-xs text-[#8C7E72]">
+                <p className="text-xs text-[#5C5248]">
                   Buat surat pesanan stok resmi dan kirim langsung via WhatsApp ke vendor
                 </p>
               </div>
@@ -186,7 +186,7 @@ export const SupplierPOModal: React.FC<SupplierPOModalProps> = ({
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-[#1F1A16]">Item Bahan Baku yang Dipesan:</span>
-                <span className="text-[11px] text-[#8C7E72] font-mono font-bold">
+                <span className="text-[11px] text-[#5C5248] font-mono font-bold">
                   Estimasi Total: <strong className="text-[#C84B27]">{formatRp(totalEstimatedCost)}</strong>
                 </span>
               </div>
@@ -196,7 +196,7 @@ export const SupplierPOModal: React.FC<SupplierPOModalProps> = ({
                   <div key={idx} className="p-3 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] flex items-center justify-between gap-3 text-xs">
                     <div className="flex-1">
                       <span className="font-bold text-[#1F1A16] block">{it.name}</span>
-                      <span className="text-[10px] text-[#8C7E72] font-mono">
+                      <span className="text-[10px] text-[#5C5248] font-mono">
                         Estimasi @ {formatRp(it.unit_price)} / {it.unit}
                       </span>
                     </div>

@@ -247,7 +247,7 @@ export const openPrintablePB1TaxReport = (orders: Order[], periodLabel: string =
         .stat-card .label {
           font-size: 8.5px;
           text-transform: uppercase;
-          color: #8C7E72;
+          color: #5C5248;
           font-weight: 700;
           margin-bottom: 2px;
         }
@@ -415,7 +415,7 @@ export const openPrintablePB1TaxReport = (orders: Order[], periodLabel: string =
           <div>Head Cashier / Accounting</div>
           <div class="sig-space"></div>
           <div class="sig-line">Siti Rahmawati, S.Ak</div>
-          <div style="font-size: 8.5px; color: #8C7E72;">Finance & Tax Specialist</div>
+          <div style="font-size: 8.5px; color: #5C5248;">Finance & Tax Specialist</div>
         </div>
 
         <div class="sig-box">
@@ -423,7 +423,7 @@ export const openPrintablePB1TaxReport = (orders: Order[], periodLabel: string =
           <div>Owner / General Manager</div>
           <div class="sig-space"></div>
           <div class="sig-line">Hans Christian Pratama</div>
-          <div style="font-size: 8.5px; color: #8C7E72;">Director of Homie Cozie F&B</div>
+          <div style="font-size: 8.5px; color: #5C5248;">Director of Homie Cozie F&B</div>
         </div>
       </div>
 

@@ -221,7 +221,7 @@ export const AnalyticsReports: React.FC = () => {
       cell: ({ row }) => (
         <div className="whitespace-nowrap">
           <span className="font-mono font-bold text-xs text-amber-800 block">{row.invoiceNo}</span>
-          <span className="text-[10px] text-[#8C7E72] font-mono block">{row.timestamp}</span>
+          <span className="text-[10px] text-[#5C5248] font-mono block">{row.timestamp}</span>
         </div>
       )
     },
@@ -378,7 +378,7 @@ export const AnalyticsReports: React.FC = () => {
 
           <div className="flex items-center justify-between text-[11px] text-[#5C5248] pt-2 border-t border-[#EAE2D8]/60 mt-1">
             <span>94 Transaksi Kasir</span>
-            <span className="font-mono text-[#8C7E72] text-[10px]">Dine-in & QRIS</span>
+            <span className="font-mono text-[#5C5248] text-[10px]">Dine-in & QRIS</span>
           </div>
         </div>
 
@@ -400,7 +400,7 @@ export const AnalyticsReports: React.FC = () => {
 
           <div className="font-display font-black text-2xl sm:text-[26px] text-[#1F1A16] tracking-tight my-1 flex items-baseline gap-1.5">
             <span>248</span>
-            <span className="text-sm font-bold text-[#8C7E72] font-mono">Pax</span>
+            <span className="text-sm font-bold text-[#5C5248] font-mono">Pax</span>
           </div>
 
           <div className="flex items-center justify-between text-[11px] text-[#5C5248] pt-2 border-t border-[#EAE2D8]/60 mt-1">
@@ -581,7 +581,7 @@ export const AnalyticsReports: React.FC = () => {
                     </div>
                     <div>
                       <div className="font-bold text-xs text-[#1F1A16]">{item.name}</div>
-                      <div className="text-[10px] text-[#8C7E72] font-mono">
+                      <div className="text-[10px] text-[#5C5248] font-mono">
                         {item.qty} terjual ({item.growth}) • Margin: {item.margin}
                       </div>
                     </div>
@@ -623,7 +623,7 @@ export const AnalyticsReports: React.FC = () => {
                   </div>
                   <div className="flex justify-between text-[10px] text-[#5C5248]">
                     <span>{src.note}</span>
-                    <span className="font-mono text-[#8C7E72]">{src.visits}</span>
+                    <span className="font-mono text-[#5C5248]">{src.visits}</span>
                   </div>
                 </div>
               ))}
@@ -662,7 +662,7 @@ export const AnalyticsReports: React.FC = () => {
                     />
                   </div>
                   <span className={`w-10 text-right font-mono font-bold text-[11px] ${
-                    hr.isPeak ? 'text-[#C84B27]' : 'text-[#8C7E72]'
+                    hr.isPeak ? 'text-[#C84B27]' : 'text-[#5C5248]'
                   }`}>
                     {hr.load}%
                   </span>
@@ -736,7 +736,7 @@ export const AnalyticsReports: React.FC = () => {
                   <span className="font-bold text-xs sm:text-sm text-[#1F1A16] block truncate">
                     Dokumen Laporan Keuangan & Rekonsiliasi Pajak PB1
                   </span>
-                  <span className="text-[11px] text-[#8C7E72] font-mono block">
+                  <span className="text-[11px] text-[#5C5248] font-mono block">
                     Format Standar Audit Pajak Daerah Bapenda DKI Jakarta
                   </span>
                 </div>

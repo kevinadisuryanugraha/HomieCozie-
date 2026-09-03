@@ -76,7 +76,7 @@ export const BackofficeMobileDrawer: React.FC<BackofficeMobileDrawerProps> = ({
               <div className="py-3 space-y-4 max-h-[75vh] overflow-y-auto pr-1">
                 {BACKOFFICE_NAV_GROUPS.map((group, gIdx) => (
                   <div key={gIdx} className="space-y-1">
-                    <div className="text-[10px] font-mono font-bold tracking-wider text-[#8C7E72] px-2 uppercase">
+                    <div className="text-[10px] font-mono font-bold tracking-wider text-[#5C5248] px-2 uppercase">
                       {group.title}
                     </div>
 
@@ -162,7 +162,7 @@ export const BackofficeMobileDrawer: React.FC<BackofficeMobileDrawerProps> = ({
                     <Palette className="w-4 h-4 text-[#C84B27]" />
                     <span>Kustomisasi Tema & Desain</span>
                   </div>
-                  <span className="text-[10px] font-mono text-[#8C7E72] font-bold uppercase">Ubah</span>
+                  <span className="text-[10px] font-mono text-[#5C5248] font-bold uppercase">Ubah</span>
                 </button>
               )}
             </div>

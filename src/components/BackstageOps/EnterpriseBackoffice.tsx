@@ -45,7 +45,7 @@ const OwnerRadarModal = React.lazy(() => import('./analytics/OwnerRadarModal').t
 const SubmoduleFallback: React.FC = () => (
   <div className="flex-1 flex flex-col items-center justify-center p-12 text-center">
     <div className="w-8 h-8 border-2 border-amber-600/20 border-t-[#C84B27] rounded-full animate-spin mb-3" />
-    <span className="text-[11px] font-mono font-bold text-[#8C7E72] uppercase">Memuat Modul Operasional...</span>
+    <span className="text-[11px] font-mono font-bold text-[#5C5248] uppercase">Memuat Modul Operasional...</span>
   </div>
 );
 

@@ -382,7 +382,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
             <div className="flex flex-col sm:flex-row gap-2 flex-1 max-w-xl">
               {/* Search */}
               <div className="relative flex-1">
-                <Search className="w-4 h-4 text-[#8C7E72] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <Search className="w-4 h-4 text-[#5C5248] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 <input
                   type="text"
                   placeholder="Cari nama menu, deskripsi..."
@@ -435,7 +435,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
           <div className="bg-white rounded-2xl border border-[#EAE2D8] shadow-xs overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs min-w-[660px]">
-                <thead className="bg-[#FAF7F2] border-b border-[#EAE2D8] font-mono text-[11px] text-[#8C7E72] uppercase tracking-wider">
+                <thead className="bg-[#FAF7F2] border-b border-[#EAE2D8] font-mono text-[11px] text-[#5C5248] uppercase tracking-wider">
                   <tr>
                     <th className="p-3.5 whitespace-nowrap min-w-[200px]">Menu & Foto</th>
                     <th className="p-3.5 whitespace-nowrap">Kategori</th>
@@ -457,7 +457,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                           />
                           <div className="min-w-0">
                             <span className="font-bold text-xs text-[#1F1A16] block truncate">{item.name}</span>
-                            <span className="text-[11px] text-[#8C7E72] line-clamp-1 max-w-xs block">
+                            <span className="text-[11px] text-[#5C5248] line-clamp-1 max-w-xs block">
                               {item.description}
                             </span>
                           </div>
@@ -491,7 +491,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                             <span>Best Seller</span>
                           </span>
                         ) : (
-                          <span className="text-[#8C7E72] font-mono text-[10px]">-</span>
+                          <span className="text-[#5C5248] font-mono text-[10px]">-</span>
                         )}
                       </td>
                       <td className="p-3.5 text-right whitespace-nowrap">
@@ -626,7 +626,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                   <p className="text-xs text-[#5C5248] truncate">
                     Oleh: <strong className="text-[#1F1A16]">{ev.performerName}</strong>
                   </p>
-                  <div className="flex flex-col gap-0.5 text-[11px] font-mono text-[#8C7E72] pt-0.5">
+                  <div className="flex flex-col gap-0.5 text-[11px] font-mono text-[#5C5248] pt-0.5">
                     <div className="flex items-center gap-1.5 whitespace-nowrap">
                       <span>📅</span>
                       <span className="font-semibold text-[#5C5248]">{formatEventDate(ev.eventDate)}</span>
@@ -665,7 +665,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
         <form onSubmit={handleSaveCafeSettings} className="bg-white p-5 sm:p-6 rounded-2xl border border-[#EAE2D8] shadow-xs space-y-5 max-w-3xl">
           <div className="border-b border-[#EAE2D8] pb-3">
             <h3 className="font-bold text-sm text-[#1F1A16]">Informasi Operasional Kafe & Fasilitas Tamu</h3>
-            <p className="text-xs text-[#8C7E72]">Pengaturan ini langsung tampil di footer dan halaman portal tamu</p>
+            <p className="text-xs text-[#5C5248]">Pengaturan ini langsung tampil di footer dan halaman portal tamu</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
@@ -772,7 +772,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
         <div className="bg-white p-5 rounded-2xl border border-[#EAE2D8] shadow-xs space-y-4">
           <div>
             <h3 className="font-bold text-sm text-[#1F1A16]">Kurasi Ulasan & Testimoni Pelanggan</h3>
-            <p className="text-xs text-[#8C7E72]">Kelola ulasan terverifikasi yang ditampilkan di section testimoni beranda</p>
+            <p className="text-xs text-[#5C5248]">Kelola ulasan terverifikasi yang ditampilkan di section testimoni beranda</p>
           </div>
 
           <div className="space-y-3">
@@ -785,7 +785,7 @@ export const CMSManager: React.FC<CMSManagerProps> = ({ showToast }) => {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-[#1F1A16]">{rev.name}</span>
-                    <span className="text-[10px] text-[#8C7E72] font-mono">({rev.tag})</span>
+                    <span className="text-[10px] text-[#5C5248] font-mono">({rev.tag})</span>
                   </div>
                   <div className="flex text-amber-400 text-xs mt-0.5">★★★★★</div>
                   <p className="text-xs text-[#5C5248] mt-1">"{rev.text}"</p>

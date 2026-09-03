@@ -141,7 +141,7 @@ export const KitchenDisplaySystem: React.FC<KitchenDisplaySystemProps> = ({
                 {activeOrders.length} Antrean Aktif
               </span>
             </div>
-            <p className="text-xs text-[#8C7E72] mt-0.5 truncate">
+            <p className="text-xs text-[#5C5248] mt-0.5 truncate">
               Sinkronisasi real-time otomatis dari QR Order Meja & Kasir POS
             </p>
           </div>
@@ -155,7 +155,7 @@ export const KitchenDisplaySystem: React.FC<KitchenDisplaySystemProps> = ({
             onClick={toggleSound}
             className={`px-3.5 py-2 rounded-2xl border text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs ${
               isAudioMuted
-                ? 'bg-[#FAF7F2] border-[#EAE2D8] text-[#8C7E72] hover:bg-stone-200'
+                ? 'bg-[#FAF7F2] border-[#EAE2D8] text-[#5C5248] hover:bg-stone-200'
                 : 'bg-amber-500/10 border-amber-300 text-amber-900 hover:bg-amber-500/20'
             }`}
             title={isAudioMuted ? 'Aktifkan Bunyi Notifikasi Bell Dapur' : 'Mute Bunyi Notifikasi'}
@@ -288,7 +288,7 @@ export const KitchenDisplaySystem: React.FC<KitchenDisplaySystemProps> = ({
                         <Timer className="w-3 h-3" />
                         <span>{elapsedMins} mnt</span>
                       </span>
-                      <span className="text-[#8C7E72] font-semibold text-[11px]">
+                      <span className="text-[#5C5248] font-semibold text-[11px]">
                         {formatOrderTime(ord.createdAt)}
                       </span>
                     </div>

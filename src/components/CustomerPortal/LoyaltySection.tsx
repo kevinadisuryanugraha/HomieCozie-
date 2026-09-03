@@ -9,7 +9,7 @@ import {
   ArrowRight,
   Award
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { CAFE_INFO } from '../../data/mockData';
 
 interface LoyaltySectionProps {
@@ -48,7 +48,7 @@ export const LoyaltySection: React.FC<LoyaltySectionProps> = ({ onOpenMenu }) =>
       setPoints((prev) => prev - pointCost);
       setRedeemedCode(code);
       try {
-        confetti({ 
+        triggerConfetti({ 
           particleCount: 50, 
           spread: 70,
           origin: { y: 0.7 }

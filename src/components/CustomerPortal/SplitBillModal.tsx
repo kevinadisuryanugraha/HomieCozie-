@@ -15,7 +15,7 @@ import {
   Copy,
   Smartphone
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { CartItem } from '../../types';
 import { soundService } from '../../utils/audioChime';
 import { CAFE_INFO } from '../../data/mockData';
@@ -113,7 +113,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
         soundService.playCashRegisterSound();
         const paidCount = Object.values(next).filter(Boolean).length;
         if (paidCount === equalPeopleCount) {
-          try { confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } }); } catch {}
+          try { triggerConfetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } }); } catch {}
         }
       }
       return next;
@@ -131,7 +131,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
         return p;
       });
       if (next.every(p => p.isPaid)) {
-        try { confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } }); } catch {}
+        try { triggerConfetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } }); } catch {}
       }
       return next;
     });
@@ -212,7 +212,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
               <h3 className="font-display font-black text-lg text-[#1F1A16]">
                 Split Bill / Patungan Meja #{tableNumber}
               </h3>
-              <span className="text-xs text-[#8C7E72] font-mono">
+              <span className="text-xs text-[#5C5248] font-mono">
                 Total Tagihan: <strong className="text-[#C84B27]">{formatRupiah(total)}</strong> (Termasuk PB1 10% + Service 5%)
               </span>
             </div>
@@ -388,7 +388,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
                         </div>
                         <div>
                           <div className="font-bold text-xs text-[#1F1A16]">{p.name}</div>
-                          <div className="font-mono text-[10px] text-[#8C7E72]">
+                          <div className="font-mono text-[10px] text-[#5C5248]">
                             Subtotal: {formatRupiah(pSub)} + Tax/Svc: {formatRupiah(pTax + pService)}
                           </div>
                         </div>
@@ -439,7 +439,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
 
                     {/* Item Pills Assignment */}
                     <div className="pt-2 border-t border-[#EAE2D8]/60 space-y-1">
-                      <span className="text-[10px] font-bold text-[#8C7E72] block">
+                      <span className="text-[10px] font-bold text-[#5C5248] block">
                         Pilih menu yang dimakan oleh {p.name}:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
@@ -504,7 +504,7 @@ export const SplitBillModal: React.FC<SplitBillModalProps> = ({
             <div className="bg-white rounded-3xl p-6 border border-[#EAE2D8] shadow-2xl w-full max-w-xs text-center space-y-4">
               <div className="flex items-center justify-between border-b border-[#EAE2D8] pb-2">
                 <div className="text-left">
-                  <span className="text-[10px] font-mono text-[#8C7E72]">QRIS SPLIT BILL</span>
+                  <span className="text-[10px] font-mono text-[#5C5248]">QRIS SPLIT BILL</span>
                   <h4 className="font-bold text-sm text-[#1F1A16]">{activeQRISPerson.name}</h4>
                 </div>
                 <button

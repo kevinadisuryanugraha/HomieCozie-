@@ -15,7 +15,7 @@ import {
   Check,
   Tag
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from "../../utils/confettiHelper";
 import { INITIAL_MENU_ITEMS } from '../../data/mockData';
 import { MenuItem } from '../../types';
 
@@ -96,7 +96,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
     onAddToCart(matchedItem);
     setIsAdded(true);
     try {
-      confetti({
+      triggerConfetti({
         particleCount: 45,
         spread: 60,
         origin: { y: 0.8 }

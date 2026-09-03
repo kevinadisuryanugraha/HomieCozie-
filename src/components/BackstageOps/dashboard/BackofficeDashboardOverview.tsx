@@ -83,7 +83,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               Operasional Backoffice
             </span>
-            <span className="text-[11px] text-[#8C7E72] font-mono font-medium flex items-center gap-1.5">
+            <span className="text-[11px] text-[#5C5248] font-mono font-medium flex items-center gap-1.5">
               <CalendarDays className="w-3.5 h-3.5 text-amber-700 inline shrink-0" />
               <span>{new Date().toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</span>
             </span>
@@ -127,7 +127,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
           className="p-5 rounded-3xl bg-white border border-[#EAE2D8] shadow-xs hover:border-amber-300 transition-all cursor-pointer space-y-3 group"
         >
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-mono font-bold text-[#8C7E72] uppercase">Omzet Kasir Hari Ini</span>
+            <span className="text-[11px] font-mono font-bold text-[#5C5248] uppercase">Omzet Kasir Hari Ini</span>
             <div className="p-2 rounded-xl bg-amber-50 text-amber-800 group-hover:scale-110 transition-transform">
               <TrendingUp className="w-4 h-4" />
             </div>
@@ -149,14 +149,14 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
           className="p-5 rounded-3xl bg-white border border-[#EAE2D8] shadow-xs hover:border-amber-300 transition-all cursor-pointer space-y-3 group"
         >
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-mono font-bold text-[#8C7E72] uppercase">Okupansi Meja</span>
+            <span className="text-[11px] font-mono font-bold text-[#5C5248] uppercase">Okupansi Meja</span>
             <div className="p-2 rounded-xl bg-emerald-50 text-emerald-800 group-hover:scale-110 transition-transform">
               <Store className="w-4 h-4" />
             </div>
           </div>
           <div>
             <div className="text-xl sm:text-2xl font-mono font-black text-[#1F1A16]">
-              {occupiedTables.length} / {tables.length} <span className="text-xs text-[#8C7E72] font-normal">Meja Terisi</span>
+              {occupiedTables.length} / {tables.length} <span className="text-xs text-[#5C5248] font-normal">Meja Terisi</span>
             </div>
             <div className="flex items-center gap-1.5 text-[11px] text-[#5C5248] font-medium mt-1">
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -171,14 +171,14 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
           className="p-5 rounded-3xl bg-white border border-[#EAE2D8] shadow-xs hover:border-amber-300 transition-all cursor-pointer space-y-3 group"
         >
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-mono font-bold text-[#8C7E72] uppercase">Antrean KDS Dapur</span>
+            <span className="text-[11px] font-mono font-bold text-[#5C5248] uppercase">Antrean KDS Dapur</span>
             <div className="p-2 rounded-xl bg-orange-50 text-orange-800 group-hover:scale-110 transition-transform">
               <UtensilsCrossed className="w-4 h-4" />
             </div>
           </div>
           <div>
             <div className="text-xl sm:text-2xl font-mono font-black text-[#1F1A16]">
-              {activeOrders.length} <span className="text-xs text-[#8C7E72] font-normal">Tiket Aktif</span>
+              {activeOrders.length} <span className="text-xs text-[#5C5248] font-normal">Tiket Aktif</span>
             </div>
             <div className="flex items-center gap-1.5 text-[11px] text-amber-700 font-medium mt-1">
               <Clock className="w-3.5 h-3.5" />
@@ -193,14 +193,14 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
           className="p-5 rounded-3xl bg-white border border-[#EAE2D8] shadow-xs hover:border-amber-300 transition-all cursor-pointer space-y-3 group"
         >
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-mono font-bold text-[#8C7E72] uppercase">Reservasi Terkonfirmasi</span>
+            <span className="text-[11px] font-mono font-bold text-[#5C5248] uppercase">Reservasi Terkonfirmasi</span>
             <div className="p-2 rounded-xl bg-teal-50 text-teal-800 group-hover:scale-110 transition-transform">
               <CalendarDays className="w-4 h-4" />
             </div>
           </div>
           <div>
             <div className="text-xl sm:text-2xl font-mono font-black text-[#1F1A16]">
-              {confirmedReservations.length} <span className="text-xs text-[#8C7E72] font-normal">Booking Meja</span>
+              {confirmedReservations.length} <span className="text-xs text-[#5C5248] font-normal">Booking Meja</span>
             </div>
             <div className="flex items-center gap-1.5 text-[11px] text-teal-700 font-bold mt-1">
               <span>Slot Live Music: 19:30 WIB</span>
@@ -220,7 +220,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
               <h3 className="font-display font-black text-base text-[#1F1A16]">
                 Kurva Jam Sibuk & Penjualan (Hourly Rush)
               </h3>
-              <p className="text-[11px] text-[#8C7E72]">
+              <p className="text-[11px] text-[#5C5248]">
                 Pola kunjungan pelanggan kafe Kalisari sepanjang hari operasional
               </p>
             </div>
@@ -257,7 +257,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
                   <div className="flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2">
                       <span className="font-mono font-bold text-[#1F1A16] w-12">{hour.time}</span>
-                      <span className="text-[11px] text-[#8C7E72]">({hour.label})</span>
+                      <span className="text-[11px] text-[#5C5248]">({hour.label})</span>
                     </div>
                     <span className="font-mono font-bold text-[#1F1A16]">
                       {chartMetric === 'revenue' ? formatRupiah(hour.revenue) : `${hour.volume} pesanan`}
@@ -288,7 +288,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
               <h3 className="font-display font-black text-base text-[#1F1A16]">
                 Top 5 Best Seller
               </h3>
-              <p className="text-[11px] text-[#8C7E72]">Menu paling laris shift ini</p>
+              <p className="text-[11px] text-[#5C5248]">Menu paling laris shift ini</p>
             </div>
             <Flame className="w-5 h-5 text-amber-600" />
           </div>
@@ -304,7 +304,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
                     {item.trend}
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-[11px] text-[#8C7E72]">
+                <div className="flex items-center justify-between text-[11px] text-[#5C5248]">
                   <span>{item.qty} Terjual ({item.category})</span>
                   <span className="font-mono font-bold text-[#1F1A16]">{formatRupiah(item.revenue)}</span>
                 </div>
@@ -341,7 +341,7 @@ export const BackofficeDashboardOverview: React.FC<BackofficeDashboardOverviewPr
               <div key={idx} className="p-3 rounded-2xl bg-[#FAF7F2] border border-[#EAE2D8] flex items-center justify-between gap-3">
                 <div className="space-y-0.5">
                   <div className="text-xs font-bold text-[#1F1A16]">{stk.name}</div>
-                  <div className="text-[10px] text-[#8C7E72]">Supplier: {stk.supplier}</div>
+                  <div className="text-[10px] text-[#5C5248]">Supplier: {stk.supplier}</div>
                 </div>
                 <div className="text-right">
                   <span className={`text-xs font-mono font-bold px-2 py-0.5 rounded-full ${

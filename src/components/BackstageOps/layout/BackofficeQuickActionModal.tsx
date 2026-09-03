@@ -89,7 +89,7 @@ export const BackofficeQuickActionModal: React.FC<BackofficeQuickActionModalProp
                   <h3 className="font-display font-black text-base text-[#1F1A16]">
                     Pintasan Aksi Cepat Restoran
                   </h3>
-                  <p className="text-xs text-[#8C7E72]">
+                  <p className="text-xs text-[#5C5248]">
                     Akses modul operasional langsung dalam 1 klik
                   </p>
                 </div>
