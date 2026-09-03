@@ -18,6 +18,7 @@ import {
 import { triggerConfetti } from "../../utils/confettiHelper";
 import { INITIAL_MENU_ITEMS } from '../../data/mockData';
 import { MenuItem } from '../../types';
+import { SpotlightCard } from '../Common/SpotlightCard';
 
 interface CoffeeTasteQuizProps {
   onAddToCart: (item: MenuItem) => void;
@@ -49,7 +50,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
       subtitle: 'Creamy, manis aren legit, dan harum espresso khas',
       icon: Coffee,
       iconBg: 'bg-amber-500/10',
-      iconColor: 'text-amber-900',
+      iconColor: 'text-[#8C341A]',
       borderColor: 'border-amber-200',
       recommendedMenuId: 'm-1', // Kopi Susu Homie Signature
       matchScore: 99
@@ -71,7 +72,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
       subtitle: 'Dark cocoa, tebal di lidah, ekstra boost energi',
       icon: Flame,
       iconBg: 'bg-[#C84B27]/10',
-      iconColor: 'text-[#B23812]',
+      iconColor: 'text-[#8C341A]',
       borderColor: 'border-orange-200',
       recommendedMenuId: 'm-2', // Aren Cremosa Cozie
       matchScore: 94
@@ -101,35 +102,46 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
         spread: 60,
         origin: { y: 0.8 }
       });
-    } catch {}
+    } catch {
+      // safe fallback
+    }
     setTimeout(() => setIsAdded(false), 2500);
   };
 
   const formatRupiah = (val: number) => {
-    return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(val);
+    return new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      maximumFractionDigits: 0
+    }).format(val);
   };
 
   return (
-    <section className="py-12 bg-[#F5EFEB] border-b border-[#EAE2D8] text-[#1F1A16] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section 
+      id="coffee-quiz-section" 
+      className="py-16 sm:py-20 bg-[#FAF7F2] text-[#1F1A16] border-b border-[#EAE2D8] relative overflow-hidden"
+      aria-label="Panduan Rasa Kopi Homie Cozie"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Header Ribbon */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-          <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-900 border border-amber-500/20 text-xs font-mono font-bold mb-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#B23812]" />
-              <span>Interactive Taste Finder</span>
+        {/* Section Header (bklit.com & UI/UX Pro Max) */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+          <div className="max-w-xl space-y-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-900/10 text-[#8C341A] border border-amber-900/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#C84B27]" />
+              <span>Panduan Rasa & Selera Kopi</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-display font-black text-[#1F1A16] tracking-tight">
-              Cari Racikan Seduhan Sesuai Mood Hari Ini
+            <h2 className="font-display font-black text-2xl sm:text-4xl text-[#1F1A16] tracking-tight">
+              Temukan Racikan Kopi Favoritmu
             </h2>
-            <p className="text-xs sm:text-sm text-[#5C5248] mt-1 max-w-xl">
-              Pilih profil rasa yang kamu sukai, kami akan mencarikan menu yang paling pas untuk santap di tempat atau take-away.
+            <p className="text-[#3D332A] text-xs sm:text-sm leading-relaxed">
+              Bingung memilih menu? Pilih karakter rasa yang Anda sukai, dan sistem rekomendasi barista kami akan mencocokkan seduhan terbaik untuk Anda.
             </p>
           </div>
+
           <div className="hidden md:flex items-center gap-2 text-xs font-mono text-[#5C5248]">
-            <Sliders className="w-4 h-4 text-[#B23812]" />
-            <span>Live Barista Matcher</span>
+            <Sliders className="w-4 h-4 text-[#8C341A]" />
+            <span>Interactive Barista Matcher</span>
           </div>
         </div>
 
@@ -152,15 +164,13 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                   const IconComp = flavor.icon;
 
                   return (
-                    <motion.button
+                    <SpotlightCard
                       key={flavor.id}
-                      whileHover={{ scale: 1.01 }}
-                      whileTap={{ scale: 0.99 }}
                       onClick={() => setSelectedFlavor(flavor.id)}
-                      className={`p-4 rounded-2xl text-left transition-all border flex items-start gap-3.5 relative shadow-xs cursor-pointer ${
+                      className={`p-4 text-left transition-all border flex items-start gap-3.5 relative cursor-pointer ${
                         isSelected 
-                          ? 'bg-white border-[#C84B27] ring-2 ring-[#C84B27]/20 shadow-md' 
-                          : 'bg-white border-[#EAE2D8] hover:border-[#D5C9BC] hover:bg-white/80'
+                          ? 'border-[#C84B27] ring-2 ring-[#C84B27]/20 shadow-md bg-white' 
+                          : 'border-[#EAE2D8] hover:border-[#D5C9BC] bg-white'
                       }`}
                     >
                       <div className={`w-10 h-10 rounded-xl ${flavor.iconBg} ${flavor.iconColor} border ${flavor.borderColor} flex items-center justify-center shrink-0`}>
@@ -170,20 +180,20 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                         <div className="font-bold text-xs sm:text-sm text-[#1F1A16] flex items-center justify-between gap-1.5">
                           <span className="truncate">{flavor.title}</span>
                           {isSelected && (
-                            <CheckCircle2 className="w-4 h-4 text-[#B23812] shrink-0" />
+                            <CheckCircle2 className="w-4 h-4 text-[#8C341A] shrink-0" />
                           )}
                         </div>
                         <p className="text-[11px] text-[#5C5248] leading-snug">
                           {flavor.subtitle}
                         </p>
                       </div>
-                    </motion.button>
+                    </SpotlightCard>
                   );
                 })}
               </div>
             </div>
 
-            {/* Step 2: Serving Style & Sweetness */}
+            {/* Step 2: Serving Style & Sweetness (shadcn / Motion physics) */}
             <div className="space-y-2.5 pt-2">
               <label className="text-xs font-bold text-[#1F1A16] flex items-center gap-2">
                 <span className="w-5 h-5 rounded-full bg-[#C84B27] text-white flex items-center justify-center text-[10px] font-bold">2</span>
@@ -191,80 +201,86 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
               </label>
 
               <div className="flex flex-wrap items-center gap-3">
-                {/* Temperature Switcher */}
-                <div className="flex items-center p-1 bg-white rounded-2xl border border-[#EAE2D8] text-xs font-bold shadow-xs">
+                {/* Temperature Switcher with Motion LayoutId */}
+                <div className="flex items-center p-1 bg-white rounded-2xl border border-[#EAE2D8] text-xs font-bold shadow-xs relative">
                   <button
                     onClick={() => setTemperature('iced')}
-                    className={`px-3.5 py-1.5 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer ${
-                      temperature === 'iced' 
-                        ? 'bg-sky-600 text-white shadow-xs' 
-                        : 'text-[#5C5248] hover:text-[#1F1A16] hover:bg-stone-50'
+                    className={`relative px-3.5 py-1.5 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer ${
+                      temperature === 'iced' ? 'text-white' : 'text-[#5C5248] hover:text-[#1F1A16]'
                     }`}
                   >
-                    <Snowflake className="w-3.5 h-3.5" />
-                    <span>Dingin (Iced)</span>
+                    {temperature === 'iced' && (
+                      <motion.div
+                        layoutId="quiz-temp-pill"
+                        transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+                        className="absolute inset-0 bg-sky-600 rounded-xl shadow-xs z-0"
+                      />
+                    )}
+                    <Snowflake className="w-3.5 h-3.5 relative z-10" />
+                    <span className="relative z-10">Dingin (Iced)</span>
                   </button>
+
                   <button
                     onClick={() => setTemperature('hot')}
-                    className={`px-3.5 py-1.5 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer ${
-                      temperature === 'hot' 
-                        ? 'bg-[#C84B27] text-white shadow-xs' 
-                        : 'text-[#5C5248] hover:text-[#1F1A16] hover:bg-stone-50'
+                    className={`relative px-3.5 py-1.5 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer ${
+                      temperature === 'hot' ? 'text-white' : 'text-[#5C5248] hover:text-[#1F1A16]'
                     }`}
                   >
-                    <Flame className="w-3.5 h-3.5" />
-                    <span>Hangat (Hot)</span>
+                    {temperature === 'hot' && (
+                      <motion.div
+                        layoutId="quiz-temp-pill"
+                        transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+                        className="absolute inset-0 bg-[#C84B27] rounded-xl shadow-xs z-0"
+                      />
+                    )}
+                    <Flame className="w-3.5 h-3.5 relative z-10" />
+                    <span className="relative z-10">Hangat (Hot)</span>
                   </button>
                 </div>
 
-                {/* Sweetness Switcher */}
-                <div className="flex items-center p-1 bg-white rounded-2xl border border-[#EAE2D8] text-xs font-bold shadow-xs">
-                  <button
-                    onClick={() => setSweetnessLevel('normal')}
-                    className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer ${
-                      sweetnessLevel === 'normal' 
-                        ? 'bg-[#C84B27] text-white shadow-xs' 
-                        : 'text-[#5C5248] hover:text-[#1F1A16] hover:bg-stone-50'
-                    }`}
-                  >
-                    Manis Pas (100%)
-                  </button>
-                  <button
-                    onClick={() => setSweetnessLevel('less')}
-                    className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer ${
-                      sweetnessLevel === 'less' 
-                        ? 'bg-[#C84B27] text-white shadow-xs' 
-                        : 'text-[#5C5248] hover:text-[#1F1A16] hover:bg-stone-50'
-                    }`}
-                  >
-                    Less Sugar (50%)
-                  </button>
-                  <button
-                    onClick={() => setSweetnessLevel('no')}
-                    className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer ${
-                      sweetnessLevel === 'no' 
-                        ? 'bg-[#C84B27] text-white shadow-xs' 
-                        : 'text-[#5C5248] hover:text-[#1F1A16] hover:bg-stone-50'
-                    }`}
-                  >
-                    No Sugar (0%)
-                  </button>
+                {/* Sweetness Switcher with Motion LayoutId */}
+                <div className="flex items-center p-1 bg-white rounded-2xl border border-[#EAE2D8] text-xs font-bold shadow-xs relative">
+                  {[
+                    { id: 'normal', label: 'Manis Pas (100%)' },
+                    { id: 'less', label: 'Less Sugar (50%)' },
+                    { id: 'no', label: 'No Sugar (0%)' }
+                  ].map((lvl) => {
+                    const isSelected = sweetnessLevel === lvl.id;
+                    return (
+                      <button
+                        key={lvl.id}
+                        onClick={() => setSweetnessLevel(lvl.id as any)}
+                        className={`relative px-3.5 py-1.5 rounded-xl transition-colors cursor-pointer ${
+                          isSelected ? 'text-white' : 'text-[#5C5248] hover:text-[#1F1A16]'
+                        }`}
+                      >
+                        {isSelected && (
+                          <motion.div
+                            layoutId="quiz-sweetness-pill"
+                            transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+                            className="absolute inset-0 bg-[#C84B27] rounded-xl shadow-xs z-0"
+                          />
+                        )}
+                        <span className="relative z-10">{lvl.label}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </div>
 
           </div>
 
-          {/* RIGHT 5-COLS: Live Matched Recommendation Card */}
+          {/* RIGHT 5-COLS: Live Matched Recommendation Card (Spotlight Card) */}
           <div className="lg:col-span-5">
             <AnimatePresence mode="wait">
-              <motion.div
+              <SpotlightCard
                 key={`${selectedFlavor}-${temperature}-${sweetnessLevel}`}
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.2 }}
-                className="bg-white rounded-3xl p-5 sm:p-6 border border-[#EAE2D8] shadow-lg relative overflow-hidden"
+                className="p-5 sm:p-6 shadow-xl"
               >
                 {/* Match Score Badge */}
                 <div className="flex items-center justify-between gap-2 pb-3 border-b border-[#EAE2D8]">
@@ -295,7 +311,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                     <p className="text-xs text-[#5C5248] line-clamp-2 leading-relaxed">
                       {matchedItem.description}
                     </p>
-                    <div className="font-mono font-black text-[#B23812] text-base pt-1">
+                    <div className="font-mono font-black text-[#8C341A] text-base pt-1">
                       {formatRupiah(matchedItem.price)}
                     </div>
                   </div>
@@ -311,7 +327,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                       </>
                     ) : (
                       <>
-                        <Flame className="w-3 h-3 text-[#B23812]" />
+                        <Flame className="w-3 h-3 text-[#8C341A]" />
                         <span>Hangat (Hot)</span>
                       </>
                     )}
@@ -320,7 +336,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                     Gula: {sweetnessLevel === 'normal' ? 'Normal 100%' : sweetnessLevel === 'less' ? 'Less 50%' : 'Tanpa Gula 0%'}
                   </span>
                   <span className="px-2.5 py-1 rounded-lg bg-[#FAF7F2] border border-[#EAE2D8]">
-                    Susu: Dairy / Oat (+5K)
+                    Susu: Fresh Milk / Oat (+5K)
                   </span>
                 </div>
 
@@ -332,7 +348,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                     onClick={handleQuickAdd}
                     className={`flex-1 py-3 rounded-2xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer ${
                       isAdded 
-                        ? 'bg-emerald-600 text-white' 
+                        ? 'bg-emerald-700 text-white' 
                         : 'bg-[#C84B27] hover:bg-[#B23E1C] text-white'
                     }`}
                   >
@@ -350,7 +366,7 @@ export const CoffeeTasteQuiz: React.FC<CoffeeTasteQuizProps> = ({ onAddToCart, o
                   </motion.button>
                 </div>
 
-              </motion.div>
+              </SpotlightCard>
             </AnimatePresence>
           </div>
 

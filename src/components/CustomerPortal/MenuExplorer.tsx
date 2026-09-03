@@ -21,6 +21,7 @@ import { triggerConfetti } from "../../utils/confettiHelper";
 import { INITIAL_MENU_ITEMS, CAFE_INFO } from '../../data/mockData';
 import { MenuItem, MenuCategory } from '../../types';
 import { AIBaristaRecommender } from './AIBaristaRecommender';
+import { SpotlightCard } from '../Common/SpotlightCard';
 
 interface MenuExplorerProps {
   onAddToCart: (item: MenuItem, quantity?: number, selectedOptions?: Record<string, string>, notes?: string) => void;
@@ -211,8 +212,8 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
 
           </div>
 
-          {/* Category Tabs: Responsive Flex-Wrap on Desktop, Hidden Smooth Swipe on Mobile */}
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar md:flex-wrap pb-1">
+          {/* Category Tabs: Responsive Flex-Wrap on Desktop, Hidden Smooth Swipe on Mobile (shadcn / motion) */}
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar md:flex-wrap pb-1 relative">
             {categories.map((cat) => {
               const Icon = cat.icon;
               const isSelected = selectedCategory === cat.id;
@@ -220,21 +221,28 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id as any)}
-                  className={`relative flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-colors ${
+                  className={`relative flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${
                     isSelected 
-                      ? 'bg-[#C84B27] text-white shadow-xs' 
+                      ? 'text-white' 
                       : 'text-[#5C5248] hover:text-[#1F1A16] bg-[#FAF7F2] border border-[#EAE2D8] hover:bg-stone-200/60'
                   }`}
                 >
-                  <Icon className="w-3.5 h-3.5 shrink-0" />
-                  <span>{cat.label}</span>
+                  {isSelected && (
+                    <motion.div
+                      layoutId="menu-category-active-tab-pill"
+                      transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+                      className="absolute inset-0 bg-[#C84B27] rounded-xl shadow-xs z-0"
+                    />
+                  )}
+                  <Icon className={`w-3.5 h-3.5 shrink-0 relative z-10 ${isSelected ? 'text-white' : 'text-[#8C341A]'}`} />
+                  <span className="relative z-10">{cat.label}</span>
                 </button>
               );
             })}
           </div>
         </div>
 
-        {/* Menu Cards Grid with Motion Stagger */}
+        {/* Menu Cards Grid with Motion Stagger & 21st.dev Spotlight */}
         {filteredItems.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-2xl border border-[#EAE2D8] p-8 shadow-xs">
             <UtensilsCrossed className="w-12 h-12 text-stone-400 mx-auto mb-3" />
@@ -246,7 +254,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                 setSearchQuery('');
                 setTagFilter('all');
               }}
-              className="mt-4 px-5 py-2.5 rounded-xl bg-[#C84B27] text-white text-xs font-bold shadow-xs hover:bg-[#B23E1C]"
+              className="mt-4 px-5 py-2.5 rounded-xl bg-[#C84B27] text-white text-xs font-bold shadow-xs hover:bg-[#B23E1C] cursor-pointer"
             >
               Reset Filter
             </button>
@@ -258,14 +266,14 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
           >
             <AnimatePresence>
               {filteredItems.map((item) => (
-                <motion.div
+                <SpotlightCard
                   key={item.id}
                   layout
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="bg-white rounded-2xl overflow-hidden border border-[#EAE2D8] hover:border-[#D5C9BC] hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group shadow-xs"
+                  className="flex flex-col justify-between group shadow-xs hover:shadow-lg transition-all duration-300"
                 >
                   {/* Image with Tag */}
                   <div className="relative h-44 overflow-hidden bg-stone-100">
@@ -372,7 +380,7 @@ export const MenuExplorer: React.FC<MenuExplorerProps> = ({ onAddToCart, onOpenR
                       </motion.button>
                     </div>
                   </div>
-                </motion.div>
+                </SpotlightCard>
               ))}
             </AnimatePresence>
           </motion.div>
