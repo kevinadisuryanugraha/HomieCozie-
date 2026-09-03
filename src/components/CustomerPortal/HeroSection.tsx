@@ -30,6 +30,7 @@ interface ShowcaseScene {
   tag: string;
   subtitle: string;
   image: string;
+  mobileImage: string;
   badge: string;
 }
 
@@ -42,6 +43,7 @@ const SHOWCASE_SCENES: ShowcaseScene[] = [
     tag: 'Live Music Weekend',
     subtitle: 'Jumat & Sabtu mulai 19:30 WIB • Semi-Outdoor Stage & Free Entry',
     image: '/photos/homie_cozie_006.webp',
+    mobileImage: '/photos/homie_cozie_006_mob.webp',
     badge: 'Jumat & Sabtu 19:30'
   },
   {
@@ -52,6 +54,7 @@ const SHOWCASE_SCENES: ShowcaseScene[] = [
     tag: 'Signature Coffee',
     subtitle: 'Kopi Susu Gula Aren Asli & Seduhan Filter V60 Single Origin Nusantara',
     image: '/photos/homie_cozie_008.webp',
+    mobileImage: '/photos/homie_cozie_008_mob.webp',
     badge: '100% Arabika & Robusta Pilihan'
   },
   {
@@ -62,6 +65,7 @@ const SHOWCASE_SCENES: ShowcaseScene[] = [
     tag: 'Chef Recipes',
     subtitle: 'Nasi Goreng Kampung, Pasta Aglio Olio, Rice Bowl Sambal Matah & Platters',
     image: '/photos/homie_cozie_105.webp',
+    mobileImage: '/photos/homie_cozie_105_mob.webp',
     badge: 'Fresh Cooked to Order'
   },
   {
@@ -72,6 +76,7 @@ const SHOWCASE_SCENES: ShowcaseScene[] = [
     tag: 'Ruang Nyaman',
     subtitle: 'Colokan di setiap meja, Wi-Fi 100Mbps cepat, dan area mezzanine semi-private',
     image: '/photos/homie_cozie_025.webp',
+    mobileImage: '/photos/homie_cozie_025_mob.webp',
     badge: 'WFH & Hangout Ready'
   }
 ];
@@ -147,12 +152,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Live Operational Status Ribbon */}
             <div className="flex flex-wrap items-center gap-2 text-xs">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#EAE2D8] text-[#1F1A16] font-medium shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-                <span className="font-semibold text-emerald-800">Buka Hari Ini</span>
-                <span className="text-[#5C5248] font-mono">10:00 – 23:00 WIB</span>
+                <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse shrink-0"></span>
+                <span className="font-bold text-emerald-900">Buka Hari Ini</span>
+                <span className="text-[#3D332A] font-mono font-medium">10:00 – 23:00 WIB</span>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#EAE2D8] text-[#5C5248] shadow-xs font-medium">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#EAE2D8] text-[#3D332A] shadow-xs font-semibold">
                 <span>📍 Kalisari, Pasar Rebo, Jakarta Timur</span>
               </div>
             </div>
@@ -163,7 +168,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 Kopi Hangat, Santap Nikmat & Panggung Musik.
               </h1>
               
-              <p className="text-[#5C5248] text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+              <p className="text-[#3D332A] text-sm sm:text-base leading-relaxed max-w-xl font-normal">
                 Tempat nongkrong favorit Kalisari – Cijantung dengan racikan kopi specialty Nusantara, hidangan dapur hangat berstandar chef, dan pertunjukan live acoustic setiap akhir pekan.
               </p>
             </div>
@@ -190,7 +195,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   onClick={onExploreMenu}
                   className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] font-semibold text-xs sm:text-sm border border-[#EAE2D8] hover:border-[#D5C9BC] transition-colors shadow-xs cursor-pointer"
                 >
-                  <Utensils className="w-4 h-4 text-amber-800" />
+                  <Utensils className="w-4 h-4 text-amber-900" />
                   <span>Daftar Menu</span>
                 </motion.button>
 
@@ -201,7 +206,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   onClick={onOpenQRScan}
                   className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] font-semibold text-xs sm:text-sm border border-[#EAE2D8] hover:border-[#D5C9BC] transition-colors shadow-xs cursor-pointer"
                 >
-                  <QrCode className="w-4 h-4 text-emerald-800" />
+                  <QrCode className="w-4 h-4 text-emerald-900" />
                   <span>Pesan di Meja</span>
                 </motion.button>
               </div>
@@ -213,32 +218,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 
                 <div className="flex flex-col justify-center px-2">
                   <div className="flex items-center gap-1 text-[#1F1A16] font-mono font-black text-lg">
-                    <Star className="w-4 h-4 fill-amber-400 text-amber-500" />
+                    <Star className="w-4 h-4 fill-amber-400 text-amber-600" />
                     <span ref={ratingCounterRef}>4.8</span>
-                    <span className="text-xs text-[#5C5248] font-semibold">/ 5.0</span>
+                    <span className="text-xs text-[#3D332A] font-semibold">/ 5.0</span>
                   </div>
-                  <div className="text-[11px] text-[#5C5248] font-medium mt-0.5">Rating Google (268+ Ulasan)</div>
+                  <div className="text-[11px] text-[#3D332A] font-semibold mt-0.5">Rating Google (268+ Ulasan)</div>
                 </div>
 
                 <div className="flex flex-col justify-center pt-2 sm:pt-0 sm:px-3">
                   <div className="font-mono font-black text-[#1F1A16] text-lg">
                     <span ref={reviewsCounterRef}>268+</span>
                   </div>
-                  <div className="text-[11px] text-[#5C5248] font-medium mt-0.5">Ulasan Positif Terverifikasi</div>
+                  <div className="text-[11px] text-[#3D332A] font-semibold mt-0.5">Ulasan Positif Terverifikasi</div>
                 </div>
 
                 <div className="flex flex-col justify-center pt-2 sm:pt-0 sm:px-3">
                   <div className="font-mono font-black text-[#C84B27] text-lg">
                     <span ref={cupsCounterRef}>50K+</span>
                   </div>
-                  <div className="text-[11px] text-[#5C5248] font-medium mt-0.5">Cangkir Kopi Disajikan</div>
+                  <div className="text-[11px] text-[#3D332A] font-semibold mt-0.5">Cangkir Kopi Disajikan</div>
                 </div>
 
                 <div className="flex flex-col justify-center pt-2 sm:pt-0 sm:px-3">
                   <div className="font-mono font-black text-[#1F1A16] text-lg">
                     <span ref={yearsCounterRef}>6 Thn</span>
                   </div>
-                  <div className="text-[11px] text-[#5C5248] font-medium mt-0.5">Sejak 2020 di Kalisari</div>
+                  <div className="text-[11px] text-[#3D332A] font-semibold mt-0.5">Sejak 2020 di Kalisari</div>
                 </div>
 
               </div>
@@ -267,10 +272,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                       className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                         isActive
                           ? 'bg-white text-[#1F1A16] shadow-xs border border-[#EAE2D8]'
-                          : 'text-[#5C5248] hover:text-[#1F1A16]'
+                          : 'text-[#3D332A] hover:text-[#1F1A16]'
                       }`}
                     >
-                      <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#C84B27]' : 'text-[#5C5248]'}`} />
+                      <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#C84B27]' : 'text-[#3D332A]'}`} />
                       <span className="text-[11px]">{scene.tabLabel}</span>
                     </button>
                   );
@@ -283,6 +288,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <motion.img
                     key={currentScene.id}
                     src={currentScene.image}
+                    srcSet={`${currentScene.mobileImage} 480w, ${currentScene.image} 900w`}
+                    sizes="(max-width: 640px) 480px, 900px"
                     alt={currentScene.title}
                     width={560}
                     height={320}
@@ -327,7 +334,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <h2 className="font-display font-bold text-base text-[#1F1A16]">
                   {currentScene.title}
                 </h2>
-                <p className="text-xs text-[#5C5248] leading-relaxed">
+                <p className="text-xs text-[#3D332A] leading-relaxed">
                   {currentScene.subtitle}
                 </p>
               </div>
@@ -335,22 +342,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* Quick Amenity Icons Ribbon */}
-            <div className="bg-white p-3 rounded-2xl border border-[#EAE2D8] grid grid-cols-4 gap-2 text-center text-xs text-[#5C5248] shadow-xs">
+            <div className="bg-white p-3 rounded-2xl border border-[#EAE2D8] grid grid-cols-4 gap-2 text-center text-xs text-[#3D332A] shadow-xs">
               <div className="flex flex-col items-center gap-1">
-                <Wifi className="w-4 h-4 text-emerald-700" />
-                <span className="text-[10px] font-medium">Wi-Fi 100Mbps</span>
+                <Wifi className="w-4 h-4 text-emerald-800" />
+                <span className="text-[10px] font-semibold">Wi-Fi 100Mbps</span>
               </div>
               <div className="flex flex-col items-center gap-1">
-                <Zap className="w-4 h-4 text-amber-700" />
-                <span className="text-[10px] font-medium">Colokan Meja</span>
+                <Zap className="w-4 h-4 text-amber-800" />
+                <span className="text-[10px] font-semibold">Colokan Meja</span>
               </div>
               <div className="flex flex-col items-center gap-1">
-                <Car className="w-4 h-4 text-blue-700" />
-                <span className="text-[10px] font-medium">Parkir Luas</span>
+                <Car className="w-4 h-4 text-blue-800" />
+                <span className="text-[10px] font-semibold">Parkir Luas</span>
               </div>
               <div className="flex flex-col items-center gap-1">
                 <Wind className="w-4 h-4 text-[#C84B27]" />
-                <span className="text-[10px] font-medium">AC & Outdoor</span>
+                <span className="text-[10px] font-semibold">AC & Outdoor</span>
               </div>
             </div>
 

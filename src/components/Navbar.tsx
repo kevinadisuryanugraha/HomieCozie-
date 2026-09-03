@@ -82,10 +82,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           <div className="hidden md:flex items-center gap-4 text-xs font-medium">
-            <span className="text-[#5C5248] text-[11px]">
+            <span className="text-[#3D332A] text-[11px] font-semibold">
               Buka: 10:00 – 23:00 WIB
             </span>
-            <span className="text-amber-700 font-semibold text-[11px]">
+            <span className="text-amber-900 font-bold text-[11px]">
               Live Music: Weekend 19:30 WIB
             </span>
           </div>
@@ -115,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="font-display font-black text-sm sm:text-lg text-[#1F1A16] leading-none tracking-tight truncate block">
               Homie Cozie
             </span>
-            <p className="text-[10px] sm:text-[11px] text-[#5C5248] font-medium mt-0.5 truncate">
+            <p className="text-[10px] sm:text-[11px] text-[#3D332A] font-semibold mt-0.5 truncate">
               Coffee & Kitchen
             </p>
           </div>

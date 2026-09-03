@@ -43,7 +43,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
         
         {/* Section Title */}
         <div className="max-w-2xl space-y-2 mb-12">
-          <div className="text-xs font-mono font-semibold text-[#5C5248]">
+          <div className="text-xs font-mono font-bold text-[#3D332A]">
             Kisah Sejak 2020 • Kalisari, Pasar Rebo
           </div>
 
@@ -51,7 +51,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
             Tempat Berkumpul yang Hangat & Tenang di Kalisari
           </h2>
 
-          <p className="text-[#5C5248] text-xs sm:text-sm leading-relaxed font-normal">
+          <p className="text-[#3D332A] text-xs sm:text-sm leading-relaxed font-normal">
             Homie Cozie hadir sebagai ruang santai kedua bagi warga Pasar Rebo dan Jakarta Timur. Menghadirkan secangkir kopi berkualitas, sajian makanan hangat, dan panggung musik akustik dalam suasana akrab.
           </p>
         </div>
@@ -63,13 +63,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
               key={idx}
               className="bg-white p-4 sm:p-5 rounded-2xl border border-[#EAE2D8] text-center shadow-xs"
             >
-              <div className="font-display font-black text-2xl sm:text-3xl text-amber-800 tracking-tight">
+              <div className="font-display font-black text-2xl sm:text-3xl text-amber-900 tracking-tight">
                 {stat.value}
               </div>
               <div className="font-bold text-[#1F1A16] text-xs sm:text-sm mt-1">
                 {stat.label}
               </div>
-              <p className="text-[11px] text-[#5C5248] mt-0.5 leading-snug">
+              <p className="text-[11px] text-[#3D332A] mt-0.5 leading-snug font-medium">
                 {stat.sub}
               </p>
             </div>
@@ -83,6 +83,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
           <div className="lg:col-span-5 rounded-2xl overflow-hidden border border-[#EAE2D8] bg-white shadow-sm">
             <img
               src="/photos/homie_cozie_116.webp"
+              srcSet="/photos/homie_cozie_116_mob.webp 480w, /photos/homie_cozie_116.webp 900w"
+              sizes="(max-width: 640px) 480px, 900px"
               alt="Barista Homie Cozie menyiapkan seduhan kopi specialty"
               width={600}
               height={400}
@@ -92,7 +94,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
             />
             <div className="p-4 bg-white border-t border-[#EAE2D8]">
               <div className="text-xs font-bold text-[#1F1A16]">Barista Specialty Bar</div>
-              <p className="text-[11px] text-[#5C5248] mt-0.5">
+              <p className="text-[11px] text-[#3D332A] mt-0.5 font-medium">
                 Penyeduhan kopi presisi dengan mesin espresso modern dan racikan khas Homie Cozie.
               </p>
             </div>
@@ -106,13 +108,13 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
                   key={idx}
                   className="bg-white p-4 rounded-2xl border border-[#EAE2D8] space-y-2 shadow-xs"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 flex items-center justify-center">
                     <pillar.icon className="w-4 h-4" />
                   </div>
                   <h3 className="font-display font-bold text-sm text-[#1F1A16]">
                     {pillar.title}
                   </h3>
-                  <p className="text-xs text-[#5C5248] leading-relaxed">
+                  <p className="text-xs text-[#3D332A] leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
@@ -132,7 +134,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenReservation, o
                 onClick={onExploreMenu}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-stone-50 text-[#1F1A16] font-semibold text-xs sm:text-sm border border-[#EAE2D8] transition-colors shadow-xs cursor-pointer"
               >
-                <Coffee className="w-4 h-4 text-[#5C5248]" />
+                <Coffee className="w-4 h-4 text-[#3D332A]" />
                 <span>Lihat Pilihan Menu</span>
               </button>
             </div>

@@ -518,21 +518,21 @@ export default function App() {
                     <span className="font-display font-black text-lg text-[#1F1A16] block leading-tight">
                       Homie Cozie
                     </span>
-                    <span className="text-[11px] font-mono text-amber-800 font-bold block">
+                    <span className="text-[11px] font-mono text-amber-900 font-bold block">
                       Coffee & Kitchen • Kalisari
                     </span>
                   </div>
                 </div>
 
-                <p className="text-xs text-[#5C5248] leading-relaxed max-w-sm">
+                <p className="text-xs text-[#3D332A] leading-relaxed max-w-sm">
                   Ruang ngopi, bersantap, dan temu komunitas dengan sajian kopi specialty Nusantara, hidangan dapur rumahan berstandar chef, serta alunan panggung Live Music akustik akhir pekan.
                 </p>
 
                 <div className="flex items-center gap-2 pt-1">
-                  <span className="bg-amber-50 text-amber-800 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-200">
+                  <span className="bg-amber-50 text-amber-950 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-amber-300">
                     ⭐ 4.8 / 5.0 (268+ Ulasan Google)
                   </span>
-                  <span className="bg-emerald-50 text-emerald-800 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-emerald-200">
+                  <span className="bg-emerald-50 text-emerald-950 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg border border-emerald-300">
                     100% Halal
                   </span>
                 </div>
@@ -543,7 +543,7 @@ export default function App() {
                 <div className="font-display font-bold text-sm text-[#1F1A16] uppercase tracking-wider">
                   Jelajahi Halaman
                 </div>
-                <div className="grid grid-cols-2 gap-2.5 text-xs font-medium text-[#5C5248]">
+                <div className="grid grid-cols-2 gap-2.5 text-xs font-medium text-[#3D332A]">
                   <button
                     onClick={() => {
                       navigateToMode('customer');
@@ -630,14 +630,14 @@ export default function App() {
                 <div className="font-display font-bold text-sm text-[#1F1A16] uppercase tracking-wider">
                   Jam Buka & Kontak
                 </div>
-                <div className="space-y-2 text-xs text-[#5C5248]">
+                <div className="space-y-2 text-xs text-[#3D332A]">
                   <div>
                     <div className="font-bold text-[#1F1A16]">Selasa – Minggu:</div>
-                    <div className="text-[#5C5248]">{CAFE_INFO.operatingHours.weekdays}</div>
+                    <div className="text-[#3D332A] font-medium">{CAFE_INFO.operatingHours.weekdays}</div>
                   </div>
                   <div>
                     <div className="font-bold text-[#1F1A16]">Akhir Pekan (Live Music):</div>
-                    <div className="text-[#5C5248]">{CAFE_INFO.operatingHours.weekends}</div>
+                    <div className="text-[#3D332A] font-medium">{CAFE_INFO.operatingHours.weekends}</div>
                   </div>
                   <div className="pt-1">
                     <div className="font-bold text-[#1F1A16]">WhatsApp Kafe:</div>
@@ -645,7 +645,7 @@ export default function App() {
                       href={`https://wa.me/${CAFE_INFO.whatsapp.replace(/[^0-9]/g, '')}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-emerald-700 hover:underline font-mono font-bold"
+                      className="text-emerald-900 hover:underline font-mono font-bold"
                     >
                       {CAFE_INFO.whatsapp}
                     </a>
@@ -656,11 +656,11 @@ export default function App() {
             </div>
 
             {/* Bottom Strip */}
-            <div className="pt-8 border-t border-[#EAE2D8] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-[#5C5248] pb-16 md:pb-0">
+            <div className="pt-8 border-t border-[#EAE2D8] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-[#3D332A] pb-16 md:pb-0">
               <div>
                 © 2020 – 2026 <strong className="text-[#1F1A16]">Homie Cozie Coffee & Kitchen</strong>. All rights reserved.
               </div>
-              <div className="text-center md:text-right font-mono">
+              <div className="text-center md:text-right font-mono font-medium">
                 {CAFE_INFO.address}
               </div>
             </div>
